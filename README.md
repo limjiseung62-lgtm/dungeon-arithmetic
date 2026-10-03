@@ -1,6 +1,18 @@
-# 던전탈출 사칙연산 v1.1
+# 던전탈출 사칙연산 v1.2
 
 초등학생이 세 개의 주사위를 사칙연산으로 조합해 몬스터와 싸우는 1~4인 로컬 협동 수학 RPG입니다. 태블릿 순차 입력과 전자칠판 동시 입력을 지원합니다.
+
+## v1.2 변화
+
+몬스터별 독립 HP와 행동 예고, 공격 대상 선택과 수정, 방어 S의 차단 대상 선택을 지원합니다. 공격으로 쓰러진 적은 행동하지 않으며, 이미 쓰러진 적을 겨냥한 예약 공격은 데이터 순서의 살아 있는 적으로 자동 옮깁니다. 한 전투의 모든 적을 쓰러뜨려야 전리품을 한 번 받습니다.
+
+기본 진행은 단일 스켈레톤 → 스켈레톤 2마리 → 고블린+스켈레톤 → 고블린+오크 → 거미+고블린 → 단일 골렘입니다. 전투 조합과 HP/공격/특수기/보상 배율은 src/EncounterData.js에서 조절합니다. 3마리 전투도 완전히 지원하며 개발 패널의 오크+고블린 2마리 또는 직접 조합으로 확인할 수 있습니다.
+
+공격·차단 대상 선택 중에는 공동 계산 시간이 멈춥니다. 동시 모드에서는 각자의 패드에서 선택하며, 모든 선택이 끝나야 시간이 다시 흐릅니다. 수학 목표는 언제나 공격 4개+방어 4개이고 좌→우 계산 규칙은 그대로입니다.
+
+화염구·얼음창은 한 적, 연쇄번개는 첫 적부터 26/18/12, 운석은 중심 48/주변 12입니다. 신규 희귀 얼음폭풍은 모든 적에게 16과 이번 일반 반격 25% 약화입니다. 치유·마법방패·정화는 적을 선택하지 않습니다.
+
+강화는 5턴부터 표시하며 시간 훔치기는 45→30초, 봉쇄는 최대 1→2명입니다. 중첩 시간 감소는 가장 강한 효과만, 독은 3턴 갱신, 봉쇄는 최대 플레이어 수−1명으로 제한합니다. 자세한 수치와 검증은 CHANGELOG-v1.2.md 및 TEST-REPORT-v1.2.md를 참고하세요.
 
 ## v1.1 변화
 
@@ -16,7 +28,7 @@ HP는 던전 전체에서 유지하고 다음 몬스터에서 방어막은 0입�
 
 Node.js 18 이상에서 START.cmd 또는 npm start. npm run build는 정적 배포 파일을 dist에 만듭니다.
 
-npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:presentation, npm run test:quality, npm run test:update로 Edge/Playwright 검사를 실행합니다.
+npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:presentation, npm run test:quality, npm run test:update, npm run test:encounters로 Edge/Playwright 검사를 실행합니다.
 
 ?debug=1은 개발자 전용 테스트 패널입니다. 일반 주소에는 패널과 개발 API가 없습니다.
 
@@ -24,4 +36,4 @@ npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:pr
 
 GitHub 저장소: https://github.com/limjiseung62-lgtm/dungeon-arithmetic
 
-main push → 자동 테스트/production build → GitHub Pages의 같은 주소 업데이트. v1.0 태그는 기존 정상 버전 복구 지점입니다. v1.1 로컬 작업은 update/v1.1 브랜치에서 진행했습니다.
+main push → 자동 테스트/production build → GitHub Pages의 같은 주소 업데이트. v1.0 태그는 기존 정상 버전 복구 지점입니다. v1.1 태그는 업데이트 전 복구 지점입니다. v1.2 작업은 update/v1.2 브랜치에서 진행했습니다. 공개 사이트 업데이트는 main의 원격 push와 Pages 배포 성공 후 적용됩니다.

@@ -5,7 +5,7 @@ export function reserveAction(state,target,expression,playerId){
   const base={playerId,targetGrade:target.grade,targetValue:target.value,targetId:target.id,expression:expression.expression};
   const add=(actionType,properties={})=>state.actionQueue.push({...base,actionType,...properties,order:state.actionQueue.length,status:'pending'});
   if(target.side==='attack'){
-    add('attack',{baseDamage:Math.max(1,config.attack[target.grade]-MonsterData[state.monsterIndex].armor)});
+    add('attack',{baseDamage:Math.max(1,config.attack[target.grade]-(state.enemies?0:MonsterData[state.monsterIndex].armor))});
     if(target.grade==='S'){
       const slot=state.scrolls[state.scrollIndex];
       if(slot){const reservations=state.actionQueue.filter(a=>a.actionType==='scroll'&&a.scrollSlot===slot).length;

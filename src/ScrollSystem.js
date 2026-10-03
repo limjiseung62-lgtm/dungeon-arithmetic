@@ -1,20 +1,28 @@
+import {livingEnemies,syncEncounter} from './EncounterData.js';
+import {cleanseStatuses} from './StatusEffectSystem.js';
 import {ScrollData,ScrollConfig} from './ScrollData.js';
 import {GameConfig as config} from './GameConfig.js';
-export function applyScrollEffect(state,data){
+export function applyScrollEffect(state,data,targetId=null){
  const before={hp:state.hero.hp,shield:state.hero.shield,monsterHP:state.monsterHP};
- if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage);
+ const alive=livingEnemies(state),primary=alive.find(e=>e.id===targetId)||alive[0],impacts=[];
+ if(state.enemies){
+  let targets=primary?[primary]:[];
+  if(data.targetType==='ALL_ENEMIES')targets=alive;
+  if(data.targetType==='RANDOM_ENEMIES')targets=primary?[primary,...alive.filter(e=>e!==primary)].slice(0,3):[];
+  targets.forEach((e,i)=>{const amount=data.effect==='lightning'?[26,18,12][i]:data.effect==='meteor'?(e===primary?48:12):(data.damage||0);const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
+  syncEncounter(state);
+ }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage);if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
  if(data.heal)state.hero.hp=Math.min(config.heroHP,state.hero.hp+data.heal);
  if(data.shield)state.hero.shield+=data.shield;
- if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);
  if(data.stop)state.scrollStop=true;
- if(data.cleanse){for(const status of ScrollConfig.cleanseable){if(status==='poison')state.hero.poison=0;else if(status==='web'||status==='stone'){if(state.blocked?.type===status)state.blocked=null;if(state.nextBlocked?.type===status)state.nextBlocked=null;}else if(status==='steal')state.stolen=false;else if(status==='shift')state.shifted=false;else state[status]=false;}}
- return {damage:before.monsterHP-state.monsterHP,heal:state.hero.hp-before.hp,shield:state.hero.shield-before.shield};
+ if(data.cleanse)cleanseStatuses(state);
+ return {damage:before.monsterHP-state.monsterHP,heal:state.hero.hp-before.hp,shield:state.hero.shield-before.shield,impacts};
 }
-export function useScroll(state,reservedSlot=null){
+export function useScroll(state,reservedSlot=null,targetId=null){
  const index=reservedSlot?state.scrolls.indexOf(reservedSlot):Math.min(state.scrollIndex,state.scrolls.length-1);
  const slot=state.scrolls[index];if(!slot||slot.uses<=0)return null;
  const data=ScrollData[slot.type];if(!data)return null;
- slot.uses--;state.stats.scrolls++;const result=applyScrollEffect(state,data);
+ slot.uses--;state.stats.scrolls++;const result=applyScrollEffect(state,data,targetId);
  if(slot.uses===0)state.scrolls.splice(index,1);
  state.scrollIndex=Math.max(0,Math.min(index,state.scrolls.length-1));
  return {...data,...result,type:slot.type};
@@ -24,7 +32,7 @@ export function generateLoot(state,rng=Math.random,forcedRarity=null){
  const candidates=[],pool=Object.entries(ScrollData);
  for(let n=0;n<ScrollConfig.candidateCount;n++){
   const remaining=pool.filter(([id])=>!candidates.includes(id));
-  const rarityPool=Object.entries(ScrollConfig.rarityWeights).filter(([r])=>remaining.some(([,d])=>d.rarity===r));
+  const rarityPool=Object.entries(ScrollConfig.rarityWeights).map(([r,w])=>[r,w*(r==='rare'||r==='heroic'?(state.encounter?.rewardModifier||1):1)]).filter(([r])=>remaining.some(([,d])=>d.rarity===r));
   let rarity=forcedRarity;if(!rarity||!remaining.some(([,d])=>d.rarity===rarity)){
    let roll=rng()*rarityPool.reduce((sum,[,w])=>sum+w,0);rarity=rarityPool.at(-1)[0];for(const [r,w]of rarityPool){roll-=w;if(roll<0){rarity=r;break;}}
   }

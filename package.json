@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
     "simulate:balance": "node tests/simulate-balance.mjs",
     "test:balance:targets": "node tests/balance-targets.cjs",
     "build": "node build.mjs",
+    "test:encounters": "node tests/encounter-browser.cjs",
     "test:update": "node tests/update-v11-browser.cjs"
   }
 }

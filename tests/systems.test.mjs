@@ -26,7 +26,7 @@ test('golem relocates marks, stone blocks next action, defense S prevents reloca
   const {s,c}=game(4);const positions=s.targets.map(t=>t.position);c.timeUpdate(40);assert.ok(s.targets.every((t,i)=>t.position!==positions[i]));finish(c);c.startTurn();assert.equal(s.intent.special,'stone');finish(c);c.startTurn();assert.equal(s.blocked.type,'stone');
   const g=game(4);hit(g.c,'defense','S');g.c.timeUpdate(40);assert.equal(g.s.shifted,false);
 });
-test('solo blocked slot automatically passes without deadlock',()=>{const {s,c}=game(3,1);finish(c);c.startTurn();finish(c);c.startTurn();assert.equal(s.phase,'resolution');c.resolveAll();c.startTurn();assert.equal(s.phase,'playing');});
+test('solo always retains one actionable slot without deadlock',()=>{const {s,c}=game(3,1);finish(c);c.startTurn();finish(c);c.startTurn();assert.equal(s.phase,'playing');assert.equal(s.actionsDone[0],false);});
 test('game over at zero shared HP',()=>{const {s,c}=game();s.hero.hp=1;finish(c);assert.equal(s.phase,'gameover');});
 test('full campaign for 1 to 4 players, rewards and final clear',()=>{
   for(let players=1;players<=4;players++){

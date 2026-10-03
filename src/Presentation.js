@@ -24,7 +24,7 @@ export class MonsterSpecialSequence{
   if(blocked){const barrier=document.createElement('div');barrier.className='special-barrier';layer.append(barrier);}
   p.stage('special-windup');this.audio.play(special);await p.wait(compact?250:PresentationTiming.windup);if(p.cancelled){layer.remove();return;}
   p.stage(blocked?'special-block':'special-impact');layer.classList.add(blocked?'blocked':'impact');this.audio.play(blocked?'block':'break');commit();
-  result.textContent=blocked?'특수 공격 방어 성공!':{steal:'제한시간 −15초!',curse:'숫자의 기억이 가려졌습니다',web:`${state.intent.slot+1}P 거미줄에 묶임!`,poison:'중독! · 3턴 지속',shift:'숫자는 그대로 · 위치 재조립',stone:`${state.intent.slot+1}P 석화!`}[special];
-  if(special==='steal')visual.textContent=blocked?'60초를 지켰어요!':'남은 시간 45초';await p.wait(compact?450:PresentationTiming.result);if(!p.cancelled){if(special==='steal'&&!blocked)this.audio.play('laugh');await this.dialogue.show(blocked?monster.dialogues.blocked:null);}layer.remove();
+  result.textContent=blocked?'특수 공격 방어 성공!':{steal:`다음 턴 제한시간 ${state.intent.seconds||45}초!`,curse:'숫자의 기억이 가려졌습니다',web:`${state.intent.slot+1}P 거미줄에 묶임!`,poison:'중독! · 3턴 지속',shift:'숫자는 그대로 · 위치 재조립',stone:`${state.intent.slot+1}P 석화!`}[special];
+  if(['web','stone'].includes(special)&&!blocked){const slots=(state.nextBlockedList||[]).map(b=>`${b.slot+1}P`).join(' · ');result.textContent=slots?`${slots} 행동 봉쇄 · 최소 1명은 행동 가능`:'최소 1명은 행동 가능 · 봉쇄 없음';}if(special==='steal')visual.textContent=blocked?'시간을 지켰어요!':`다음 턴 ${state.intent.seconds||45}초`;await p.wait(compact?450:PresentationTiming.result);if(!p.cancelled){if(special==='steal'&&!blocked)this.audio.play('laugh');await this.dialogue.show(blocked?monster.dialogues.blocked:null);}layer.remove();
  }
 }
