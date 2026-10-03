@@ -1,0 +1,2 @@
+// Display-only translation; combat event identifiers and rules remain untouched.
+export function displayText(value){return String(value).replace(/TOTAL DAMAGE/g,'총 피해').replace(/SPECIAL BLOCKED!/g,'특수 공격 방어 성공!').replace(/SPECIAL BLOCK/g,'특수 공격 방어').replace(/GAME OVER/g,'게임 오버').replace(/BATTLE!/g,'전투 시작!').replace(/TURN (\d+)/g,'$1턴').replace(/SHIELD/g,'방어막').replace(/DAMAGE/g,'피해').replace(/PASS/g,'넘기기');}

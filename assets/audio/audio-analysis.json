@@ -1,0 +1,110 @@
+[
+  {
+    "file": "dungeon-suite.wav",
+    "seconds": 65.45453125,
+    "peak": 0.62,
+    "rms": 0.1408
+  },
+  {
+    "file": "golem-suite.wav",
+    "seconds": 65.45453125,
+    "peak": 0.62,
+    "rms": 0.1408
+  },
+  {
+    "file": "victory.wav",
+    "seconds": 8.0,
+    "peak": 0.6,
+    "rms": 0.1101
+  },
+  {
+    "file": "gameover.wav",
+    "seconds": 8.0,
+    "peak": 0.6,
+    "rms": 0.12
+  },
+  {
+    "file": "sword-swing-1.wav",
+    "seconds": 0.32,
+    "peak": 0.52,
+    "rms": 0.1056
+  },
+  {
+    "file": "sword-impact-1.wav",
+    "seconds": 0.5,
+    "peak": 0.65,
+    "rms": 0.0675
+  },
+  {
+    "file": "sword-swing-2.wav",
+    "seconds": 0.338,
+    "peak": 0.52,
+    "rms": 0.0873
+  },
+  {
+    "file": "sword-impact-2.wav",
+    "seconds": 0.5,
+    "peak": 0.65,
+    "rms": 0.0655
+  },
+  {
+    "file": "sword-swing-3.wav",
+    "seconds": 0.356,
+    "peak": 0.52,
+    "rms": 0.1056
+  },
+  {
+    "file": "sword-impact-3.wav",
+    "seconds": 0.5,
+    "peak": 0.65,
+    "rms": 0.0516
+  },
+  {
+    "file": "scroll-open.wav",
+    "seconds": 0.5,
+    "peak": 0.62,
+    "rms": 0.0594
+  },
+  {
+    "file": "magic-charge.wav",
+    "seconds": 0.85,
+    "peak": 0.62,
+    "rms": 0.1739
+  },
+  {
+    "file": "magic-launch.wav",
+    "seconds": 0.4,
+    "peak": 0.62,
+    "rms": 0.1368
+  },
+  {
+    "file": "fire-explosion.wav",
+    "seconds": 1.1,
+    "peak": 0.7,
+    "rms": 0.0728
+  },
+  {
+    "file": "shield-impact.wav",
+    "seconds": 0.55,
+    "peak": 0.62,
+    "rms": 0.0841
+  },
+  {
+    "file": "shield-break.wav",
+    "seconds": 0.7,
+    "peak": 0.62,
+    "rms": 0.0658
+  },
+  {
+    "file": "special-block.wav",
+    "seconds": 0.9,
+    "peak": 0.62,
+    "rms": 0.1198
+  },
+  {
+    "file": "player-hit.wav",
+    "seconds": 0.4,
+    "peak": 0.62,
+    "rms": 0.0817
+  }
+]

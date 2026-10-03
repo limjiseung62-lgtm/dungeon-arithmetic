@@ -1,0 +1,605 @@
+{
+  "assumptions": "All selected expressions correct; no input timeout or memory errors. Same valid dice generator; ten seeds per policy. Pure defense stops at 80 turns.",
+  "profiles": [
+    {
+      "id": "skeleton",
+      "hp": [
+        100,
+        145,
+        190,
+        230
+      ],
+      "attack": [
+        6,
+        7,
+        8,
+        8
+      ],
+      "attackPattern": [
+        0
+      ],
+      "specials": [
+        "none"
+      ]
+    },
+    {
+      "id": "goblin",
+      "hp": [
+        115,
+        185,
+        250,
+        320
+      ],
+      "attack": [
+        12,
+        20,
+        27,
+        32
+      ],
+      "attackPattern": [
+        0,
+        4,
+        0
+      ],
+      "specials": [
+        "steal",
+        "none",
+        "steal"
+      ]
+    },
+    {
+      "id": "orc",
+      "hp": [
+        145,
+        215,
+        290,
+        370
+      ],
+      "attack": [
+        14,
+        23,
+        31,
+        38
+      ],
+      "attackPattern": [
+        0,
+        6,
+        0,
+        4
+      ],
+      "specials": [
+        "curse",
+        "none",
+        "curse"
+      ]
+    },
+    {
+      "id": "spider",
+      "hp": [
+        125,
+        245,
+        330,
+        380
+      ],
+      "attack": [
+        16,
+        27,
+        36,
+        44
+      ],
+      "attackPattern": [
+        0,
+        6,
+        2,
+        8
+      ],
+      "specials": [
+        "poison",
+        "web"
+      ]
+    },
+    {
+      "id": "golem",
+      "hp": [
+        140,
+        260,
+        350,
+        410
+      ],
+      "attack": [
+        19,
+        31,
+        42,
+        52
+      ],
+      "attackPattern": [
+        0,
+        10,
+        4,
+        12
+      ],
+      "specials": [
+        "shift",
+        "stone"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "players": 1,
+      "policy": "attack-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        8,
+        2
+      ],
+      "meanTotalTurns": 20,
+      "meanRemainingHP": 0,
+      "attackActions": 17,
+      "defenseActions": 0
+    },
+    {
+      "players": 1,
+      "policy": "defense-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanTotalTurns": 80,
+      "meanRemainingHP": 180,
+      "attackActions": 0,
+      "defenseActions": 79
+    },
+    {
+      "players": 1,
+      "policy": "balanced",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        5,
+        5,
+        7,
+        7,
+        7
+      ],
+      "meanTotalTurns": 31,
+      "meanRemainingHP": 107,
+      "attackActions": 18,
+      "defenseActions": 13
+    },
+    {
+      "players": 1,
+      "policy": "one-defense",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanTotalTurns": 80,
+      "meanRemainingHP": 180,
+      "attackActions": 0,
+      "defenseActions": 79
+    },
+    {
+      "players": 1,
+      "policy": "adaptive",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        3,
+        4,
+        6,
+        8
+      ],
+      "meanTotalTurns": 24,
+      "meanRemainingHP": 51,
+      "attackActions": 19,
+      "defenseActions": 5
+    },
+    {
+      "players": 1,
+      "policy": "attack-S",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        8,
+        2
+      ],
+      "meanTotalTurns": 20,
+      "meanRemainingHP": 0,
+      "attackActions": 17,
+      "defenseActions": 0
+    },
+    {
+      "players": 1,
+      "policy": "defense-S",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanTotalTurns": 80,
+      "meanRemainingHP": 180,
+      "attackActions": 0,
+      "defenseActions": 79
+    },
+    {
+      "players": 2,
+      "policy": "attack-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        0
+      ],
+      "meanTotalTurns": 14,
+      "meanRemainingHP": 0,
+      "attackActions": 26,
+      "defenseActions": 0
+    },
+    {
+      "players": 2,
+      "policy": "defense-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanTotalTurns": 80,
+      "meanRemainingHP": 180,
+      "attackActions": 0,
+      "defenseActions": 158
+    },
+    {
+      "players": 2,
+      "policy": "balanced",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        5,
+        7,
+        10,
+        9
+      ],
+      "meanTotalTurns": 34,
+      "meanRemainingHP": 180,
+      "attackActions": 34,
+      "defenseActions": 34
+    },
+    {
+      "players": 2,
+      "policy": "one-defense",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        5,
+        7,
+        10,
+        9
+      ],
+      "meanTotalTurns": 34,
+      "meanRemainingHP": 180,
+      "attackActions": 34,
+      "defenseActions": 34
+    },
+    {
+      "players": 2,
+      "policy": "adaptive",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        2,
+        4,
+        5,
+        9,
+        10
+      ],
+      "meanTotalTurns": 30,
+      "meanRemainingHP": 136,
+      "attackActions": 34,
+      "defenseActions": 25
+    },
+    {
+      "players": 2,
+      "policy": "attack-S",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        5,
+        7,
+        10,
+        9
+      ],
+      "meanTotalTurns": 34,
+      "meanRemainingHP": 155,
+      "attackActions": 34,
+      "defenseActions": 34
+    },
+    {
+      "players": 2,
+      "policy": "defense-S",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        5,
+        7,
+        10,
+        9
+      ],
+      "meanTotalTurns": 34,
+      "meanRemainingHP": 180,
+      "attackActions": 34,
+      "defenseActions": 34
+    },
+    {
+      "players": 3,
+      "policy": "attack-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        1,
+        0
+      ],
+      "meanTotalTurns": 11,
+      "meanRemainingHP": 0,
+      "attackActions": 33,
+      "defenseActions": 0
+    },
+    {
+      "players": 3,
+      "policy": "defense-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanTotalTurns": 80,
+      "meanRemainingHP": 180,
+      "attackActions": 0,
+      "defenseActions": 237
+    },
+    {
+      "players": 3,
+      "policy": "balanced",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        4,
+        5,
+        7,
+        7
+      ],
+      "meanTotalTurns": 26,
+      "meanRemainingHP": 83,
+      "attackActions": 52,
+      "defenseActions": 26
+    },
+    {
+      "players": 3,
+      "policy": "one-defense",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        4,
+        5,
+        7,
+        7
+      ],
+      "meanTotalTurns": 26,
+      "meanRemainingHP": 83,
+      "attackActions": 52,
+      "defenseActions": 26
+    },
+    {
+      "players": 3,
+      "policy": "adaptive",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        3,
+        5,
+        8,
+        10
+      ],
+      "meanTotalTurns": 29,
+      "meanRemainingHP": 174,
+      "attackActions": 49,
+      "defenseActions": 34
+    },
+    {
+      "players": 3,
+      "policy": "attack-S",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        4,
+        5,
+        7,
+        7
+      ],
+      "meanTotalTurns": 26,
+      "meanRemainingHP": 31,
+      "attackActions": 52,
+      "defenseActions": 26
+    },
+    {
+      "players": 3,
+      "policy": "defense-S",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        5,
+        7,
+        10,
+        14,
+        13
+      ],
+      "meanTotalTurns": 49,
+      "meanRemainingHP": 180,
+      "attackActions": 49,
+      "defenseActions": 98
+    },
+    {
+      "players": 4,
+      "policy": "attack-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        3,
+        4,
+        2,
+        0,
+        0
+      ],
+      "meanTotalTurns": 9,
+      "meanRemainingHP": 0,
+      "attackActions": 36,
+      "defenseActions": 0
+    },
+    {
+      "players": 4,
+      "policy": "defense-all",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "meanTotalTurns": 80,
+      "meanRemainingHP": 180,
+      "attackActions": 0,
+      "defenseActions": 316
+    },
+    {
+      "players": 4,
+      "policy": "balanced",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        4,
+        5,
+        7,
+        8,
+        8
+      ],
+      "meanTotalTurns": 32,
+      "meanRemainingHP": 180,
+      "attackActions": 64,
+      "defenseActions": 64
+    },
+    {
+      "players": 4,
+      "policy": "one-defense",
+      "runs": 10,
+      "clears": 0,
+      "turns": [
+        3,
+        4,
+        5,
+        6,
+        5
+      ],
+      "meanTotalTurns": 23,
+      "meanRemainingHP": 0,
+      "attackActions": 69,
+      "defenseActions": 23
+    },
+    {
+      "players": 4,
+      "policy": "adaptive",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "meanTotalTurns": 28,
+      "meanRemainingHP": 156,
+      "attackActions": 66,
+      "defenseActions": 38
+    },
+    {
+      "players": 4,
+      "policy": "attack-S",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        4,
+        5,
+        7,
+        8,
+        8
+      ],
+      "meanTotalTurns": 32,
+      "meanRemainingHP": 180,
+      "attackActions": 64,
+      "defenseActions": 64
+    },
+    {
+      "players": 4,
+      "policy": "defense-S",
+      "runs": 10,
+      "clears": 10,
+      "turns": [
+        4,
+        5,
+        7,
+        8,
+        8
+      ],
+      "meanTotalTurns": 32,
+      "meanRemainingHP": 180,
+      "attackActions": 64,
+      "defenseActions": 64
+    }
+  ]
+}

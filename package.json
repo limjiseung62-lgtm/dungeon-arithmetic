@@ -1,0 +1,17 @@
+{
+  "name": "dungeon-arithmetic",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser-ui.cjs",
+    "test:presentation": "node tests/presentation-browser.cjs",
+    "test:quality": "node tests/quality-browser.cjs",
+    "test:balance": "node tests/balance-browser.cjs",
+    "simulate:balance": "node tests/simulate-balance.mjs",
+    "test:balance:targets": "node tests/balance-targets.cjs",
+    "build": "node build.mjs"
+  }
+}

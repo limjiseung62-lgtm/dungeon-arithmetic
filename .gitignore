@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.cache/
+playwright-report/
+test-results/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netlify/
+.vercel/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

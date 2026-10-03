@@ -1,0 +1,167 @@
+[
+  {
+    "players": 1,
+    "mode": "sequential",
+    "policy": "adaptive",
+    "phase": "clear",
+    "turns": [
+      3,
+      3,
+      4,
+      6,
+      8
+    ],
+    "hp": 51,
+    "shield": 0
+  },
+  {
+    "players": 2,
+    "mode": "sequential",
+    "policy": "adaptive",
+    "phase": "clear",
+    "turns": [
+      2,
+      4,
+      5,
+      9,
+      10
+    ],
+    "hp": 136,
+    "shield": 2
+  },
+  {
+    "players": 3,
+    "mode": "sequential",
+    "policy": "adaptive",
+    "phase": "clear",
+    "turns": [
+      3,
+      3,
+      5,
+      8,
+      10
+    ],
+    "hp": 174,
+    "shield": 0
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "adaptive",
+    "phase": "clear",
+    "turns": [
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "hp": 156,
+    "shield": 0
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "attack-all",
+    "phase": "gameover",
+    "turns": [
+      3,
+      4,
+      2,
+      0,
+      0
+    ],
+    "hp": 0,
+    "shield": 0
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "defense-all",
+    "phase": "playing",
+    "turns": [
+      10,
+      0,
+      0,
+      0,
+      0
+    ],
+    "hp": 180,
+    "shield": 690
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "one-defense",
+    "phase": "gameover",
+    "turns": [
+      3,
+      4,
+      5,
+      6,
+      5
+    ],
+    "hp": 0,
+    "shield": 0
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "attack-S",
+    "phase": "clear",
+    "turns": [
+      4,
+      5,
+      7,
+      8,
+      8
+    ],
+    "hp": 180,
+    "shield": 346
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "defense-S",
+    "phase": "clear",
+    "turns": [
+      4,
+      5,
+      7,
+      8,
+      8
+    ],
+    "hp": 180,
+    "shield": 476
+  },
+  {
+    "players": 4,
+    "mode": "simultaneous",
+    "policy": "adaptive",
+    "phase": "clear",
+    "turns": [
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "hp": 156,
+    "shield": 0
+  },
+  {
+    "players": 4,
+    "mode": "sequential",
+    "policy": "balanced",
+    "phase": "clear",
+    "turns": [
+      4,
+      5,
+      7,
+      8,
+      8
+    ],
+    "hp": 180,
+    "shield": 528
+  }
+]
