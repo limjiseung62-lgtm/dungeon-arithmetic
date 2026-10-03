@@ -28,3 +28,7 @@
 공식 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 연결할 원격은 https://github.com/limjiseung62-lgtm/dungeon-arithmetic.git 입니다. 실제 push·태그 반영·공개 주소 접속 확인은 별도 완료 여부로 보고합니다.
+
+## 원격 저장 확인
+
+2026-10-03: 원격 main의 7503060783c361bcd753795449f89c2dcecf806e가 로컬 v1.0 기준점과 일치함을 확인했습니다. GitHub Actions에서도 npm test와 production build가 통과했습니다. 최초 배포는 Pages 비활성화로 configure-pages 단계에서 멈췄습니다. Pages 설정 완료 후 이 기록 커밋을 push하여 배포를 다시 실행합니다. 공개 주소는 배포 성공 뒤 별도로 확인합니다.
