@@ -1,7 +1,7 @@
 import {plan} from './BalanceStrategies.js';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {createState} from '../src/GameState.js';import {CombatSystem} from '../src/CombatSystem.js';import {MonsterData} from '../src/MonsterData.js';
-const game=(index=0,players=4)=>{const s=createState(players);s.monsterIndex=index;s.monsterHP=MonsterData[index].hp;const c=new CombatSystem(s);c.startTurn();return {s,c};};
+const game=(index=0,players=4)=>{const s=createState(players);s.monsterIndex=index;s.monsterHP=MonsterData[index].hp;const c=new CombatSystem(s,Math.random,()=>.2);c.startTurn();return {s,c};};
 const finish=c=>{c.endTurn();c.resolveAll();};
 const hit=(c,side,grade)=>{const t=c.state.targets.find(t=>t.side===side&&t.grade===grade);return c.submit(t.solution.ids,t.solution.ops);};
 test('attack S consumes shared scroll; defense S blocks special but keeps normal attack',()=>{
@@ -11,7 +11,7 @@ test('attack S consumes shared scroll; defense S blocks special but keeps normal
 test('scroll vanishes after three uses and death has no counterattack',()=>{
   const {s,c}=game(4);s.monsterHP=1000;
   for(let i=0;i<3;i++){hit(c,'attack','S');finish(c);c.startTurn();}
-  assert.equal(s.scrolls.length,0);s.monsterHP=1;const hp=s.hero.hp;hit(c,'attack','C');finish(c);assert.equal(s.phase,'clear');assert.equal(s.hero.hp,hp);assert.equal(s.scrolls.length,1);
+  assert.equal(s.scrolls.length,0);s.monsterHP=1;const hp=s.hero.hp;hit(c,'attack','C');finish(c);assert.equal(s.phase,'clear');assert.equal(s.hero.hp,hp);assert.equal(s.scrolls.length,0);assert.equal(s.lootCandidates.length,3);assert.equal(c.chooseReward(s.lootCandidates[0]),true);assert.equal(s.scrolls.length,1);
 });
 test('goblin steals next turn time; then resets to 60 if blocked',()=>{
   const {s,c}=game(1);finish(c);c.startTurn();assert.equal(s.duration,45);hit(c,'defense','S');finish(c);c.startTurn();assert.equal(s.duration,60);
@@ -31,8 +31,8 @@ test('game over at zero shared HP',()=>{const {s,c}=game();s.hero.hp=1;finish(c)
 test('full campaign for 1 to 4 players, rewards and final clear',()=>{
   for(let players=1;players<=4;players++){
     const {s,c}=game(0,players);let guard=0;
-    while(s.phase!=='clear'&&s.phase!=='gameover'&&guard++<300){
-      if(s.phase==='resolution')c.resolveAll();else if(s.phase==='enemy')c.startTurn();else if(s.phase==='reward')c.nextMonster();
+    while(s.phase!=='clear'&&s.phase!=='gameover'&&guard++<600){
+      if(s.phase==='resolution')c.resolveAll();else if(s.phase==='enemy')c.startTurn();else if(s.phase==='reward'){c.chooseReward(s.lootCandidates.find(id=>id==='fire')||s.lootCandidates.find(id=>['ice','shield','heal'].includes(id))||s.lootCandidates[0]);c.nextMonster();}
       else if(s.phase==='playing'){
         for(const t of plan(s,'adaptive')){if(s.phase!=='playing')break;c.submit(t.solution.ids,t.solution.ops);}
         while(s.phase==='playing')c.pass();

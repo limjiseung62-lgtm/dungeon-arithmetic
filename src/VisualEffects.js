@@ -1,37 +1,38 @@
+import {ScrollData} from './ScrollData.js';
 import {displayText} from './LocalizedText.js';
 export class VisualEffects{
   constructor(sound){this.sound=sound;this.handles=[];}
-  clear(){for(const id of this.handles)clearTimeout(id);this.handles=[];document.querySelectorAll('.effect-layer').forEach(e=>e.remove());const stage=document.querySelector('.battle-stage');if(stage)for(const name of ['sword-strike','sword-recover','monster-hit','monster-lunge','player-hit','guard-hit','reassemble','time-steal'])stage.classList.remove(name);}
+  clear(){for(const id of this.handles)clearTimeout(id);this.handles=[];document.querySelectorAll('.effect-layer').forEach(e=>e.remove());const stage=document.querySelector('.battle-stage');if(stage)for(const name of ['sword-strike','sword-recover','monster-hit','monster-lunge','player-hit','guard-hit','reassemble','time-steal','finisher'])stage.classList.remove(name);}
   show(event){
     this.clear();const stage=document.querySelector('.battle-stage');if(!stage)return;
-    stage.dataset.effect=event.kind;if(!['attack-windup','enemy-windup','magic-launch','enemy'].includes(event.kind))this.sound(event.kind,{grade:event.action?.targetGrade,type:event.type});if(event.kind==='enemy'){if(event.hpDamage)this.sound('enemy');if(event.absorbed)this.sound('collision');if(event.absorbed>0&&event.hpDamage>0)this.sound('break');}
+    stage.dataset.effect=event.kind;stage.dataset.variation=event.variation??0;if(event.grade)stage.dataset.hitGrade=event.grade;stage.dataset.monster=event.monster??0;stage.dataset.intensity=event.intensity??1;stage.classList.toggle('wounded',!!event.wounded);stage.classList.toggle('finisher',!!event.finisher);if(!['attack-windup','enemy-windup','magic-launch','enemy'].includes(event.kind))this.sound(event.kind,{grade:event.action?.targetGrade,type:event.type});if(event.kind==='enemy'){if(event.hpDamage)this.sound('enemy');if(event.absorbed)this.sound('collision');if(event.absorbed>0&&event.hpDamage>0)this.sound('break');}
     const layer=document.createElement('div');layer.className=`effect-layer fx-${event.kind}`;layer.setAttribute('aria-hidden','true');
     const label=document.createElement('div');label.className='cinematic-label';label.textContent=displayText(event.text);
     if(['battle','total','turn-end','block','victory','gameover'].includes(event.kind))layer.append(label);
     if(event.kind==='attack-windup')stage.classList.add('sword-strike');
     if(event.kind==='attack'){
-      stage.classList.add('sword-recover','monster-hit');stage.dataset.hitGrade=event.action.targetGrade;layer.innerHTML='<div class="sword-trail"></div><div class="impact-spark"></div>';
-      const number=document.createElement('div');number.className='damage-number';number.textContent=`${event.action.playerId+1}P · ${event.damage}`;layer.append(number);
+      stage.classList.add('sword-recover','monster-hit');stage.dataset.hitGrade=event.action.targetGrade;layer.dataset.grade=event.action.targetGrade;layer.innerHTML='<div class="sword-trail"></div><div class="impact-spark"></div>';
+      const number=document.createElement('div');number.className='damage-number';number.textContent=`${event.action.playerId+1}P · ${event.damage}`;layer.append(number);if(event.combo){const combo=document.createElement('b');combo.className='combo-counter';combo.textContent=event.combo===1?'첫 타격':`${event.combo}연속 공격`;layer.append(combo);}
     }
     if(event.kind==='scroll-open'){
-      const title={fire:'파이어볼',lightning:'번개',ice:'얼음 마법',heal:'회복 마법'}[event.type];
+      const title=ScrollData[event.type]?.name||'두루마리';layer.classList.add(`spell-${event.type}`);
       layer.innerHTML=`<div class="spell-runes">✧ ⟡ ✦ ⟡ ✧</div><div class="unfurled-scroll"><i></i><div class="rune-seal">✧</div><b>${title}</b><span>스크롤 발동!</span><i></i></div>`;
     }
     if(event.kind==='magic-launch'){layer.classList.add(`spell-${event.type}`);layer.innerHTML='<div class="magic-projectile"></div>'; }
     if(event.kind==='magic'){
-      stage.classList.add('monster-hit');layer.classList.add(`spell-${event.type}`);
+      if(event.damage)stage.classList.add('monster-hit');layer.classList.add(`spell-${event.type}`);
       layer.innerHTML='<div class="magic-projectile"></div><div class="magic-explosion"></div><div class="magic-ring"></div>';
-      const number=document.createElement('div');number.className='damage-number magic-number';number.textContent=event.damage?`피해 ${event.damage}`:`HP +${event.heal}`;layer.append(number);
+      const number=document.createElement('div');number.className='damage-number magic-number';number.textContent=event.damage?`${event.hits>1?'번개 3회 · ':''}피해 ${event.damage}`:event.type==='heal'?`HP +${event.heal}`:event.shieldGain?`방어막 +${event.shieldGain}`:event.type==='cleanse'?'상태이상 정화!':'이번 적의 행동 억제!';layer.append(number);if(event.combo){const combo=document.createElement('b');combo.className='combo-counter';combo.textContent=event.combo===1?'첫 타격':`${event.combo}연속 공격`;layer.append(combo);}
     }
-    if(event.kind==='defense'||event.kind==='barrier')layer.innerHTML=`<div class="first-person-barrier"></div><div class="shield-caption">${event.kind==='defense'?`방어막 +${event.shieldGain}`:'특수 공격 방어 준비!'}</div>`;
+    if(event.kind==='defense'||event.kind==='barrier'){layer.dataset.grade=event.grade||event.action?.targetGrade||'S';}if(event.kind==='defense'||event.kind==='barrier')layer.innerHTML=`<div class="first-person-barrier"></div><div class="shield-caption">${event.kind==='defense'?`방어막 +${event.shieldGain}`:'특수 공격 방어 준비!'}</div>`;
     if(event.kind==='block'){
       layer.insertAdjacentHTML('afterbegin','<div class="first-person-barrier"></div><div class="broken-special">✦</div>');
     }
     if(event.kind==='enemy'){
-      stage.classList.add('monster-lunge');
+      if(!event.suppressed)stage.classList.add('monster-lunge');
       if(event.absorbed>0){stage.classList.add('guard-hit');layer.innerHTML='<div class="first-person-barrier collision"></div><div class="guard-impact"></div>';}
       if(event.hpDamage>0){stage.classList.add('player-hit');layer.insertAdjacentHTML('beforeend','<div class="hurt-vignette"></div>');}
-      const caption=document.createElement('div');caption.className='shield-caption';caption.textContent=event.hpDamage>0?`${event.absorbed>0?"방어막 파괴! · ":""}HP −${event.hpDamage} · 방어막 흡수 ${event.absorbed}`:`완벽 방어! 방어막 −${event.absorbed}`;layer.append(caption);
+      const caption=document.createElement('div');caption.className='shield-caption';caption.textContent=event.suppressed?'시간정지 · 이번 반격 없음':event.hpDamage>0?`${event.absorbed>0?"방어막 파괴! · ":""}HP −${event.hpDamage} · 방어막 흡수 ${event.absorbed}`:`완벽 방어! 방어막 −${event.absorbed}`;layer.append(caption);
     }
     if(event.kind==='shift')stage.classList.add('reassemble');
     if(event.kind==='steal')stage.classList.add('time-steal');
@@ -41,7 +42,7 @@ export class VisualEffects{
       else if(event.absorbed>0)layer.insertAdjacentHTML('beforeend','<div class="first-person-barrier collision"></div>');
     }
     if(['curse','web','stone','steal','poison','shift'].includes(event.kind)){label.className='special-caption';layer.append(label);}
-    stage.append(layer);
+    if(event.kind==='enemy'&&!event.suppressed){const gesture=document.createElement('div');gesture.className='enemy-gesture';gesture.textContent=[['검 베기','내려치기','찌르기'],['단검 베기','점프 공격','기습 돌진'],['지팡이 타격','마법탄','충격파'],['앞발 공격','돌진','물기'],['주먹 내려치기','양손 충격','지면 강타']][event.monster??0][event.variation??0];layer.append(gesture);}stage.append(layer);
     this.handles.push(setTimeout(()=>this.clear(),2200));
   }
 }

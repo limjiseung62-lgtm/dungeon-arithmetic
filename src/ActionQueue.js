@@ -20,5 +20,5 @@ export function actionLabel(action){
   if(action.actionType==='attack')return `⚔ 검 공격 +${action.baseDamage}`;
   if(action.actionType==='defense')return `🛡 ${action.targetGrade==='S'?'강력한 ':''}방어막 +${action.shieldGain}`;
   if(action.actionType==='block')return '✨ 특수 공격 방어';
-  return `${action.icon} ${action.name} ${action.damage?`+${action.damage}`:`HP +${action.heal}`}`;
+  return action.skipped?'📜 이번에는 아껴두기':`${action.icon} ${action.name} · 사용할 때 선택`;
 }

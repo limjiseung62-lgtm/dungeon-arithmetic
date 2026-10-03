@@ -12,7 +12,7 @@ export function plan(s,policy){const n=s.actionsDone.filter(x=>!x).length;if(!n)
  if(policy==='balanced')return priority(n===1&&s.players===1?(s.enemyTurn%2===0?def:atk):[...def.slice(0,Math.max(1,Math.floor(n/2))),...atk]);
  if(policy==='attack-S')return priority([atk[0],def[0],atk[1],def[1]]);
  if(policy==='defense-S')return priority([def[0],atk[0],def[1],atk[1]]);
- if(s.players===1){const attack=target(s,'attack','S'),e=estimate(s,[attack]);if(e.damage>=s.monsterHP)return [attack];if(['web','stone'].includes(s.intent.special)||s.hero.hp<Math.max(50,s.intent.attack*2))return [target(s,'defense','S')];return [attack];}
+ if(s.players===1){const attack=target(s,'attack','S'),e=estimate(s,[attack]);if(e.damage>=s.monsterHP)return [attack];if(['web','stone'].includes(s.intent.special)||(s.hero.hp<Math.max(50,s.intent.attack*2)&&s.hero.shield<s.intent.attack))return [target(s,'defense','S')];return [attack];}
  const available=s.targets.filter(t=>!t.used);let best=[],bestScore=-Infinity;
  for(let mask=1;mask<1<<available.length;mask++){const list=available.filter((_,i)=>mask>>i&1);if(list.length>n)continue;const e=estimate(s,list);const specialCost=e.blocked?0:({none:0,steal:12,curse:17,poison:12,web:23,shift:10,stone:26}[s.intent.special]);let score;
  if(e.damage>=s.monsterHP)score=10000-list.length*5-(list.some(t=>t.side==='attack'&&t.grade==='S')?1:0);
@@ -23,11 +23,11 @@ export function plan(s,policy){const n=s.actionsDone.filter(x=>!x).length;if(!n)
 }
 
 export function simulate(players,policy,seed=1,{isolated=null,maxTurns=80,mode='sequential'}={}){
- let value=seed;const rng=()=>{value=(value*1664525+1013904223)>>>0;return value/2**32;};const s=createState(players,mode),c=new CombatSystem(s,rng);if(isolated!==null){s.monsterIndex=isolated;s.monsterHP=MonsterData[isolated].hp;}
+ let value=seed;const rng=()=>{value=(value*1664525+1013904223)>>>0;return value/2**32;};const s=createState(players,mode),c=new CombatSystem(s,rng,rng);if(isolated!==null){s.monsterIndex=isolated;s.monsterHP=MonsterData[isolated].hp;}
  const turns=Array(5).fill(0);let attackActions=0,defenseActions=0,guard=0;
  while(!['clear','gameover'].includes(s.phase)&&s.stats.turns<maxTurns&&guard++<1000){
  if(s.phase==='ready'||s.phase==='enemy'){c.startTurn();turns[s.monsterIndex]++;}
- else if(s.phase==='reward'){if(isolated!==null)break;c.nextMonster();turns[s.monsterIndex]++;}
+ else if(s.phase==='reward'){if(isolated!==null)break;const type=s.lootCandidates.find(id=>id==='fire')||s.lootCandidates.find(id=>['ice','shield','heal'].includes(id))||s.lootCandidates[0];c.chooseReward(type);c.nextMonster();turns[s.monsterIndex]++;}
  else if(s.phase==='playing'){const list=plan(s,policy);for(const t of list){if(s.phase!=='playing')break;if(t.side==='attack')attackActions++;else defenseActions++;c.submit(t.solution.ids,t.solution.ops);}while(s.phase==='playing')c.pass();}
  else if(s.phase==='resolution')c.resolveAll();
  }

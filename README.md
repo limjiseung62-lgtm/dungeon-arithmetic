@@ -1,34 +1,27 @@
-# 던전탈출 사칙연산
+# 던전탈출 사칙연산 v1.1
 
-초등학생이 사칙연산을 활용해 몬스터와 싸우는 협력형 던전 RPG 수학 게임.
+초등학생이 세 개의 주사위를 사칙연산으로 조합해 몬스터와 싸우는 1~4인 로컬 협동 수학 RPG입니다. 태블릿 순차 입력과 전자칠판 동시 입력을 지원합니다.
 
-## 플레이 방식
+## v1.1 변화
 
-- 1~4인 로컬 협동
-- 태블릿 순차 플레이 / 전자칠판 동시 플레이
-- 주사위 3개의 숫자를 왼쪽부터 계산하는 사칙연산으로 조합
-- 공격·방어 S/A/B/C 목표를 선택하고 행동 예약 후 일괄 전투
-- 스크롤과 특수능력 차단을 활용한 5종 몬스터 공략
-- HP는 던전 전체에서 유지하며 다음 몬스터 시작 시 방어막은 0
+검격 4종과 몬스터별 반격 3종, 등급별 템포, 연속 공격 표시, 마지막 일격, 반복 특수기 축약 연출을 추가했습니다. 콤보는 연출이며 추가 피해를 주지 않습니다.
 
-## 현재 버전
+공격 S는 A급 기본 검격 뒤 팀 공용 두루마리를 선택하거나 아껴둘 수 있습니다. 선택·연출 중 계산 시간은 멈춥니다. 처치 가능한 검격이면 미사용 두루마리는 소비하지 않습니다.
 
-v1.0 테스트 버전. 서버·계정 없이 실행하는 정적 웹 게임입니다. 기존 연출·음원·한국어 UI를 유지합니다.
+화염구·얼음창·마법방패·치유·연쇄번개·정화·운석·시간정지의 8종이 있습니다. 처치 후 랜덤 전리품 세 후보 중 하나를 고릅니다. 희귀도는 일반/고급/희귀/영웅이며 역할이 서로 다릅니다. 상세 수치와 한계는 CHANGELOG-v1.1.md를 참고하세요.
 
-## 실행과 검증
+HP는 던전 전체에서 유지하고 다음 몬스터에서 방어막은 0입니다. 좌→우 계산, 목표 생성, 공격/방어 등급 수치, 기존 몬스터 수치와 입력 모드를 유지합니다.
 
-Node.js 18 이상에서 START.cmd 또는 npm start를 실행합니다.
+## 실행과 검사
 
-npm test: 자동 검사. npm run build: 배포용 dist 생성.
+Node.js 18 이상에서 START.cmd 또는 npm start. npm run build는 정적 배포 파일을 dist에 만듭니다.
 
-서버 실행 후 npm run test:browser, npm run test:quality로 브라우저 검사를 실행할 수 있습니다. 브라우저 검사는 Playwright와 Edge가 필요합니다.
+npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:presentation, npm run test:quality, npm run test:update로 Edge/Playwright 검사를 실행합니다.
 
-## 배포
+?debug=1은 개발자 전용 테스트 패널입니다. 일반 주소에는 패널과 개발 API가 없습니다.
+
+## 저장과 배포
 
 GitHub 저장소: https://github.com/limjiseung62-lgtm/dungeon-arithmetic
 
-GitHub Pages 설정 후 main에 push하면 테스트·빌드·배포를 자동 실행하도록 .github/workflows/pages.yml을 준비했습니다. 상세 연결 단계와 검증 상태는 RELEASE-v1.0.md를 참고하세요.
-
-최신 버전 반영: git add . && git commit -m "Update game" && git push origin main
-
-v1.0 기준점: git switch --detach v1.0 (변경 파일을 먼저 저장한 뒤 실행).
+main push → 자동 테스트/production build → GitHub Pages의 같은 주소 업데이트. v1.0 태그는 기존 정상 버전 복구 지점입니다. v1.1 로컬 작업은 update/v1.1 브랜치에서 진행했습니다.

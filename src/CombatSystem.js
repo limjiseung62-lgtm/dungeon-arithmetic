@@ -1,15 +1,16 @@
 import {encounterStats} from './BalanceSystem.js';
 import {GameConfig as config} from './GameConfig.js';
+import {ScrollData} from './ScrollData.js';
 import {MonsterData} from './MonsterData.js';
 import {generateTurn} from './TargetGenerator.js';
 import {evaluate} from './ExpressionEngine.js';
 import {takeDamage} from './DefenseSystem.js';
-import {useScroll,rewardScroll} from './ScrollSystem.js';
+import {useScroll,rewardScroll,generateLoot} from './ScrollSystem.js';
 import {tickPoison} from './StatusEffectSystem.js';
 import {nextIntent,SpecialNames} from './MonsterAI.js';
 import {reserveAction} from './ActionQueue.js';
 export class CombatSystem{
-  constructor(state,rng=Math.random){this.state=state;this.rng=rng;}
+  constructor(state,rng=Math.random,lootRng=Math.random){this.state=state;this.rng=rng;this.lootRng=lootRng;}
   emit(kind,text,extra={}){const event={kind,text,...extra};this.state.events.push(event);return event;}
   startTurn(){
     const s=this.state;if(!['ready','enemy'].includes(s.phase))return false;
@@ -17,7 +18,7 @@ export class CombatSystem{
     const generated=generateTurn(this.rng,s.targets.map(t=>t.value));
     s.dice=generated.dice;s.targets=generated.targets;s.turn++;s.stats.turns++;s.enemyTurn++;
     s.duration=s.stolen?config.stolenSeconds:config.turnSeconds;s.seconds=s.duration;s.elapsed=0;s.stolen=false;
-    s.specialBlocked=false;s.blockReserved=false;s.curse=false;s.shifted=false;s.blocked=s.nextBlocked;s.nextBlocked=null;
+    s.scrollStop=false;s.scrollWeaken=0;s.specialBlocked=false;s.blockReserved=false;s.curse=false;s.shifted=false;s.blocked=s.nextBlocked;s.nextBlocked=null;
     s.actionQueue=[];s.actionsDone=Array(s.players).fill(false);s.resolutionIndex=0;s.totalDamage=0;s.resolutionStage=null;
     if(s.blocked)s.actionsDone[s.blocked.slot]=true;
     s.player=s.actionsDone.findIndex(done=>!done);s.intent=nextIntent(s);s.phase='playing';
@@ -64,6 +65,7 @@ export class CombatSystem{
   }
   applySpecial(force=false){
     const s=this.state,sp=s.intent.special;
+    if(!force&&s.scrollStop)return this.emit('block','시간정지 · 특수 행동 억제',{special:sp});
     if(!force&&s.specialBlocked){if(sp!=='none'){s.stats.blocks++;return this.emit('block','SPECIAL BLOCKED!',{special:sp});}return this.emit('special-none','특수능력 없음');}
     if(sp==='steal')s.stolen=true;
     if(sp==='poison')s.hero.poison=config.poisonTurns;
@@ -85,7 +87,7 @@ export class CombatSystem{
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:action.baseDamage,action});
         }else if(action.actionType==='scroll'){
           const before=s.monsterHP,scroll=useScroll(s,action.scrollSlot);s.totalDamage+=before-s.monsterHP;
-          event=this.emit('magic',`${action.icon} ${action.name} 발동!`,{type:action.scrollEffect,damage:scroll?.damage||0,heal:scroll?.heal||0,action});
+          event=this.emit('magic',`${action.icon} ${action.name} 발동!`,{type:action.scrollEffect,damage:scroll?.damage||0,heal:scroll?.heal||0,shieldGain:scroll?.shield||0,hits:scroll?.hits||1,action});
         }else if(action.actionType==='defense'){
           s.hero.shield+=action.shieldGain;s.stats.defense[action.targetGrade]++;
           event=this.emit('defense',`${action.playerId+1}P SHIELD +${action.shieldGain}`,{shieldGain:action.shieldGain,action});
@@ -104,8 +106,8 @@ export class CombatSystem{
     if(s.resolutionStage==='victory'){this.win();return s.events.at(-1);}
     if(s.resolutionStage==='special'){s.resolutionStage='enemy';return this.applySpecial();}
     if(s.resolutionStage==='enemy'){
-      s.resolutionStage='status';const damage=takeDamage(s,s.intent.attack);
-      return this.emit('enemy',`적의 공격 ${s.intent.attack} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,damage);
+      s.resolutionStage='status';const incoming=s.scrollStop?0:Math.round(s.intent.attack*(1-(s.scrollWeaken||0)));const damage=takeDamage(s,incoming);
+      return this.emit('enemy',`적의 공격 ${incoming} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,{...damage,attack:incoming,suppressed:!!s.scrollStop});
     }
     if(s.resolutionStage==='status'){
       s.resolutionStage='end';const poison=tickPoison(s);
@@ -120,11 +122,14 @@ export class CombatSystem{
   resolveAll(){let guard=0;while(this.state.phase==='resolution'&&guard++<50)this.resolveNext();if(guard>=50)throw new Error('전투 해결 반복 오류');}
   win(){
     const s=this.state;if(s.phase==='reward'||s.phase==='clear')return;
-    rewardScroll(s,MonsterData[s.monsterIndex].reward);
+    s.lootCandidates=generateLoot(s,this.lootRng);s.lootChosen=false;
     s.phase=s.monsterIndex===MonsterData.length-1?'clear':'reward';this.emit('victory',`${MonsterData[s.monsterIndex].name} 격파!`);
   }
+  chooseReward(type){const s=this.state;if(!['reward','clear'].includes(s.phase)||s.lootChosen||!s.lootCandidates?.includes(type))return false;rewardScroll(s,type);s.lootChosen=true;s.lootAcquired=type;return true;}
+  chooseScroll(action,index){if(!action||action.status!=='pending'||action.actionType!=='scroll')return false;if(index===null){action.status='cancelled';action.skipped=true;return true;}const slot=this.state.scrolls[index];if(!slot||slot.uses<1)return false;Object.assign(action,{scrollSlot:slot,scrollEffect:slot.type,...ScrollData[slot.type]});return true;}
   nextMonster(){
     const s=this.state;if(s.phase!=='reward')return;
+    if(!s.lootChosen&&s.lootCandidates?.length)this.chooseReward(s.lootCandidates[0]);
     s.monsterIndex++;s.monsterMaxHP=encounterStats(s.monsterIndex,s.players).hp;s.monsterHP=s.monsterMaxHP;s.enemyTurn=0;
     s.hero.shield=0;s.blocked=null;s.nextBlocked=null;s.stolen=false;s.curse=false;s.phase='ready';this.startTurn();
   }
