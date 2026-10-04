@@ -1,0 +1,35 @@
+[
+  {
+    "id": "golem_core_shield",
+    "source": "C:/Users/사용자/.codex/generated_images/01a0ff8e-6c5c-7e51-8989-0b476ea54593/exec-f9a6fe30-4b5f-4f08-ae6d-86a1f248f58b.png",
+    "target": "assets/collection-v28/golem_core_shield.webp",
+    "width": 640,
+    "height": 640,
+    "bytes": 114680,
+    "alpha": true,
+    "transparentFraction": 0.5029296875,
+    "mode": "built-in imagegen, individual original transparent asset; resize/encode only"
+  },
+  {
+    "id": "life_seed",
+    "source": "C:/Users/사용자/.codex/generated_images/01a0ff8e-6c5c-7e51-8989-0b476ea54593/exec-b85b584e-8905-4782-b04d-0f34350ab481.png",
+    "target": "assets/collection-v28/life_seed.webp",
+    "width": 640,
+    "height": 640,
+    "bytes": 119880,
+    "alpha": true,
+    "transparentFraction": 0.616708984375,
+    "mode": "built-in imagegen, individual original transparent asset; resize/encode only"
+  },
+  {
+    "id": "flame_greatsword",
+    "source": "C:/Users/사용자/.codex/generated_images/01a0ff8e-6c5c-7e51-8989-0b476ea54593/exec-ca2aa832-d563-4b57-8e14-e5c545ab3535.png",
+    "target": "assets/collection-v28/flame_greatsword.webp",
+    "width": 640,
+    "height": 640,
+    "bytes": 79138,
+    "alpha": true,
+    "transparentFraction": 0.7950439453125,
+    "mode": "built-in imagegen, individual original transparent asset; resize/encode only"
+  }
+]

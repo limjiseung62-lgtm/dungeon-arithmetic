@@ -11,6 +11,7 @@ export const ArtManifest = {
  mine:{src:'assets/mine-v26/mine.webp',alt:'불타는 광산'},
  forest:{src:'assets/forest-v22.webp',alt:'저주받은 숲'},
 };
+for(const id of ['golem_core_shield','life_seed','flame_greatsword'])ArtManifest[id]={src:'assets/collection-v28/'+id+'.webp',alt:id,columns:1,index:0,thumb:'assets/collection-v28/'+id+'.webp'};
 export const AssetPaths={fireImp:'assets/mine-v26/fireImp.webp',lavaMiner:'assets/mine-v26/lavaMiner.webp',fireScorpion:'assets/mine-v26/fireScorpion.webp',magmaGuard:'assets/mine-v26/magmaGuard.webp',flameGiant:'assets/mine-v26/flameGiant.webp',dungeon:'assets/dungeon-v2.png',skeleton:'assets/skeleton-v2.png',goblin:'assets/goblin-v2.png',orc:'assets/orc-v2.png',spider:'assets/spider-v2.png',golem:'assets/golem-v2.png',vineSlime:'assets/vineSlime-v22.webp',shadowWolf:'assets/shadowWolf-v22.webp',mushroomSpirit:'assets/mushroomSpirit-v22.webp',forestSpirit:'assets/forestSpirit-v22.webp',treeGuardian:'assets/treeGuardian-v22.webp'};
 for(const [id,src]of Object.entries(AssetPaths))ArtManifest[id]={src,alt:id};
 for(const id of ['rowen','bram','sera','luna','kain','elia'])ArtManifest[id]={src:`assets/mercenaries/${id}.webp`,alt:id};
@@ -29,7 +30,7 @@ export function artHTML(id,{className='',label='',eager=false,full=false,deferFu
  const alt=label||a.alt;
  if(a.columns){const n=a.columns,x=a.index%n,y=Math.floor(a.index/n);
  return `<svg class="relic-art ${className}" data-art="${id}" viewBox="0 0 100 100" role="img" aria-label="${alt}"><title>${alt}</title><svg viewBox="${x*100} ${y*100} 100 100" x="0" y="0" width="100" height="100" overflow="hidden"><image href="${full&&!deferFull?a.src:a.thumb}" ${deferFull?`data-full-src="${a.src}"`:''} width="${n*100}" height="${n*100}" preserveAspectRatio="none"/></svg></svg>`;}
- return `<img class="environment-art ${className}" data-art="${id}" src="${a.src}" alt="${alt}" width="${id==='hero'?667:1600}" height="${id==='hero'?1000:900}" loading="${eager?'eager':'lazy'}" decoding="async" draggable="false">`;
+ return `<img class="environment-art ${className}" role="img" data-art="${id}" src="${a.src}" alt="${alt}" width="${id==='hero'?667:1600}" height="${id==='hero'?1000:900}" loading="${eager?'eager':'lazy'}" decoding="async" draggable="false">`;
 }
 export function installArtTheme(){
  if(typeof document==='undefined')return;

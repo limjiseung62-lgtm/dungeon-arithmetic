@@ -172,6 +172,9 @@ function handleRPGAction(action,button=null){switch(action){
  case 'rpg-opening-next':rpgScreen('rpg-opening:'+Math.min(2,Number(screen.split(':')[1])+1),rpgNotice);break;
  case 'rpg-opening-skip':rpg.finishOpening();rpgScreen('rpg-town',rpg.saveInfo.ok?'':rpg.saveInfo.message);break;
  case 'rpg-opening-replay':rpgScreen('rpg-opening:0');break;
+ case 'rpg-collection':rpgScreen('rpg-collection');break;
+ case 'rpg-collection-claim':rpgScreen('rpg-collection',rpg.claimCollection(button.dataset.reward).message);break;
+ case 'rpg-deep-start':if(rpg.enterDungeon('old-prison','deep'))startRPGBattle('old-prison');break;
  case 'rpg-records':rpgScreen('rpg-records');break;
  case 'rpg-new':rpgScreen('rpg-reset');break;
  case 'rpg-reset-confirm':rpgNameDraft='';rpgScreen('rpg-create');break;

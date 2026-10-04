@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -24,6 +24,11 @@
     "test:mine": "node tests/mine-browser.cjs",
     "test:story": "node tests/story-browser.cjs",
     "test:boss": "node tests/boss-browser.cjs",
-    "test:boss:regression": "node tests/boss-regression-run.cjs"
+    "test:boss:regression": "node tests/boss-regression-run.cjs",
+    "test:collection": "node tests/collection-browser.cjs",
+    "test:collection:effects": "node tests/collection-effects-browser.cjs",
+    "test:collection:regression": "node tests/collection-regression-run.cjs",
+    "test:collection:balance": "node tests/collection-balance.mjs",
+    "test:collection:invariants": "node tests/collection-invariants.mjs"
   }
 }

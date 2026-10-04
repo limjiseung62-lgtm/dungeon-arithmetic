@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "base": "v2.7",
+  "unchangedCoreFiles": [
+    "src/RPGConfig.js",
+    "src/CombatSystem.js",
+    "src/ActionQueue.js",
+    "src/DefenseSystem.js",
+    "src/BossBattleData.js",
+    "src/BossBattleSystem.js",
+    "src/BossCheckpoint.js",
+    "src/BalanceSystem.js",
+    "src/MonsterData.js",
+    "src/ForestMonsterData.js",
+    "src/MineMonsterData.js",
+    "src/EncounterData.js",
+    "src/MercenarySystem.js",
+    "src/MercenaryData.js",
+    "src/LootData.js",
+    "src/ExpressionEngine.js",
+    "src/TargetGenerator.js"
+  ],
+  "unchangedOriginalEquipment": 12,
+  "unchangedAssets": 72,
+  "allOldUnitTestFilesPreserved": 21,
+  "tagsBeforeV28": [
+    {
+      "ref": "refs/tags/v1.0",
+      "object": "9a2a79973bed392e8345c60579cd6fe028a423f3"
+    },
+    {
+      "ref": "refs/tags/v1.1",
+      "object": "2b9decb9ae9a8d569b17689b885bf27f1c5139c5"
+    },
+    {
+      "ref": "refs/tags/v1.2",
+      "object": "0bbdd25ebba3a3a1b0c20365cbbbe2b0f57d8a7f"
+    },
+    {
+      "ref": "refs/tags/v2.0",
+      "object": "01a880fb83b5301ab8f24e99bf3a736a2df6e786"
+    },
+    {
+      "ref": "refs/tags/v2.1",
+      "object": "aa9f2936ba3ccf776d200c7771b0a883fee00791"
+    },
+    {
+      "ref": "refs/tags/v2.2",
+      "object": "e4d01de4d1351789fb78b09c83d651c308375fca"
+    },
+    {
+      "ref": "refs/tags/v2.3",
+      "object": "5da49d299385e7e193d2e284d122750c6f12fd1a"
+    },
+    {
+      "ref": "refs/tags/v2.4",
+      "object": "849659de4bef50250e1151f806ea871b5b641c4a"
+    },
+    {
+      "ref": "refs/tags/v2.5",
+      "object": "d3cd25b644a87236e10e265eca9ecff4f0a6024e"
+    },
+    {
+      "ref": "refs/tags/v2.6",
+      "object": "daecacd3d98cde9e68d494b8f95c6395a9eef898"
+    },
+    {
+      "ref": "refs/tags/v2.7",
+      "object": "97317948c26b2fb49d59f52fc69fe7ad12d1b443"
+    }
+  ],
+  "dropChance": 0.25,
+  "pityReplayLimit": 4,
+  "root": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg"
+}

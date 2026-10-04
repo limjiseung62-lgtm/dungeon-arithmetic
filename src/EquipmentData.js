@@ -13,4 +13,9 @@ export const EquipmentData=[
  {id:'guardian_charm',name:'수호자의 부적',type:'accessory',rarity:'RARE',buyPrice:400,sellPrice:200,icon:'🔰',description:'A/S 방어막 강화',statModifiers:{},specialEffects:{effectType:'DEFENSE_GRADE_BONUS',trigger:['A','S'],value:2}},
  {id:'sage_ring',name:'현자의 반지',type:'accessory',rarity:'EPIC',buyPrice:620,sellPrice:310,icon:'💠',description:'S 스크롤 강화',statModifiers:{},specialEffects:{effectType:'SCROLL_POWER_BONUS',trigger:'S',value:3}}
 ];
+EquipmentData.push(
+ {id:'golem_core_shield',name:'골렘의 핵 방패',type:'armor',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'방어력 +3 · A/S 방어막 +3 · 특수기 차단은 방어 S만 가능',statModifiers:{defense:3},specialEffects:{effectType:'DEFENSE_GRADE_BONUS',trigger:['A','S'],value:3}},
+ {id:'life_seed',name:'생명의 씨앗',type:'accessory',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'최대 HP +10 · 전투 승리 후 HP 4 회복',statModifiers:{maxHP:10},specialEffects:{effectType:'VICTORY_HEAL',trigger:'VICTORY',value:4}},
+ {id:'flame_greatsword',name:'화염 거인의 대검',type:'weapon',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'공격력 +3 · A/S 공격 성공 시 화염 추가 피해 +2',statModifiers:{attack:3},specialEffects:{effectType:'ATTACK_GRADE_BONUS',trigger:['A','S'],value:2}}
+);
 export const equipmentById=id=>EquipmentData.find(item=>item.id===id)||null;

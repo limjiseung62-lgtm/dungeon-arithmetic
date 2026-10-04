@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import assert from 'node:assert/strict';
+const regression=JSON.parse(fs.readFileSync('REGRESSION-RESULTS-v2.8.json','utf8'));
+assert.equal(regression.length,17);assert.ok(regression.every(r=>r.status===0));
+for(const file of ['COLLECTION-BROWSER-RESULTS-v2.8.json','COLLECTION-EFFECTS-BROWSER-v2.8.json','COLLECTION-BALANCE-v2.8.json'])assert.equal(JSON.parse(fs.readFileSync(file,'utf8')).passed,true,file);
+const units=execFileSync(process.execPath,['--test',...fs.readdirSync('tests').filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f)],{encoding:'utf8',maxBuffer:8*1024*1024});
+fs.writeFileSync('UNIT-v2.8.txt',units);assert.match(units,/tests 412/);assert.match(units,/pass 412/);assert.match(units,/fail 0/);
+const build=execFileSync(process.execPath,['build.mjs'],{encoding:'utf8'});assert.match(build,/Production static build/);
+execFileSync(process.execPath,['tests/collection-invariants.mjs'],{stdio:'pipe'});
+fs.writeFileSync('COLLECTION-VERIFICATION-v2.8.json',JSON.stringify({passed:true,unitTests:412,originalUnitTests:359,newUnitTests:53,browserSuites:19,originalBrowserSuites:17,newBrowserSuites:2,build:true,invariants:true,sourceOnly:true,remotePush:false,publicDeployment:false},null,2));
+console.log('PASS release gate: 412 unit tests / 19 browser suites / production build / core and assets preserved');

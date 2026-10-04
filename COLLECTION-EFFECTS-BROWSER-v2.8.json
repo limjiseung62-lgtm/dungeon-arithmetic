@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "boss": "golem",
+      "probabilityAcquisition": true,
+      "realGrade": "A"
+    },
+    {
+      "boss": "treeGuardian",
+      "probabilityAcquisition": true,
+      "realGrade": "A"
+    },
+    {
+      "boss": "flameGiant",
+      "probabilityAcquisition": true,
+      "realGrade": "A"
+    }
+  ],
+  "realGreatswordDamage": 37,
+  "realSeedHeal": 4,
+  "realShieldA": 29,
+  "realShieldS": 29,
+  "onlyDefenseSBlocksSpecial": true,
+  "realCollectionQuestReport": true,
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unitTests": 412,
+  "originalUnitTests": 359,
+  "newUnitTests": 53,
+  "browserSuites": 19,
+  "originalBrowserSuites": 17,
+  "newBrowserSuites": 2,
+  "build": true,
+  "invariants": true,
+  "sourceOnly": true,
+  "remotePush": false,
+  "publicDeployment": false
+}

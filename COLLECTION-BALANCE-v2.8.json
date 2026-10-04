@@ -1,0 +1,587 @@
+{
+  "passed": true,
+  "deep": [
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 3,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        8,
+        10,
+        11
+      ],
+      "totalTurns": 29,
+      "specials": {
+        "poison": 3,
+        "steal": 6,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 3,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        8,
+        10,
+        11
+      ],
+      "totalTurns": 29,
+      "specials": {
+        "poison": 3,
+        "steal": 6,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 3,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        8,
+        10,
+        11
+      ],
+      "totalTurns": 29,
+      "specials": {
+        "poison": 3,
+        "steal": 6,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 3,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 65,
+      "turns": [
+        4,
+        10,
+        12
+      ],
+      "totalTurns": 26,
+      "specials": {
+        "block": 8,
+        "steal": 5,
+        "web": 2,
+        "groundSmash": 1,
+        "stone": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 3,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 120,
+      "turns": [
+        4,
+        7,
+        8
+      ],
+      "totalTurns": 19,
+      "specials": {
+        "block": 4,
+        "steal": 4,
+        "web": 1,
+        "poison": 1,
+        "groundSmash": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 3,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 92,
+      "turns": [
+        4,
+        7,
+        12
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 7,
+        "steal": 4,
+        "web": 1,
+        "stone": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 9,
+      "turns": [
+        8,
+        10,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "poison": 3,
+        "steal": 6,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 9,
+      "turns": [
+        8,
+        10,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "poison": 3,
+        "steal": 6,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 9,
+      "turns": [
+        8,
+        10,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "poison": 3,
+        "steal": 6,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 81,
+      "turns": [
+        4,
+        10,
+        10
+      ],
+      "totalTurns": 24,
+      "specials": {
+        "block": 8,
+        "steal": 5,
+        "web": 2,
+        "groundSmash": 1,
+        "stone": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        4,
+        7,
+        8
+      ],
+      "totalTurns": 19,
+      "specials": {
+        "block": 4,
+        "steal": 4,
+        "web": 1,
+        "poison": 1,
+        "groundSmash": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 94,
+      "turns": [
+        4,
+        6,
+        8
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 4,
+        "steal": 3,
+        "web": 1,
+        "groundSmash": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 6,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 41,
+      "turns": [
+        6,
+        9,
+        10
+      ],
+      "totalTurns": 25,
+      "specials": {
+        "poison": 3,
+        "steal": 5,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 4
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 6,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 41,
+      "turns": [
+        6,
+        9,
+        10
+      ],
+      "totalTurns": 25,
+      "specials": {
+        "poison": 3,
+        "steal": 5,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 4
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 6,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 41,
+      "turns": [
+        6,
+        9,
+        10
+      ],
+      "totalTurns": 25,
+      "specials": {
+        "poison": 3,
+        "steal": 5,
+        "web": 2,
+        "shift": 3,
+        "groundSmash": 4
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 6,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 128,
+      "turns": [
+        4,
+        8,
+        7
+      ],
+      "totalTurns": 19,
+      "specials": {
+        "block": 5,
+        "steal": 5,
+        "web": 2,
+        "groundSmash": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 6,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 130,
+      "turns": [
+        4,
+        6,
+        7
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "block": 3,
+        "steal": 3,
+        "web": 1,
+        "poison": 1,
+        "groundSmash": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 6,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 129,
+      "turns": [
+        4,
+        5,
+        7
+      ],
+      "totalTurns": 16,
+      "specials": {
+        "block": 4,
+        "steal": 3,
+        "web": 1,
+        "groundSmash": 1
+      }
+    }
+  ],
+  "classic": [
+    {
+      "players": 1,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 76,
+      "turns": [
+        3,
+        3,
+        4,
+        5,
+        7,
+        7
+      ],
+      "scrolls": 16
+    },
+    {
+      "players": 2,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 150,
+      "turns": [
+        3,
+        3,
+        4,
+        6,
+        7,
+        6
+      ],
+      "scrolls": 18
+    },
+    {
+      "players": 3,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 154,
+      "turns": [
+        3,
+        3,
+        4,
+        6,
+        7,
+        6
+      ],
+      "scrolls": 18
+    },
+    {
+      "players": 4,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 163,
+      "turns": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        6
+      ],
+      "scrolls": 18
+    }
+  ],
+  "regions": [
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 70,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        14
+      ],
+      "totalTurns": 33,
+      "specials": {
+        "guard": 5,
+        "steal": 2,
+        "poison": 4,
+        "shift": 2,
+        "regenSeed": 6,
+        "rootPrison": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        6,
+        5,
+        6
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1,
+        "poison": 2,
+        "rootPrison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 33,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        16
+      ],
+      "totalTurns": 52,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 6,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 133,
+      "turns": [
+        3,
+        8,
+        6,
+        8,
+        8
+      ],
+      "totalTurns": 33,
+      "specials": {
+        "block": 11,
+        "heatSpark": 3,
+        "burn": 4,
+        "magmaArmor": 1,
+        "flameFist": 2,
+        "lavaSlam": 2
+      }
+    }
+  ],
+  "conditions": "Actual generated arithmetic solutions. Deep/forest: steel sword + leather armor, no mercenary or unique gear; mine: Lv7 steel sword/iron armor/life necklace, no mercenary or unique gear. A runs never use Attack S."
+}

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {deepSimulation} from './deep-balance.mjs';
+import {forestSimulation} from './forest-balance.mjs';
+import {mineSimulation} from './mine-balance.mjs';
+import {simulateEncounterCampaign} from './EncounterStrategies.mjs';
+const deep=[];for(const level of [3,4,6])for(const grade of ['A','S'])for(const seed of [1,2,3])deep.push(deepSimulation('adaptive',seed,grade,level));
+const classic=[1,2,3,4].map(players=>simulateEncounterCampaign(players,'adaptive'));
+const regions=[forestSimulation('adaptive',1,'A',4),forestSimulation('adaptive',1,'S',4),mineSimulation('adaptive',1,'A',7),mineSimulation('adaptive',1,'S',7)];
+const passed=[...deep.filter(r=>r.level>=4),...classic,...regions].every(r=>r.phase==='clear'&&r.hp>0);
+writeFileSync('COLLECTION-BALANCE-v2.8.json',JSON.stringify({passed,deep,classic,regions,conditions:'Actual generated arithmetic solutions. Deep/forest: steel sword + leather armor, no mercenary or unique gear; mine: Lv7 steel sword/iron armor/life necklace, no mercenary or unique gear. A runs never use Attack S.'},null,2));
+assert.ok(passed,'collection or existing campaign balance failed');
+console.log('PASS twelve recommended-level deep RPG A/S runs, four CLASS party sizes, forest/mine A/S without unique equipment; six Lv3 entry probes retained');

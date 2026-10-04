@@ -33,7 +33,7 @@ export function nextGoal(data){
  if(p.completedQuests.length)return {title:'완료한 의뢰를 보고하세요',text:`길드에서 ${p.completedQuests.length}개의 보상을 받을 수 있어요.`,action:'rpg-guild',label:'길드에서 보고하기'};
  if(!storyFlags(p).guildVisited)return {title:'먼저 모험가 길드를 방문하세요',text:'이 세계의 안내를 듣고 첫 번째 의뢰를 받아보세요.',action:'rpg-guild',label:'길드로 가기'};
  if(!Object.values(c.equipment).some(Boolean)&&c.inventory.items.length)return {title:'가방 속 장비를 장착하세요',text:'구매하거나 획득한 장비는 인벤토리에서 장착해야 능력치에 적용돼요.',action:'rpg-inventory',label:'장비 장착하기'};
- if(!Object.values(c.equipment).some(Boolean)&&EquipmentData.some(e=>e.buyPrice<=c.gold))return {title:'첫 장비로 더 강해지세요',text:`현재 ${c.gold}G로 장비를 살 수 있어요. 구매 후 인벤토리에서 장착하세요.`,action:'rpg-shop-weapon',label:'무기점 둘러보기'};
+ if(!Object.values(c.equipment).some(Boolean)&&EquipmentData.some(e=>!e.bossOnly&&e.buyPrice<=c.gold))return {title:'첫 장비로 더 강해지세요',text:`현재 ${c.gold}G로 장비를 살 수 있어요. 구매 후 인벤토리에서 장착하세요.`,action:'rpg-shop-weapon',label:'무기점 둘러보기'};
  if(main.id==='mine-giant')return {title:'불타는 광산을 조사하세요',text:'열기는 전투마다 초기화돼요. 장비·동료·치유와 정화 두루마리를 준비하고 공격과 방어를 판단하세요.',action:'rpg-dungeon',label:'광산 준비하기'};
  if(main.id==='mine-trace')return {title:'숲 아래에서 붉은 마력이 발견됐어요',text:'길드 마스터가 북쪽 광산의 단서를 기다립니다. 「붉은 마력의 흔적」을 확인하세요.',action:'rpg-guild',label:'광산 단서 확인'};
  if(p.activeQuests.length){const q=QuestData.find(q=>q.id===p.activeQuests[0]);return {title:q.name,text:`${q.description} · ${p.questProgress[q.id]?.count??0}/${q.target}`,action:'rpg-dungeon',label:'던전 준비하기'};}
@@ -44,4 +44,4 @@ export function nextGoal(data){
 }
 export function growthGoal(c){const required=nextLevelExp(c.level);return {max:c.level>=RPGConfig.maxLevel,remaining:Math.max(0,required-c.exp),next:c.level+1,growth:RPGConfig.growth};}
 export function equipmentComparison(c,item){const current=equipmentById(c.equipment?.[item.type]);return {current,deltas:Object.fromEntries(['attack','maxHP','defense'].map(k=>[k,(item.statModifiers[k]??0)-(current?.statModifiers[k]??0)]))};}
-export function effectText(item){const e=item.specialEffects;if(!e.effectType)return '조건 없이 기본 능력치에 적용';if(e.effectType==='SCROLL_POWER_BONUS')return `${e.trigger} 등급 공격 후 두루마리 피해·회복·방어막 +${e.value} · 운석은 주 대상에 적용`;return `${Array.isArray(e.trigger)?e.trigger.join('/') : e.trigger} 등급 ${e.effectType==='ATTACK_GRADE_BONUS'?'공격 성공 시 추가 피해':'방어 성공 시 방어막 추가'} +${e.value}`;}
+export function effectText(item){const e=item.specialEffects;if(e.effectType==='VICTORY_HEAL')return '전투 승리 후 HP +'+e.value+' · 최대 HP까지';if(!e.effectType)return '조건 없이 기본 능력치에 적용';if(e.effectType==='SCROLL_POWER_BONUS')return `${e.trigger} 등급 공격 후 두루마리 피해·회복·방어막 +${e.value} · 운석은 주 대상에 적용`;return `${Array.isArray(e.trigger)?e.trigger.join('/') : e.trigger} 등급 ${e.effectType==='ATTACK_GRADE_BONUS'?'공격 성공 시 추가 피해':'방어 성공 시 방어막 추가'} +${e.value}`;}

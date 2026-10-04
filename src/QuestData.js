@@ -13,6 +13,11 @@ export const QuestData=[
  {...q('forest-road','숲으로 가는 길','첫 번째 모험 보고 후, 두루마리를 사용해 길을 열어요.','USE_SCROLL',1,{}, {exp:40,gold:70,unlock:'cursed-forest'},'보통'),prerequisites:['first-adventure']},
 ];
 QuestData.push(q('new-companion','새로운 동료','용병과 함께 던전을 한 번 클리어해요.','CLEAR_WITH_MERCENARY',1,{}, {exp:40,gold:80},'쉬움','any'),q('perfect-team','완벽한 호흡','용병 지원을 5번 발동해요.','MERCENARY_SUPPORT',5,{}, {exp:50,gold:90},'보통','any'),q('forest-companion','든든한 동료','용병과 함께 저주받은 숲을 클리어해요.','CLEAR_WITH_MERCENARY',1,{}, {exp:60,gold:120},'어려움','cursed-forest'));
+QuestData.push(
+ q('collection-monsters','세계를 기록하는 모험가','모험 도감에 몬스터 10종을 기록해요.','COLLECT_MONSTERS',10,{}, {exp:40,gold:60},'수집','any'),
+ q('collection-equipment','장비 수집가','장비 10종을 발견해요. 판매한 장비도 기록이 남아요.','COLLECT_EQUIPMENT',10,{}, {exp:30,gold:80},'수집','any'),
+ q('collection-boss','수호자의 유산','보스 고유 장비 하나를 발견해요.','COLLECT_BOSS',1,{}, {exp:40,gold:60},'수집','any')
+);
 export const questById=id=>QuestData.find(q=>q.id===id);
 // Additional quest kinds can be used by data without changing the battle core.
-export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY'];
+export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY','COLLECT_MONSTERS','COLLECT_EQUIPMENT','COLLECT_BOSS'];

@@ -1,0 +1,99 @@
+{
+  "pass": true,
+  "turns": {
+    "prison-first": [
+      2,
+      2,
+      3
+    ],
+    "prison-route": [
+      2,
+      3,
+      3
+    ],
+    "forest": [
+      3,
+      3,
+      5,
+      3,
+      5
+    ]
+  },
+  "frames": {
+    "two-monsters": {
+      "medianMS": 4.2000000000000455,
+      "p95MS": 12.5
+    },
+    "boss-phase2": {
+      "medianMS": 4.199999999998909,
+      "p95MS": 4.300000000001091
+    },
+    "boss-loot": {
+      "medianMS": 4.199999999999932,
+      "p95MS": 4.600000000000023
+    }
+  },
+  "specials": [
+    "steal",
+    "block",
+    "guard",
+    "poison"
+  ],
+  "character": {
+    "name": "숲 탐험가",
+    "level": 7,
+    "exp": 120,
+    "maxHP": 135,
+    "attack": 22,
+    "defense": 11,
+    "hp": 135,
+    "gold": 1001,
+    "scrolls": [
+      {
+        "type": "shield",
+        "uses": 3
+      },
+      {
+        "type": "heal",
+        "uses": 4
+      },
+      {
+        "type": "time",
+        "uses": 1
+      },
+      {
+        "type": "ice",
+        "uses": 6
+      },
+      {
+        "type": "meteor",
+        "uses": 1
+      },
+      {
+        "type": "fire",
+        "uses": 3
+      }
+    ],
+    "equipment": {
+      "weapon": "steel_sword",
+      "armor": "leather_armor",
+      "accessory": null
+    },
+    "equippedWeapon": "steel_sword",
+    "equippedArmor": "leather_armor",
+    "equippedAccessory": null,
+    "inventory": {
+      "items": [
+        "old_sword",
+        "life_necklace",
+        "guardian_charm"
+      ],
+      "materials": []
+    }
+  },
+  "unlocked": [
+    "old-prison",
+    "cursed-forest"
+  ],
+  "errors": []
+}
