@@ -1,0 +1,36 @@
+{
+  "mode": "built-in image_gen",
+  "optimization": "Sharp resize to height1000 / WebP quality88 / preserve alpha; original art unchanged",
+  "assets": [
+    {
+      "id": "rowen",
+      "path": "assets/mercenaries/rowen.webp",
+      "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-21bc39d1-ebd6-4d96-aab3-f9eb09d0aaa1.png",
+      "prompt": "Use case: stylized-concept. Asset: transparent full-body fantasy RPG companion illustration, reused for portrait card via CSS crop. One original young adult male ranger Rowen, brown hair, friendly confident face, green and brown practical layered ranger clothing, boots, bow held clearly, quiver. Polished painterly anime-influenced fantasy game art, refined anatomy and hands, school-age appropriate, rich detail, soft rim lighting, same world as blue-purple enchanted forest RPG. Entire figure and bow visible centered with generous margin, tall portrait composition, isolated genuine transparent background. No text, logo, watermark, additional characters, gore, revealing outfit, commercial character imitation."
+    },
+    {
+      "id": "bram",
+      "path": "assets/mercenaries/bram.webp",
+      "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-e6e231d1-e7c5-4710-b44c-00f4f7b6c979.png",
+      "prompt": "Use case: stylized-concept. Transparent full-body original fantasy RPG companion Bram, sturdy broad-shouldered middle-aged male knight, short beard, steel heavy armor with brass details, huge kite shield and sheathed sword, trustworthy calm expression. Polished painterly anime-influenced fantasy game illustration, refined proportions and hands, soft cinematic rimlight, detailed materials, family friendly and suitable for elementary school. Complete figure and shield centered with margins, tall portrait. Same world as blue-purple enchanted forest RPG ranger Rowen. Genuine transparent backdrop. No lettering, logos, watermarks, gore, commercial character copies."
+    },
+    {
+      "id": "luna",
+      "path": "assets/mercenaries/luna.webp",
+      "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-678c38f5-4517-4ddd-9edc-a2ab7d301d6b.png",
+      "prompt": "Use case: stylized-concept. Transparent full-body original fantasy RPG companion Luna, adult female mage, intelligent confident expression, dark blue hair, elegant modest purple and navy layered mage outfit with silver trim, crystal-tipped staff, small violet magic circle around free hand. Polished painterly anime-influenced fantasy RPG illustration, detailed materials, refined anatomy hands face, soft cinematic rim lighting consistent with ranger Rowen and knight Bram and cleric Sera, school appropriate, beautiful and adventurous not childish. Whole figure staff and shoes visible centered with margins, tall portrait composition, genuine transparent background. No text logos watermark, commercial characters, gore, cleavage, extra figures."
+    },
+    {
+      "id": "kain",
+      "path": "assets/mercenaries/kain.webp",
+      "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-aeea0ac0-20c2-4b41-878a-e3d4a7d594df.png",
+      "prompt": "Use case: stylized-concept. Transparent full-body original fantasy RPG companion Kain, adult male swordmaster, restrained powerful expression, dark hair, black and muted crimson light battle armor with refined red trims and cloak, one elegant long sword ready at side, confident composed stance. Polished painterly anime-influenced fantasy RPG illustration with refined anatomy face and hands, rich cloth and metal details, strong silhouette, soft cinematic rimlight consistent with Rowen Bram Sera Luna. School-appropriate heroic warrior. Whole figure sword shoes centered visible with margin, tall portrait, genuine transparent background. No blood, gore, sexualization, text logo watermark, commercial character imitation, extra characters."
+    },
+    {
+      "id": "elia",
+      "path": "assets/mercenaries/elia.webp",
+      "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-dfaec16a-a4d1-4c02-967f-0e2994462932.png",
+      "prompt": "Use case: stylized-concept. Transparent full-body original fantasy RPG companion Elia, adult female archsage, dignified mysterious face, silvery hair, refined fully covered white gold layered high mage robes, azure glowing staff, intricate blue magical circle and restrained floating golden sigils. Premium S rank silhouette through elegant equipment and magic, not exposure. Polished painterly anime-influenced fantasy RPG art, fine face hands anatomy, detailed materials, soft cinematic rimlighting matching Rowen Bram Sera Luna Kain. Elementary-school appropriate. Complete figure shoes staff visible centered with margins, tall portrait, genuine transparent backdrop. No text, logos, watermark, commercial character imitation, gore, revealing clothing, extra characters."
+    }
+  ]
+}

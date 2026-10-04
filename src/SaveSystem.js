@@ -6,12 +6,15 @@ import {equipmentById} from './EquipmentData.js';
 import {blankQuests} from './QuestSystem.js';
 import {QuestConfig,questById} from './QuestData.js';
 import {dungeonById} from './DungeonData.js';
+import {blankMercenaries} from './MercenarySystem.js';
+import {mercenaryById} from './MercenaryData.js';
 const equipmentId=id=>!!equipmentById(id),equipmentType=id=>equipmentById(id)?.type;
 const integer=(n,min,max)=>Number.isSafeInteger(n)&&n>=min&&n<=max;
 export function migrateSave(value){
  if(value?.saveVersion===0)value={...value,saveVersion:1,character:{...value.character,equipment:{weapon:null,armor:null,accessory:null},inventory:{items:[],materials:[]}}};
  if(value?.saveVersion===1){const migrated=structuredClone(value);migrated.saveVersion=2;migrated.character.equipment??={weapon:null,armor:null,accessory:null};migrated.character.inventory??={items:[],materials:[]};normalizeEquipment(migrated.character);value=migrated;}
  if(value?.saveVersion===2){value=structuredClone(value);value.saveVersion=3;value.progress={...blankQuests(),unlockedDungeons:['old-prison'],dungeonClearHistory:[],lootHistory:[],...value.progress};}
+ if(value?.saveVersion===3){value=structuredClone(value);value.saveVersion=4;value.progress={...blankMercenaries(),...value.progress};}
  return value;
 }
 export function validateSave(raw){
@@ -24,6 +27,9 @@ export function validateSave(raw){
  if(!Array.isArray(c.scrolls)||c.scrolls.length>Object.keys(ScrollData).length||new Set(c.scrolls.map(s=>s.type)).size!==c.scrolls.length||c.scrolls.some(s=>!ScrollData[s.type]||!integer(s.uses,1,ScrollConfig.maxUses)))throw new Error('두루마리 기록이 올바르지 않습니다.');
  if(!Array.isArray(p.clearedDungeons)||p.clearedDungeons.some(id=>!dungeonById(id)))throw new Error('던전 기록이 올바르지 않습니다.');
  for(const stats of [p.stats,p.run?.stats].filter(Boolean)){for(const key of ['turns','blocks','scrolls'])if(!integer(stats[key],0,1e9))throw new Error('전투 기록이 올바르지 않습니다.');for(const side of ['attack','defense'])for(const grade of ['S','A','B','C'])if(!integer(stats[side]?.[grade],0,1e9))throw new Error('전투 기록이 올바르지 않습니다.');}
+ const mc=p.mercenaryContractState,ms=p.mercenaryStats;
+ if((p.activeMercenary!==null&&!mercenaryById(p.activeMercenary))||!!p.activeMercenary!==!!mc||!ms||['hires','supports','ended'].some(k=>!integer(ms[k],0,1e9)))throw new Error('용병 계약 기록이 올바르지 않습니다.');
+ if(mc&&(typeof mc.id!=='string'||mc.id.length>200||typeof mc.purchaseToken!=='string'||mc.purchaseToken.length>200||!['waiting','active'].includes(mc.status)||!mc.counts||typeof mc.counts!=='object'||Array.isArray(mc.counts)||Object.entries(mc.counts).some(([k,v])=>!integer(Number(k),0,4)||!integer(v,0,mercenaryById(p.activeMercenary).maxPerEncounter))||!Array.isArray(mc.eventIds)||mc.eventIds.some(v=>typeof v!=='string'||v.length>250)||new Set(mc.eventIds).size!==mc.eventIds.length||!Array.isArray(mc.successfulEncounters)||mc.successfulEncounters.some(v=>!integer(v,0,4))||new Set(mc.successfulEncounters).size!==mc.successfulEncounters.length||mc.status==='waiting'&&(mc.runId!==null||p.run)||mc.status==='active'&&mc.runId!==p.run?.id))throw new Error('용병 계약 상태가 올바르지 않습니다.');
  const run=p.run;if(run){const dungeon=dungeonById(run.dungeonId);if(typeof run.id!=='string'||run.id.length>100||!dungeon||!integer(run.nextEncounter,0,(dungeon?.encounters.length||0))||!['active','clear','defeat'].includes(run.status)||!Array.isArray(run.completed)||run.completed.some(i=>!integer(i,0,(dungeon?.encounters.length||0)-1))||new Set(run.completed).size!==run.completed.length)throw new Error('던전 진행 기록이 올바르지 않습니다.');
   if(run.status==='clear'&&(run.nextEncounter!==(dungeon?.encounters.length||0)||!run.clearBonusGranted))throw new Error('클리어 기록이 올바르지 않습니다.');
   const loot=run.pendingLoot;if(loot&&(!integer(loot.encounterIndex,0,(dungeon?.encounters.length||0)-1)||!Array.isArray(loot.candidates)||loot.candidates.length!==3||new Set(loot.candidates).size!==3||loot.candidates.some(id=>!ScrollData[id])||typeof loot.chosen!=='boolean'))throw new Error('전리품 기록이 올바르지 않습니다.');

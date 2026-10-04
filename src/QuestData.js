@@ -12,6 +12,7 @@ export const QuestData=[
  q('first-adventure','첫 번째 모험','오래된 지하감옥을 클리어하고 보고해요.','CLEAR_DUNGEON',1,{}, {exp:60,gold:120},'쉬움'),
  {...q('forest-road','숲으로 가는 길','첫 번째 모험 보고 후, 두루마리를 사용해 길을 열어요.','USE_SCROLL',1,{}, {exp:40,gold:70,unlock:'cursed-forest'},'보통'),prerequisites:['first-adventure']},
 ];
+QuestData.push(q('new-companion','새로운 동료','용병과 함께 던전을 한 번 클리어해요.','CLEAR_WITH_MERCENARY',1,{}, {exp:40,gold:80},'쉬움','any'),q('perfect-team','완벽한 호흡','용병 지원을 5번 발동해요.','MERCENARY_SUPPORT',5,{}, {exp:50,gold:90},'보통','any'),q('forest-companion','든든한 동료','용병과 함께 저주받은 숲을 클리어해요.','CLEAR_WITH_MERCENARY',1,{}, {exp:60,gold:120},'어려움','cursed-forest'));
 export const questById=id=>QuestData.find(q=>q.id===id);
 // Additional quest kinds can be used by data without changing the battle core.
-export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT'];
+export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY'];

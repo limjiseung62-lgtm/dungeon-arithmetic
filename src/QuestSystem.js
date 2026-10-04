@@ -15,6 +15,8 @@ function matches(q,e){
  case 'DEFENSE_GRADE_SUCCESS':return e.type==='DEFENSE_SUCCESS'&&(!f.grades||f.grades.includes(e.grade));
  case 'BLOCK_SPECIAL':return e.type==='SPECIAL_BLOCKED'&&e.source==='defense';
  case 'USE_SCROLL':case 'USE_DIFFERENT_SCROLLS':return e.type==='SCROLL_USED';
+ case 'MERCENARY_SUPPORT':return e.type==='MERCENARY_SUPPORT';
+ case 'CLEAR_WITH_MERCENARY':return e.type==='DUNGEON_CLEARED'&&!!e.mercenaryId;
  case 'CLEAR_DUNGEON':return e.type==='DUNGEON_CLEARED';
  case 'CLEAR_WITH_HP':return e.type==='DUNGEON_CLEARED'&&e.hpRatio>=f.hpRatio;
  case 'CLEAR_WITHOUT_DEFEAT':return e.type==='DUNGEON_CLEARED'&&!e.defeated;

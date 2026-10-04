@@ -3,28 +3,29 @@ import {livingEnemies,syncEncounter} from './EncounterData.js';
 import {cleanseStatuses} from './StatusEffectSystem.js';
 import {ScrollData,ScrollConfig} from './ScrollData.js';
 import {GameConfig as config} from './GameConfig.js';
-export function applyScrollEffect(state,data,targetId=null){
+export function applyScrollEffect(state,data,targetId=null,powerModifier=0){
  const before={hp:state.hero.hp,shield:state.hero.shield,monsterHP:state.monsterHP};
  const alive=livingEnemies(state),primary=alive.find(e=>e.id===targetId)||alive[0],impacts=[];
  if(state.enemies){
   let targets=primary?[primary]:[];
   if(data.targetType==='ALL_ENEMIES')targets=alive;
   if(data.targetType==='RANDOM_ENEMIES')targets=primary?[primary,...alive.filter(e=>e!==primary)].slice(0,3):[];
-  targets.forEach((e,i)=>{const boost=state.battleContext?.scrollPowerBonus?.('S')||0;const amount=data.effect==='lightning'?[26,18,12][i]+boost:data.effect==='meteor'?(e===primary?48+boost:12):data.damage?data.damage+boost:0;const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
+  targets.forEach((e,i)=>{const boost=(state.battleContext?.scrollPowerBonus?.('S')||0)+powerModifier;const amount=data.effect==='lightning'?[26,18,12][i]+boost:data.effect==='meteor'?(e===primary?48+boost:12+powerModifier):data.damage?data.damage+boost:0;const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
   syncEncounter(state);
- }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage-(state.battleContext?.scrollPowerBonus?.('S')||0));if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
- const scrollBoost=state.battleContext?.scrollPowerBonus?.('S')||0;
+ }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage-(state.battleContext?.scrollPowerBonus?.('S')||0)-powerModifier);if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
+ const scrollBoost=(state.battleContext?.scrollPowerBonus?.('S')||0)+powerModifier;
  if(data.heal)state.hero.hp=Math.min(heroMaxHP(state),state.hero.hp+data.heal+scrollBoost);
  if(data.shield)state.hero.shield+=data.shield+scrollBoost;
+ if(powerModifier&&!data.damage&&!data.heal&&!data.shield)state.hero.shield+=powerModifier;
  if(data.stop)state.scrollStop=true;
  if(data.cleanse)cleanseStatuses(state);
  return {damage:before.monsterHP-state.monsterHP,heal:state.hero.hp-before.hp,shield:state.hero.shield-before.shield,impacts};
 }
-export function useScroll(state,reservedSlot=null,targetId=null){
+export function useScroll(state,reservedSlot=null,targetId=null,powerModifier=0){
  const index=reservedSlot?state.scrolls.indexOf(reservedSlot):Math.min(state.scrollIndex,state.scrolls.length-1);
  const slot=state.scrolls[index];if(!slot||slot.uses<=0)return null;
  const data=ScrollData[slot.type];if(!data)return null;
- slot.uses--;state.stats.scrolls++;const result=applyScrollEffect(state,data,targetId);
+ slot.uses--;state.stats.scrolls++;const result=applyScrollEffect(state,data,targetId,powerModifier);
  if(slot.uses===0)state.scrolls.splice(index,1);
  state.scrollIndex=Math.max(0,Math.min(index,state.scrolls.length-1));
  return {...data,...result,type:slot.type};

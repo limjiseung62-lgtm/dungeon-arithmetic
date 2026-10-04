@@ -1,0 +1,59 @@
+{
+  "totalBytes": 1303990,
+  "assets": [
+    {
+      "id": "rowen",
+      "path": "assets/mercenaries/rowen.webp",
+      "width": 667,
+      "height": 1000,
+      "bytes": 166784,
+      "transparentFraction": 0.6084437781109445,
+      "cornerAlpha": 0
+    },
+    {
+      "id": "bram",
+      "path": "assets/mercenaries/bram.webp",
+      "width": 667,
+      "height": 1000,
+      "bytes": 190542,
+      "transparentFraction": 0.4154047976011994,
+      "cornerAlpha": 0
+    },
+    {
+      "id": "sera",
+      "path": "assets/mercenaries/sera.webp",
+      "width": 667,
+      "height": 1000,
+      "bytes": 239996,
+      "transparentFraction": 0.5351829085457271,
+      "cornerAlpha": 0
+    },
+    {
+      "id": "luna",
+      "path": "assets/mercenaries/luna.webp",
+      "width": 667,
+      "height": 1000,
+      "bytes": 231372,
+      "transparentFraction": 0.495616191904048,
+      "cornerAlpha": 0
+    },
+    {
+      "id": "kain",
+      "path": "assets/mercenaries/kain.webp",
+      "width": 667,
+      "height": 1000,
+      "bytes": 168528,
+      "transparentFraction": 0.5168095952023988,
+      "cornerAlpha": 0
+    },
+    {
+      "id": "elia",
+      "path": "assets/mercenaries/elia.webp",
+      "width": 667,
+      "height": 1000,
+      "bytes": 306768,
+      "transparentFraction": 0.3931079460269865,
+      "cornerAlpha": 0
+    }
+  ]
+}

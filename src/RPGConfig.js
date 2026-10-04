@@ -1,4 +1,4 @@
-export const RPGConfig={saveVersion:3,previousSaveVersion:2,saveKey:'dungeon-rpg-adventure-save',backupKey:'dungeon-rpg-adventure-backup',maxNameLength:12,maxLevel:50,
+export const RPGConfig={saveVersion:4,previousSaveVersion:3,saveKey:'dungeon-rpg-adventure-save',backupKey:'dungeon-rpg-adventure-backup',maxNameLength:12,maxLevel:50,
  initial:{maxHP:100,attack:10,defense:5,gold:0,scrolls:[{type:'fire',uses:3}]},
  growth:{maxHP:5,attack:2,defense:1},experience:[50,80,120,170,230],experienceStep:70,
  attackBonusFactor:.5,maxAttackBonus:8,defenseFactor:.2,maxDefenseMitigation:4,maxMitigationRatio:.3,

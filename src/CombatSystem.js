@@ -38,7 +38,7 @@ export class CombatSystem{
   resolveTarget(action){
     const s=this.state;if(!s.enemies)return null;let e=this.enemy(action.enemyId);if(!e||e.hp<=0){const old=e;e=livingEnemies(s)[0];if(e){action.retargeted=old?`${old.name}이 이미 쓰러져 ${e.name}으로 공격 대상을 변경합니다!`:null;action.enemyId=e.id;action.enemyName=e.name;}}return e;
   }
-  emit(kind,text,extra={}){const event={kind,text,...extra};this.state.events.push(event);return event;}
+  emit(kind,text,extra={}){const event={kind,text,...extra};if(this.supportHook)event.support=this.supportHook(event,this.state);this.state.events.push(event);return event;}
   startTurn(){
     const s=this.state;if(!['ready','enemy'].includes(s.phase))return false;
     if(!s.enemies&&s.enemyTurn===0){s.monsterMaxHP=encounterStats(s.monsterIndex,s.players).hp;if(s.monsterHP===monsterAt(s.monsterIndex).hp)s.monsterHP=s.monsterMaxHP;}
@@ -120,8 +120,8 @@ export class CombatSystem{
           s.stats.attack[action.targetGrade]++;
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:action.baseDamage,enemyId:action.enemyId,action,retargeted:action.retargeted});
         }else if(action.actionType==='scroll'){
-          const before=s.monsterHP;if(['SINGLE_ENEMY','RANDOM_ENEMIES','ALL_ENEMIES'].includes(action.targetType))this.resolveTarget(action);const scroll=useScroll(s,action.scrollSlot,action.enemyId);s.totalDamage+=before-s.monsterHP;
-          event=this.emit('magic',`${action.icon} ${action.name} 발동!`,{type:action.scrollEffect,damage:scroll?.damage||0,heal:scroll?.heal||0,shieldGain:scroll?.shield||0,hits:scroll?.hits||1,impacts:scroll?.impacts||[],enemyId:action.enemyId,action,retargeted:action.retargeted});
+          const before=s.monsterHP;if(['SINGLE_ENEMY','RANDOM_ENEMIES','ALL_ENEMIES'].includes(action.targetType))this.resolveTarget(action);const boost=this.scrollModifier?.(action,s)||0;const scroll=useScroll(s,action.scrollSlot,action.enemyId,boost);s.totalDamage+=before-s.monsterHP;
+          event=this.emit('magic',`${action.icon} ${action.name} 발동!`,{type:action.scrollEffect,damage:scroll?.damage||0,heal:scroll?.heal||0,shieldGain:scroll?.shield||0,hits:scroll?.hits||1,impacts:scroll?.impacts||[],enemyId:action.enemyId,action,mercenaryBoost:scroll?boost:0,retargeted:action.retargeted});
         }else if(action.actionType==='defense'){
           s.hero.shield+=action.shieldGain;s.stats.defense[action.targetGrade]++;
           event=this.emit('defense',`${action.playerId+1}P SHIELD +${action.shieldGain}`,{shieldGain:action.shieldGain,action});
