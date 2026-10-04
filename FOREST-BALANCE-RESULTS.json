@@ -1,0 +1,1259 @@
+[
+  {
+    "policy": "attack",
+    "seed": 1,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 92,
+    "turns": [
+      2,
+      2,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 15,
+    "specials": {
+      "guard": 4,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 2,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 23,
+    "turns": [
+      2,
+      2,
+      4,
+      4,
+      4
+    ],
+    "totalTurns": 16,
+    "specials": {
+      "guard": 4,
+      "steal": 1,
+      "poison": 2,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 3,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 113,
+    "turns": [
+      2,
+      2,
+      4,
+      4,
+      6
+    ],
+    "totalTurns": 18,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 2,
+      "shift": 3,
+      "block": 1
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 4,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 114,
+    "turns": [
+      2,
+      2,
+      4,
+      4,
+      6
+    ],
+    "totalTurns": 18,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 4,
+      "block": 1
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 5,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 125,
+    "turns": [
+      2,
+      2,
+      4,
+      4,
+      6
+    ],
+    "totalTurns": 18,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 2,
+      "block": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 6,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 97,
+    "turns": [
+      2,
+      2,
+      3,
+      3,
+      5
+    ],
+    "totalTurns": 15,
+    "specials": {
+      "guard": 3,
+      "steal": 1,
+      "poison": 2,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 7,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 115,
+    "turns": [
+      2,
+      2,
+      4,
+      4,
+      6
+    ],
+    "totalTurns": 18,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 2,
+      "shift": 4
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 8,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 110,
+    "turns": [
+      2,
+      2,
+      4,
+      3,
+      6
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 2,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 9,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 81,
+    "turns": [
+      2,
+      2,
+      3,
+      3,
+      4
+    ],
+    "totalTurns": 14,
+    "specials": {
+      "guard": 3,
+      "steal": 1,
+      "poison": 2,
+      "shift": 2
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 10,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 94,
+    "turns": [
+      2,
+      2,
+      4,
+      2,
+      5
+    ],
+    "totalTurns": 15,
+    "specials": {
+      "guard": 4,
+      "steal": 1,
+      "poison": 2,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 1,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 2,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 3,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 4,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 5,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 6,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 7,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 8,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 9,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "attack",
+    "seed": 10,
+    "grade": "A",
+    "level": 4,
+    "phase": "gameover",
+    "hp": 0,
+    "turns": [
+      3,
+      3,
+      4,
+      4,
+      3
+    ],
+    "totalTurns": 17,
+    "specials": {
+      "guard": 5,
+      "steal": 1,
+      "poison": 1,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 1,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 2,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 3,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 4,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 5,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 6,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 7,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 8,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 9,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 10,
+    "grade": "S",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "block": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 1,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 2,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 3,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 4,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 5,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 6,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 7,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 8,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 9,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "defense",
+    "seed": 10,
+    "grade": "A",
+    "level": 4,
+    "phase": "enemy",
+    "hp": 120,
+    "turns": [
+      150,
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalTurns": 150,
+    "specials": {
+      "guard": 75
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 1,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 125,
+    "turns": [
+      3,
+      3,
+      6,
+      5,
+      7
+    ],
+    "totalTurns": 24,
+    "specials": {
+      "block": 6,
+      "guard": 4,
+      "shift": 4,
+      "poison": 1
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 2,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 125,
+    "turns": [
+      3,
+      3,
+      5,
+      4,
+      7
+    ],
+    "totalTurns": 22,
+    "specials": {
+      "block": 6,
+      "guard": 3,
+      "shift": 4,
+      "poison": 1
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 3,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 117,
+    "turns": [
+      3,
+      3,
+      5,
+      3,
+      6
+    ],
+    "totalTurns": 20,
+    "specials": {
+      "block": 7,
+      "guard": 3,
+      "shift": 2
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 4,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 104,
+    "turns": [
+      3,
+      3,
+      6,
+      5,
+      10
+    ],
+    "totalTurns": 27,
+    "specials": {
+      "block": 9,
+      "guard": 4,
+      "shift": 5
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 5,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 101,
+    "turns": [
+      3,
+      3,
+      6,
+      3,
+      8
+    ],
+    "totalTurns": 23,
+    "specials": {
+      "block": 7,
+      "guard": 4,
+      "shift": 3,
+      "poison": 1
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 6,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 117,
+    "turns": [
+      3,
+      3,
+      6,
+      5,
+      6
+    ],
+    "totalTurns": 23,
+    "specials": {
+      "block": 8,
+      "guard": 4,
+      "shift": 3
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 7,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 112,
+    "turns": [
+      3,
+      3,
+      5,
+      3,
+      6
+    ],
+    "totalTurns": 20,
+    "specials": {
+      "block": 7,
+      "guard": 3,
+      "shift": 2
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 8,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 125,
+    "turns": [
+      3,
+      3,
+      6,
+      5,
+      8
+    ],
+    "totalTurns": 25,
+    "specials": {
+      "block": 7,
+      "guard": 4,
+      "shift": 4,
+      "poison": 1
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 9,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 109,
+    "turns": [
+      3,
+      3,
+      6,
+      3,
+      6
+    ],
+    "totalTurns": 21,
+    "specials": {
+      "block": 7,
+      "guard": 4,
+      "shift": 2
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 10,
+    "grade": "S",
+    "level": 4,
+    "phase": "clear",
+    "hp": 96,
+    "turns": [
+      3,
+      3,
+      6,
+      5,
+      10
+    ],
+    "totalTurns": 27,
+    "specials": {
+      "block": 10,
+      "guard": 3,
+      "shift": 5
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 1,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 2,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 3,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 4,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 5,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 6,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 7,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 8,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 9,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  },
+  {
+    "policy": "adaptive",
+    "seed": 10,
+    "grade": "A",
+    "level": 4,
+    "phase": "clear",
+    "hp": 84,
+    "turns": [
+      4,
+      4,
+      6,
+      5,
+      16
+    ],
+    "totalTurns": 35,
+    "specials": {
+      "guard": 8,
+      "steal": 2,
+      "poison": 7,
+      "shift": 9
+    }
+  }
+]
