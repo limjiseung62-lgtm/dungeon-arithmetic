@@ -1,0 +1,199 @@
+{
+  "pass": true,
+  "version": "2.5.0",
+  "unit": {
+    "total": 314,
+    "passed": 314,
+    "failed": 0
+  },
+  "browserSuites": [
+    {
+      "name": "rpg-browser",
+      "pass": true,
+      "summary": [
+        "PASS real RPG creation / town / three fights / growth / loot / return / reload / continue / class isolation 10",
+        "PASS pending loot reload without duplicate rewards / defeat keeps progress",
+        "PASS production build and board layout",
+        "PASS confirmed reset delays replacing save until valid name / keyboard Enter",
+        "PASS storage denied stays playable, warns and retains current-window character",
+        "PASS no browser exceptions"
+      ]
+    },
+    {
+      "name": "equipment-browser",
+      "pass": true,
+      "summary": [
+        "PASS browser shop purchase/equip/unequip/sell"
+      ]
+    },
+    {
+      "name": "adventure-browser",
+      "pass": true,
+      "summary": [
+        "PASS actual v2.1 migration with all resources, gear and duplicate inventory",
+        "PASS dungeon prison-first [ 2, 2, 3 ]",
+        "PASS dungeon prison-route [ 2, 3, 3 ]",
+        "PASS dungeon forest [ 3, 3, 5, 3, 4 ]",
+        "PASS guild / real math prison twice / quest report / drops / unlock / buy and equip / all five forest fights / boss / final reload / production / tablet and board {\"prison-first\":[2,2,3],\"prison-route\":[2,3,3],\"forest\":[3,3,5,3,4]} [ 'steal', 'block', 'guard', 'shift' ]"
+      ]
+    },
+    {
+      "name": "mercenary-browser",
+      "pass": true,
+      "summary": [
+        "PASS six mercenaries real browser math, full Rowen dungeon, costs, refresh, quests, party, responsive art, production {\"rowen-visual\":true,\"rowen\":{\"fullClear\":true,\"supports\":6,\"reload\":true},\"bram-visual\":true,\"bram\":{\"fullClear\":true,\"effects\":[{\"id\":\"30fb856e-7980-462d-ae04-57f3ecea5e25:0:mercenary:1:defense:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"bram\",\"grade\":\"B\",\"effect\":\"shield\",\"value\":6,\"en…"
+      ]
+    },
+    {
+      "name": "remaster-browser",
+      "pass": true,
+      "summary": [
+        "PASS remaster screens, responsive layouts, production assets, missing image fallback 25"
+      ]
+    },
+    {
+      "name": "browser-ui",
+      "pass": true,
+      "summary": [
+        "PASS sequential: 4 players, three full turns, deferred damage/shields/scrolls, claimed marks, separate scroll scene, counterattack, regenerated targets",
+        "PASS full campaign: all five monsters, state effects, final clear and saved team record",
+        "PASS simultaneous: four-contact touch, independent dice/operator/reset, contested target keeps action, single shared timer, one queue and fully absorbed counterattack",
+        "PASS special block, normal attack preserved, lethal queue cancels counterattack and preserves uncast scroll",
+        "PASS shared 60-second timer: all four automatic passes and cinematic phase; 30-second weak hints",
+        "PASS no fatal browser/console errors"
+      ]
+    },
+    {
+      "name": "presentation-browser",
+      "pass": true,
+      "summary": [
+        "PASS goblin 45 second success, 60 second block, cinematic timer stopped, skip",
+        "PASS curse success",
+        "PASS curse blocked",
+        "PASS web success",
+        "PASS web blocked",
+        "PASS poison success",
+        "PASS poison blocked",
+        "PASS shift success",
+        "PASS shift blocked",
+        "PASS stone success",
+        "PASS stone blocked",
+        "PASS mid-input timer pause/resume",
+        "PASS browser audio activation, independent mute and volume",
+        "PASS classroom board layout and no page errors"
+      ]
+    },
+    {
+      "name": "quality-browser",
+      "pass": true,
+      "summary": [
+        "PASS music continuity; recorded swing/impact spacing 0.18933333333333335 seconds; impact frame delta 0",
+        "PASS Korean title/setup/story/settings/input/attacks/spells/all specials; mobile/tablet/board; no browser errors"
+      ]
+    },
+    {
+      "name": "update-v11-browser",
+      "pass": true,
+      "summary": [
+        "PASS spell fire one charge, paused timer, distinct effect",
+        "PASS spell ice one charge, paused timer, distinct effect",
+        "PASS spell shield one charge, paused timer, distinct effect",
+        "PASS spell heal one charge, paused timer, distinct effect",
+        "PASS spell lightning one charge, paused timer, distinct effect",
+        "PASS spell cleanse one charge, paused timer, distinct effect",
+        "PASS spell meteor one charge, paused timer, distinct effect",
+        "PASS spell time one charge, paused timer, distinct effect",
+        "PASS preserve scroll on Attack S",
+        "PASS 4 combo labels, nonrepeat slash variations, no extra damage",
+        "PASS 3 unique loot, selected reward, HP carry/shield reset, board four pads",
+        "PASS v1.1 actual touch UI and no errors"
+      ]
+    },
+    {
+      "name": "encounter-browser",
+      "pass": true,
+      "summary": [
+        "PASS layout sequential 1 / 2 / 3 enemies, eight common goals, input pads visible",
+        "PASS layout simultaneous 1 / 2 / 3 enemies, eight common goals, input pads visible",
+        "PASS sequential edit after current player changed",
+        "PASS simultaneous choices, timer reference count, target edit, single Defense S with other special active",
+        "PASS real scroll target fire [ 22, 0, 0 ]",
+        "PASS real scroll target lightning [ 26, 18, 12 ]",
+        "PASS real scroll target iceStorm [ 16, 16, 16 ]",
+        "PASS real scroll target meteor [ 48, 12, 12 ]",
+        "PASS real scroll target heal [ 0, 0, 0 ]",
+        "PASS real scroll target shield [ 0, 0, 0 ]",
+        "PASS six encounters campaign turns [ 3, 4, 6, 7, 7, 12 ] HP 180",
+        "PASS production build multi-enemy scene",
+        "PASS no browser errors, student debug hidden"
+      ]
+    },
+    {
+      "name": "balance-browser",
+      "pass": true,
+      "summary": [
+        "PASS actual touch UI campaigns: all party sizes, all six policies, 4-pad simultaneous, scaled HP and existing cutscenes"
+      ]
+    },
+    {
+      "name": "balance-targets",
+      "pass": true,
+      "summary": [
+        "PASS actual cutscenes and pads: web/petrify rotate 2P→3P→4P→1P; exactly one next-turn action blocked"
+      ]
+    },
+    {
+      "name": "mercenary-performance",
+      "pass": true,
+      "summary": [
+        "PASS isolated six animation renderer [{\"member\":\"rowen\",\"medianMS\":4.199999999999932,\"p95MS\":12.399999999999977,\"maxMS\":20.899999999999977,\"samples\":60},{\"member\":\"bram\",\"medianMS\":4.199999999999818,\"p95MS\":4.2999999999999545,\"maxMS\":4.399999999999864,\"samples\":60},{\"member\":\"sera\",\"medianMS\":4.2000000000000455,\"p95MS\":4.2999999999999545,\"maxMS\":12.599999999999909,\"samples\":60},{\"member\":\"luna\",\"m…"
+      ]
+    },
+    {
+      "name": "release-browser",
+      "pass": true,
+      "summary": [
+        "PASS production dist starts; transition HP82/shield0; tablet/board width; no errors"
+      ]
+    },
+    {
+      "name": "story-browser",
+      "pass": true,
+      "summary": [
+        "PASS v2.5 opening, once/replay, main story, prices/comparison, touch, responsive, hover/focus, progress, production"
+      ]
+    }
+  ],
+  "build": {
+    "pass": true,
+    "entry": "dist/index.html"
+  },
+  "screens": [
+    "preview-v25-armor-1920.png",
+    "preview-v25-armor-390.png",
+    "preview-v25-armor-768.png",
+    "preview-v25-character.png",
+    "preview-v25-dungeons.png",
+    "preview-v25-guild-level-up.png",
+    "preview-v25-guild.png",
+    "preview-v25-mercenaries.png",
+    "preview-v25-opening-classroom.png",
+    "preview-v25-opening-demon.png",
+    "preview-v25-shop-accessory.png",
+    "preview-v25-shop-armor.png",
+    "preview-v25-shop-poor.png",
+    "preview-v25-shop-weapon.png",
+    "preview-v25-story-complete.png",
+    "preview-v25-town-1920.png",
+    "preview-v25-town-390.png",
+    "preview-v25-town-768.png",
+    "preview-v25-town-focus.png",
+    "preview-v25-town.png"
+  ],
+  "invariants": "STORY-INVARIANTS-v2.5.json",
+  "publicDeployment": false,
+  "notes": [
+    "Responsive checks use Edge viewport and touch emulation; no physical school device test.",
+    "Historical v2.4 remaster freeze has its original version scope; v2.5 freezes the same rule/data files with explicit story-only metadata exceptions."
+  ]
+}

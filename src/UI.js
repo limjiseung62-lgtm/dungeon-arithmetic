@@ -155,12 +155,16 @@ function debugHTML(){
 function preferences(){try{localStorage.setItem('dungeon-settings',JSON.stringify({sound,hints,reducedMotion}));}catch{}}
 function rpgScreen(next,notice=''){if(isRPG()&&state&&rpg.run){rpg.captureBattle(state);rpg.save();}cancel();state=null;screen=next;settingsOpen=false;debugOpen=false;rpgNotice=notice;render();}
 function enterRPG(){playScope='rpg';const loaded=rpg.load();rpgNameDraft='';rpgScreen(loaded.data?'rpg-gate':['invalid','newer'].includes(loaded.status)?'rpg-gate':'rpg-create',loaded.message);}
-function createRPGCharacter(){if(screen!=='rpg-create')return;rpgNameDraft=document.querySelector('#character-name')?.value||'';try{rpg.create(rpgNameDraft);rpgScreen('rpg-town',rpg.saveInfo.ok?'':rpg.saveInfo.message);}catch(error){rpgNotice=error.message;render();document.querySelector('#character-name')?.focus();}}
+function createRPGCharacter(){if(screen!=='rpg-create')return;rpgNameDraft=document.querySelector('#character-name')?.value||'';try{rpg.create(rpgNameDraft);rpgScreen('rpg-opening:0',rpg.saveInfo.ok?'':rpg.saveInfo.message);}catch(error){rpgNotice=error.message;render();document.querySelector('#character-name')?.focus();}}
 function startRPGBattle(dungeonId='old-prison'){cancel();playScope='rpg';if(!rpg.run&&!rpg.enterDungeon(dungeonId))return;const built=rpg.createBattle();state=built.state;combat=built.combat;pads=createPads(1);specialHistory.clear();settingsOpen=false;debugOpen=false;rpgNotice='';screen='battle';lastSaved=null;if(built.pending){rolling=false;render();}else beginTurn(true);}
 function handleRPGAction(action,button=null){switch(action){
  case 'rpg-enter':enterRPG();break;
  case 'rpg-create-submit':createRPGCharacter();break;
- case 'rpg-continue':if(rpg.run?.status==='defeat')rpg.returnToTown();rpgScreen('rpg-town');break;
+ case 'rpg-continue':if(rpg.run?.status==='defeat')rpg.returnToTown();rpgScreen(rpg.openingSeen?'rpg-town':'rpg-opening:0');break;
+ case 'rpg-opening-next':rpgScreen('rpg-opening:'+Math.min(2,Number(screen.split(':')[1])+1),rpgNotice);break;
+ case 'rpg-opening-skip':rpg.finishOpening();rpgScreen('rpg-town',rpg.saveInfo.ok?'':rpg.saveInfo.message);break;
+ case 'rpg-opening-replay':rpgScreen('rpg-opening:0');break;
+ case 'rpg-records':rpgScreen('rpg-records');break;
  case 'rpg-new':rpgScreen('rpg-reset');break;
  case 'rpg-reset-confirm':rpgNameDraft='';rpgScreen('rpg-create');break;
  case 'rpg-reset-cancel':rpgScreen('rpg-gate');break;
@@ -181,9 +185,10 @@ function handleRPGAction(action,button=null){switch(action){
  case 'rpg-mercenary-detail':app.insertAdjacentHTML('beforeend',mercenaryDetailHTML(button.dataset.mercenary));break;
  case 'rpg-mercenary-close':document.querySelectorAll('.mercenary-detail-overlay,.mercenary-confirm-overlay').forEach(e=>e.remove());break;
  case 'rpg-mercenary-hire':case 'rpg-mercenary-confirm':{const result=rpg.hire(button.dataset.mercenary,{confirm:action==='rpg-mercenary-confirm'});document.querySelectorAll('.mercenary-detail-overlay,.mercenary-confirm-overlay').forEach(e=>e.remove());if(result.needsConfirmation)app.insertAdjacentHTML('beforeend',replacementHTML(result,button.dataset.mercenary));else{rpgNotice=result.message;rpgScreen('rpg-mercenaries',rpgNotice);}break;}
- case 'rpg-guild':rpgScreen('rpg-guild');break;
+ case 'rpg-guild':rpg.visitGuild();rpgScreen('rpg-guild');break;
  case 'rpg-quest-accept':rpgNotice=rpg.acceptQuest(button.dataset.quest).message;render();break;
- case 'rpg-quest-report':rpgNotice=rpg.reportQuest(button.dataset.quest).message;render();break;
+ case 'rpg-quest-report':{const result=rpg.reportQuest(button.dataset.quest);rpgNotice=result.message;render();const up=result.levelUp;if(up?.to>up.from)app.insertAdjacentHTML('beforeend',`<div class="overlay story-level-overlay"><section class="modal level-up-banner" role="dialog" aria-modal="true" aria-label="레벨 업"><h2>레벨 업!</h2><b>레벨 ${up.from} → ${up.to}</b><p>최대 HP +${up.maxHP} · 공격력 +${up.attack} · 방어력 +${up.defense}</p><p>더 강해졌어요! 마왕의 성에 한 걸음 가까워졌어요.</p><button class="primary" data-action="rpg-level-close">모험 계속하기 →</button></section></div>`);break;}
+ case 'rpg-level-close':document.querySelector('.story-level-overlay')?.remove();break;
  case 'rpg-save':rpg.save();rpgNotice=rpg.saveInfo.message;render();break;
  case 'rpg-return':if(rpg.returnToTown())rpgScreen('rpg-town','마을에 돌아왔어요. HP를 회복했습니다.');break;
  default:return false;

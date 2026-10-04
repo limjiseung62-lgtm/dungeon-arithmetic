@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "baseline": "v2.4",
+  "unchangedRuleAndDataFiles": [
+    "src/ActionQueue.js",
+    "src/AnimationVariationSystem.js",
+    "src/AssetManager.js",
+    "src/AssetManifest.js",
+    "src/AudioManager.js",
+    "src/BalanceSystem.js",
+    "src/BattleContext.js",
+    "src/BattleDirector.js",
+    "src/BattleEvents.js",
+    "src/CharacterSystem.js",
+    "src/CombatSystem.js",
+    "src/DefenseSystem.js",
+    "src/DiceSystem.js",
+    "src/DifficultyEvaluator.js",
+    "src/DungeonData.js",
+    "src/DungeonSystem.js",
+    "src/EncounterData.js",
+    "src/EquipmentData.js",
+    "src/EquipmentSystem.js",
+    "src/ExpressionEngine.js",
+    "src/ForestMonsterData.js",
+    "src/GameConfig.js",
+    "src/GameState.js",
+    "src/InputPadSystem.js",
+    "src/LocalizedText.js",
+    "src/LootData.js",
+    "src/LootSystem.js",
+    "src/MercenaryData.js",
+    "src/MercenaryPresentation.js",
+    "src/MercenarySystem.js",
+    "src/MonsterAI.js",
+    "src/MonsterData.js",
+    "src/MonsterRegistry.js",
+    "src/PlayerActionSystem.js",
+    "src/Presentation.js",
+    "src/QuestData.js",
+    "src/QuestSystem.js",
+    "src/RPGConfig.js",
+    "src/ScrollData.js",
+    "src/ScrollSystem.js",
+    "src/ShopSystem.js",
+    "src/StatusEffectSystem.js",
+    "src/TargetGenerator.js",
+    "src/TimerSystem.js",
+    "src/VisualEffects.js"
+  ],
+  "storyOnlyExtensions": [
+    "RPGMode.js: two optional flags and save methods",
+    "SaveSystem.js: optional boolean validation"
+  ],
+  "allExistingAssetsUnchanged": true,
+  "tags": [
+    {
+      "tag": "v1.0",
+      "commit": "7503060783c361bcd753795449f89c2dcecf806e"
+    },
+    {
+      "tag": "v1.1",
+      "commit": "b42ab66352ca2523cef01d72f1c46a9abe344e76"
+    },
+    {
+      "tag": "v1.2",
+      "commit": "db192c660d8141d4f863d1a559a2c7ba24f3a4c3"
+    },
+    {
+      "tag": "v2.0",
+      "commit": "81be62ac71452d485c51a2be3c20d194c6a78206"
+    },
+    {
+      "tag": "v2.1",
+      "commit": "1d187275823a755a16d296a11e8ff66badcfc1ba"
+    },
+    {
+      "tag": "v2.2",
+      "commit": "5c3dd0b5e33856836cfb0e9dec1185dc6a99321e"
+    },
+    {
+      "tag": "v2.3",
+      "commit": "1d79d06cd7afc9cd3c45b956002618c8a20d8c7f"
+    },
+    {
+      "tag": "v2.4",
+      "commit": "1bfbeabf8e7db03077da59ccdaf60fcf32f4e6c4"
+    }
+  ]
+}

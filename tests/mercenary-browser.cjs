@@ -2,7 +2,7 @@ const path=require('node:path'),fs=require('node:fs'),assert=require('node:asser
 const pw=require(path.join(process.env.USERPROFILE,'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));
 (async()=>{
  const {RPGMode}=await import('../src/RPGMode.js'),{characterStats}=await import('../src/RPGConfig.js');
- const rpg=new RPGMode({getItem(){return null},setItem(){}});rpg.create('동료 탐험가');Object.assign(rpg.character,{level:4,exp:0,...characterStats(4),hp:110,gold:5000});rpg.character.inventory.items.push('steel_sword','leather_armor');rpg.equip('steel_sword');rpg.equip('leather_armor');rpg.acceptQuest('new-companion');rpg.acceptQuest('perfect-team');
+ const rpg=new RPGMode({getItem(){return null},setItem(){}});rpg.create('동료 탐험가');rpg.finishOpening();Object.assign(rpg.character,{level:4,exp:0,...characterStats(4),hp:110,gold:5000});rpg.character.inventory.items.push('steel_sword','leather_armor');rpg.equip('steel_sword');rpg.equip('leather_armor');rpg.acceptQuest('new-companion');rpg.acceptQuest('perfect-team');
  const fixture=structuredClone(rpg.data);fixture.saveVersion=3;for(const k of ['activeMercenary','mercenaryContractState','mercenaryStats'])delete fixture.progress[k];
  const browser=await pw.chromium.launch({channel:'msedge',headless:true}),page=await browser.newPage({viewport:{width:1024,height:768},hasTouch:true});
  const errors=[],results={},frames=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url())});page.setDefaultTimeout(20000);

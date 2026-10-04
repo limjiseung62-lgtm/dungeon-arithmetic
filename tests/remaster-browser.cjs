@@ -1,7 +1,7 @@
 const path=require('node:path'),fs=require('node:fs'),assert=require('node:assert/strict');
 const pw=require(path.join(process.env.USERPROFILE,'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));
 (async()=>{const {RPGMode}=await import('../src/RPGMode.js'),{EquipmentData}=await import('../src/EquipmentData.js');
- const r=new RPGMode({getItem(){return null},setItem(){}});r.create('빛의 모험가');r.character.gold=5000;r.character.inventory.items=EquipmentData.map(x=>x.id);r.equip('sage_staff');r.equip('mage_armor');r.equip('sage_ring');
+ const r=new RPGMode({getItem(){return null},setItem(){}});r.create('빛의 모험가');r.finishOpening();r.character.gold=5000;r.character.inventory.items=EquipmentData.map(x=>x.id);r.equip('sage_staff');r.equip('mage_armor');r.equip('sage_ring');
  const b=await pw.chromium.launch({channel:'msedge',headless:true}),p=await b.newPage({viewport:{width:1440,height:1000},hasTouch:true});p.setDefaultTimeout(15000);const errors=[],screens=[];p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url())});
  const click=async a=>p.locator('[data-action="'+a+'"]').first().tap();
  async function shot(n){await p.evaluate(()=>Promise.all([...document.images].map(i=>{i.loading="eager";return i.decode().catch(()=>{});} )));await p.waitForTimeout(250);await p.screenshot({path:path.join(__dirname,'../preview-v24-'+n+'.png'),fullPage:true});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),n+' horizontal overflow');screens.push(n);}

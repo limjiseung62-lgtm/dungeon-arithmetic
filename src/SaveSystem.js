@@ -21,6 +21,7 @@ export function validateSave(raw){
  const data=migrateSave(raw);if(data?.saveVersion!==RPGConfig.saveVersion)throw new Error('지원하지 않는 저장 버전입니다.');
  if(!data.meta||typeof data.meta.createdAt!=='string'||typeof data.meta.updatedAt!=='string')throw new Error('저장 정보가 올바르지 않습니다.');
  const c=data.character,p=data.progress;if(!c||!p||validateName(c.name)!==c.name)throw new Error('캐릭터 기록이 올바르지 않습니다.');
+ if(p.story!==undefined&&(!p.story||typeof p.story.openingSeen!=='boolean'||typeof p.story.guildVisited!=='boolean'))throw new Error('이야기 기록이 올바르지 않습니다.');
  if(!c.inventory||!Array.isArray(c.inventory.items)||c.inventory.items.some(id=>!equipmentId(id)))throw new Error('인벤토리 기록이 올바르지 않습니다.');normalizeEquipment(c);if(!Array.isArray(c.inventory.items)||c.inventory.items.some(id=>typeof id!=='string'||!equipmentId(id)))throw new Error('인벤토리 기록이 올바르지 않습니다.');for(const slot of ['weapon','armor','accessory'])if(c.equipment[slot]!==null&&(!equipmentId(c.equipment[slot])||equipmentType(c.equipment[slot])!==slot))throw new Error('장비 기록이 올바르지 않습니다.');const derived=finalStats(c),base=characterStats(c.level);if(c.attack!==base.attack||c.defense!==base.defense||c.maxHP!==derived.maxHP||c.hp>c.maxHP)throw new Error('장비 능력치 기록이 올바르지 않습니다.');
  for(const [key,min,max]of [['level',1,RPGConfig.maxLevel],['exp',0,1e9],['maxHP',1,10000],['hp',0,c.maxHP],['attack',1,1000],['defense',0,1000],['gold',0,1e9]])if(!integer(c[key],min,max))throw new Error('캐릭터 능력치 기록이 올바르지 않습니다.');
  if(c.level<RPGConfig.maxLevel&&c.exp>=nextLevelExp(c.level))throw new Error('경험치 기록이 올바르지 않습니다.');

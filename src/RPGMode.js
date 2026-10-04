@@ -1,4 +1,5 @@
 import {createState} from './GameState.js';
+import {storyFlags} from './StorySystem.js';
 import {CombatSystem} from './CombatSystem.js';
 import {createCharacter,addExperience,addGold} from './CharacterSystem.js';
 import {RPGConfig,RPGRewardData,createRPGContext} from './RPGConfig.js';
@@ -21,7 +22,10 @@ export class RPGMode{
  load(){if(this.data&&!this.saveInfo.ok){this.loadInfo={status:'ready',data:this.data,message:'저장되지 않은 현재 창의 모험을 이어갑니다.'};return this.loadInfo;}this.loadInfo=this.saves.load();this.data=this.loadInfo.data;this.receipt=this.data?.progress.run?.pendingLoot?.receipt||null;return this.loadInfo;}
  get character(){return this.data?.character;}
  get run(){return this.data?.progress.run;}
- create(name){const character=createCharacter(name);this.data={saveVersion:RPGConfig.saveVersion,character,progress:{...blankQuests(),...blankMercenaries(),unlockedDungeons:['old-prison'],dungeonClearHistory:[],lootHistory:[],clearedDungeons:[],run:null,completedRuns:0,stats:blankStats()},meta:{createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}};this.receipt=null;this.loadInfo={status:'ready',data:this.data,message:''};this.save();return character;}
+ get openingSeen(){return !!this.data&&storyFlags(this.data.progress).openingSeen;}
+ finishOpening(){this.data.progress.story={...storyFlags(this.data.progress),openingSeen:true};return this.save();}
+ visitGuild(){this.data.progress.story={...storyFlags(this.data.progress),guildVisited:true};return this.save();}
+ create(name){const character=createCharacter(name);this.data={saveVersion:RPGConfig.saveVersion,character,progress:{story:{openingSeen:false,guildVisited:false},...blankQuests(),...blankMercenaries(),unlockedDungeons:['old-prison'],dungeonClearHistory:[],lootHistory:[],clearedDungeons:[],run:null,completedRuns:0,stats:blankStats()},meta:{createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}};this.receipt=null;this.loadInfo={status:'ready',data:this.data,message:''};this.save();return character;}
  hire(id,options){const result=hireMercenary(this.data,id,options);if(result.ok)this.save();return result;}
  buy(id){const result=buyItem(this.character,id);if(result.ok)this.save();return result;}
  equip(id){const result=equipItem(this.character,id);if(result.ok)this.save();return result;}
