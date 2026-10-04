@@ -8,9 +8,10 @@ export const ArtManifest = {
  mercenaries:{src:'assets/remaster/mercenaries.webp',alt:'용병 길드'},
  hero:{src:'assets/remaster/hero.webp',alt:'바람빛 마을의 모험가'},
  prison:{src:'assets/dungeon-v2.png',alt:'오래된 지하감옥'},
+ mine:{src:'assets/mine-v26/mine.webp',alt:'불타는 광산'},
  forest:{src:'assets/forest-v22.webp',alt:'저주받은 숲'},
 };
-export const AssetPaths={dungeon:'assets/dungeon-v2.png',skeleton:'assets/skeleton-v2.png',goblin:'assets/goblin-v2.png',orc:'assets/orc-v2.png',spider:'assets/spider-v2.png',golem:'assets/golem-v2.png',vineSlime:'assets/vineSlime-v22.webp',shadowWolf:'assets/shadowWolf-v22.webp',mushroomSpirit:'assets/mushroomSpirit-v22.webp',forestSpirit:'assets/forestSpirit-v22.webp',treeGuardian:'assets/treeGuardian-v22.webp'};
+export const AssetPaths={fireImp:'assets/mine-v26/fireImp.webp',lavaMiner:'assets/mine-v26/lavaMiner.webp',fireScorpion:'assets/mine-v26/fireScorpion.webp',magmaGuard:'assets/mine-v26/magmaGuard.webp',flameGiant:'assets/mine-v26/flameGiant.webp',dungeon:'assets/dungeon-v2.png',skeleton:'assets/skeleton-v2.png',goblin:'assets/goblin-v2.png',orc:'assets/orc-v2.png',spider:'assets/spider-v2.png',golem:'assets/golem-v2.png',vineSlime:'assets/vineSlime-v22.webp',shadowWolf:'assets/shadowWolf-v22.webp',mushroomSpirit:'assets/mushroomSpirit-v22.webp',forestSpirit:'assets/forestSpirit-v22.webp',treeGuardian:'assets/treeGuardian-v22.webp'};
 for(const [id,src]of Object.entries(AssetPaths))ArtManifest[id]={src,alt:id};
 for(const id of ['rowen','bram','sera','luna','kain','elia'])ArtManifest[id]={src:`assets/mercenaries/${id}.webp`,alt:id};
 const groups = {

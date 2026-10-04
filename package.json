@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -21,6 +21,7 @@
     "test:mercenaries": "node tests/mercenary-browser.cjs",
     "test:mercenary-performance": "node tests/mercenary-performance.cjs",
     "simulate:mercenaries": "node tests/mercenary-balance.mjs",
+    "test:mine": "node tests/mine-browser.cjs",
     "test:story": "node tests/story-browser.cjs"
   }
 }

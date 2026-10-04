@@ -1,0 +1,63 @@
+{
+  "pass": true,
+  "baseline": "0e3e322a385118d2194f316c8b62e2e22174ed1b",
+  "existingAssetCount": 64,
+  "unchangedModules": [
+    "GameConfig",
+    "ExpressionEngine",
+    "TargetGenerator",
+    "GameState",
+    "BattleContext",
+    "ActionQueue",
+    "DefenseSystem",
+    "EquipmentData",
+    "EquipmentSystem",
+    "QuestData",
+    "QuestSystem",
+    "LootSystem",
+    "ScrollData",
+    "MercenaryData",
+    "MonsterData",
+    "ForestMonsterData",
+    "TimerSystem",
+    "AudioManager"
+  ],
+  "tagCommits": [
+    {
+      "tag": "v1.0",
+      "commit": "7503060783c361bcd753795449f89c2dcecf806e"
+    },
+    {
+      "tag": "v1.1",
+      "commit": "b42ab66352ca2523cef01d72f1c46a9abe344e76"
+    },
+    {
+      "tag": "v1.2",
+      "commit": "db192c660d8141d4f863d1a559a2c7ba24f3a4c3"
+    },
+    {
+      "tag": "v2.0",
+      "commit": "81be62ac71452d485c51a2be3c20d194c6a78206"
+    },
+    {
+      "tag": "v2.1",
+      "commit": "1d187275823a755a16d296a11e8ff66badcfc1ba"
+    },
+    {
+      "tag": "v2.2",
+      "commit": "5c3dd0b5e33856836cfb0e9dec1185dc6a99321e"
+    },
+    {
+      "tag": "v2.3",
+      "commit": "1d79d06cd7afc9cd3c45b956002618c8a20d8c7f"
+    },
+    {
+      "tag": "v2.4",
+      "commit": "1bfbeabf8e7db03077da59ccdaf60fcf32f4e6c4"
+    },
+    {
+      "tag": "v2.5",
+      "commit": "0e3e322a385118d2194f316c8b62e2e22174ed1b"
+    }
+  ]
+}

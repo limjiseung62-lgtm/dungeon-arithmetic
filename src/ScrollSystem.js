@@ -1,3 +1,4 @@
+import {mineAttackDamage} from './HeatSystem.js';
 import {heroMaxHP} from './BattleContext.js';
 import {livingEnemies,syncEncounter} from './EncounterData.js';
 import {cleanseStatuses} from './StatusEffectSystem.js';
@@ -10,7 +11,7 @@ export function applyScrollEffect(state,data,targetId=null,powerModifier=0){
   let targets=primary?[primary]:[];
   if(data.targetType==='ALL_ENEMIES')targets=alive;
   if(data.targetType==='RANDOM_ENEMIES')targets=primary?[primary,...alive.filter(e=>e!==primary)].slice(0,3):[];
-  targets.forEach((e,i)=>{const boost=(state.battleContext?.scrollPowerBonus?.('S')||0)+powerModifier;const amount=data.effect==='lightning'?[26,18,12][i]+boost:data.effect==='meteor'?(e===primary?48+boost:12+powerModifier):data.damage?data.damage+boost:0;const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
+  targets.forEach((e,i)=>{const boost=(state.battleContext?.scrollPowerBonus?.('S')||0)+powerModifier;const amount=data.effect==='lightning'?[26,18,12][i]+boost:data.effect==='meteor'?(e===primary?48+boost:12+powerModifier):data.damage?data.damage+boost:0;const damage=Math.min(e.hp,mineAttackDamage(state,e,null,amount).amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
   syncEncounter(state);
  }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage-(state.battleContext?.scrollPowerBonus?.('S')||0)-powerModifier);if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
  const scrollBoost=(state.battleContext?.scrollPowerBonus?.('S')||0)+powerModifier;

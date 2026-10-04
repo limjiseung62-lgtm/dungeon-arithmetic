@@ -1,3 +1,4 @@
+import {MineDungeon} from './MineConfig.js';
 import {RPGDungeonData} from './RPGConfig.js';
 export const ForestDungeon={id:'cursed-forest',name:'저주받은 숲',recommendedLevel:4,description:'빛나는 버섯과 오래된 유적 사이, 숲의 마력을 되돌려 주세요.',clearReward:{exp:100,gold:160},encounters:[
  {id:'forest-gate',name:'덩굴로 덮인 길',enemies:[{type:'vineSlime'}],rewardModifier:1.1},
@@ -6,5 +7,5 @@ export const ForestDungeon={id:'cursed-forest',name:'저주받은 숲',recommend
  {id:'forest-ruins',name:'잊힌 숲의 유적',enemies:[{type:'forestSpirit'}],rewardModifier:1.2},
  {id:'forest-heart',name:'숲의 심장 · 고대 나무수호자',enemies:[{type:'treeGuardian'}],rewardModifier:1.25},
 ]};
-export const DungeonData=[RPGDungeonData,ForestDungeon];
+export const DungeonData=[RPGDungeonData,ForestDungeon,MineDungeon];
 export const dungeonById=id=>DungeonData.find(d=>d.id===id);

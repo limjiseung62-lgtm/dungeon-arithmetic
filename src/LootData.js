@@ -1,6 +1,11 @@
 const table=(scrollChance,scrolls,equipmentChance,equipment)=>({scrollChance,scrolls,equipmentChance,equipment});
 // Gold is the existing monster gold reward, not a second copy of it.
 export const LootTable={
+ fireImp:table(.2,['fire','heal'],.08,['steel_sword','power_ring']),
+ lavaMiner:table(.24,['shield','meteor'],.09,['iron_armor','guardian_armor']),
+ fireScorpion:table(.3,['cleanse','heal'],.09,['guardian_charm','life_necklace']),
+ magmaGuard:table(.3,['shield','iceStorm'],.14,['guardian_armor','mage_armor']),
+ flameGiant:table(.4,['meteor','heal','cleanse'],.14,['sage_staff','mage_armor','sage_ring']),
  skeleton:table(.08,['shield'],.06,['old_sword','leather_armor']),
  goblin:table(.14,['ice','time'],.07,['old_sword','power_ring','steel_sword']),
  orc:table(.2,['fire','heal','cleanse'],.05,['life_necklace','leather_armor']),

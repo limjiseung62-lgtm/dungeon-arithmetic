@@ -33,6 +33,7 @@ export class RPGMode{
  sell(id){const result=sellItem(this.character,id);if(result.ok)this.save();return result;}
  stats(){normalizeEquipment(this.character);return finalStats(this.character);}
  save(){if(!this.data)return false;this.data.meta.updatedAt=new Date().toISOString();this.saveInfo=this.saves.save(this.data);return this.saveInfo.ok;}
+ investigateMine(){const p=this.data.progress;if(this.run||!p.clearedDungeons.includes('old-prison')||!p.clearedDungeons.includes('cursed-forest'))return {ok:false,message:'두 지역을 클리어하고 마을로 돌아와 주세요.'};if(p.unlockedDungeons.includes('burning-mine'))return {ok:false,message:'이미 광산이 열려 있어요.'};p.story={...storyFlags(p),mineInvestigated:true};unlockDungeon(p,'burning-mine');this.save();return {ok:true,message:'새로운 지역이 열렸습니다! 🌋 불타는 광산 · 붉은 마력의 흔적을 조사하세요.'};}
  get dungeon(){return dungeonById(this.run?.dungeonId||'old-prison');}
  acceptQuest(id){if(this.run)return {ok:false,message:'던전을 마친 뒤 의뢰를 수락해 주세요.'};const result=acceptQuest(this.data.progress,id);if(result.ok)this.save();return result;}
  reportQuest(id){
@@ -48,12 +49,12 @@ export class RPGMode{
  createBattle(){
   const run=this.run;if(!run)throw new Error('던전에 입장해 주세요.');const pending=run.pendingLoot,index=pending?.encounterIndex??run.nextEncounter;
   if(index>=this.dungeon.encounters.length)throw new Error('마을로 귀환해 주세요.');
-  const state=createState(1,'sequential',createRPGContext(this.character,this.dungeon));state.hero.hp=this.character.hp;state.hero.poison=Math.min(3,run.poison||0);state.scrolls=structuredClone(this.character.scrolls);state.stats=structuredClone(run.stats||blankStats());state.turn=state.stats.turns;
-  const combat=new CombatSystem(state),mercenaries=new MercenarySystem(this.data,run);combat.supportHook=(event,s)=>mercenaries.support(event,s);combat.scrollModifier=(action,s)=>mercenaries.scrollModifier(action,s);combat.configureEncounter(index);combat.startTurn();
+  const state=createState(1,'sequential',createRPGContext(this.character,this.dungeon));state.hero.hp=this.character.hp;state.hero.poison=Math.min(3,run.poison||0);state.hero.burn=Math.min(2,run.burn||0);state.scrolls=structuredClone(this.character.scrolls);state.stats=structuredClone(run.stats||blankStats());state.turn=state.stats.turns;
+  const combat=new CombatSystem(state),mercenaries=new MercenarySystem(this.data,run);combat.supportHook=(event,s)=>mercenaries.support(event,s);combat.scrollModifier=(action,s)=>mercenaries.scrollModifier(action,s);combat.configureEncounter(index);if(run.dungeonId==='burning-mine')state.heatPoints=run.heatPoints||0;combat.startTurn();
   if(pending){state.stats=structuredClone(run.stats||blankStats());state.turn=state.stats.turns;state.enemies.forEach(e=>e.hp=0);syncEncounter(state);state.phase=run.status==='clear'?'clear':'reward';state.lootCandidates=[...pending.candidates];state.lootChosen=pending.chosen;state.lootAcquired=pending.type;this.receipt=pending.receipt;}
   return {state,combat,pending:!!pending};
  }
- captureBattle(state){if(!this.character||state?.battleContext?.mode!=='rpg'||!this.run)return false;this.character.hp=Math.max(0,Math.min(this.character.maxHP,state.hero.hp));this.character.scrolls=structuredClone(state.scrolls);if(this.character.hp===0&&this.run.status==='active')this.run.status='defeat';this.run.poison=state.hero.poison;this.run.stats=structuredClone(state.stats);return true;}
+ captureBattle(state){if(!this.character||state?.battleContext?.mode!=='rpg'||!this.run)return false;this.character.hp=Math.max(0,Math.min(this.character.maxHP,state.hero.hp));this.character.scrolls=structuredClone(state.scrolls);if(this.character.hp===0&&this.run.status==='active')this.run.status='defeat';this.run.poison=state.hero.poison;if(this.run.dungeonId==='burning-mine'){this.run.burn=state.hero.burn||0;this.run.heatPoints=state.heatPoints||0;}this.run.stats=structuredClone(state.stats);return true;}
  awardBattle(state){
   if(!['reward','clear'].includes(state?.phase)||state.enemies?.some(e=>e.hp>0)||!this.captureBattle(state))return false;const run=this.run,index=state.encounterIndex;if(run.completed.includes(index))return false;
   const reward=state.enemies.reduce((sum,e)=>{const r=RPGRewardData[e.type]||{exp:0,gold:0};return {exp:sum.exp+r.exp,gold:sum.gold+r.gold};},{exp:0,gold:0});
@@ -67,7 +68,7 @@ export class RPGMode{
  applyCharacter(state){state.battleContext=createRPGContext(this.character,this.dungeon);state.hero.hp=this.character.hp;}
  recordLoot(state,type){const pending=this.run?.pendingLoot;if(!pending||pending.chosen)return false;if(!pending.candidates.includes(type))return false;this.captureBattle(state);pending.chosen=true;pending.type=type;this.save();return true;}
  advanceBattle(state,combat){if(!this.run?.pendingLoot?.chosen||this.run.status!=='active')return false;this.captureBattle(state);this.run.pendingLoot=null;this.receipt=null;this.applyCharacter(state);combat.nextMonster();this.captureBattle(state);this.save();return true;}
- onBattleEvent(event,state){if(!event||state?.battleContext?.mode!=='rpg'||!this.run)return;for(const mapped of battleEvents(event,state,this.run))this.dispatchEvent(mapped);if(event.support)this.dispatchEvent({...event.support,type:'MERCENARY_SUPPORT',dungeonId:this.run.dungeonId});if(event.kind==='victory')this.awardBattle(state);else if(event.kind==='gameover'){this.captureBattle(state);this.run.status='defeat';this.save();}else if(['attack','defense','block','magic','turn-end'].includes(event.kind)){this.captureBattle(state);this.save();}}
+ onBattleEvent(event,state){if(!event||state?.battleContext?.mode!=='rpg'||!this.run)return;for(const mapped of battleEvents(event,state,this.run))this.dispatchEvent(mapped);if(event.support)this.dispatchEvent({...event.support,type:'MERCENARY_SUPPORT',dungeonId:this.run.dungeonId});if(event.kind==='victory')this.awardBattle(state);else if(event.kind==='gameover'){this.captureBattle(state);this.run.status='defeat';this.save();}else if(['attack','defense','block','magic','burn','heatSpark','magmaArmor','turn-end'].includes(event.kind)){this.captureBattle(state);this.save();}}
  returnToTown(){
   if(!this.run)return false;const result=this.run.status;if(!['clear','defeat'].includes(result))return false;
   if(result==='clear'&&!this.run.pendingLoot?.chosen)return false;

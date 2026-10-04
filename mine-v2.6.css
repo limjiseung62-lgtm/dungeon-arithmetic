@@ -1,0 +1,25 @@
+.mine-battle .battle-stage{background:#17242a url('assets/mine-v26/mine.webp') center/cover;isolation:isolate}
+.mine-battle .stage-shade{background:linear-gradient(#09202b66,#0a1b26aa)}
+.heat-hud{position:absolute;z-index:9;left:14px;top:12px;background:#152b30f5;color:#ffedd1;border:1px solid #d8a560;border-radius:10px;padding:9px 12px;display:flex;gap:12px;align-items:center;font-size:15px;pointer-events:none}
+.heat-hud b{color:#ffdda0}.heat-hud span{color:#ffb16f;letter-spacing:3px}.heat-hud small{color:#e9ddc9;font-size:12px}.heat-3{border-color:#ffae72;background:#3e2623f5}
+.mine-battle .enemy-roster{padding-top:40px}.mine-battle .enemy-plan{background:#122a32ef}.mine-battle .combat-target{background:#122c36f5;color:#fff2d2;border-color:#d8c394}
+.mine-battle .enemy-card[data-type=flameGiant] .enemy-body{transform:scale(1.08);filter:drop-shadow(0 0 15px #f5863b66)}
+.mine-battle:has(.heat-2) .battle-stage:after,.mine-battle:has(.heat-3) .battle-stage:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;box-shadow:inset 0 0 55px #e3563933}
+.mine-battle:has(.heat-3) .battle-stage:after{box-shadow:inset 0 0 75px #e3694a55}
+.giant-awakening{animation:mine-rumble .65s 3}.core-awakening .monster-image{filter:drop-shadow(0 0 24px #ffe097)}
+.mine-omen{background:#17302e;border:1px solid #c3a568;border-radius:10px;padding:16px;margin:18px 0;color:#f8dfac}.mine-omen p{color:#e0e6d7!important;line-height:1.7}
+.region-map{grid-template-columns:repeat(6,minmax(0,1fr))}.main-story>.primary{margin:15px 0;min-height:48px}
+.special-heatSpark .special-object,.special-burn .special-object,.special-flameFist .special-object,.special-lavaSlam .special-object{color:#ffc68b;filter:drop-shadow(0 0 18px #e58847)}
+@keyframes mine-rumble{0%,100%{translate:0}25%{translate:3px 2px}75%{translate:-3px -2px}}
+@media(max-width:760px){.region-map{grid-template-columns:repeat(2,minmax(0,1fr))}.region-map li:last-child{grid-column:auto}.heat-hud{font-size:12px;padding:7px;gap:6px;left:8px;top:5px;right:8px;justify-content:center}.heat-hud small{font-size:10px}.mine-battle .enemy-roster{padding-top:37px}}
+@media(prefers-reduced-motion:reduce){.giant-awakening{animation:none}}
+.reduced-motion .giant-awakening{animation:none}
+
+.mine-unlock-overlay .modal{overflow:hidden}.mine-unlock-overlay img{width:100%;max-height:240px;object-fit:cover;border-radius:14px;margin-bottom:16px}.main-quest-list>.primary,.main-quest-list>.mine-omen{grid-column:1/-1}.mine-entry-rubble{display:none;position:absolute;inset:0;pointer-events:none;z-index:4}.giant-awakening .mine-entry-rubble{display:block}.mine-entry-rubble i{position:absolute;top:-40px;width:25px;height:35px;background:#544438;clip-path:polygon(20% 0,80% 10%,100% 70%,40% 100%,0 50%);animation:mine-rock 1.1s ease-in both}.mine-entry-rubble i:nth-child(1){left:15%}.mine-entry-rubble i:nth-child(2){left:37%;animation-delay:.3s}.mine-entry-rubble i:nth-child(3){left:70%;animation-delay:.5s}.mine-entry-rubble i:nth-child(4){left:90%;animation-delay:.1s}.giant-awakening .enemy-body{animation:giant-rise 1.7s ease-out both}@keyframes mine-rock{to{transform:translateY(350px) rotate(120deg);opacity:0}}@keyframes giant-rise{from{transform:translateY(180px);opacity:0}to{transform:translateY(0);opacity:1}}@media(prefers-reduced-motion:reduce){.mine-entry-rubble i,.giant-awakening .enemy-body{animation:none}}
+
+.mine-battle .enemy-card[data-type=flameGiant] .monster-image{transform:scale(1.22);transform-origin:center bottom}.mine-omen{position:relative;overflow:hidden}.mine-omen:has(b:first-child):after{content:"";position:absolute;right:8px;bottom:-10px;width:40px;height:80px;background:linear-gradient(#1d172a,#070f16);clip-path:polygon(50% 0,80% 25%,73% 45%,100% 100%,0 100%,27% 45%,20% 25%);opacity:.25;pointer-events:none}
+
+.mine-battle [data-boss-phase="2"] .monster-image{filter:brightness(1.08) saturate(1.15) drop-shadow(0 0 10px #ef9d5744)}.mine-battle [data-boss-phase="3"] .monster-image{filter:brightness(1.15) saturate(1.15) drop-shadow(0 0 14px #ffd77477)}.reduced-motion .mine-entry-rubble i,.reduced-motion .giant-awakening .enemy-body{animation:none}
+
+.mine-entry-hand{position:absolute;left:43%;top:40%;width:128px;height:220px;background:url("assets/mine-v26/flameGiant.webp") -32px -180px/400px 600px no-repeat;filter:drop-shadow(0 8px 15px #ffa85a66);animation:mine-first-hand .9s ease-out both}.giant-awakening .enemy-body{animation-duration:1.2s;animation-delay:.5s}@keyframes mine-first-hand{0%{translate:0 100px;opacity:0}25%,65%{translate:0 0;opacity:1}100%{translate:0 0;opacity:0}}@media(prefers-reduced-motion:reduce){.mine-entry-hand{display:none}}.reduced-motion .mine-entry-hand{display:none}
+.mine-entry-hand{height:170px;mask-image:radial-gradient(ellipse at 42% 48%,#000 28%,transparent 72%)}

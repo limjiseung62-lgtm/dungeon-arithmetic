@@ -12,6 +12,8 @@ export function mainStory(p){
   {id:'trial',name:'첫 번째 시험',goal:'오래된 지하감옥을 클리어하고 모험가로서 실력을 증명하세요.',done:cleared('old-prison'),action:'rpg-dungeon',art:'prison'},
   {id:'forest-road',name:'숲의 이상 현상',goal:'길드의 「숲으로 가는 길」을 완료 보고하여 저주받은 숲을 여세요.',done:forest,action:'rpg-guild',art:'forest'},
   {id:'guardian',name:'저주받은 숲의 수호자',goal:'저주받은 숲을 클리어하고 나무 수호자를 물리치세요.',done:cleared('cursed-forest'),action:'rpg-dungeon',art:'forest'},
+  {id:'mine-trace',name:'붉은 마력의 흔적',goal:'숲 아래의 붉은 마력을 따라 북쪽 불타는 광산을 조사하세요. 길드에서 단서를 확인하면 광산이 열립니다.',done:p.story?.mineInvestigated===true,action:'rpg-guild',art:'mine'},
+  {id:'mine-giant',name:'꺼지지 않는 불길',goal:'불타는 광산의 화염 거인을 물리치고 마왕군의 단서를 찾으세요.',done:cleared('burning-mine'),action:'rpg-dungeon',art:'mine'},
   {id:'future',name:'???',goal:'새로운 지역과 마왕의 성은 다음 업데이트에서 이어집니다.',done:false,action:null,art:'town'}
  ];
  const current=steps.findIndex(s=>!s.done);
@@ -32,8 +34,10 @@ export function nextGoal(data){
  if(!storyFlags(p).guildVisited)return {title:'먼저 모험가 길드를 방문하세요',text:'이 세계의 안내를 듣고 첫 번째 의뢰를 받아보세요.',action:'rpg-guild',label:'길드로 가기'};
  if(!Object.values(c.equipment).some(Boolean)&&c.inventory.items.length)return {title:'가방 속 장비를 장착하세요',text:'구매하거나 획득한 장비는 인벤토리에서 장착해야 능력치에 적용돼요.',action:'rpg-inventory',label:'장비 장착하기'};
  if(!Object.values(c.equipment).some(Boolean)&&EquipmentData.some(e=>e.buyPrice<=c.gold))return {title:'첫 장비로 더 강해지세요',text:`현재 ${c.gold}G로 장비를 살 수 있어요. 구매 후 인벤토리에서 장착하세요.`,action:'rpg-shop-weapon',label:'무기점 둘러보기'};
+ if(main.id==='mine-giant')return {title:'불타는 광산을 조사하세요',text:'열기는 전투마다 초기화돼요. 장비·동료·치유와 정화 두루마리를 준비하고 공격과 방어를 판단하세요.',action:'rpg-dungeon',label:'광산 준비하기'};
+ if(main.id==='mine-trace')return {title:'숲 아래에서 붉은 마력이 발견됐어요',text:'길드 마스터가 북쪽 광산의 단서를 기다립니다. 「붉은 마력의 흔적」을 확인하세요.',action:'rpg-guild',label:'광산 단서 확인'};
  if(p.activeQuests.length){const q=QuestData.find(q=>q.id===p.activeQuests[0]);return {title:q.name,text:`${q.description} · ${p.questProgress[q.id]?.count??0}/${q.target}`,action:'rpg-dungeon',label:'던전 준비하기'};}
- if(main.id==='future')return {title:'현재 공개된 두 지역을 돌파했어요!',text:'마왕의 성을 향한 이야기는 다음 업데이트에서 이어집니다. 남은 의뢰와 장비 수집에 도전하세요.',action:'rpg-guild',label:'남은 의뢰 확인'};
+ if(main.id==='future')return {title:'현재 공개된 세 지역을 돌파했어요!',text:'마왕의 성을 향한 이야기는 다음 업데이트에서 이어집니다. 남은 의뢰와 장비 수집에 도전하세요.',action:'rpg-guild',label:'남은 의뢰 확인'};
  if(!p.activeQuests.length&&main.id!=='guardian')return {title:'다음 모험의 의뢰를 받아보세요',text:main.goal,action:'rpg-guild',label:'길드로 가기'};
  if(p.unlockedDungeons.includes('cursed-forest')&&!p.activeMercenary)return {title:'저주받은 숲이 열렸어요 · 동료와 준비하세요',text:'독과 행동 방해에 대비해 장비와 두루마리를 준비하세요. 용병은 선택 사항이에요.',action:'rpg-mercenaries',label:'용병 길드 둘러보기'};
  return {title:main.name,text:main.goal,action:main.action,label:'다음 모험 준비하기'};

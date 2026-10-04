@@ -1,0 +1,74 @@
+[
+  {
+    "id": "fireImp",
+    "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-a746fe1c-2df0-4335-9b76-c75c6cced2be.png",
+    "filename": "assets/mine-v26/fireImp.webp",
+    "bytes": 169274,
+    "width": 640,
+    "height": 960,
+    "alpha": true,
+    "opaque": false,
+    "sha256": "e373f808800f6f6aee33ab1a38b6afd363c164c57ee9c863db03a643d4832904",
+    "absoluteFile": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg\\assets\\mine-v26\\fireImp.webp"
+  },
+  {
+    "id": "lavaMiner",
+    "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-d741d589-0096-4599-b9b4-cdb2da9f5c30.png",
+    "filename": "assets/mine-v26/lavaMiner.webp",
+    "bytes": 220714,
+    "width": 640,
+    "height": 960,
+    "alpha": true,
+    "opaque": false,
+    "sha256": "0c60d44f395ad3f25abb271710d63d87040b7c9077a35fc2cc4575b084e7004d",
+    "absoluteFile": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg\\assets\\mine-v26\\lavaMiner.webp"
+  },
+  {
+    "id": "fireScorpion",
+    "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-c386a4ee-47bb-4fb6-a3b9-724015714fc2.png",
+    "filename": "assets/mine-v26/fireScorpion.webp",
+    "bytes": 179390,
+    "width": 640,
+    "height": 960,
+    "alpha": true,
+    "opaque": false,
+    "sha256": "1fc7e97b37c6f94115617c1d99fbac283412472ef6fc2739838df3b0cb6fb7d6",
+    "absoluteFile": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg\\assets\\mine-v26\\fireScorpion.webp"
+  },
+  {
+    "id": "magmaGuard",
+    "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-edf91ba8-e5ff-405c-a460-a2b4d6dfbfbf.png",
+    "filename": "assets/mine-v26/magmaGuard.webp",
+    "bytes": 216964,
+    "width": 640,
+    "height": 960,
+    "alpha": true,
+    "opaque": false,
+    "sha256": "b2c9e0144f8877c018747bb098c4d8ebedf2f5e5a1fa20b29b081e1451918337",
+    "absoluteFile": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg\\assets\\mine-v26\\magmaGuard.webp"
+  },
+  {
+    "id": "flameGiant",
+    "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-c98c4bc0-d571-49d7-9e1b-d755b43f7357.png",
+    "filename": "assets/mine-v26/flameGiant.webp",
+    "bytes": 259676,
+    "width": 640,
+    "height": 960,
+    "alpha": true,
+    "opaque": false,
+    "sha256": "eb4ecbc12bd21e145e54a45031e676d9c9b27ac2b896b382899cfbf3b4a23ace",
+    "absoluteFile": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg\\assets\\mine-v26\\flameGiant.webp"
+  },
+  {
+    "id": "mine",
+    "source": "C:\\Users\\사용자\\.codex\\generated_images\\01a0ff8e-6c5c-7e51-8989-0b476ea54593\\exec-9213e171-cefd-40f8-b807-963668265b07.png",
+    "filename": "assets/mine-v26/mine.webp",
+    "bytes": 385256,
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "opaque": true,
+    "sha256": "b4891cb05bb113654c1494eeb1056254501f189539ab638e8ab176bb4910a5d1",
+    "absoluteFile": "C:\\Users\\사용자\\Documents\\Codex\\2026-10-03\\files-pasted-by-the-user-1\\outputs\\dungeon-rpg\\assets\\mine-v26\\mine.webp"
+  }
+]
