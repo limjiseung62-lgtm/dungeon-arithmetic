@@ -67,6 +67,8 @@ const {chromium}=playwright,assert=require('node:assert/strict');const output=na
  await waitTurn((await state()).turn+1).catch(async()=>{await page.waitForFunction(()=>window.dungeonDebug.state.phase==='playing');});
  const blockState=await state();assert.equal(blockState.duration,60);assert.ok(blockState.events.some(e=>e.kind==='enemy'));
  await page.locator('[data-action=debug-toggle]').tap();await page.locator('#debug-monster').fill('5');await page.locator('#debug-monster').dispatchEvent('change');await page.locator('[data-action=debug-toggle]').tap();
+ // Observe combat charge preservation before the separate loot reward can refill fire.
+ await page.evaluate(()=>window.v11TestObserver?.disconnect());
  const hp=(await state()).hero.hp,charges=(await state()).scrolls[0].uses;await solve(0,'attack','C');await solve(1,'attack','S');await root(2).locator('[data-action=pass]').tap();await root(3).locator('[data-action=pass]').tap();await page.getByRole('heading',{name:'고블린 도적 격파!'}).waitFor({timeout:10000});assert.equal((await state()).hero.hp,hp);assert.equal((await state()).scrolls[0].uses,charges);
  console.log('PASS special block, normal attack preserved, lethal queue cancels counterattack and preserves uncast scroll');
  // Real timer code, accelerated browser clock, not a direct engine call.

@@ -1,8 +1,9 @@
+import {createClassContext} from './BattleContext.js';
 import {encounterStats} from './BalanceSystem.js';
 import {GameConfig as config} from './GameConfig.js';
 import {MonsterData} from './MonsterData.js';
-export function createState(players=1,mode='sequential'){
-  return {players,mode,phase:'ready',hero:{hp:config.heroHP,shield:0,poison:0},
+export function createState(players=1,mode='sequential',battleContext=createClassContext()){
+  return {players,mode,battleContext,phase:'ready',hero:{hp:battleContext.heroMaxHP,shield:0,poison:0},
     encounterIndex:null,encounter:null,enemies:null,choices:{},blockedList:[],nextBlockedList:[],blockReservedIds:new Set(),blockedIds:new Set(),
     monsterIndex:0,monsterHP:encounterStats(0,players).hp,monsterMaxHP:encounterStats(0,players).hp,turn:0,enemyTurn:0,
     dice:[],targets:[],player:0,blocked:null,nextBlocked:null,

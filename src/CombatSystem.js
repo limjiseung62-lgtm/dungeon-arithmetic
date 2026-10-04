@@ -1,3 +1,4 @@
+import {attackDamage,mitigateAttack,battleEncounters} from './BattleContext.js';
 import {EncounterData,createEncounter,livingEnemies,syncEncounter,enemyIntent} from './EncounterData.js';
 import {applyStatus} from './StatusEffectSystem.js';
 import {encounterStats} from './BalanceSystem.js';
@@ -13,10 +14,10 @@ import {nextIntent,SpecialNames} from './MonsterAI.js';
 import {reserveAction} from './ActionQueue.js';
 export class CombatSystem{
   constructor(state,rng=Math.random,lootRng=Math.random){this.state=state;this.rng=rng;this.lootRng=lootRng;}
-  configureEncounter(index=0,data=EncounterData[index]){
+  configureEncounter(index=0,data=battleEncounters(this.state)[index]){
     const s=this.state;s.encounterIndex=index;s.encounter=data;s.enemies=createEncounter(data,s.players,index);s.monsterIndex=s.enemies[0].monsterIndex;s.enemyTurn=0;s.phase='ready';s.choices={};s.blockedList=[];s.nextBlockedList=[];s.nextBlocked=null;s.blocked=null;s.stolen=false;s.stolenDuration=null;s.curse=false;s.shifted=false;syncEncounter(s);return s.enemies;
   }
-  assignTarget(action,enemy){action.enemyId=enemy.id;action.enemyName=enemy.name;if(action.actionType==='attack')action.baseDamage=Math.max(1,config.attack[action.targetGrade]-MonsterData[enemy.monsterIndex].armor);}
+  assignTarget(action,enemy){action.enemyId=enemy.id;action.enemyName=enemy.name;if(action.actionType==='attack')action.baseDamage=attackDamage(this.state,action.targetGrade,MonsterData[enemy.monsterIndex].armor);}
   enemy(id){return this.state.enemies?.find(e=>e.id===id);}
   currentEnemy(){return this.state.enemies?.[this.state.enemyResolutionIndex||0];}
   awaitingChoices(){return Object.keys(this.state.choices||{}).length>0;}
@@ -114,7 +115,7 @@ export class CombatSystem{
         if(action.status!=='pending')return this.resolveNext();
         action.status='resolved';let event;
         if(action.actionType==='attack'){
-          const before=s.monsterHP,e=this.resolveTarget(action);const amount=s.enemies?Math.max(1,config.attack[action.targetGrade]-MonsterData[e.monsterIndex].armor):action.baseDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
+          const before=s.monsterHP,e=this.resolveTarget(action);const amount=s.enemies?attackDamage(s,action.targetGrade,MonsterData[e.monsterIndex].armor):action.baseDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
           s.stats.attack[action.targetGrade]++;
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:action.baseDamage,enemyId:action.enemyId,action,retargeted:action.retargeted});
         }else if(action.actionType==='scroll'){
@@ -143,7 +144,7 @@ export class CombatSystem{
     if(s.resolutionStage==='enemy'){
       if(s.enemies){while(this.currentEnemy()?.hp===0)s.enemyResolutionIndex++;if(!this.currentEnemy()||s.hero.hp===0){s.resolutionStage='status';return this.resolveNext();}}
       const e=this.currentEnemy(),intent=e?.intent||s.intent;
-      s.resolutionStage=s.enemies?'special':'status';const incoming=s.scrollStop?0:Math.round(intent.attack*(1-(e?.weaken||s.scrollWeaken||0)));const damage=takeDamage(s,incoming);
+      s.resolutionStage=s.enemies?'special':'status';const incoming=s.scrollStop?0:mitigateAttack(s,Math.round(intent.attack*(1-(e?.weaken||s.scrollWeaken||0))));const damage=takeDamage(s,incoming);
       return this.emit('enemy',`${e?e.name+' · ':''}적의 공격 ${incoming} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,{...damage,attack:incoming,suppressed:!!s.scrollStop,enemyId:e?.id,monster:e?.monsterIndex});
     }
     if(s.resolutionStage==='status'){
@@ -160,7 +161,7 @@ export class CombatSystem{
   win(){
     const s=this.state;if(s.phase==='reward'||s.phase==='clear')return;
     s.lootCandidates=generateLoot(s,this.lootRng);s.lootChosen=false;
-    s.phase=(s.enemies?s.encounterIndex===EncounterData.length-1:s.monsterIndex===MonsterData.length-1)?'clear':'reward';this.emit('victory',`${s.encounter?.name||MonsterData[s.monsterIndex].name} · 전투 승리!`);
+    s.phase=(s.enemies?s.encounterIndex===battleEncounters(s).length-1:s.monsterIndex===MonsterData.length-1)?'clear':'reward';this.emit('victory',`${s.encounter?.name||MonsterData[s.monsterIndex].name} · 전투 승리!`);
   }
   chooseReward(type){const s=this.state;if(!['reward','clear'].includes(s.phase)||s.lootChosen||!s.lootCandidates?.includes(type))return false;rewardScroll(s,type);s.lootChosen=true;s.lootAcquired=type;return true;}
   chooseScroll(action,index){if(!action||action.status!=='pending'||action.actionType!=='scroll')return false;if(index===null){action.status='cancelled';action.skipped=true;return true;}const slot=this.state.scrolls[index];if(!slot||slot.uses<1)return false;Object.assign(action,{scrollSlot:slot,scrollEffect:slot.type,...ScrollData[slot.type]});return true;}

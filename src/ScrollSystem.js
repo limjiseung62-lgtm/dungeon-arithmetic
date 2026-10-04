@@ -1,3 +1,4 @@
+import {heroMaxHP} from './BattleContext.js';
 import {livingEnemies,syncEncounter} from './EncounterData.js';
 import {cleanseStatuses} from './StatusEffectSystem.js';
 import {ScrollData,ScrollConfig} from './ScrollData.js';
@@ -12,7 +13,7 @@ export function applyScrollEffect(state,data,targetId=null){
   targets.forEach((e,i)=>{const amount=data.effect==='lightning'?[26,18,12][i]:data.effect==='meteor'?(e===primary?48:12):(data.damage||0);const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
   syncEncounter(state);
  }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage);if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
- if(data.heal)state.hero.hp=Math.min(config.heroHP,state.hero.hp+data.heal);
+ if(data.heal)state.hero.hp=Math.min(heroMaxHP(state),state.hero.hp+data.heal);
  if(data.shield)state.hero.shield+=data.shield;
  if(data.stop)state.scrollStop=true;
  if(data.cleanse)cleanseStatuses(state);

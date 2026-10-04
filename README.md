@@ -1,6 +1,20 @@
-# 던전탈출 사칙연산 v1.2
+# 던전탈출 사칙연산 v2.0
 
 초등학생이 세 개의 주사위를 사칙연산으로 조합해 몬스터와 싸우는 1~4인 로컬 협동 수학 RPG입니다. 태블릿 순차 입력과 전자칠판 동시 입력을 지원합니다.
+
+## v2.0 RPG 확장 1차
+
+한 프로젝트에서 **함께하기**와 **모험하기**를 선택합니다. 함께하기는 기존 1~4인 협동 전투이고, 모험하기는 이름을 만든 1인 용사가 마을과 3연전 던전을 오가며 성장하는 모드입니다.
+
+모험하기: 이름 생성 → 바람빛 마을 → 오래된 지하감옥(스켈레톤/고블린/오크) → 경험치·골드·두루마리 보상 → 레벨업 → 귀환 → 다음 접속에서 이어하기. 무기점·방어구점·길드는 준비 화면만 있습니다.
+
+초기 HP100/공격10/방어5, 레벨업 HP+5/공격+2/방어+1. 공격 보정은 최대+8, 일반 반격 감소는 최대4 및 피해의30%로 제한합니다. 수학 등급의 가치를 유지합니다. src/RPGConfig.js에서 초기 능력치, 경험치 곡선, 성장, 보상, 회복 정책을 조절합니다.
+
+RPG 저장은 **현재 사이트·브라우저의 localStorage**를 사용합니다. 다른 PC, 다른 브라우저, 로컬 주소와 공개 주소 사이에는 자동 공유되지 않습니다. 창을 닫기 전 자동 저장 안내를 확인하세요. 데이터는 saveVersion=1이며 이전 정상 저장을 자동 백업합니다. 손상된 데이터와 지원하지 않는 최신 버전은 자동 삭제하지 않습니다. 새 모험은 확인 후 유효한 새 이름을 생성할 때만 기존 기록을 교체합니다.
+
+전투 중 나가거나 새로고침하면 해당 전투를 처음부터 재개하며 마지막 저장 HP·두루마리 횟수를 유지합니다. 수식·입력 큐·남은 몬스터 HP는 저장하지 않습니다. 이미 승리한 전투의 보상/전리품 선택은 저장해서 중복 지급을 막습니다. 던전 클리어 또는 패배 후 귀환 시 HP를 회복하고, 패배해도 성장과 골드는 보존합니다.
+
+상점 구매·장비·퀘스트·계정·클라우드 저장·RPG 멀티플레이는 향후 범위입니다. 변경 내용과 검증 결과는 CHANGELOG-v2.0.md / TEST-REPORT-v2.0.md에 있습니다.
 
 ## v1.2 변화
 
@@ -28,7 +42,7 @@ HP는 던전 전체에서 유지하고 다음 몬스터에서 방어막은 0입�
 
 Node.js 18 이상에서 START.cmd 또는 npm start. npm run build는 정적 배포 파일을 dist에 만듭니다.
 
-npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:presentation, npm run test:quality, npm run test:update, npm run test:encounters로 Edge/Playwright 검사를 실행합니다.
+npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:presentation, npm run test:quality, npm run test:update, npm run test:encounters, npm run test:rpg로 Edge/Playwright 검사를 실행합니다.
 
 ?debug=1은 개발자 전용 테스트 패널입니다. 일반 주소에는 패널과 개발 API가 없습니다.
 
@@ -37,3 +51,5 @@ npm test: 자동 검사. 서버 실행 후 npm run test:browser, npm run test:pr
 GitHub 저장소: https://github.com/limjiseung62-lgtm/dungeon-arithmetic
 
 main push → 자동 테스트/production build → GitHub Pages의 같은 주소 업데이트. v1.0 태그는 기존 정상 버전 복구 지점입니다. v1.1 태그는 업데이트 전 복구 지점입니다. v1.2 작업은 update/v1.2 브랜치에서 진행했습니다. 공개 사이트 업데이트는 main의 원격 push와 Pages 배포 성공 후 적용됩니다.
+
+최신 로컬 개발은 update/v2.0에서 진행했습니다. v1.2 태그와 기존 버전의 이력을 보존합니다. 공개 버전 적용은 main을 원격에 push한 뒤 Pages 배포가 성공해야 합니다.
