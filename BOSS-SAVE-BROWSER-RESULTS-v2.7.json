@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "restored": {
+    "hp": 45,
+    "shield": 123,
+    "announced": [
+      1,
+      2,
+      3
+    ],
+    "phase": 3
+  },
+  "afterHit": {
+    "hp": 21,
+    "uses": 3
+  },
+  "midResolutionNoReplay": true,
+  "rewardNoReplay": true,
+  "errors": []
+}

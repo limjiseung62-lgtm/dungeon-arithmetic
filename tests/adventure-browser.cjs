@@ -14,7 +14,7 @@ const pw=require(path.join(process.env.USERPROFILE,'.cache/codex-runtimes/codex-
  async function solve(side='attack',grade='S',preferredScroll=null){
   const s=await state(),target=s.targets.find(t=>t.side===side&&t.grade===grade),root=page.locator('.input-pad[data-player="0"]');
   for(let i=0;i<target.solution.ids.length;i++){if(i)await root.locator(`[data-op="${target.solution.ops[i-1]}"]`).tap();await root.locator(`[data-dice="${target.solution.ids[i]}"]`).tap();}
-  await root.locator('[data-action=submit]').tap();if(s.enemies.some(e=>e.type==='treeGuardian'))assert.equal(await page.evaluate(()=>window.dungeonDebug.audio.track),'boss');
+  await root.locator('[data-action=submit]').tap();if(s.enemies.some(e=>e.type==='treeGuardian'))assert.equal(await page.evaluate(()=>window.dungeonDebug.audio.track),'boss-tree');
   if(await page.locator('.player-target-choice').count()){const alive=s.enemies.filter(e=>e.hp>0),e=side==='attack'?(alive.find(e=>e.type==='mushroomSpirit')||alive[0]):(alive.find(e=>e.intent.special==='poison')||alive.find(e=>e.intent.special!=='none')||alive[0]);await page.locator(`[data-action=choose-target][data-enemy="${e.id}"]`).tap();}
   await skip();
   for(let j=0;j<200;j++){

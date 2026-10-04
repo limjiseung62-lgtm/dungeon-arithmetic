@@ -1,0 +1,21 @@
+{
+  "original": true,
+  "generator": "tools/generate-boss-audio.cjs",
+  "golem": "assets/audio/golem-suite.wav (preserved)",
+  "tracks": {
+    "tree": {
+      "bytes": 1058444,
+      "sampleRate": 22050,
+      "duration": 24,
+      "peak": 0.17864990234375,
+      "rms": 0.08175614096630664
+    },
+    "flame": {
+      "bytes": 1058444,
+      "sampleRate": 22050,
+      "duration": 24,
+      "peak": 0.272247314453125,
+      "rms": 0.08456792495041957
+    }
+  }
+}

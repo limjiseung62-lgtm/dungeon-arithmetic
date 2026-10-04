@@ -11,7 +11,7 @@ export class BattlePresentationManager{
   if(event.kind==='enemy')result.variation=this.enemy??0;
   if(event.kind==='defense'||event.kind==='barrier')result.grade=event.action?.targetGrade||'S';
   if(event.kind==='magic')result.finisher=state.monsterHP===0;
-  const enemy=state.enemies?.find(e=>e.id===(event.enemyId||event.action?.enemyId));result.enemyId=event.enemyId||event.action?.enemyId;result.monster=event.monster??enemy?.monsterIndex??state.monsterIndex;result.wounded=state.monsterHP<=state.monsterMaxHP*.5;result.intensity=Math.min(3,1+Math.floor((state.enemyTurn-1)/4));
+  const enemy=state.enemies?.find(e=>e.id===(event.enemyId||event.action?.enemyId));result.bossReaction=enemy?.boss&&['attack','magic'].includes(event.kind)?state.monsterHP===0?'lethal':event.bossBreak||enemy.boss.breakTurns?'break':['A','S'].includes(event.action?.targetGrade)?'strong':'normal':null;result.enemyId=event.enemyId||event.action?.enemyId;result.monster=event.monster??enemy?.monsterIndex??state.monsterIndex;result.wounded=state.monsterHP<=state.monsterMaxHP*.5;result.intensity=Math.min(3,1+Math.floor((state.enemyTurn-1)/4));
   return result;
  }
 }

@@ -1,0 +1,563 @@
+{
+  "passed": true,
+  "classroom": [
+    {
+      "players": 1,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 76,
+      "turns": [
+        3,
+        3,
+        4,
+        5,
+        7,
+        7
+      ],
+      "scrolls": 16
+    },
+    {
+      "players": 1,
+      "policy": "attack-all",
+      "seed": 1,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        6,
+        4,
+        2
+      ],
+      "scrolls": 16
+    },
+    {
+      "players": 1,
+      "policy": "defense-all",
+      "seed": 1,
+      "phase": "playing",
+      "hp": 180,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scrolls": 0
+    },
+    {
+      "players": 2,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 150,
+      "turns": [
+        3,
+        3,
+        4,
+        6,
+        7,
+        6
+      ],
+      "scrolls": 18
+    },
+    {
+      "players": 2,
+      "policy": "attack-all",
+      "seed": 1,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        4
+      ],
+      "scrolls": 15
+    },
+    {
+      "players": 2,
+      "policy": "defense-all",
+      "seed": 1,
+      "phase": "playing",
+      "hp": 180,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scrolls": 0
+    },
+    {
+      "players": 3,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 154,
+      "turns": [
+        3,
+        3,
+        4,
+        6,
+        7,
+        6
+      ],
+      "scrolls": 18
+    },
+    {
+      "players": 3,
+      "policy": "attack-all",
+      "seed": 1,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        5,
+        4,
+        0
+      ],
+      "scrolls": 13
+    },
+    {
+      "players": 3,
+      "policy": "defense-all",
+      "seed": 1,
+      "phase": "playing",
+      "hp": 180,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scrolls": 0
+    },
+    {
+      "players": 4,
+      "policy": "adaptive",
+      "seed": 1,
+      "phase": "clear",
+      "hp": 163,
+      "turns": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        6
+      ],
+      "scrolls": 18
+    },
+    {
+      "players": 4,
+      "policy": "attack-all",
+      "seed": 1,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        5,
+        0,
+        0
+      ],
+      "scrolls": 11
+    },
+    {
+      "players": 4,
+      "policy": "defense-all",
+      "seed": 1,
+      "phase": "playing",
+      "hp": 180,
+      "turns": [
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scrolls": 0
+    }
+  ],
+  "mine": [
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 33,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        16
+      ],
+      "totalTurns": 52,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 6,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 133,
+      "turns": [
+        3,
+        8,
+        6,
+        8,
+        8
+      ],
+      "totalTurns": 33,
+      "specials": {
+        "block": 11,
+        "heatSpark": 3,
+        "burn": 4,
+        "magmaArmor": 1,
+        "flameFist": 2,
+        "lavaSlam": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": "rowen",
+      "supports": 15,
+      "phase": "clear",
+      "hp": 46,
+      "turns": [
+        6,
+        10,
+        6,
+        12,
+        14
+      ],
+      "totalTurns": 48,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 5,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 4,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": "rowen",
+      "supports": 14,
+      "phase": "clear",
+      "hp": 130,
+      "turns": [
+        3,
+        6,
+        5,
+        9,
+        9
+      ],
+      "totalTurns": 32,
+      "specials": {
+        "block": 13,
+        "heatSpark": 3,
+        "burn": 3,
+        "flameFist": 2,
+        "lavaSlam": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": "bram",
+      "supports": 13,
+      "phase": "clear",
+      "hp": 50,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        14
+      ],
+      "totalTurns": 50,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 5,
+        "lavaSlam": 6
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": "bram",
+      "supports": 10,
+      "phase": "clear",
+      "hp": 144,
+      "turns": [
+        3,
+        6,
+        5,
+        9,
+        10
+      ],
+      "totalTurns": 33,
+      "specials": {
+        "block": 10,
+        "heatSpark": 3,
+        "pickBlast": 1,
+        "burn": 3,
+        "magmaArmor": 1,
+        "flameFist": 2,
+        "lavaSlam": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 83,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        16
+      ],
+      "totalTurns": 52,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 6,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 145,
+      "turns": [
+        3,
+        8,
+        6,
+        8,
+        8
+      ],
+      "totalTurns": 33,
+      "specials": {
+        "block": 11,
+        "heatSpark": 3,
+        "burn": 4,
+        "magmaArmor": 1,
+        "flameFist": 2,
+        "lavaSlam": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 33,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        16
+      ],
+      "totalTurns": 52,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 6,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": "luna",
+      "supports": 10,
+      "phase": "clear",
+      "hp": 131,
+      "turns": [
+        3,
+        6,
+        5,
+        9,
+        9
+      ],
+      "totalTurns": 32,
+      "specials": {
+        "block": 13,
+        "heatSpark": 3,
+        "burn": 3,
+        "flameFist": 2,
+        "lavaSlam": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 33,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        16
+      ],
+      "totalTurns": 52,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 6,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": "kain",
+      "supports": 10,
+      "phase": "clear",
+      "hp": 138,
+      "turns": [
+        3,
+        6,
+        3,
+        9,
+        9
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "block": 12,
+        "heatSpark": 3,
+        "burn": 2,
+        "flameFist": 2,
+        "lavaSlam": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 7,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 33,
+      "turns": [
+        6,
+        12,
+        6,
+        12,
+        16
+      ],
+      "totalTurns": 52,
+      "specials": {
+        "heatSpark": 7,
+        "pickBlast": 6,
+        "burn": 7,
+        "magmaArmor": 3,
+        "flameFist": 6,
+        "lavaSlam": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 7,
+      "mercenaryId": "elia",
+      "supports": 15,
+      "phase": "clear",
+      "hp": 119,
+      "turns": [
+        3,
+        6,
+        4,
+        6,
+        7
+      ],
+      "totalTurns": 26,
+      "specials": {
+        "block": 8,
+        "heatSpark": 3,
+        "pickBlast": 1,
+        "burn": 3,
+        "magmaArmor": 1,
+        "flameFist": 2,
+        "lavaSlam": 1
+      }
+    }
+  ],
+  "conditions": "Actual arithmetic solutions, Lv7 steel sword / iron armor / life necklace; optional mercenary; no Attack S in A cases."
+}

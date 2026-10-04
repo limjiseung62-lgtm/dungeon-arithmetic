@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "base": "v2.6",
+  "preservedFiles": 81,
+  "preservedAssets": 70,
+  "preservedSource": 11,
+  "tags": [
+    "9a2a79973bed392e8345c60579cd6fe028a423f3 refs/tags/v1.0",
+    "2b9decb9ae9a8d569b17689b885bf27f1c5139c5 refs/tags/v1.1",
+    "0bbdd25ebba3a3a1b0c20365cbbbe2b0f57d8a7f refs/tags/v1.2",
+    "01a880fb83b5301ab8f24e99bf3a736a2df6e786 refs/tags/v2.0",
+    "aa9f2936ba3ccf776d200c7771b0a883fee00791 refs/tags/v2.1",
+    "e4d01de4d1351789fb78b09c83d651c308375fca refs/tags/v2.2",
+    "5da49d299385e7e193d2e284d122750c6f12fd1a refs/tags/v2.3",
+    "849659de4bef50250e1151f806ea871b5b641c4a refs/tags/v2.4",
+    "d3cd25b644a87236e10e265eca9ecff4f0a6024e refs/tags/v2.5",
+    "daecacd3d98cde9e68d494b8f95c6395a9eef898 refs/tags/v2.6"
+  ]
+}

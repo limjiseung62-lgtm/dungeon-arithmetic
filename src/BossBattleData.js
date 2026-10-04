@@ -1,0 +1,15 @@
+// Boss rules are independent of ordinary monster AI and reward ledgers.
+export const BossBattleData={
+ golem:{strategy:'armor',rewardKey:'golem',armorMultiplier:[.75,1,1],removeArmorPhase:2,patterns:[[{special:'shift',label:'재조립',extra:0},{special:'groundSmash',label:'지면 강타',extra:5}],[{special:'groundSmash',label:'지면 강타',extra:5},{special:'stone',label:'석화',extra:0}],[{special:'groundSmash',label:'최후의 지면 강타',extra:8},{special:'stone',label:'석화',extra:0}]],name:'골렘',thresholds:[1,.68,.3],music:'boss-golem',meter:'석갑 붕괴',limit:4,pressure:{C:0,B:.25,A:1,S:2},duration:2,bonus:1.35,weakness:'공격 A/S로 석갑에 균열을 모으세요.',phases:[
+  {title:'움직이는 석갑',dialogue:'이 문은 아무도 지나갈 수 없다.',hint:'석갑이 피해를 줄입니다. 균열을 모으면 약점이 열립니다.',attack:0},
+  {title:'석갑 탈락',dialogue:'방어는 필요 없다. 더 강하게!',hint:'석갑이 벗겨집니다. 지면 강타는 방어 S로 차단하세요.',attack:2},
+  {title:'최후의 지면 강타',dialogue:'돌의 힘으로 부숴 주마!',hint:'석화와 강타가 강화됩니다. 약점 공략과 방어를 선택하세요.',attack:3}]},
+ treeGuardian:{strategy:'regeneration',rewardKey:'treeGuardian',pressureWindow:'seed',seed:{prepareTurns:2,cooldown:4,healing:[6,6,10]},patterns:[[{special:'poison',label:'숲의 독',extra:0}],[{special:'rootPrison',label:'뿌리 감옥',extra:4}],[{special:'rootPrison',label:'뿌리 감옥',extra:6}]],name:'고대 나무수호자',thresholds:[1,.65,.3],music:'boss-tree',meter:'재생 차단',limit:2,pressure:{C:0,B:.25,A:1,S:2},duration:2,bonus:1.35,weakness:'씨앗 준비 2턴 동안 공격 A 두 번 또는 S로 재생을 끊으세요.',phases:[
+  {title:'숲의 숨결',dialogue:'숲을 해치는 자여, 멈추어라.',hint:'재생의 씨앗이 보이면 공격 압력을 모으세요.',attack:0},
+  {title:'뿌리 감옥',dialogue:'뿌리여, 이들을 붙잡아라!',hint:'뿌리 감옥의 추가 피해는 방어 S로 차단할 수 있습니다.',attack:2},
+  {title:'마지막 재생',dialogue:'아직 숲의 생명이 남아 있다.',hint:'마지막 재생도 준비 2턴 뒤 발동합니다. 공격으로 차단하세요.',attack:3}]},
+ flameGiant:{strategy:'heat-core',rewardKey:'flameGiant',activationPhase:3,patterns:[[{special:'flameFist',label:'화염 주먹',extra:3}],[{special:'lavaSlam',label:'용암 강타',extra:5}],[{special:'lavaSlam',label:'용암 강타',extra:5}]],name:'화염 거인',thresholds:[1,.7,.3],music:'boss-flame',meter:'화염 핵 붕괴',limit:1,pressure:{C:0,B:.25,A:1,S:2},duration:2,bonus:1.35,weakness:'3단계 핵 노출 중 공격 A/S로 핵 붕괴를 모으세요.',phases:[
+  {title:'용암의 주먹',dialogue:'마왕님의 길을 막는 자는 재가 될 것이다.',hint:'화염 주먹과 광산 열기를 주의하세요.',attack:0},
+  {title:'화염 폭주',dialogue:'불길아, 더 거세게 타올라라!',hint:'열기가 빠르게 오릅니다. 용암 강타는 방어 S로 차단하세요.',attack:0},
+  {title:'화염 핵 노출',dialogue:'핵이 드러났다… 아직 끝이 아니다!',hint:'핵 붕괴 중에는 열기 상승이 멈추고 받는 피해가 늘어납니다.',attack:0}]}
+};

@@ -13,7 +13,7 @@ export function planEncounter(s,policy='adaptive'){
   for(const scroll of sc){const copy=structuredClone(s),c=new CombatSystem(copy,Math.random,()=>.2);copy.scrollIndex=scroll;copy.choices={};copy.actionQueue=[];copy.resolutionIndex=0;
    for(const [i,t]of goals.entries()){reserveAction(copy,t,t.solution,i);for(const a of copy.actionQueue.filter(a=>a.playerId===i)){if(a.actionType==='attack'||a.actionType==='scroll')a.enemyId=target.id;if(a.actionType==='block')a.enemyId=block.id;}}
    c.endTurn();c.resolveAll();const loss=s.hero.hp-copy.hero.hp,damage=s.monsterHP-copy.monsterHP,kills=alive.length-livingEnemies(copy).length;
-   let score=damage+ kills*25-loss*3+Math.min(55,copy.hero.shield)*.45-(copy.hero.poison?4:0)-(copy.stolen?2:0);
+   const bossValue=copy.enemies.reduce((n,e,i)=>n+(e.boss?(e.boss.pressure-(s.enemies[i].boss?.pressure||0))*12+(e.boss.breaks-(s.enemies[i].boss?.breaks||0))*35:0),0);let score=bossValue+damage+ kills*25-loss*3+Math.min(55,copy.hero.shield)*.45-(copy.hero.poison?4:0)-(copy.stolen?2:0);
    if(copy.hero.hp===0)score=-1e6;if(['reward','clear'].includes(copy.phase))score=10000-loss*3-goals.length*.1;
    if(!best||score>best.score)best={goals,focus:target.id,block:block.id,scroll,score};
   }

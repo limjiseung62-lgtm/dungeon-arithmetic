@@ -1,0 +1,12 @@
+import {writeFileSync} from 'node:fs';
+import {simulateEncounterCampaign} from './EncounterStrategies.mjs';
+import {mineSimulation} from './mine-balance.mjs';
+import {MercenaryData} from '../src/MercenaryData.js';
+const classroom=[];
+for(const players of [1,2,3,4])for(const policy of ['adaptive','attack-all','defense-all'])classroom.push(simulateEncounterCampaign(players,policy));
+const mine=[];
+for(const mercenaryId of [null,...MercenaryData.map(m=>m.id)])for(const grade of ['A','S'])mine.push(mineSimulation('adaptive',1,grade,7,mercenaryId));
+const passed=classroom.filter(r=>r.policy==='adaptive').every(r=>r.phase==='clear'&&r.hp>0)&&mine.every(r=>r.phase==='clear'&&r.hp>0);
+writeFileSync('BOSS-BALANCE-RESULTS-v2.7.json',JSON.stringify({passed,classroom,mine,conditions:'Actual arithmetic solutions, Lv7 steel sword / iron armor / life necklace; optional mercenary; no Attack S in A cases.'},null,2));
+if(!passed)throw Error('Boss balance regression');
+console.log('PASS four classroom party sizes and fourteen mine A/S companion cases');

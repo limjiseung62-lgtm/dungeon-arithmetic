@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "bosses": [
+    "golem",
+    "treeGuardian",
+    "flameGiant"
+  ],
+  "viewports": [
+    390,
+    768,
+    1280
+  ],
+  "phase3": true,
+  "phaseTimerPaused": true,
+  "realAInputBreak": true,
+  "errors": []
+}

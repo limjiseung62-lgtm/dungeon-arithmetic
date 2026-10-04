@@ -1,3 +1,4 @@
+import {bossDamage} from './BossBattleSystem.js';
 import {mineAttackDamage} from './HeatSystem.js';
 import {mercenaryById} from './MercenaryData.js';
 import {heroMaxHP} from './BattleContext.js';
@@ -35,7 +36,7 @@ export class MercenarySystem{
   if(['attack','defense'].includes(event.kind)&&!c.successfulEncounters.includes(state.encounterIndex))c.successfulEncounters.push(state.encounterIndex);
   if(!this.available(event,state))return null;
   let effect=m.effect==='adaptive'?(event.kind==='defense'?'shield':'damage'):m.effect,value=m.effect==='adaptive'&&effect==='shield'?m.defenseValue:m.effectValue,actual=0,enemyId=null;
-  if(effect==='damage'){const enemy=livingEnemies(state).find(e=>e.id===event.enemyId)||livingEnemies(state)[0];if(!enemy)return null;actual=Math.min(enemy.hp,mineAttackDamage(state,enemy,null,value).amount);enemy.hp-=actual;enemyId=enemy.id;syncEncounter(state);state.totalDamage+=actual;}
+  if(effect==='damage'){const enemy=livingEnemies(state).find(e=>e.id===event.enemyId)||livingEnemies(state)[0];if(!enemy)return null;actual=Math.min(enemy.hp,bossDamage(enemy,mineAttackDamage(state,enemy,null,value).amount));enemy.hp-=actual;enemyId=enemy.id;syncEncounter(state);state.totalDamage+=actual;}
   else if(effect==='shield'){actual=value;state.hero.shield+=actual;}
   else if(effect==='heal'){actual=Math.min(value,heroMaxHP(state)-state.hero.hp);state.hero.hp+=actual;}
   else if(effect==='scroll'){if(!event.mercenaryBoost)return null;actual=event.mercenaryBoost;}
