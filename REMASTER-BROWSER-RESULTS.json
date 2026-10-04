@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "screens": [
+    "main",
+    "town",
+    "weapons",
+    "armor",
+    "accessories",
+    "item-detail",
+    "inventory",
+    "character",
+    "guild",
+    "mercenaries",
+    "dungeons",
+    "party",
+    "prison-companion",
+    "scroll-selection",
+    "loot-equipment",
+    "scroll-open",
+    "town-390",
+    "accessories-390",
+    "detail-390",
+    "town-1024",
+    "accessories-1024",
+    "detail-1024",
+    "town-1920",
+    "accessories-1920",
+    "detail-1920"
+  ],
+  "errors": [],
+  "fallback": true
+}

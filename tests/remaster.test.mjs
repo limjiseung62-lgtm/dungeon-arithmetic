@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {ArtManifest,artHTML,installArtTheme} from '../src/AssetManifest.js';
+import {EquipmentData} from '../src/EquipmentData.js';
+import {ScrollData} from '../src/ScrollData.js';
+const root=new URL('../',import.meta.url);
+test('all twelve equipment IDs map to real premium raster assets',()=>{assert.equal(EquipmentData.length,12);for(const e of EquipmentData){assert.ok(ArtManifest[e.id]);assert.ok(fs.existsSync(new URL(ArtManifest[e.id].src,root)));assert.match(artHTML(e.id,{label:e.name}),/role="img"/);}});
+test('nine scrolls share stable artwork IDs and bounded atlas cells',()=>{for(const id of Object.keys(ScrollData)){const a=ArtManifest[id];assert.equal(a.columns,3);assert.ok(a.index>=0&&a.index<9);assert.match(artHTML(id),new RegExp('data-art="'+id+'"'));}});
+test('thumbnail paths exist while enlarged items use full resolution',()=>{for(const e of EquipmentData)assert.ok(fs.existsSync(new URL(ArtManifest[e.id].thumb,root)));assert.match(artHTML('sage_ring'),/accessories-thumb.webp/);assert.match(artHTML('sage_ring',{full:true}),/accessories.webp/);});
+test('all environment and hero files exist with bounded WebP size',()=>{for(const a of JSON.parse(fs.readFileSync(new URL('ASSETS-v2.4.json',root)))){assert.ok(a.bytes<1000000);assert.ok(a.width>=512);assert.ok(fs.existsSync(new URL(a.filename,root)));}});
+test('all item atlases and protagonist retain alpha',()=>{for(const a of JSON.parse(fs.readFileSync(new URL('ASSETS-v2.4.json',root))).filter(a=>['hero','weapons','armor','accessories','scrolls'].includes(a.id)))assert.equal(a.alpha,true);});
+test('atlas images are clipped by nested square viewport',()=>{const html=artHTML('sage_ring');assert.match(html,/overflow="hidden"/);assert.match(html,/viewBox="100 100 100 100"/);});
+test('missing asset IDs have a readable semantic fallback',()=>{assert.match(artHTML('missing',{label:'유물'}),/유물/);assert.match(artHTML('missing'),/art-fallback/);assert.doesNotThrow(installArtTheme);});
+test('generated backgrounds keep labels in HTML',()=>{for(const id of ['town','weapon','armorShop','accessory','guild','mercenaries'])assert.match(artHTML(id),/alt=/);});
+test('scroll open and selection use the same manifest function',()=>{for(const f of ['src/UI.js','src/VisualEffects.js'])assert.match(fs.readFileSync(new URL(f,root),'utf8'),/artHTML\(/);});
+test('production build includes remaster style and centralized manifest',()=>{assert.match(fs.readFileSync(new URL('build.mjs',root),'utf8'),/remaster-v2.4.css/);assert.match(fs.readFileSync(new URL('index.html',root),'utf8'),/v2.4/);});

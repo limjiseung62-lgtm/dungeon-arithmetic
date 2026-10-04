@@ -1,0 +1,4105 @@
+{
+  "scenarios": 140,
+  "level": 4,
+  "gear": [
+    "steel_sword",
+    "leather_armor"
+  ],
+  "summary": [
+    {
+      "member": "none",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 0,
+      "total": 5,
+      "cost": 0,
+      "turns": [],
+      "hp": [],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "none",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 0,
+      "turns": [
+        15,
+        16,
+        18,
+        18,
+        18
+      ],
+      "hp": [
+        92,
+        23,
+        113,
+        114,
+        125
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "none",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 0,
+      "turns": [
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      "hp": [
+        84,
+        84,
+        84,
+        84,
+        84
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "none",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 0,
+      "turns": [
+        24,
+        22,
+        20,
+        27,
+        23
+      ],
+      "hp": [
+        125,
+        125,
+        117,
+        104,
+        101
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "rowen",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 0,
+      "total": 5,
+      "cost": 260,
+      "turns": [],
+      "hp": [],
+      "supports": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "member": "rowen",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 260,
+      "turns": [
+        15,
+        13,
+        15,
+        14,
+        15
+      ],
+      "hp": [
+        112,
+        71,
+        94,
+        103,
+        124
+      ],
+      "supports": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "member": "rowen",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 260,
+      "turns": [
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "hp": [
+        82,
+        82,
+        82,
+        82,
+        82
+      ],
+      "supports": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "member": "rowen",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 260,
+      "turns": [
+        18,
+        18,
+        18,
+        23,
+        19
+      ],
+      "hp": [
+        117,
+        117,
+        125,
+        113,
+        117
+      ],
+      "supports": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "member": "bram",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 0,
+      "total": 5,
+      "cost": 240,
+      "turns": [],
+      "hp": [],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "bram",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 240,
+      "turns": [
+        15,
+        16,
+        18,
+        18,
+        18
+      ],
+      "hp": [
+        92,
+        23,
+        113,
+        114,
+        125
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "bram",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 240,
+      "turns": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "hp": [
+        88,
+        88,
+        88,
+        88,
+        88
+      ],
+      "supports": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "member": "bram",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 240,
+      "turns": [
+        18,
+        17,
+        19,
+        23,
+        23
+      ],
+      "hp": [
+        123,
+        123,
+        123,
+        125,
+        125
+      ],
+      "supports": [
+        5,
+        5,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "member": "sera",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 480,
+      "turns": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "hp": [
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "supports": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "member": "sera",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 480,
+      "turns": [
+        15,
+        16,
+        18,
+        18,
+        18
+      ],
+      "hp": [
+        114,
+        76,
+        125,
+        125,
+        125
+      ],
+      "supports": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "member": "sera",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 480,
+      "turns": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "hp": [
+        88,
+        88,
+        88,
+        88,
+        88
+      ],
+      "supports": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "member": "sera",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 480,
+      "turns": [
+        24,
+        22,
+        20,
+        27,
+        23
+      ],
+      "hp": [
+        125,
+        125,
+        125,
+        116,
+        113
+      ],
+      "supports": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "member": "luna",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 0,
+      "total": 5,
+      "cost": 520,
+      "turns": [],
+      "hp": [],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "luna",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 520,
+      "turns": [
+        17,
+        17,
+        15,
+        14,
+        17
+      ],
+      "hp": [
+        66,
+        73,
+        87,
+        92,
+        72
+      ],
+      "supports": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "member": "luna",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 520,
+      "turns": [
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      "hp": [
+        84,
+        84,
+        84,
+        84,
+        84
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "luna",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 520,
+      "turns": [
+        18,
+        17,
+        17,
+        23,
+        23
+      ],
+      "hp": [
+        117,
+        117,
+        125,
+        125,
+        125
+      ],
+      "supports": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "member": "kain",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 0,
+      "total": 5,
+      "cost": 1050,
+      "turns": [],
+      "hp": [],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "kain",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 1050,
+      "turns": [
+        15,
+        13,
+        15,
+        13,
+        15
+      ],
+      "hp": [
+        98,
+        71,
+        94,
+        103,
+        124
+      ],
+      "supports": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "member": "kain",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 1050,
+      "turns": [
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      "hp": [
+        84,
+        84,
+        84,
+        84,
+        84
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "kain",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 1050,
+      "turns": [
+        18,
+        17,
+        17,
+        23,
+        19
+      ],
+      "hp": [
+        117,
+        117,
+        121,
+        109,
+        117
+      ],
+      "supports": [
+        7,
+        7,
+        7,
+        8,
+        8
+      ]
+    },
+    {
+      "member": "elia",
+      "policy": "attack",
+      "grade": "A",
+      "clears": 0,
+      "total": 5,
+      "cost": 1150,
+      "turns": [],
+      "hp": [],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "elia",
+      "policy": "attack",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 1150,
+      "turns": [
+        15,
+        13,
+        15,
+        13,
+        15
+      ],
+      "hp": [
+        112,
+        71,
+        94,
+        103,
+        124
+      ],
+      "supports": [
+        9,
+        8,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "member": "elia",
+      "policy": "adaptive",
+      "grade": "A",
+      "clears": 5,
+      "total": 5,
+      "cost": 1150,
+      "turns": [
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      "hp": [
+        84,
+        84,
+        84,
+        84,
+        84
+      ],
+      "supports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "member": "elia",
+      "policy": "adaptive",
+      "grade": "S",
+      "clears": 5,
+      "total": 5,
+      "cost": 1150,
+      "turns": [
+        20,
+        16,
+        16,
+        18,
+        18
+      ],
+      "hp": [
+        125,
+        125,
+        125,
+        125,
+        125
+      ],
+      "supports": [
+        13,
+        12,
+        13,
+        13,
+        13
+      ]
+    }
+  ],
+  "results": [
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 92,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 23,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "totalTurns": 16,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 113,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 114,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 4,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "block": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        6,
+        5,
+        7
+      ],
+      "totalTurns": 24,
+      "specials": {
+        "block": 6,
+        "guard": 4,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        4,
+        7
+      ],
+      "totalTurns": 22,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "block": 7,
+        "guard": 3,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 104,
+      "turns": [
+        3,
+        3,
+        6,
+        5,
+        10
+      ],
+      "totalTurns": 27,
+      "specials": {
+        "block": 9,
+        "guard": 4,
+        "shift": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": null,
+      "supports": 0,
+      "phase": "clear",
+      "hp": 101,
+      "turns": [
+        3,
+        3,
+        6,
+        3,
+        8
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 7,
+        "guard": 4,
+        "shift": 3,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 112,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 71,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "totalTurns": 13,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 94,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 103,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "totalTurns": 14,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 2,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 124,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2,
+        "block": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "clear",
+      "hp": 82,
+      "turns": [
+        4,
+        4,
+        6,
+        4,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "clear",
+      "hp": 82,
+      "turns": [
+        4,
+        4,
+        6,
+        4,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "clear",
+      "hp": 82,
+      "turns": [
+        4,
+        4,
+        6,
+        4,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "clear",
+      "hp": 82,
+      "turns": [
+        4,
+        4,
+        6,
+        4,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 12,
+      "phase": "clear",
+      "hp": 82,
+      "turns": [
+        4,
+        4,
+        6,
+        4,
+        12
+      ],
+      "totalTurns": 30,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 113,
+      "turns": [
+        3,
+        3,
+        5,
+        4,
+        8
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 9,
+        "guard": 3,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "rowen",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        4,
+        4
+      ],
+      "totalTurns": 19,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 92,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 23,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "totalTurns": 16,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 113,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 114,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 4,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "block": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 123,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 5,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 123,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "block": 5,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 6,
+      "phase": "clear",
+      "hp": 123,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        6
+      ],
+      "totalTurns": 19,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        5,
+        7
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 3,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "bram",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        5,
+        7
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 5,
+        "guard": 3,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 17,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 17,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 17,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 17,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 17,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 114,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 76,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        4
+      ],
+      "totalTurns": 16,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 4,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        2,
+        2,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 2,
+        "block": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 88,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        12
+      ],
+      "totalTurns": 31,
+      "specials": {
+        "guard": 7,
+        "steal": 2,
+        "poison": 6,
+        "shift": 7
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        6,
+        5,
+        7
+      ],
+      "totalTurns": 24,
+      "specials": {
+        "block": 6,
+        "guard": 4,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        4,
+        7
+      ],
+      "totalTurns": 22,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "block": 7,
+        "guard": 3,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 116,
+      "turns": [
+        3,
+        3,
+        6,
+        5,
+        10
+      ],
+      "totalTurns": 27,
+      "specials": {
+        "block": 9,
+        "guard": 4,
+        "shift": 5
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "sera",
+      "supports": 5,
+      "phase": "clear",
+      "hp": 113,
+      "turns": [
+        3,
+        3,
+        6,
+        3,
+        8
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 7,
+        "guard": 4,
+        "shift": 3,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 66,
+      "turns": [
+        2,
+        2,
+        3,
+        4,
+        6
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 73,
+      "turns": [
+        2,
+        2,
+        3,
+        4,
+        6
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 87,
+      "turns": [
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 92,
+      "turns": [
+        2,
+        2,
+        3,
+        4,
+        3
+      ],
+      "totalTurns": 14,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 72,
+      "turns": [
+        2,
+        2,
+        3,
+        4,
+        6
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 2,
+        "shift": 4,
+        "block": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        5,
+        7
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 7,
+        "guard": 3,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "luna",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        5,
+        5,
+        7
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 4,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 98,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 2,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 71,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "totalTurns": 13,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 94,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 2,
+        "shift": 2,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 103,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "totalTurns": 13,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 124,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2,
+        "block": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 7,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        3,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 7,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 7,
+      "phase": "clear",
+      "hp": 121,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        4
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 109,
+      "turns": [
+        3,
+        3,
+        5,
+        4,
+        8
+      ],
+      "totalTurns": 23,
+      "specials": {
+        "block": 9,
+        "guard": 3,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "kain",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 117,
+      "turns": [
+        3,
+        3,
+        5,
+        4,
+        4
+      ],
+      "totalTurns": 19,
+      "specials": {
+        "block": 6,
+        "guard": 3,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "gameover",
+      "hp": 0,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "totalTurns": 17,
+      "specials": {
+        "guard": 5,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 112,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 3
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 8,
+      "phase": "clear",
+      "hp": 71,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "totalTurns": 13,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 94,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 4,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2,
+        "block": 1
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 103,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "totalTurns": 13,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "attack",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 9,
+      "phase": "clear",
+      "hp": 124,
+      "turns": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "totalTurns": 15,
+      "specials": {
+        "guard": 3,
+        "steal": 1,
+        "poison": 1,
+        "shift": 2,
+        "block": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "A",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 0,
+      "phase": "clear",
+      "hp": 84,
+      "turns": [
+        4,
+        4,
+        6,
+        5,
+        16
+      ],
+      "totalTurns": 35,
+      "specials": {
+        "guard": 8,
+        "steal": 2,
+        "poison": 7,
+        "shift": 9
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 1,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 13,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        6
+      ],
+      "totalTurns": 20,
+      "specials": {
+        "block": 5,
+        "guard": 3,
+        "shift": 3,
+        "poison": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 2,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 12,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "totalTurns": 16,
+      "specials": {
+        "block": 5,
+        "guard": 2,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 3,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 13,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "totalTurns": 16,
+      "specials": {
+        "block": 5,
+        "guard": 2,
+        "shift": 1
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 4,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 13,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 5,
+        "guard": 3,
+        "shift": 2
+      }
+    },
+    {
+      "policy": "adaptive",
+      "seed": 5,
+      "grade": "S",
+      "level": 4,
+      "mercenaryId": "elia",
+      "supports": 13,
+      "phase": "clear",
+      "hp": 125,
+      "turns": [
+        3,
+        3,
+        4,
+        3,
+        5
+      ],
+      "totalTurns": 18,
+      "specials": {
+        "block": 5,
+        "guard": 3,
+        "shift": 2
+      }
+    }
+  ]
+}

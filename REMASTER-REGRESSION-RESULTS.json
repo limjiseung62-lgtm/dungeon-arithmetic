@@ -1,0 +1,50 @@
+[
+  {
+    "file": "presentation-browser.cjs",
+    "status": 0,
+    "stdout": "PASS goblin 45 second success, 60 second block, cinematic timer stopped, skip\nPASS curse success\nPASS curse blocked\nPASS web success\nPASS web blocked\nPASS poison success\nPASS poison blocked\nPASS shift success\nPASS shift blocked\nPASS stone success\nPASS stone blocked\nPASS mid-input timer pause/resume\nPASS browser audio activation, independent mute and volume\nPASS classroom board layout and no page errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "quality-browser.cjs",
+    "status": 0,
+    "stdout": "PASS music continuity; recorded swing/impact spacing 0.18133333333333335 seconds; impact frame delta 0\nPASS Korean title/setup/story/settings/input/attacks/spells/all specials; mobile/tablet/board; no browser errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "update-v11-browser.cjs",
+    "status": 0,
+    "stdout": "PASS spell fire one charge, paused timer, distinct effect\nPASS spell ice one charge, paused timer, distinct effect\nPASS spell shield one charge, paused timer, distinct effect\nPASS spell heal one charge, paused timer, distinct effect\nPASS spell lightning one charge, paused timer, distinct effect\nPASS spell cleanse one charge, paused timer, distinct effect\nPASS spell meteor one charge, paused timer, distinct effect\nPASS spell time one charge, paused timer, distinct effect\nPASS preserve scroll on Attack S\nPASS 4 combo labels, nonrepeat slash variations, no extra damage\nPASS 3 unique loot, selected reward, HP carry/shield reset, board four pads\nPASS v1.1 actual touch UI and no errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "encounter-browser.cjs",
+    "status": 0,
+    "stdout": "PASS layout sequential 1 / 2 / 3 enemies, eight common goals, input pads visible\nPASS layout simultaneous 1 / 2 / 3 enemies, eight common goals, input pads visible\nPASS sequential edit after current player changed\nPASS simultaneous choices, timer reference count, target edit, single Defense S with other special active\nPASS real scroll target fire [ 22, 0, 0 ]\nPASS real scroll target lightning [ 26, 18, 12 ]\nPASS real scroll target iceStorm [ 16, 16, 16 ]\nPASS real scroll target meteor [ 48, 12, 12 ]\nPASS real scroll target heal [ 0, 0, 0 ]\nPASS real scroll target shield [ 0, 0, 0 ]\nPASS six encounters campaign turns [ 3, 4, 5, 6, 7, 11 ] HP 180\nPASS production build multi-enemy scene\nPASS no browser errors, student debug hidden\n",
+    "stderr": ""
+  },
+  {
+    "file": "balance-browser.cjs",
+    "status": 0,
+    "stdout": "{\"players\":1,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,3,4,4,14],\"hp\":33,\"shield\":2}\n{\"players\":2,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[2,4,5,7,10],\"hp\":131,\"shield\":2}\n{\"players\":3,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,4,5,7,13],\"hp\":164,\"shield\":9}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,4,5,6,9],\"hp\":170,\"shield\":4}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"attack-all\",\"phase\":\"gameover\",\"turns\":[3,4,2,0,0],\"hp\":0,\"shield\":0}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"defense-all\",\"phase\":\"playing\",\"turns\":[10,0,0,0,0],\"hp\":180,\"shield\":690}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"one-defense\",\"phase\":\"gameover\",\"turns\":[3,4,5,5,1],\"hp\":0,\"shield\":0}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"balanced\",\"phase\":\"clear\",\"turns\":[4,7,7,7,8],\"hp\":140,\"shield\":52}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"attack-S\",\"phase\":\"clear\",\"turns\":[4,5,7,7,8],\"hp\":140,\"shield\":26}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"defense-S\",\"phase\":\"clear\",\"turns\":[4,5,7,7,10],\"hp\":128,\"shield\":26}\n{\"players\":4,\"mode\":\"simultaneous\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,4,6,6,9],\"hp\":170,\"shield\":4}\nPASS actual touch UI campaigns: all party sizes, all six policies, 4-pad simultaneous, scaled HP and existing cutscenes\n",
+    "stderr": ""
+  },
+  {
+    "file": "balance-targets.cjs",
+    "status": 0,
+    "stdout": "CHECK web 2\nCHECK web 4\nCHECK web 6\nCHECK web 8\nCHECK stone 2\nCHECK stone 4\nCHECK stone 6\nCHECK stone 8\nPASS actual cutscenes and pads: web/petrify rotate 2P→3P→4P→1P; exactly one next-turn action blocked\n",
+    "stderr": ""
+  },
+  {
+    "file": "simulate-balance.mjs",
+    "status": 0,
+    "stdout": "280 strategy simulations completed; see REMASTER-BALANCE-RESULTS.json",
+    "stderr": ""
+  },
+  {
+    "file": "mercenary-balance.mjs",
+    "status": 0,
+    "stdout": "140 forest companion simulations completed; see REMASTER-MERCENARY-BALANCE-RESULTS.json",
+    "stderr": ""
+  }
+]

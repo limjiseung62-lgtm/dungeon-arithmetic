@@ -1,0 +1,222 @@
+{
+  "pass": true,
+  "baseline": "v2.3",
+  "files": [
+    {
+      "file": "src/ActionQueue.js",
+      "sha256": "999c7fb48465f53489551fb907c1903b4cb74e0b4be075aabb81ee1e975cae80"
+    },
+    {
+      "file": "src/AnimationVariationSystem.js",
+      "sha256": "f84ee55d3574569b118bb4dc1c33ac2376063bd13e33a19cecd88b17adf39da3"
+    },
+    {
+      "file": "src/AudioManager.js",
+      "sha256": "b44dbe2350db0cb99de05d5a255a93d7e289abcb764fc557fcdc74bc6c6e1575"
+    },
+    {
+      "file": "src/BalanceSystem.js",
+      "sha256": "cb183f551b007bdaeacf7b2c8599269cc897d5e6c52c35dffa247f35036d8ecd"
+    },
+    {
+      "file": "src/BattleContext.js",
+      "sha256": "da37357b537509bcea105df1b6af95c925aaed283ccd406fecacac6d8263092e"
+    },
+    {
+      "file": "src/BattleDirector.js",
+      "sha256": "d95fc50a54c968dd6ed2c84b89757a7e53b70178b6e2dcf57fdbd1ea315232b0"
+    },
+    {
+      "file": "src/BattleEvents.js",
+      "sha256": "1971e4065c40650cf2b67a09ffd8059f4b9e32cce7082e9651cd928b4185e851"
+    },
+    {
+      "file": "src/CharacterSystem.js",
+      "sha256": "fa965f86105830ff7c3b61bf7107efa561481154905b4bda8dc3d924611d4e15"
+    },
+    {
+      "file": "src/CombatSystem.js",
+      "sha256": "5fe06c9b247706e49c5b4c679fea5c899b2264c74e3d8b475f4bfb10b05afc34"
+    },
+    {
+      "file": "src/DefenseSystem.js",
+      "sha256": "58ee7c82008d438e2bd3c67be1f8170d03727b3b89ce01e874e6190863bb51ee"
+    },
+    {
+      "file": "src/DiceSystem.js",
+      "sha256": "0e49a355203621e23b646a292c0d2c96844dc39226894c5ae171531b4636ad04"
+    },
+    {
+      "file": "src/DifficultyEvaluator.js",
+      "sha256": "90bcb439b3e1fe3dc82a51f048374dfe9a69ca23f74a5ea1301050f635d7ab0b"
+    },
+    {
+      "file": "src/DungeonData.js",
+      "sha256": "1b03a30c01585558d7a22d74cc11aee42a50286f3584c6d2889d715ba4ff857d"
+    },
+    {
+      "file": "src/DungeonSystem.js",
+      "sha256": "299ecf375544907daf68e78aec9453ca637673cb98db6e288d0cad3e0c471359"
+    },
+    {
+      "file": "src/EncounterData.js",
+      "sha256": "97d5e46557621c29361b51a44e77b8fbc03300dd6185f93e52cd6bfafd49d68c"
+    },
+    {
+      "file": "src/EquipmentData.js",
+      "sha256": "2df93057908aec956dccef81256859a15826b770d1a1fe34e1a92c1ea685eecd"
+    },
+    {
+      "file": "src/EquipmentSystem.js",
+      "sha256": "ca638b4953e427257cf43cc1d750c465ce4cbaad070fa48bb943be3736b20f43"
+    },
+    {
+      "file": "src/ExpressionEngine.js",
+      "sha256": "8249a531dd6886c41a2356251fdc0c46b0c9cf5c70f11ea7f48252e57c9509b2"
+    },
+    {
+      "file": "src/ForestMonsterData.js",
+      "sha256": "6ddcbac6523c147f82a33f8689b406a9f02027288c427836366e6aecc8996179"
+    },
+    {
+      "file": "src/GameConfig.js",
+      "sha256": "4c5571148b6c2b39e8f2ff90e5a444b3f03784ddb18a749d6ccbc4e3cb60687c"
+    },
+    {
+      "file": "src/GameState.js",
+      "sha256": "dc23d433621e7a55402d6cf85d7f477bf48ebe3f47dd0b0d199bf4b5e1fa9c11"
+    },
+    {
+      "file": "src/InputPadSystem.js",
+      "sha256": "07476aa261155ec89eda7379072f56f052bd5fa9aea44608ee23f1187e7e5373"
+    },
+    {
+      "file": "src/LocalizedText.js",
+      "sha256": "6208ce0626ea3016d5e5142ebd300fe7930e18a0f10d4b4c2d29293953109f16"
+    },
+    {
+      "file": "src/LootData.js",
+      "sha256": "61139aab44022c96e67f71f46f07b7bb66a09f8a7094e67db7c513f26f975cc6"
+    },
+    {
+      "file": "src/LootSystem.js",
+      "sha256": "13463df6ad6bbcfc6efd3072ef197a3be7364066bcd3600348128ef933b820b9"
+    },
+    {
+      "file": "src/MercenaryData.js",
+      "sha256": "cc02bff898a8515318272ef2fd8930abe4f2c438b707d4fdc8729a31e8c44624"
+    },
+    {
+      "file": "src/MercenarySystem.js",
+      "sha256": "70e4670db594fba5303f9f2250ac8f81970c901ff932fc3134471c11f9e4fe56"
+    },
+    {
+      "file": "src/MonsterAI.js",
+      "sha256": "d451ae51c47ea12ad2a1ec78597f5e4fb47b0a1a9c8f09ac35dd3f0eab8b21d6"
+    },
+    {
+      "file": "src/MonsterData.js",
+      "sha256": "4972e5199c1102b45e53e45e0744ffc04c58f98eb300c6579c9303921571ea2d"
+    },
+    {
+      "file": "src/MonsterRegistry.js",
+      "sha256": "8396430b2597f415e632451ce5ee1249a42dfcc4c93df84f53054af2755c70f4"
+    },
+    {
+      "file": "src/PlayerActionSystem.js",
+      "sha256": "7051f2c8aca61f73f6ecda8ab6bbd313646329318001d8c28ab1bafee8fc3f70"
+    },
+    {
+      "file": "src/Presentation.js",
+      "sha256": "951893d879265ba904853775e0ebac8a670e0e48871827f1050adf429f812124"
+    },
+    {
+      "file": "src/QuestData.js",
+      "sha256": "a4207f58cfeef586bec9058e5ccecbf5228a028663b3c2c4948ae064e35c5b8e"
+    },
+    {
+      "file": "src/QuestSystem.js",
+      "sha256": "480e8894556534dd7d3ff1b6ebbec85d3bf5af644477e7ab227294a8a8343c56"
+    },
+    {
+      "file": "src/RPGConfig.js",
+      "sha256": "06a96efdeb5526cc5f9138666e1a18022d4a7a4540909aef57c7f8fd13c901d8"
+    },
+    {
+      "file": "src/RPGMode.js",
+      "sha256": "25a744982ceba1e952fd792f1a4c8819698b7925386772de3969d81d997fd297"
+    },
+    {
+      "file": "src/SaveSystem.js",
+      "sha256": "e8f54df271a600f8ffeec8e87a87b946c5fad3627964d946455dffbd649a0cf1"
+    },
+    {
+      "file": "src/ScrollData.js",
+      "sha256": "44dfb415ca2992e38bfc8c2c0db1f959218fe21df5c300ef8e59f46cffcceea5"
+    },
+    {
+      "file": "src/ScrollSystem.js",
+      "sha256": "40ac621940689fd314c2ebcaade0751a06d1758162545a71ac7cf673b24d4d30"
+    },
+    {
+      "file": "src/ShopSystem.js",
+      "sha256": "65c4e62982ba3c6443ff4facee68f6947a0d6e7ed37890fe4d1c9017c21b9d08"
+    },
+    {
+      "file": "src/StatusEffectSystem.js",
+      "sha256": "7e54e9cdd5a7e67e1d26e7f45c25236d4aeb84fc2dab4c912ad990edc46d3c63"
+    },
+    {
+      "file": "src/TargetGenerator.js",
+      "sha256": "c35cc349e7915ef7fe5f5b498c90eac3a55f041e3209ca92f4426038695b0068"
+    },
+    {
+      "file": "src/TimerSystem.js",
+      "sha256": "ba6a9d940a0688a8fdfca49d7447bae4345632d9b41b9e0846b6af7f020d10f0"
+    }
+  ],
+  "mercenaries": [
+    {
+      "id": "rowen",
+      "sha256": "aaaa4e43fb03dc2134dd19088160ad3d7a8b9a7aa6e379eb92b6ae78a3b2563d"
+    },
+    {
+      "id": "bram",
+      "sha256": "2be95848df7b569fe7d2cd6c155fb530023645ea3ec9195d379b552fcd9c5d75"
+    },
+    {
+      "id": "sera",
+      "sha256": "aa9b162ce4e068e8280d742488b730e644e1b7db167a4ed83599bdd8eb0ddfb7"
+    },
+    {
+      "id": "luna",
+      "sha256": "628fa87c63389a2088597f4c6812118ff49d4aa223a91326f4059e2317b556c1"
+    },
+    {
+      "id": "kain",
+      "sha256": "b0bc590b927269cec7f7b36b00e3b2baae81a3e09b3d75946a920b26dd86bbc2"
+    },
+    {
+      "id": "elia",
+      "sha256": "1f79eb06533bbd70252958201e7b8465cf2d44c0ed2e570c136dd6086d1cf5cd"
+    }
+  ],
+  "tags": [
+    {
+      "tag": "v2.0",
+      "commit": "81be62ac71452d485c51a2be3c20d194c6a78206"
+    },
+    {
+      "tag": "v2.1",
+      "commit": "1d187275823a755a16d296a11e8ff66badcfc1ba"
+    },
+    {
+      "tag": "v2.2",
+      "commit": "5c3dd0b5e33856836cfb0e9dec1185dc6a99321e"
+    },
+    {
+      "tag": "v2.3",
+      "commit": "1d79d06cd7afc9cd3c45b956002618c8a20d8c7f"
+    }
+  ]
+}

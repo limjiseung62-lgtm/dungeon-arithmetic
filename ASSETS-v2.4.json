@@ -1,0 +1,122 @@
+[
+  {
+    "id": "town",
+    "filename": "assets/remaster/town.webp",
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "bytes": 512932
+  },
+  {
+    "id": "accessories",
+    "filename": "assets/remaster/accessories.webp",
+    "width": 1254,
+    "height": 1254,
+    "alpha": true,
+    "bytes": 451656
+  },
+  {
+    "id": "weapons",
+    "filename": "assets/remaster/weapons.webp",
+    "width": 1254,
+    "height": 1254,
+    "alpha": true,
+    "bytes": 202422
+  },
+  {
+    "id": "armor",
+    "filename": "assets/remaster/armor.webp",
+    "width": 1254,
+    "height": 1254,
+    "alpha": true,
+    "bytes": 580390
+  },
+  {
+    "id": "scrolls",
+    "filename": "assets/remaster/scrolls.webp",
+    "width": 1254,
+    "height": 1254,
+    "alpha": true,
+    "bytes": 784998
+  },
+  {
+    "id": "guild",
+    "filename": "assets/remaster/guild.webp",
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "bytes": 406388
+  },
+  {
+    "id": "mercenaries",
+    "filename": "assets/remaster/mercenaries.webp",
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "bytes": 336530
+  },
+  {
+    "id": "weapon",
+    "filename": "assets/remaster/weapon.webp",
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "bytes": 381564
+  },
+  {
+    "id": "armorShop",
+    "filename": "assets/remaster/armorShop.webp",
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "bytes": 394726
+  },
+  {
+    "id": "accessory",
+    "filename": "assets/remaster/accessory.webp",
+    "width": 1600,
+    "height": 900,
+    "alpha": false,
+    "bytes": 387172
+  },
+  {
+    "id": "hero",
+    "filename": "assets/remaster/hero.webp",
+    "width": 667,
+    "height": 1000,
+    "alpha": true,
+    "bytes": 158594
+  },
+  {
+    "id": "accessories-thumb",
+    "filename": "assets/remaster/accessories-thumb.webp",
+    "width": 512,
+    "height": 512,
+    "alpha": true,
+    "bytes": 82378
+  },
+  {
+    "id": "weapons-thumb",
+    "filename": "assets/remaster/weapons-thumb.webp",
+    "width": 512,
+    "height": 512,
+    "alpha": true,
+    "bytes": 40614
+  },
+  {
+    "id": "armor-thumb",
+    "filename": "assets/remaster/armor-thumb.webp",
+    "width": 512,
+    "height": 512,
+    "alpha": true,
+    "bytes": 107888
+  },
+  {
+    "id": "scrolls-thumb",
+    "filename": "assets/remaster/scrolls-thumb.webp",
+    "width": 768,
+    "height": 768,
+    "alpha": true,
+    "bytes": 287580
+  }
+]

@@ -1,3 +1,4 @@
+import {artHTML} from './AssetManifest.js';
 import {ScrollData} from './ScrollData.js';
 import {displayText} from './LocalizedText.js';
 const gestures=[['검 베기','내려치기','찌르기'],['단검 베기','점프 공격','기습 돌진'],['지팡이 타격','마법탄','충격파'],['앞발 공격','돌진','물기'],['주먹 내려치기','양손 충격','지면 강타'],['덩굴 휘두르기','덩굴 밀치기','잎사귀 일격'],['그림자 돌진','빠른 발톱','도약 공격'],['포자 날리기','버섯 통통','잎사귀 타격'],['마력탄','빛의 고리','유적의 파동'],['가지 내려치기','뿌리의 파동','숲의 일격']];
@@ -18,7 +19,7 @@ export class VisualEffects{
     }
     if(event.kind==='scroll-open'){
       const title=ScrollData[event.type]?.name||'두루마리';layer.classList.add(`spell-${event.type}`);
-      layer.innerHTML=`<div class="spell-runes">✧ ⟡ ✦ ⟡ ✧</div><div class="unfurled-scroll"><i></i><div class="rune-seal">✧</div><b>${title}</b><span>스크롤 발동!</span><i></i></div>`;
+      layer.innerHTML=`<div class="spell-runes">✧ ⟡ ✦ ⟡ ✧</div><div class="unfurled-scroll"><i></i><div class="rune-seal">${artHTML(event.type,{label:title,full:true})}</div><b>${title}</b><span>스크롤 발동!</span><i></i></div>`;
     }
     if(event.kind==='magic-launch'){layer.classList.add(`spell-${event.type}`);layer.innerHTML='<div class="magic-projectile"></div>'; }
     if(event.kind==='magic'){
@@ -48,4 +49,3 @@ export class VisualEffects{
     this.handles.push(setTimeout(()=>this.clear(),2200));
   }
 }
-
