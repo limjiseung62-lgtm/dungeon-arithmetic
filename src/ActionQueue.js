@@ -13,7 +13,7 @@ export function reserveAction(state,target,expression,playerId){
         if(slot.uses>reservations)add('scroll',{scrollSlot:slot,scrollEffect:slot.type,...ScrollData[slot.type]});}
     }
   }else{
-    add('defense',{shieldGain:config.defense[target.grade]});
+    add('defense',{shieldGain:config.defense[target.grade]+(state.battleContext?.defenseGradeBonus?.(target.grade)||0)});
     if(target.grade==='S'){state.blockReserved=true;add('block',{specialBlock:true});}
   }
 }

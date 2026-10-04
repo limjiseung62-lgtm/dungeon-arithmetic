@@ -152,7 +152,7 @@ function rpgScreen(next,notice=''){cancel();state=null;screen=next;settingsOpen=
 function enterRPG(){playScope='rpg';const loaded=rpg.load();rpgNameDraft='';rpgScreen(loaded.data?'rpg-gate':['invalid','newer'].includes(loaded.status)?'rpg-gate':'rpg-create',loaded.message);}
 function createRPGCharacter(){if(screen!=='rpg-create')return;rpgNameDraft=document.querySelector('#character-name')?.value||'';try{rpg.create(rpgNameDraft);rpgScreen('rpg-town',rpg.saveInfo.ok?'':rpg.saveInfo.message);}catch(error){rpgNotice=error.message;render();document.querySelector('#character-name')?.focus();}}
 function startRPGBattle(){cancel();playScope='rpg';if(!rpg.run)rpg.enterDungeon();const built=rpg.createBattle();state=built.state;combat=built.combat;pads=createPads(1);specialHistory.clear();settingsOpen=false;debugOpen=false;rpgNotice='';screen='battle';lastSaved=null;if(built.pending){rolling=false;render();}else beginTurn(true);}
-function handleRPGAction(action){switch(action){
+function handleRPGAction(action,button=null){switch(action){
  case 'rpg-enter':enterRPG();break;
  case 'rpg-create-submit':createRPGCharacter();break;
  case 'rpg-continue':if(rpg.run?.status==='defeat')rpg.returnToTown();rpgScreen('rpg-town');break;
@@ -161,6 +161,14 @@ function handleRPGAction(action){switch(action){
  case 'rpg-reset-cancel':rpgScreen('rpg-gate');break;
  case 'rpg-town':rpgScreen('rpg-town');break;
  case 'rpg-character':rpgScreen('rpg-character');break;
+ case 'rpg-inventory':rpgScreen('rpg-inventory');break;
+ case 'rpg-shop-weapon':rpgScreen('rpg-shop-weapon');break;
+ case 'rpg-shop-armor':rpgScreen('rpg-shop-armor');break;
+ case 'rpg-shop-accessory':rpgScreen('rpg-shop-accessory');break;
+ case 'rpg-buy':rpgNotice=rpg.buy(button?.dataset.item).message;render();break;
+ case 'rpg-equip':rpgNotice=rpg.equip(button?.dataset.item).message;rpgScreen('rpg-inventory',rpgNotice);break;
+ case 'rpg-unequip':rpgNotice=rpg.unequip(button?.dataset.slot).message;rpgScreen('rpg-character',rpgNotice);break;
+ case 'rpg-sell':rpgNotice=rpg.sell(button?.dataset.item).message;render();break;
  case 'rpg-dungeon':rpgScreen('rpg-dungeon');break;
  case 'rpg-dungeon-start':startRPGBattle();break;
  case 'rpg-future':rpgNotice='다음 업데이트에서 열립니다!';render();break;
@@ -170,7 +178,7 @@ function handleRPGAction(action){switch(action){
  }return true;}
 function handleButton(button){
  if(!button||button.disabled)return;
- if(button.dataset.action?.startsWith('rpg-')){if(!audio.active)audio.activate();handleRPGAction(button.dataset.action);return;}
+ if(button.dataset.action?.startsWith('rpg-')){if(!audio.active)audio.activate();handleRPGAction(button.dataset.action,button);return;}
  if(button.dataset.action==='choose-target'){if(combat.chooseTarget(Number(button.dataset.playerId),button.dataset.enemy)){syncChoiceTimer();render();if(state.phase==='resolution')runResolution();}return;}
  if(button.dataset.action==='change-target'){const id=Number(button.dataset.playerId),a=state.actionQueue.find(a=>a.playerId===id&&a.actionType==='attack');if(a&&state.phase==='playing'){state.choices[id]={kind:'attack',actions:[a],editing:true};timer.pause();render();}return;}
  if(button.dataset.action==='scroll-target'){const choice=targetScrollChoice;if(choice&&combat.chooseScrollTarget(choice.action,button.dataset.enemy)){targetScrollChoice=null;document.querySelector('.target-scroll-overlay,.edit-target-overlay')?.remove();choice.resolve(button.dataset.enemy);}return;}

@@ -10,11 +10,12 @@ export function applyScrollEffect(state,data,targetId=null){
   let targets=primary?[primary]:[];
   if(data.targetType==='ALL_ENEMIES')targets=alive;
   if(data.targetType==='RANDOM_ENEMIES')targets=primary?[primary,...alive.filter(e=>e!==primary)].slice(0,3):[];
-  targets.forEach((e,i)=>{const amount=data.effect==='lightning'?[26,18,12][i]:data.effect==='meteor'?(e===primary?48:12):(data.damage||0);const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
+  targets.forEach((e,i)=>{const boost=state.battleContext?.scrollPowerBonus?.('S')||0;const amount=data.effect==='lightning'?[26,18,12][i]+boost:data.effect==='meteor'?(e===primary?48+boost:12):(data.damage||0)+boost;const damage=Math.min(e.hp,amount);e.hp-=damage;if(data.weaken)e.weaken=Math.max(e.weaken||0,data.weaken);if(damage)impacts.push({enemyId:e.id,damage,killed:e.hp===0});});
   syncEncounter(state);
- }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage);if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
- if(data.heal)state.hero.hp=Math.min(heroMaxHP(state),state.hero.hp+data.heal);
- if(data.shield)state.hero.shield+=data.shield;
+ }else{if(data.damage)state.monsterHP=Math.max(0,state.monsterHP-data.damage-(state.battleContext?.scrollPowerBonus?.('S')||0));if(data.weaken)state.scrollWeaken=Math.max(state.scrollWeaken||0,data.weaken);}
+ const scrollBoost=state.battleContext?.scrollPowerBonus?.('S')||0;
+ if(data.heal)state.hero.hp=Math.min(heroMaxHP(state),state.hero.hp+data.heal+scrollBoost);
+ if(data.shield)state.hero.shield+=data.shield+scrollBoost;
  if(data.stop)state.scrollStop=true;
  if(data.cleanse)cleanseStatuses(state);
  return {damage:before.monsterHP-state.monsterHP,heal:state.hero.hp-before.hp,shield:state.hero.shield-before.shield,impacts};

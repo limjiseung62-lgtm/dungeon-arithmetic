@@ -4,6 +4,8 @@ import {createCharacter,addExperience,addGold} from './CharacterSystem.js';
 import {RPGConfig,RPGDungeonData,RPGRewardData,createRPGContext} from './RPGConfig.js';
 import {SaveSystem} from './SaveSystem.js';
 import {syncEncounter} from './EncounterData.js';
+import {normalizeEquipment,finalStats,equipItem,unequipItem,sellItem} from './EquipmentSystem.js';
+import {buyItem} from './ShopSystem.js';
 const blankStats=()=>({turns:0,attack:{S:0,A:0,B:0,C:0},defense:{S:0,A:0,B:0,C:0},blocks:0,scrolls:0});
 const runId=()=>globalThis.crypto?.randomUUID?.()||`${Date.now()}-${Math.random().toString(36).slice(2)}`;
 export class RPGMode{
@@ -12,6 +14,11 @@ export class RPGMode{
  get character(){return this.data?.character;}
  get run(){return this.data?.progress.run;}
  create(name){const character=createCharacter(name);this.data={saveVersion:RPGConfig.saveVersion,character,progress:{clearedDungeons:[],run:null,completedRuns:0,stats:blankStats()},meta:{createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}};this.receipt=null;this.loadInfo={status:'ready',data:this.data,message:''};this.save();return character;}
+ buy(id){const result=buyItem(this.character,id);if(result.ok)this.save();return result;}
+ equip(id){const result=equipItem(this.character,id);if(result.ok)this.save();return result;}
+ unequip(slot){const result=unequipItem(this.character,slot);if(result.ok)this.save();return result;}
+ sell(id){const result=sellItem(this.character,id);if(result.ok)this.save();return result;}
+ stats(){normalizeEquipment(this.character);return finalStats(this.character);}
  save(){if(!this.data)return false;this.data.meta.updatedAt=new Date().toISOString();this.saveInfo=this.saves.save(this.data);return this.saveInfo.ok;}
  enterDungeon(){if(!this.character)throw new Error('먼저 용사를 만들어 주세요.');if(this.run?.status==='active'||this.run?.pendingLoot)return false;this.data.progress.run={id:runId(),dungeonId:RPGDungeonData.id,nextEncounter:0,status:'active',completed:[],clearBonusGranted:false,pendingLoot:null,stats:blankStats(),poison:0};this.receipt=null;this.save();return true;}
  createBattle(){
