@@ -22,7 +22,10 @@ export function mainStory(p){
   {id:'chaos-seal',name:'두 번째 봉인',goal:'혼돈의 마탑에서 마법진의 문양을 관찰하고 혼돈의 마법사를 쓰러뜨리세요.',done:campaign(p).seals.chaos,action:'rpg-dungeon',art:'tower'},
   {id:'last-seal',name:'마지막 봉인',goal:'길드에서 용의 수호자가 향한 천공의 용암 협곡을 조사하세요.',done:campaign(p).canyonInvestigated,action:'rpg-guild',art:'canyon'},
  {id:'dragon-seal',name:'용의 수호자',goal:'협곡에서 용을 추격하고 날개 BREAK와 브레스 예고를 판단하여 마지막 봉인을 파괴하세요.',done:campaign(p).seals.dragon,action:'rpg-dungeon',art:'dragonNest'},
- {id:'future',name:'마왕의 성',goal:'세 봉인의 결계가 열립니다. v3.3에서 성에 입장하여 원래 세계로 돌아가는 마지막 여정을 시작하세요.',done:false,action:null,art:'castleGate'}
+ {id:'castle-road',name:'제3막 · 마왕의 성',goal:'마을에서 길드 마스터의 마지막 당부를 듣고 마왕의 성으로 출발하세요.',done:campaign(p).actThreeSeen,action:'rpg-town',art:'castleGate'},
+ {id:'elia-truth',name:'말하지 못한 진실',goal:'마력 용광로를 돌파하고 봉인의 방에서 엘리아의 기억을 확인하세요.',done:campaign(p).eliaTruthSeen,action:'rpg-dungeon',art:'sealChamber'},
+ {id:'throne-road',name:'왕좌로 향하라',goal:'용의 전당과 최종 정예전을 넘어 왕좌의 문에 도달하세요.',done:campaign(p).throneReached,action:'rpg-dungeon',art:'throneDoor'},
+ {id:'future',name:'마왕과 마지막 질문',goal:'왜 마왕이 용사를 불렀는가? 실제 마왕전과 엔딩은 v3.4에서 이어집니다.',done:false,action:null,art:'kingAwakens'}
  ];
  const current=steps.findIndex(s=>!s.done);
  return steps.map((s,i)=>({...s,status:s.done?'complete':i===current?'current':'locked'}));
@@ -42,11 +45,12 @@ export function nextGoal(data){
  if(!storyFlags(p).guildVisited)return {title:'먼저 모험가 길드를 방문하세요',text:'이 세계의 안내를 듣고 첫 번째 의뢰를 받아보세요.',action:'rpg-guild',label:'길드로 가기'};
  if(!Object.values(c.equipment).some(Boolean)&&c.inventory.items.length)return {title:'가방 속 장비를 장착하세요',text:'구매하거나 획득한 장비는 인벤토리에서 장착해야 능력치에 적용돼요.',action:'rpg-inventory',label:'장비 장착하기'};
  if(!Object.values(c.equipment).some(Boolean)&&EquipmentData.some(e=>!e.bossOnly&&e.buyPrice<=c.gold))return {title:'첫 장비로 더 강해지세요',text:`현재 ${c.gold}G로 장비를 살 수 있어요. 구매 후 인벤토리에서 장착하세요.`,action:'rpg-shop-weapon',label:'무기점 둘러보기'};
+ if(['castle-road','elia-truth','throne-road'].includes(main.id))return {title:main.name,text:main.goal,action:main.action,label:'제3막 목표 확인'};
  if(['war-declared','fortress-road','dark-seal','twisted-space','chaos-seal','last-seal','dragon-seal'].includes(main.id))return {title:main.name,text:main.goal,action:main.action,label:'제2막 목표 확인'};
  if(main.id==='mine-giant')return {title:'불타는 광산을 조사하세요',text:'열기는 전투마다 초기화돼요. 장비·동료·치유와 정화 두루마리를 준비하고 공격과 방어를 판단하세요.',action:'rpg-dungeon',label:'광산 준비하기'};
  if(main.id==='mine-trace')return {title:'숲 아래에서 붉은 마력이 발견됐어요',text:'길드 마스터가 북쪽 광산의 단서를 기다립니다. 「붉은 마력의 흔적」을 확인하세요.',action:'rpg-guild',label:'광산 단서 확인'};
  if(p.activeQuests.length){const q=QuestData.find(q=>q.id===p.activeQuests[0]);return {title:q.name,text:`${q.description} · ${p.questProgress[q.id]?.count??0}/${q.target}`,action:'rpg-dungeon',label:'던전 준비하기'};}
- if(main.id==='future')return {title:'제2막 완료 · 마왕의 성 OPEN',text:'세 봉인 3/3 · 결계가 열렸습니다. 입장 전투는 v3.3에서 공개됩니다. 남은 의뢰와 장비 수집에 도전하세요.',action:'rpg-guild',label:'남은 의뢰 확인'};
+ if(main.id==='future')return {title:'왕좌 도달 · 마지막 질문',text:'마왕의 목적과 실제 최종 전투는 v3.4에서 이어집니다. 남은 의뢰와 수집에 도전하세요.',action:'rpg-guild',label:'남은 의뢰 확인'};
  if(!p.activeQuests.length&&main.id!=='guardian')return {title:'다음 모험의 의뢰를 받아보세요',text:main.goal,action:'rpg-guild',label:'길드로 가기'};
  if(p.unlockedDungeons.includes('cursed-forest')&&!p.activeMercenary)return {title:'저주받은 숲이 열렸어요 · 동료와 준비하세요',text:'독과 행동 방해에 대비해 장비와 두루마리를 준비하세요. 용병은 선택 사항이에요.',action:'rpg-mercenaries',label:'용병 길드 둘러보기'};
  return {title:main.name,text:main.goal,action:main.action,label:'다음 모험 준비하기'};

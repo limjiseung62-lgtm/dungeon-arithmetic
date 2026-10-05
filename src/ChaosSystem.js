@@ -1,13 +1,14 @@
+import {castleMechanic} from './CastleData.js';
 import {takeDamage} from './DefenseSystem.js';
 export const ChaosConfig={max:3,warningSeconds:10,maskSeconds:5,maskCount:2,timePenalty:5,illusionDamage:.6,bodyPressure:1};
-export const inTower=s=>s?.battleContext?.mode==='rpg'&&s.battleContext.dungeonId==='chaos-tower';
+export const inTower=s=>s?.battleContext?.mode==='rpg'&&(s.battleContext.dungeonId==='chaos-tower'||castleMechanic(s,'chaos'));
 export function initChaos(s){if(inTower(s)){s.chaos={level:0,defeated:[],shuffle:false,prophecy:false,mask:false,timePenalty:0};s.chaosTurn=null;}}
 export function chaosKills(s){if(!inTower(s))return false;let changed=false;for(const e of s.enemies){if(e.hp>0||s.chaos.defeated.includes(e.id))continue;s.chaos.defeated.push(e.id);if(['chaosApostle','illusionist','bookSpirit'].includes(e.type)){s.chaos.level=Math.max(0,s.chaos.level-1);changed=true;}}return changed;}
 // Presentation metadata never replaces dice, target values, grades or their solutions.
 export function chaosTurn(s){if(!inTower(s))return;const c=s.chaos,b=s.enemies.find(e=>e.type==='chaosMage'),phase=b?.boss?.phase||0;
  s.duration=Math.max(50,s.duration-c.timePenalty);s.seconds=s.duration;c.timePenalty=0;
  if(c.shuffle||phase>=2){for(const side of ['attack','defense'])for(const t of s.targets.filter(t=>t.side===side))t.position=(t.position+1+(s.enemyTurn%2))%4;}
- const mask=(c.mask||phase>=2||c.level>=2)&&!b?.boss?.breakTurns;
+ const mask=s.battleContext.dungeonId!=='demon-castle'&&(c.mask||phase>=2||c.level>=2)&&!b?.boss?.breakTurns;
  s.chaosTurn={maskIds:mask?s.targets.filter(t=>t.grade==='A').map(t=>t.id).slice(0,ChaosConfig.maskCount):[],prophecy:c.prophecy||s.enemyTurn===1&&s.enemies.some(e=>e.type==='illusionist'&&e.hp>0)||phase>0||c.level===3,body:phase===3&&!b.boss.breakTurns?(s.enemyTurn+1)%3:null};c.shuffle=false;c.mask=false;c.prophecy=false;
 }
 export const chaosMasked=(s,t)=>inTower(s)&&s.phase==='playing'&&!t.used&&s.chaosTurn?.maskIds.includes(t.id)&&s.elapsed>=ChaosConfig.warningSeconds&&s.elapsed<ChaosConfig.warningSeconds+Math.max(1,ChaosConfig.maskSeconds-(s.battleContext.chaosReveal||0));

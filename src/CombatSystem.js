@@ -1,3 +1,5 @@
+import {inCastle} from './CastleData.js';
+import {initCastle,castleTurn,castleDamage,elitePressure,assistElite,castleSpecial,tickCastle} from './CastleSystem.js';
 import {initCanyon,canyonTurn,canyonDamage,canyonSpecial,scrollWings,assistWings} from './CanyonSystem.js';
 import {initChaos,chaosTurn,chaosKills,chaosSpecial,bodyActive,bodyDamage,bodyBreak,collapseIllusions} from './ChaosSystem.js';
 import {initMorale,moraleKills,tickMorale,fortressSpecial,fortressRelicBonus} from './MoraleSystem.js';
@@ -21,7 +23,7 @@ import {reserveAction} from './ActionQueue.js';
 export class CombatSystem{
   constructor(state,rng=Math.random,lootRng=Math.random){this.state=state;this.rng=rng;this.lootRng=lootRng;}
   configureEncounter(index=0,data=battleEncounters(this.state)[index]){
-    const s=this.state;s.encounterIndex=index;if(inMine(s))s.heatPoints=0;s.encounter=data;s.enemies=createEncounter(data,s.players,index);s.enemies.forEach(initBoss);initMorale(s);initChaos(s);initCanyon(s);s.monsterIndex=s.enemies[0].monsterIndex;s.enemyTurn=0;s.phase='ready';s.choices={};s.blockedList=[];s.nextBlockedList=[];s.nextBlocked=null;s.blocked=null;s.stolen=false;s.stolenDuration=null;s.curse=false;s.shifted=false;syncEncounter(s);return s.enemies;
+    const s=this.state;s.encounterIndex=index;s.encounter=data;if(inMine(s))s.heatPoints=0;s.enemies=createEncounter(data,s.players,index);s.enemies.forEach(initBoss);initMorale(s);initChaos(s);initCanyon(s);initCastle(s);s.monsterIndex=s.enemies[0].monsterIndex;s.enemyTurn=0;s.phase='ready';s.choices={};s.blockedList=[];s.nextBlockedList=[];s.nextBlocked=null;s.blocked=null;s.stolen=false;s.stolenDuration=null;s.curse=false;s.shifted=false;syncEncounter(s);return s.enemies;
   }
   assignTarget(action,enemy){action.enemyId=enemy.id;action.enemyName=enemy.name;if(action.actionType==='attack')action.baseDamage=attackDamage(this.state,action.targetGrade,bossArmor(enemy,monsterAt(enemy.monsterIndex).armor));}
   enemy(id){return this.state.enemies?.find(e=>e.id===id);}
@@ -43,7 +45,7 @@ export class CombatSystem{
   resolveTarget(action){
     const s=this.state;if(!s.enemies)return null;let e=this.enemy(action.enemyId);if(!e||e.hp<=0){const old=e;e=livingEnemies(s)[0];if(e){action.retargeted=old?`${old.name}이 이미 쓰러져 ${e.name}으로 공격 대상을 변경합니다!`:null;action.enemyId=e.id;action.enemyName=e.name;}}return e;
   }
-  emit(kind,text,extra={}){const event={kind,text,...extra};if(this.supportHook)event.support=this.supportHook(event,this.state);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistWings(this.enemy(event.enemyId),.25);event.chaosWeakened=chaosKills(this.state);const morale=moraleKills(this.state);if(morale==='적의 사기가 꺾였습니다!')event.moraleBroken=true;this.state.events.push(event);return event;}
+  emit(kind,text,extra={}){const event={kind,text,...extra};const ctx=this.state.battleContext,a=event.action;if(ctx?.mode==='rpg'&&a){event.equipmentBonus=kind==='attack'?a.equipmentBonus||0:kind==='defense'?ctx.defenseGradeBonus?.(a.targetGrade)||0:kind==='magic'?a.equipmentBonus||0:0;if(event.equipmentBonus)event.text+=' · 장비 효과 +'+event.equipmentBonus;}if(this.supportHook)event.support=this.supportHook(event,this.state);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistWings(this.enemy(event.enemyId),.25);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistElite(this.state,this.enemy(event.enemyId));event.chaosWeakened=chaosKills(this.state);const morale=moraleKills(this.state);if(morale==='적의 사기가 꺾였습니다!')event.moraleBroken=true;this.state.events.push(event);return event;}
   startTurn(){
     const s=this.state;if(!['ready','enemy'].includes(s.phase))return false;
     if(!s.enemies&&s.enemyTurn===0){s.monsterMaxHP=encounterStats(s.monsterIndex,s.players).hp;if(s.monsterHP===monsterAt(s.monsterIndex).hp)s.monsterHP=s.monsterMaxHP;}
@@ -53,7 +55,7 @@ export class CombatSystem{
     s.scrollStop=false;s.scrollWeaken=0;s.specialBlocked=false;s.blockReserved=false;s.curse=false;s.shifted=false;s.blocked=s.nextBlocked;s.blockedList=s.nextBlockedList?.length?s.nextBlockedList:(s.blocked?[s.blocked]:[]);s.nextBlocked=null;s.nextBlockedList=[];s.blockReservedIds=new Set();s.blockedIds=new Set();s.choices={};
     s.actionQueue=[];s.actionsDone=Array(s.players).fill(false);s.resolutionIndex=0;s.totalDamage=0;s.resolutionStage=null;
     for(const b of s.blockedList)s.actionsDone[b.slot]=true;
-    s.player=s.actionsDone.findIndex(done=>!done);s.intent=nextIntent(s);if(s.enemies){for(const e of s.enemies){e.weaken=0;prepareBoss(s,e);e.intent=enemyIntent(s,e);}s.intent=s.enemies[0].intent;}s.phase='playing';chaosTurn(s);canyonTurn(s);s.mineStatusResolved=false;
+    s.player=s.actionsDone.findIndex(done=>!done);s.intent=nextIntent(s);if(s.enemies){for(const e of s.enemies){e.weaken=0;prepareBoss(s,e);e.intent=enemyIntent(s,e);}s.intent=s.enemies[0].intent;}s.phase='playing';chaosTurn(s);canyonTurn(s);castleTurn(s);s.mineStatusResolved=false;
     this.emit('roll',`TURN ${s.turn} · 새로운 주사위!`);
     if(s.actionsDone.every(Boolean))this.endTurn();return true;
   }
@@ -110,7 +112,7 @@ export class CombatSystem{
     if(e&&e.hp<=0)return this.emit('special-none','쓰러진 적은 행동하지 않습니다',extra);
     if(!force&&s.scrollStop)return this.emit('block','시간정지 · 특수 행동 억제',extra);
     if(!force&&(s.enemies?s.blockedIds.has(e?.id):s.specialBlocked)){if(sp!=='none'){blockBoss(e);s.stats.blocks++;return this.emit('block','SPECIAL BLOCKED!',extra);}return this.emit('special-none','특수능력 없음',extra);}
-    if(canyonSpecial(s,e,sp)){syncEncounter(s);}else if(chaosSpecial(s,e,sp)){syncEncounter(s);}else if(bossSpecial(s,e,sp)){syncEncounter(s);}else if(fortressSpecial(s,e,sp)){syncEncounter(s);}else if(mineSpecial(s,e,sp)){}else if(sp==='guard'&&e){e.hp=Math.min(e.maxHP,e.hp+6);syncEncounter(s);}else applyStatus(s,sp,intent);
+    if(castleSpecial(s,e,sp)){syncEncounter(s);}else if(canyonSpecial(s,e,sp)){syncEncounter(s);}else if(chaosSpecial(s,e,sp)){syncEncounter(s);}else if(bossSpecial(s,e,sp)){syncEncounter(s);}else if(fortressSpecial(s,e,sp)){syncEncounter(s);}else if(mineSpecial(s,e,sp)){}else if(sp==='guard'&&e){e.hp=Math.min(e.maxHP,e.hp+6);syncEncounter(s);}else applyStatus(s,sp,intent);
     return sp!=='none'?this.emit(sp,SpecialNames[sp],extra):this.emit('special-none','특수능력 없음',extra);
   }
   resolveNext(){
@@ -121,12 +123,12 @@ export class CombatSystem{
         if(action.status!=='pending')return this.resolveNext();
         action.status='resolved';let event;
         if(action.actionType==='attack'){
-          const before=s.monsterHP,e=this.resolveTarget(action);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount+fortressRelicBonus(s,e,action.targetGrade));amount=canyonDamage(s,e,action.targetGrade,bodyDamage(s,e,action,amount));action.illusionHit=bodyActive(s)&&action.appearance!==s.chaosTurn.body;action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
-          const bossBreak=bodyBreak(s,e,action)&&pressureBoss(e,action.targetGrade);if(bossBreak&&e.type==='chaosMage')collapseIllusions(s);action.bossBreak=bossBreak;s.stats.attack[action.targetGrade]++;
+          const before=s.monsterHP,e=this.resolveTarget(action);action.equipmentBonus=(s.battleContext?.attackGradeBonus?.(action.targetGrade)||0)+(['A','S'].includes(action.targetGrade)&&(e?.elite?.breakTurns||e?.boss?.breakTurns)?s.battleContext?.bossBreakBonus||0:0);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount+fortressRelicBonus(s,e,action.targetGrade));amount=castleDamage(s,e,canyonDamage(s,e,action.targetGrade,bodyDamage(s,e,action,amount)));action.illusionHit=bodyActive(s)&&action.appearance!==s.chaosTurn.body;action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
+          const bossBreak=elitePressure(s,e,action.targetGrade)||(bodyBreak(s,e,action)&&pressureBoss(e,action.targetGrade));if(bossBreak&&e.type==='chaosMage')collapseIllusions(s);action.bossBreak=bossBreak;s.stats.attack[action.targetGrade]++;
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:action.baseDamage,bossBreak:action.bossBreak,breakDamage:action.breakDamage||0,enemyId:action.enemyId,action,retargeted:action.retargeted});
         }else if(action.actionType==='scroll'){
           const before=s.monsterHP;if(['SINGLE_ENEMY','RANDOM_ENEMIES','ALL_ENEMIES'].includes(action.targetType))this.resolveTarget(action);const boost=this.scrollModifier?.(action,s)||0;const scroll=useScroll(s,action.scrollSlot,action.enemyId,boost);s.totalDamage+=before-s.monsterHP;
-          scrollWings(s,action,scroll);event=this.emit('magic',`${action.icon} ${action.name} 발동!`,{type:action.scrollEffect,damage:scroll?.damage||0,heal:scroll?.heal||0,shieldGain:scroll?.shield||0,hits:scroll?.hits||1,impacts:scroll?.impacts||[],enemyId:action.enemyId,action,mercenaryBoost:scroll?boost:0,retargeted:action.retargeted});
+          const equipped=s.battleContext?.scrollPowerBonus?.('S')||0;action.equipmentBonus=!scroll?0:scroll.heal?Math.max(0,Math.min(equipped,scroll.heal-(ScrollData[scroll.type]?.heal||0)-(boost||0))):scroll.shield?equipped:scroll.damage?equipped:0;scrollWings(s,action,scroll);event=this.emit('magic',`${action.icon} ${action.name} 발동!`,{type:action.scrollEffect,damage:scroll?.damage||0,heal:scroll?.heal||0,shieldGain:scroll?.shield||0,hits:scroll?.hits||1,impacts:scroll?.impacts||[],enemyId:action.enemyId,action,mercenaryBoost:scroll?boost:0,retargeted:action.retargeted});
         }else if(action.actionType==='defense'){
           s.hero.shield+=action.shieldGain;s.stats.defense[action.targetGrade]++;
           event=this.emit('defense',`${action.playerId+1}P SHIELD +${action.shieldGain}`,{shieldGain:action.shieldGain,action});
@@ -158,9 +160,9 @@ export class CombatSystem{
       if(poison)return this.emit('poison',`독 피해 ${config.poisonDamage} · 남은 ${s.hero.poison}턴`,poison);
     }
     if(s.resolutionStage==='end'){
-      if(inMine(s)&&!s.mineStatusResolved){s.mineStatusResolved=true;const damage=tickMine(s);if(damage)return this.emit('burn',`화상 ${damage.burnDamage} · 열기 ${damage.heatDamage} 피해`,damage);}
+      if((inMine(s)||inCastle(s)&&s.hero.burn>0)&&!s.mineStatusResolved){s.mineStatusResolved=true;const damage=tickMine(s);if(damage)return this.emit('burn',`화상 ${damage.burnDamage} · 열기 ${damage.heatDamage} 피해`,damage);}
       if(s.hero.hp===0){s.phase='gameover';return this.emit('gameover','GAME OVER');}
-      const heatStopped=stoppedBossHeat(s);tickBoss(s);tickMorale(s);if(inMine(s)&&!heatStopped){const boss=s.enemies.find(e=>e.hp>0&&e.type==='flameGiant');raiseHeat(s,boss&&bossPhase(boss)>=2?2:1);}s.phase='enemy';return this.emit('turn-end',`TURN ${s.turn+1}`);
+      const heatStopped=stoppedBossHeat(s);tickBoss(s);tickCastle(s);tickMorale(s);if(inMine(s)&&!heatStopped){const boss=s.enemies.find(e=>e.hp>0&&e.type==='flameGiant');raiseHeat(s,boss&&bossPhase(boss)>=2?2:1);}s.phase='enemy';return this.emit('turn-end',`TURN ${s.turn+1}`);
     }
     return null;
   }

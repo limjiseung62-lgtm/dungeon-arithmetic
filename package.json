@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -54,6 +54,13 @@
     "test:canyon:invariants": "node tests/canyon-invariants.mjs",
     "test:canyon:regression": "node tests/canyon-regression-run.cjs",
     "test:canyon:release": "node tests/canyon-release-check.mjs",
-    "test:canyon:assets": "node tests/canyon-asset-audit.cjs"
+    "test:canyon:assets": "node tests/canyon-asset-audit.cjs",
+    "test:castle": "node tests/castle-browser.cjs",
+    "test:castle:effects": "node tests/castle-effects-browser.cjs",
+    "test:castle:balance": "node tests/castle-balance.mjs",
+    "test:castle:regression": "node tests/castle-regression-run.cjs",
+    "test:castle:invariants": "node tests/castle-invariants.mjs",
+    "test:castle:release": "node tests/castle-release-check.mjs",
+    "test:castle:assets": "node tests/castle-asset-audit.cjs"
   }
 }

@@ -1,0 +1,45 @@
+✔ six encounters with three elites, no king or new boss (1.4127ms)
+✔ third seal, town and Act III required to unlock castle (16.3073ms)
+✔ v32 save migrates without changing inventory, resources or relationships (3.1733ms)
+✔ reject malformed Act III actThreeSeen (3.2468ms)
+✔ reject malformed Act III eliaTruthSeen (2.5002ms)
+✔ reject malformed Act III throneReached (2.6458ms)
+✔ reject malformed Act III throneSceneSeen (2.0961ms)
+✔ mixed-mechanic exact F5 checkpoint 0 (11.5752ms)
+✔ mixed-mechanic exact F5 checkpoint 1 (5.7228ms)
+✔ mixed-mechanic exact F5 checkpoint 2 (7.4813ms)
+✔ mixed-mechanic exact F5 checkpoint 3 (6.6007ms)
+✔ mixed-mechanic exact F5 checkpoint 4 (6.0839ms)
+✔ mixed-mechanic exact F5 checkpoint 5 (6.9922ms)
+✔ castle checkpoint cannot contain the king, wrong elite or another region (4.1435ms)
+✔ illusion corridor keeps all numbers readable even at maximum chaos (9.8705ms)
+✔ barrier protects allies only and ends immediately when guardian dies (3.6642ms)
+✔ A/S BREAK removes barrier, lasts two enemy turns and boosts damage (3.9382ms)
+✔ support pressure assists but cannot automatically BREAK (3.6179ms)
+✔ Defense S cancels royalGuard (5.8123ms)
+✔ Defense S cancels abyssCurse (3.9179ms)
+✔ Defense S cancels sealBarrier (5.1574ms)
+✔ curse and strong counter use existing poison/shield rules (3.6986ms)
+✔ 35% rest clamps maxHP, persists and cannot repeat after F5 (6.4844ms)
+✔ rest at full HP consumes once even when gain is zero (4.5803ms)
+✔ cannot leave rest without resting and reading truth, no shopping or selling (11.0185ms)
+✔ Elia truth appears through record without Elia and directly with Elia (5.0386ms)
+✔ rest gear only contains owned equipment, comparison and no sale controls (7.6415ms)
+✔ final elite clear is recorded once, throne button never creates a battle (4.9395ms)
+✔ castle collection has no invented boss unique entry (2.3739ms)
+✔ sixth encounter saves actual rowen contract support (14.8825ms)
+✔ sixth encounter saves actual bram contract support (14.9132ms)
+✔ sixth encounter saves actual sera contract support (12.5467ms)
+✔ sixth encounter saves actual luna contract support (11.8833ms)
+✔ sixth encounter saves actual kain contract support (10.1352ms)
+✔ sixth encounter saves actual elia contract support (11.0622ms)
+✔ forge heat at 12 and burn persist exactly through F5 (7.0457ms)
+✔ forged rest metadata cannot turn an unused rest into a repeated heal (3.7224ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 392.4773

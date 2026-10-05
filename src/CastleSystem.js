@@ -1,0 +1,11 @@
+import {inCastle} from './CastleData.js';
+import {takeDamage} from './DefenseSystem.js';
+export function initCastle(s){if(inCastle(s)){s.castle={barrierId:null};for(const e of s.enemies)if(e.type==='sealGuardian')e.elite={pressure:0,breakTurns:0};}}
+export function castleTurn(s){if(!inCastle(s))return;s.castle.barrierId=s.enemies.find(e=>e.hp>0&&e.type==='sealGuardian'&&!e.elite.breakTurns&&e.intent.special==='sealBarrier')?.id||null;for(const e of s.enemies){if(e.elite?.breakTurns)e.intent={...e.intent,special:'none'};}}
+export function castleDamage(s,e,n){if(!inCastle(s)||!e||n<=0)return n;const barrier=s.enemies.find(v=>v.id===s.castle.barrierId&&v.hp>0&&!v.elite.breakTurns);if(barrier&&barrier!==e)n=Math.max(1,Math.round(n*.75));return e.elite?.breakTurns?Math.round(n*1.35):n;}
+export function elitePressure(s,e,grade){if(!inCastle(s)||e?.hp<=0||!e?.elite||e.elite.breakTurns)return false;e.elite.pressure=Math.min(3,e.elite.pressure+({S:2,A:1,B:.25,C:0}[grade]||0));if(e.elite.pressure<3)return false;e.elite.pressure=0;e.elite.breakTurns=3;s.castle.barrierId=null;e.intent.special='none';return true;}
+export function assistElite(s,e,n=.25){if(inCastle(s)&&e?.hp>0&&e.elite&&!e.elite.breakTurns)e.elite.pressure=Math.min(2.75,e.elite.pressure+n);}
+export function castleSpecial(s,e,sp){if(!inCastle(s))return false;if(sp==='sealBarrier')return true;if(sp==='royalGuard'){takeDamage(s,4,'enemy');return true;}if(sp==='abyssCurse'){s.hero.poison=2;return true;}return false;}
+export function tickCastle(s){if(inCastle(s))for(const e of s.enemies)if(e.elite?.breakTurns)e.elite.breakTurns--;}
+export function eliteHint(e){if(e.type==='sealGuardian')return e.elite?.breakTurns?'BREAK · '+e.elite.breakTurns+'턴 · 장벽 해제 · 검격 +35%':'장벽 · 다른 적 검격 피해 −25% / A +1, S +2 → 3 BREAK · '+(e.elite?.pressure||0)+'/3';if(e.type==='royalGuard')return '왕의 수호 · 강한 반격 +4 · 방어 S로 차단';if(e.type==='abyssMage')return '심연의 저주 · 독 2턴 · 방어 S 또는 정화로 대응';return '';}
+export function castleHUD(s){return inCastle(s)?'<aside class="castle-hud" role="status"><b>제3막 · '+s.encounter.name+' · '+(s.encounterIndex+1)+'/6</b><span>왕좌까지 도달하라 · '+(s.encounterIndex<4?'마력 용광로 이후 봉인의 방에서 한 번 휴식':'휴식 이후 · 마지막 자원을 판단하세요')+'</span></aside>':'';}

@@ -18,7 +18,7 @@ export function skillValue(data,m,event,state){
  case 'bram':return s?8:7;
  case 'sera':return 15;
  case 'luna':return base+({damage:2,weaken:2,heal:3,protect:3}[ScrollData[event.type||event.action?.scrollEffect]?.role]||1);
- case 'kain':return 13+(livingEnemies(state).find(e=>e.id===event.enemyId)?.boss?.breakTurns?4:0);
+ case 'kain':return 13+(livingEnemies(state).find(e=>e.id===event.enemyId)?.boss?.breakTurns||livingEnemies(state).find(e=>e.id===event.enemyId)?.elite?.breakTurns?4:0);
  case 'elia':return effect==='shield'?13:11;
  default:return base;
  }

@@ -70,7 +70,7 @@ export function dungeonCollection(p,d){
  const monsterIds=[...new Set(d.encounters.flatMap(e=>e.enemies.map(m=>m.type)))];
  if(d.id==='old-prison')monsterIds.push('spider','golem');
  const equipmentIds=[...new Set(monsterIds.flatMap(id=>LootTable[id]?.equipment||[]))],c=collection(p),boss=BossLootData.find(b=>b.dungeon===d.id);
- return {monsters:monsterIds.filter(id=>c.monsters.includes(id)).length,monsterTotal:monsterIds.length,equipment:equipmentIds.filter(id=>c.equipment.includes(id)).length,equipmentTotal:equipmentIds.length,boss,bossFound:c.equipment.includes(boss.item)};
+ return {monsters:monsterIds.filter(id=>c.monsters.includes(id)).length,monsterTotal:monsterIds.length,equipment:equipmentIds.filter(id=>c.equipment.includes(id)).length,equipmentTotal:equipmentIds.length,boss,bossFound:!!boss&&c.equipment.includes(boss.item)};
 }
 export function validateCollection(p){
  const c=p.collection,validIds={monsters:AllMonsterData.map(m=>m.id),equipment:EquipmentData.map(e=>e.id),scrolls:Object.keys(ScrollData),claimedCollectionRewards:CollectionRewards.map(r=>r.id)};

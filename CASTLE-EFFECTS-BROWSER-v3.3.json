@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "real S equipment +2 VFX",
+    "Rowen support pressure cannot auto break",
+    "A completes elite BREAK",
+    "exact elite BREAK F5",
+    "Defense S stops curse",
+    "390/768/1920 real triple elite battle",
+    "mandatory Elia memory without Elia"
+  ],
+  "errors": []
+}

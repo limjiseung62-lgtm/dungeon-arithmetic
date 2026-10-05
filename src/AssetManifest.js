@@ -1,5 +1,6 @@
 // Presentation only. IDs never participate in save data or game rules.
 export const ArtManifest = {
+ ...Object.fromEntries([['royalGuard','마왕의 근위병'],['abyssMage','심연 마도사'],['sealGuardian','봉인 수호자'],['castleInterior','마왕의 성 내부'],['sealChamber','봉인의 방'],['throneDoor','왕좌의 문']].map(([id,alt])=>[id,{src:'assets/castle-v33/'+id+'.webp',alt}])),
  town:{src:'assets/remaster/town.webp',alt:'바람빛 마을'},
  weapon:{src:'assets/remaster/weapon.webp',alt:'무기점'},
  armorShop:{src:'assets/remaster/armorShop.webp',alt:'방어구점'},
@@ -48,3 +49,5 @@ for(const id of ['dragonLizard','fireWyvern','dragonGuard','dragonShaman','drago
 ArtManifest.dragon_heart={...ArtManifest.dragon_heart,thumb:ArtManifest.dragon_heart.src,columns:1,index:0};ArtManifest.castleGate={src:'assets/canyon-v32/castleGate.webp',alt:'결계가 열린 마왕의 성'};
 
 ArtManifest.kingAwakens={src:'assets/canyon-v32/kingAwakens.webp',alt:'왕좌에서 눈을 뜨는 마왕'};
+
+for(const id of ['royalGuard','abyssMage','sealGuardian'])AssetPaths[id]=ArtManifest[id].src;

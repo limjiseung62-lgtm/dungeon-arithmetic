@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "firstPrisonFullClear": true,
+  "turns": 10,
+  "bosses": [
+    {
+      "boss": "golem",
+      "pity": [
+        {
+          "kill": 1,
+          "misses": 0,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 2,
+          "misses": 1,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 3,
+          "misses": 2,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 4,
+          "misses": 3,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 5,
+          "misses": 0,
+          "acquired": true,
+          "grade": "A"
+        }
+      ],
+      "actualFinalHitInput": true,
+      "receiptRefreshNoReplay": true
+    },
+    {
+      "boss": "treeGuardian",
+      "pity": [
+        {
+          "kill": 1,
+          "misses": 0,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 2,
+          "misses": 1,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 3,
+          "misses": 2,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 4,
+          "misses": 3,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 5,
+          "misses": 0,
+          "acquired": true,
+          "grade": "A"
+        }
+      ],
+      "actualFinalHitInput": true,
+      "receiptRefreshNoReplay": true
+    },
+    {
+      "boss": "flameGiant",
+      "pity": [
+        {
+          "kill": 1,
+          "misses": 0,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 2,
+          "misses": 1,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 3,
+          "misses": 2,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 4,
+          "misses": 3,
+          "acquired": false,
+          "grade": "A"
+        },
+        {
+          "kill": 5,
+          "misses": 0,
+          "acquired": true,
+          "grade": "A"
+        }
+      ],
+      "actualFinalHitInput": true,
+      "receiptRefreshNoReplay": true
+    }
+  ],
+  "effects": {
+    "attackA": 2,
+    "attackB": 0,
+    "shieldA": 3,
+    "maxHP": 175,
+    "level": 14
+  },
+  "seedActualVictoryHeal": 4,
+  "refreshPersistence": true,
+  "rewardsNoDuplicate": true,
+  "viewports": [
+    390,
+    768,
+    1280,
+    1920
+  ],
+  "production": true,
+  "classIsolation": true,
+  "errors": []
+}

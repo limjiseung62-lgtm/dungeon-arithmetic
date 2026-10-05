@@ -1,0 +1,176 @@
+[
+  {
+    "file": "boss-browser.cjs",
+    "status": 0,
+    "stdout": "PASS three boss HUDs / phases / A BREAK / paused timer / responsive\n",
+    "stderr": ""
+  },
+  {
+    "file": "browser-ui.cjs",
+    "status": 0,
+    "stdout": "PASS sequential: 4 players, three full turns, deferred damage/shields/scrolls, claimed marks, separate scroll scene, counterattack, regenerated targets\nPASS full campaign: all five monsters, state effects, final clear and saved team record\nPASS simultaneous: four-contact touch, independent dice/operator/reset, contested target keeps action, single shared timer, one queue and fully absorbed counterattack\nPASS special block, normal attack preserved, lethal queue cancels counterattack and preserves uncast scroll\nPASS shared 60-second timer: all four automatic passes and cinematic phase; 30-second weak hints\nPASS no fatal browser/console errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "rpg-browser.cjs",
+    "status": 0,
+    "stdout": "PASS real RPG creation / town / three fights / growth / loot / return / reload / continue / class isolation 11\nPASS pending loot reload without duplicate rewards / defeat keeps progress\nPASS production build and board layout\nPASS confirmed reset delays replacing save until valid name / keyboard Enter\nPASS storage denied stays playable, warns and retains current-window character\nPASS no browser exceptions\n",
+    "stderr": ""
+  },
+  {
+    "file": "adventure-browser.cjs",
+    "status": 0,
+    "stdout": "PASS actual v2.1 migration with all resources, gear and duplicate inventory\nPASS dungeon prison-first [ 2, 2, 3 ]\nPASS dungeon prison-route [ 2, 3, 3 ]\nPASS dungeon forest [ 3, 3, 5, 3, 5 ]\nPASS guild / real math prison twice / quest report / drops / unlock / buy and equip / all five forest fights / boss / final reload / production / tablet and board {\"prison-first\":[2,2,3],\"prison-route\":[2,3,3],\"forest\":[3,3,5,3,5]} [ 'steal', 'block', 'guard', 'poison' ]\n",
+    "stderr": ""
+  },
+  {
+    "file": "equipment-browser.cjs",
+    "status": 0,
+    "stdout": "PASS browser shop purchase/equip/unequip/sell\n",
+    "stderr": ""
+  },
+  {
+    "file": "encounter-browser.cjs",
+    "status": 0,
+    "stdout": "PASS layout sequential 1 / 2 / 3 enemies, eight common goals, input pads visible\nPASS layout simultaneous 1 / 2 / 3 enemies, eight common goals, input pads visible\nPASS sequential edit after current player changed\nPASS simultaneous choices, timer reference count, target edit, single Defense S with other special active\nPASS real scroll target fire [ 22, 0, 0 ]\nPASS real scroll target lightning [ 26, 18, 12 ]\nPASS real scroll target iceStorm [ 16, 16, 16 ]\nPASS real scroll target meteor [ 48, 12, 12 ]\nPASS real scroll target heal [ 0, 0, 0 ]\nPASS real scroll target shield [ 0, 0, 0 ]\nPASS six encounters campaign turns [ 3, 4, 6, 7, 7, 7 ] HP 180\nPASS production build multi-enemy scene\nPASS no browser errors, student debug hidden\n",
+    "stderr": ""
+  },
+  {
+    "file": "mercenary-browser.cjs",
+    "status": 0,
+    "stdout": "PASS six mercenaries real browser math, full Rowen dungeon, costs, refresh, quests, party, responsive art, production {\"rowen-visual\":true,\"rowen\":{\"fullClear\":true,\"supports\":6,\"reload\":true},\"bram-visual\":true,\"bram\":{\"fullClear\":true,\"effects\":[{\"id\":\"45387d0e-7359-4bcf-ae25-b0310cf15c40:0:mercenary:1:defense:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"bram\",\"grade\":\"B\",\"effect\":\"shield\",\"value\":6,\"enemyId\":null,\"compact\":false,\"text\":\"브람 지원! 방어막 +6\"}],\"supports\":1,\"gold\":4935,\"hp\":77,\"animationFrames\":[[8.299999999999727,4.100000000000364,8.5,4.299999999999727,133,4.5,8,4.200000000000273,25,4.199999999999818,4.199999999999818,4.100000000000364,4.199999999999818,4.099999999999909,4.400000000000091,4,4.199999999999818,4.100000000000364,245.89999999999964,4.200000000000273,4,8.400000000000091,4.5,16.5,4,4.199999999999818,4.199999999999818,4.200000000000273,4.099999999999909,4.199999999999818]]},\"sera-visual\":true,\"sera\":{\"fullClear\":true,\"effects\":[{\"id\":\"2e75fada-fafd-4089-9791-75a65e8d4bd1:0:mercenary:win\",\"kind\":\"mercenary\",\"mercenaryId\":\"sera\",\"grade\":\"A\",\"effect\":\"heal\",\"value\":12,\"enemyId\":null,\"compact\":false,\"text\":\"세라 지원! HP 회복 +12\"},{\"id\":\"2e75fada-fafd-4089-9791-75a65e8d4bd1:1:mercenary:win\",\"kind\":\"mercenary\",\"mercenaryId\":\"sera\",\"grade\":\"A\",\"effect\":\"heal\",\"value\":12,\"enemyId\":null,\"compact\":false,\"text\":\"세라 지원! HP 회복 +12\"},{\"id\":\"2e75fada-fafd-4089-9791-75a65e8d4bd1:2:mercenary:win\",\"kind\":\"mercenary\",\"mercenaryId\":\"sera\",\"grade\":\"A\",\"effect\":\"heal\",\"value\":12,\"enemyId\":null,\"compact\":false,\"text\":\"세라 지원! HP 회복 +12\"}],\"supports\":3,\"gold\":4695,\"hp\":68,\"animationFrames\":[[8.400000000000546,4.199999999999818,8.399999999999636,4.199999999999818,4.100000000000364,8.399999999999636,4,4.200000000000728,4.199999999999818,4.099999999999454,4.100000000000364,25.199999999999818,4.100000000000364,12.599999999999454,8.200000000000728,4.199999999999818,8.399999999999636,4.100000000000364,4.199999999999818,4.399999999999636,8,4.200000000000728,4.399999999999636,8.100000000000364,4.099999999999454,4.199999999999818,233.40000000000055,8.399999999999636,4.199999999999818,4.100000000000364],[8.199999999998909,4.200000000000728,8.399999999999636,4.399999999999636,3.900000000001455,4.099999999998545,4.300000000001091,4.100000000000364,4.199999999998909,4.100000000000364,8.299999999999272,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728,4.100000000000364,4.299999999999272,4.100000000000364,4.200000000000728,4.099999999998545,4.100000000000364,4.100000000000364,4.299999999999272,4.200000000000728,4.200000000000728,4.199999999998909,4.200000000000728,4.100000000000364,4.199999999998909,4.200000000000728],[4,4.199999999998909,4.100000000000364,4.200000000000728,4.100000000000364,4.099999999998545,4.100000000000364,4.300000000001091,4.099999999998545,4.100000000000364,4.399999999999636,4.100000000000364,4,4.300000000001091,4.199999999998909,4.100000000000364,4.200000000000728,4.199999999998909,4.200000000000728,4.5,7.899999999999636,4.100000000000364,4.100000000000364,4.299999999999272,4.200000000000728,4.099999999998545,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728],[12.5,4,8.399999999997817,4.200000000000728,4.100000000002183,4.19999999999709,8.30000000000291,4.19999999999709,4.200000000000728,4.200000000000728,4.200000000000728,4.200000000000728,4.099999999998545,4.099999999998545,4.200000000000728,8.299999999999272,8.400000000001455,4,4.299999999999272,4.299999999999272,4.200000000000728,4,4.200000000000728,4.099999999998545,4.100000000002183,4.200000000000728,4.19999999999709,4.200000000000728,4.100000000002183,4.19999999999709]]},\"luna-visual\":true,\"luna\":{\"fullClear\":true,\"effects\":[{\"id\":\"42cfd1b5-08d4-49ec-8d68-d144fb0ec641:0:mercenary:1:magic:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"luna\",\"grade\":\"A\",\"effect\":\"scroll\",\"value\":6,\"enemyId\":null,\"compact\":false,\"text\":\"루나 지원! 두루마리 강화 +6\"},{\"id\":\"42cfd1b5-08d4-49ec-8d68-d144fb0ec641:1:mercenary:3:magic:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"luna\",\"grade\":\"A\",\"effect\":\"scroll\",\"value\":6,\"enemyId\":null,\"compact\":false,\"text\":\"루나 지원! 두루마리 강화 +6\"},{\"id\":\"42cfd1b5-08d4-49ec-8d68-d144fb0ec641:1:mercenary:4:magic:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"luna\",\"grade\":\"A\",\"effect\":\"scroll\",\"value\":6,\"enemyId\":null,\"compact\":true,\"text\":\"루나 지원! 두루마리 강화 +6\"},{\"id\":\"42cfd1b5-08d4-49ec-8d68-d144fb0ec641:2:mercenary:5:magic:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"luna\",\"grade\":\"A\",\"effect\":\"scroll\",\"value\":6,\"enemyId\":null,\"compact\":false,\"text\":\"루나 지원! 두루마리 강화 +6\"},{\"id\":\"42cfd1b5-08d4-49ec-8d68-d144fb0ec641:2:mercenary:6:magic:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"luna\",\"grade\":\"A\",\"effect\":\"scroll\",\"value\":6,\"enemyId\":null,\"compact\":true,\"text\":\"루나 지원! 두루마리 강화 +6\"}],\"supports\":5,\"gold\":4655,\"hp\":85,\"animationFrames\":[[12.534000000000106,4.199999999999818,24.90000000000009,33.40000000000009,16.699999999999818,4.099999999999909,8.300000000000182,12.5,8.300000000000182,4.299999999999727,8.300000000000182,4,4.400000000000091,8.299999999999727,4.099999999999909,4.200000000000273,4.099999999999909,4.199999999999818,304.3000000000002,4.199999999999818,4.300000000000182,16.40000000000009,4.699999999999818,3.700000000000273,4.099999999999909,4.199999999999818,4.099999999999909,4.100000000000364,4.299999999999727,4.200000000000273],[16.699999999999818,4.199999999999818,24.800000000000182,12.599999999999454,4.300000000000182,8.199999999999818,4.100000000000364,4.199999999999818,4.300000000000182,8.199999999999818,4.100000000000364,4.300000000000182,4.099999999999454,4.100000000000364,4.199999999999818,4.699999999999818,12.100000000000364,8.300000000000182,4.299999999999272,3.9000000000005457,8.300000000000182,4.299999999999272,4.100000000000364,4.199999999999818,4.199999999999818,4.200000000000728,4.099999999999454,4.100000000000364,4.199999999999818,4.300000000000182],[16.5,4.299999999999272,20.700000000000728,8.5,4.100000000000364,8.299999999999272,4.200000000000728,4.199999999998909,4.100000000000364,4.100000000000364,4.200000000000728,4.399999999999636,4,4.399999999999636,4,8.299999999999272,4.400000000001455,3.899999999999636,4.199999999998909,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728,4.200000000000728],[12.299999999999272,4.200000000000728,16.799999999999272,12.399999999999636,8.300000000001091,4.199999999998909,4.100000000000364,4.299999999999272,4.200000000000728,4.100000000000364,4.100000000000364,4.299999999999272,4.100000000000364,4.199999999998909,4.100000000000364,4.100000000000364,4.200000000000728,4.199999999998909,4.100000000000364,4.200000000000728,4.199999999998909,4.100000000000364,4.200000000000728,4.299999999999272,4.100000000000364,4.199999999998909,4.100000000000364,4.200000000000728,4.100000000000364,4.199999999998909],[20.634000000001834,4.200000000000728,24.899999999997817,8.400000000001455,12.399999999997817,4.200000000000728,4.299999999999272,4.100000000002183,4.200000000000728,4.099999999998545,4.200000000000728,4.299999999999272,4.200000000000728,4.200000000000728,8.19999999999709,4.200000000000728,12.400000000001455,4.099999999998545,4.299999999999272,4.200000000000728,4.200000000000728,4.099999999998545,4.30000000000291,4,4.099999999998545,8.5,4,4.799999999999272,16.100000000002183,8.299999999999272]]},\"kain-visual\":true,\"kain\":{\"fullClear\":true,\"effects\":[{\"id\":\"e0c2f24b-e6dd-41d4-bc7d-c6ac4b9a2db9:0:mercenary:1:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"kain\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":12,\"enemyId\":\"rpg-skeleton-0-0\",\"compact\":false,\"text\":\"카인 지원! 추가 피해 +12\",\"dialogue\":\"좋아! 지금이 기회야!\"},{\"id\":\"e0c2f24b-e6dd-41d4-bc7d-c6ac4b9a2db9:1:mercenary:3:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"kain\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":12,\"enemyId\":\"rpg-goblin-1-0\",\"compact\":false,\"text\":\"카인 지원! 추가 피해 +12\"},{\"id\":\"e0c2f24b-e6dd-41d4-bc7d-c6ac4b9a2db9:2:mercenary:5:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"kain\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":12,\"enemyId\":\"rpg-orc-2-0\",\"compact\":false,\"text\":\"카인 지원! 추가 피해 +12\",\"dialogue\":\"정확한 계산이야. 함께 밀고 나가자!\"},{\"id\":\"e0c2f24b-e6dd-41d4-bc7d-c6ac4b9a2db9:2:mercenary:6:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"kain\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":12,\"enemyId\":\"rpg-orc-2-0\",\"compact\":true,\"text\":\"카인 지원! 추가 피해 +12\"}],\"supports\":4,\"gold\":4125,\"hp\":85,\"animationFrames\":[[12.5,4.400000000000091,4.199999999999818,12.200000000000273,16.699999999999818,4.200000000000273,4.099999999999909,12.5,4.199999999999818,4.300000000000182,3.900000000000091,8.399999999999636,8.400000000000091,4.099999999999909,4.400000000000091,4,4.5,249.80000000000018,4,4.199999999999818,20.800000000000182,8.400000000000091,8.299999999999727,4.5,3.900000000000091,4.099999999999909,4.200000000000273,4.199999999999818,4.099999999999909,4.200000000000273],[8.300000000000182,4.199999999999818,8.400000000000546,8.399999999999636,16.5,4.300000000000182,4.100000000000364,4.199999999999818,4.099999999999454,4.100000000000364,4.199999999999818,8.400000000000546,4.099999999999454,4.300000000000182,4.100000000000364,4.399999999999636,3.899999999999636,4.200000000000728,4.199999999999818,4.300000000000182,8.199999999999818,4.199999999999818,4.199999999999818,4.100000000000364,4.199999999999818,4.199999999999818,4.199999999999818,4.5,3.9000000000005457,4.099999999999454],[8.300000000001091,4.199999999998909,12.5,8.300000000001091,8.399999999999636,4,4.200000000000728,4.199999999998909,4.200000000000728,4.100000000000364,4.199999999998909,4.100000000000364,4.299999999999272,4.100000000000364,4.200000000000728,4.299999999999272,3.899999999999636,4.300000000001091,4.100000000000364,4.199999999998909,4.200000000000728,4.100000000000364,4.099999999998545,4.200000000000728,4.200000000000728,4.199999999998909,4.200000000000728,4.299999999999272,4,4.100000000000364],[16.599999999998545,4.100000000002183,4.200000000000728,12.599999999998545,4.200000000000728,8.200000000000728,4,4.299999999999272,4.200000000000728,4.299999999999272,4.099999999998545,4.100000000002183,4.19999999999709,4.100000000002183,4.099999999998545,4.200000000000728,4.200000000000728,4.200000000000728,4.19999999999709,4.100000000002183,4.099999999998545,4.299999999999272,4.100000000002183,4.200000000000728,4.099999999998545,4.200000000000728,4.099999999998545,4.200000000000728,4.200000000000728,4.200000000000728]]},\"elia-visual\":true,\"elia\":{\"fullClear\":true,\"effects\":[{\"id\":\"46e395e7-4db3-44a1-9569-1fcccbe5cf02:0:mercenary:1:defense:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"elia\",\"grade\":\"S\",\"effect\":\"shield\",\"value\":10,\"enemyId\":null,\"compact\":false,\"text\":\"엘리아 지원! 방어막 +10\"},{\"id\":\"46e395e7-4db3-44a1-9569-1fcccbe5cf02:0:mercenary:2:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"elia\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":8,\"enemyId\":\"rpg-skeleton-0-0\",\"compact\":true,\"text\":\"엘리아 지원! 추가 피해 +8\",\"dialogue\":\"좋아! 지금이 기회야!\"},{\"id\":\"46e395e7-4db3-44a1-9569-1fcccbe5cf02:1:mercenary:4:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"elia\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":8,\"enemyId\":\"rpg-goblin-1-0\",\"compact\":false,\"text\":\"엘리아 지원! 추가 피해 +8\"},{\"id\":\"46e395e7-4db3-44a1-9569-1fcccbe5cf02:2:mercenary:6:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"elia\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":8,\"enemyId\":\"rpg-orc-2-0\",\"compact\":false,\"text\":\"엘리아 지원! 추가 피해 +8\",\"dialogue\":\"정확한 계산이야. 함께 밀고 나가자!\"},{\"id\":\"46e395e7-4db3-44a1-9569-1fcccbe5cf02:2:mercenary:7:attack:0\",\"kind\":\"mercenary\",\"mercenaryId\":\"elia\",\"grade\":\"S\",\"effect\":\"damage\",\"value\":8,\"enemyId\":\"rpg-orc-2-0\",\"compact\":true,\"text\":\"엘리아 지원! 추가 피해 +8\"}],\"supports\":5,\"gold\":4025,\"hp\":90,\"animationFrames\":[[4.400000000000091,3.900000000000091,8.399999999999864,8.400000000000091,16.700000000000045,16.59999999999991,4.2000000000000455,4,21,4.2000000000000455,4.099999999999909,4.099999999999909,4.2000000000000455,4.100000000000136,4.2999999999999545,4.2000000000000455,4.099999999999909,4.099999999999909,225.0999999999999,4.100000000000364,8.399999999999636,8.300000000000182,16.800000000000182,4,4.099999999999909,4.099999999999909,4.199999999999818,4.300000000000182,4.099999999999909,4.099999999999909],[12.599999999999909,4.200000000000273,4,12.599999999999909,8.300000000000182,12.5,8.5,4,4.099999999999909,4.299999999999727,4.400000000000091,3.900000000000091,4.099999999999909,8.300000000000182,4.299999999999727,8.300000000000182,4.199999999999818,4.100000000000364,4.199999999999818,4.199999999999818,4,4.400000000000091,4.099999999999909,4.200000000000273,4.099999999999909,4.099999999999909,4.200000000000273,4.199999999999818,4.099999999999909,4.200000000000273],[12.400000000001455,4.199999999998909,20.80000000000109,16.69999999999891,8.300000000001091,4.199999999998909,4.100000000000364,4.299999999999272,4.100000000000364,4.200000000000728,4,4.299999999999272,4.100000000000364,4.200000000000728,4.199999999998909,4.200000000000728,8.299999999999272,4.300000000001091,3.899999999999636,4.299999999999272,4.100000000000364,4.200000000000728,4.099999999998545,4.200000000000728,4.200000000000728,4.199999999998909,4.100000000000364,4.200000000000728,8.5,8.199999999998909],[8.200000000000728,4.299999999999272,12.5,8.200000000000728,8.399999999999636,8.299999999999272,4.300000000001091,4,4.199999999998909,4.300000000001091,4,4.299999999999272,4.100000000000364,4.199999999998909,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728,8.200000000000728,4.199999999998909,4.100000000000364,4.299999999999272,4.100000000000364,4.200000000000728,4.199999999998909,4.200000000000728,4.100000000000364,4.199999999998909,4.100000000000364,4.300000000001091],[12.5,4,4.400000000001455,12.399999999997817,4.200000000000728,4.400000000001455,3.899999999997817,8.299999999999272,4.200000000000728,4.100000000002183,4.099999999998545,4.200000000000728,4.200000000000728,4.19999999999709,4.100000000002183,4.200000000000728,4.19999999999709,4.200000000000728,8.299999999999272,4.200000000000728,4.200000000000728,4.099999999998545,4.200000000000728,4.100000000002183,4.299999999999272,4,4.200000000000728,4.19999999999709,8.30000000000291,4.19999999999709]]},\"none\":{\"fullClear\":true,\"gold\":5175,\"hp\":72}}\n",
+    "stderr": ""
+  },
+  {
+    "file": "mercenary-performance.cjs",
+    "status": 0,
+    "stdout": "PASS isolated six animation renderer [{\"member\":\"rowen\",\"medianMS\":4.2000000000000455,\"p95MS\":8.5,\"maxMS\":33.299999999999955,\"samples\":60},{\"member\":\"bram\",\"medianMS\":4.2000000000000455,\"p95MS\":4.300000000000182,\"maxMS\":4.300000000000182,\"samples\":60},{\"member\":\"sera\",\"medianMS\":4.2000000000000455,\"p95MS\":4.300000000000182,\"maxMS\":12.400000000000091,\"samples\":60},{\"member\":\"luna\",\"medianMS\":4.2000000000000455,\"p95MS\":4.2999999999999545,\"maxMS\":25.100000000000136,\"samples\":60},{\"member\":\"kain\",\"medianMS\":4.199999999999818,\"p95MS\":4.399999999999864,\"maxMS\":12.5,\"samples\":60},{\"member\":\"elia\",\"medianMS\":4.199999999999818,\"p95MS\":4.300000000000182,\"maxMS\":4.300000000000182,\"samples\":60}]\n",
+    "stderr": ""
+  },
+  {
+    "file": "update-v11-browser.cjs",
+    "status": 0,
+    "stdout": "PASS spell fire one charge, paused timer, distinct effect\nPASS spell ice one charge, paused timer, distinct effect\nPASS spell shield one charge, paused timer, distinct effect\nPASS spell heal one charge, paused timer, distinct effect\nPASS spell lightning one charge, paused timer, distinct effect\nPASS spell cleanse one charge, paused timer, distinct effect\nPASS spell meteor one charge, paused timer, distinct effect\nPASS spell time one charge, paused timer, distinct effect\nPASS preserve scroll on Attack S\nPASS 4 combo labels, nonrepeat slash variations, no extra damage\nPASS 3 unique loot, selected reward, HP carry/shield reset, board four pads\nPASS v1.1 actual touch UI and no errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "presentation-browser.cjs",
+    "status": 0,
+    "stdout": "PASS goblin 45 second success, 60 second block, cinematic timer stopped, skip\nPASS curse success\nPASS curse blocked\nPASS web success\nPASS web blocked\nPASS poison success\nPASS poison blocked\nPASS shift success\nPASS shift blocked\nPASS stone success\nPASS stone blocked\nPASS mid-input timer pause/resume\nPASS browser audio activation, independent mute and volume\nPASS classroom board layout and no page errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "quality-browser.cjs",
+    "status": 0,
+    "stdout": "PASS music continuity; recorded swing/impact spacing 0.18933333333333313 seconds; impact frame delta 0\nPASS Korean title/setup/story/settings/input/attacks/spells/all specials; mobile/tablet/board; no browser errors\n",
+    "stderr": ""
+  },
+  {
+    "file": "balance-browser.cjs",
+    "status": 0,
+    "stdout": "{\"players\":1,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,3,4,4,14],\"hp\":33,\"shield\":2}\n{\"players\":2,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[2,4,5,7,10],\"hp\":143,\"shield\":0}\n{\"players\":3,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,4,5,7,10],\"hp\":164,\"shield\":0}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,4,6,6,10],\"hp\":170,\"shield\":4}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"attack-all\",\"phase\":\"gameover\",\"turns\":[3,4,2,0,0],\"hp\":0,\"shield\":0}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"defense-all\",\"phase\":\"playing\",\"turns\":[10,0,0,0,0],\"hp\":180,\"shield\":690}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"one-defense\",\"phase\":\"gameover\",\"turns\":[3,4,5,5,1],\"hp\":0,\"shield\":0}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"balanced\",\"phase\":\"clear\",\"turns\":[4,5,7,7,8],\"hp\":140,\"shield\":52}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"attack-S\",\"phase\":\"clear\",\"turns\":[4,5,7,7,8],\"hp\":140,\"shield\":26}\n{\"players\":4,\"mode\":\"sequential\",\"policy\":\"defense-S\",\"phase\":\"clear\",\"turns\":[4,5,7,7,10],\"hp\":180,\"shield\":46}\n{\"players\":4,\"mode\":\"simultaneous\",\"policy\":\"adaptive\",\"phase\":\"clear\",\"turns\":[3,4,6,6,9],\"hp\":170,\"shield\":4}\nPASS actual touch UI campaigns: all party sizes, all six policies, 4-pad simultaneous, scaled HP and existing cutscenes\n",
+    "stderr": ""
+  },
+  {
+    "file": "balance-targets.cjs",
+    "status": 0,
+    "stdout": "CHECK web 2\nCHECK web 4\nCHECK web 6\nCHECK web 8\nCHECK stone 2\nCHECK stone 4\nCHECK stone 6\nCHECK stone 8\nPASS actual cutscenes and pads: web/petrify rotate 2P→3P→4P→1P; exactly one next-turn action blocked\n",
+    "stderr": ""
+  },
+  {
+    "file": "remaster-browser.cjs",
+    "status": 0,
+    "stdout": "PASS remaster screens, responsive layouts, production assets, missing image fallback 25\n",
+    "stderr": ""
+  },
+  {
+    "file": "story-browser.cjs",
+    "status": 0,
+    "stdout": "PASS v2.6 opening, once/replay, main story, prices/comparison, touch, responsive, hover/focus, progress, production\n",
+    "stderr": ""
+  },
+  {
+    "file": "mine-browser.cjs",
+    "status": 0,
+    "stdout": "PASS mine story/unlock, all five real UI battles, target choice, heat, timed boss entry, settlement reload, responsive, production 42\n",
+    "stderr": ""
+  },
+  {
+    "file": "boss-save-browser.cjs",
+    "status": 0,
+    "stdout": "PASS real RPG browser reload checkpoint\n",
+    "stderr": ""
+  },
+  {
+    "file": "collection-browser.cjs",
+    "status": 0,
+    "stdout": "PASS v2.8 encyclopedia / actual inputs for all boss first-kill, misses, pity / equipment / heal / rewards / reload / production / CLASS\n",
+    "stderr": ""
+  },
+  {
+    "file": "collection-effects-browser.cjs",
+    "status": 0,
+    "stdout": "PASS actual probability drops / attack and defense equipment effects / S-only block / collection quest report\n",
+    "stderr": ""
+  },
+  {
+    "file": "affinity-browser.cjs",
+    "status": 0,
+    "stdout": "PASS v2.9 real trust loop, six actual personal fights, report/awakening, resume/replay, responsive and production\n",
+    "stderr": ""
+  },
+  {
+    "file": "affinity-effects-browser.cjs",
+    "status": 0,
+    "stdout": "PASS all six awakened real UI supports, quotas, exact damage display, Sera reload and readable in-viewport awakening\n",
+    "stderr": ""
+  },
+  {
+    "file": "fortress-browser.cjs",
+    "status": 0,
+    "stdout": "PASS v3.0 campaign browser 41 real turns\n",
+    "stderr": ""
+  },
+  {
+    "file": "fortress-effects-browser.cjs",
+    "status": 0,
+    "stdout": "PASS knight/Kain phases defense music exact reload browser\n",
+    "stderr": ""
+  },
+  {
+    "file": "chaos-browser.cjs",
+    "status": 0,
+    "stdout": "PASS tower full browser 38 real turns\n",
+    "stderr": ""
+  },
+  {
+    "file": "chaos-effects-browser.cjs",
+    "status": 0,
+    "stdout": "PASS chaos mask/body/save/audio/browser effects\n",
+    "stderr": ""
+  },
+  {
+    "file": "canyon-browser.cjs",
+    "status": 0,
+    "stdout": "PASS canyon full browser 49 real turns\n",
+    "stderr": ""
+  },
+  {
+    "file": "canyon-effects-browser.cjs",
+    "status": 0,
+    "stdout": "PASS dragon flight / BREAK / breath / exact save / responsive / audio\n",
+    "stderr": ""
+  },
+  {
+    "file": "castle-browser.cjs",
+    "status": 0,
+    "stdout": "PASS castle browser 54 real turns\n",
+    "stderr": ""
+  },
+  {
+    "file": "castle-effects-browser.cjs",
+    "status": 0,
+    "stdout": "PASS castle elite / gear / BREAK / record\n",
+    "stderr": ""
+  }
+]

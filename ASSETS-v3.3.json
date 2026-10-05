@@ -1,0 +1,56 @@
+[
+  {
+    "id": "royalGuard",
+    "path": "assets/castle-v33/royalGuard.webp",
+    "width": 667,
+    "height": 1000,
+    "bytes": 191062,
+    "alpha": true,
+    "transparentFraction": 0.45543178410794605
+  },
+  {
+    "id": "abyssMage",
+    "path": "assets/castle-v33/abyssMage.webp",
+    "width": 667,
+    "height": 1000,
+    "bytes": 236794,
+    "alpha": true,
+    "transparentFraction": 0.43842578710644675
+  },
+  {
+    "id": "sealGuardian",
+    "path": "assets/castle-v33/sealGuardian.webp",
+    "width": 667,
+    "height": 1000,
+    "bytes": 230096,
+    "alpha": true,
+    "transparentFraction": 0.4485547226386807
+  },
+  {
+    "id": "castleInterior",
+    "path": "assets/castle-v33/castleInterior.webp",
+    "width": 1535,
+    "height": 864,
+    "bytes": 296496,
+    "alpha": false,
+    "transparentFraction": 0
+  },
+  {
+    "id": "sealChamber",
+    "path": "assets/castle-v33/sealChamber.webp",
+    "width": 1535,
+    "height": 864,
+    "bytes": 281116,
+    "alpha": false,
+    "transparentFraction": 0
+  },
+  {
+    "id": "throneDoor",
+    "path": "assets/castle-v33/throneDoor.webp",
+    "width": 1535,
+    "height": 864,
+    "bytes": 163100,
+    "alpha": false,
+    "transparentFraction": 0
+  }
+]
