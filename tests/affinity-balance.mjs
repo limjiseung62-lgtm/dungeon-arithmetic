@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+import {RPGMode} from '../src/RPGMode.js';
+import {characterStats} from '../src/RPGConfig.js';
+import {PersonalQuestData} from '../src/AffinityData.js';
+import {relation} from '../src/AffinitySystem.js';
+import {MercenaryData} from '../src/MercenaryData.js';
+function setup(id,seed){let v=seed;const rng=()=>{v=(v*1664525+1013904223)>>>0;return v/4294967296;};const r=new RPGMode({getItem(){return null;},setItem(){}},rng);r.create('동료 전략가');Object.assign(r.character,{level:7,exp:0,...characterStats(7),gold:20000});r.character.inventory.items=['steel_sword','leather_armor'];r.equip('steel_sword');r.equip('leather_armor');r.character.hp=r.character.maxHP;r.character.scrolls=[{type:'heal',uses:9},{type:'fire',uses:9},{type:'shield',uses:9},{type:'cleanse',uses:9}];const p=r.data.progress;p.unlockedDungeons=['old-prison','cursed-forest','burning-mine'];p.clearedDungeons=['old-prison','cursed-forest'];p.story.mineInvestigated=true;p.rewardedQuests=['forest-road'];p.questProgress['forest-road']={count:1,scrolls:[]};if(id)r.hire(id);return {r,rng};}
+function solve(r,s,c,side,grade,scroll){const t=s.targets.find(t=>t.side===side&&t.grade===grade);c.submit(t.solution.ids,t.solution.ops);if(c.awaitingChoices())c.chooseTarget(0,s.enemies.find(e=>e.hp>0&&(side==='attack'||e.intent.special!=='none'))?.id||s.enemies.find(e=>e.hp>0).id);while(s.phase==='resolution'){const a=s.resolutionStage==='actions'?s.actionQueue[s.resolutionIndex]:null;if(a?.actionType==='scroll'){const index=s.scrolls.findIndex(x=>x.type===scroll);c.chooseScroll(a,index>=0?index:null);}r.onBattleEvent(c.resolveNext(),s);}}
+const personal=[];
+for(const q of PersonalQuestData)for(let seed=1;seed<=5;seed++){
+ const {r,rng}=setup(q.mercenaryId,seed),v=relation(r.data.progress,q.mercenaryId);Object.assign(v,{affinityLevel:2,affinityProgress:3,personalQuestUnlocked:true,unlockedDialogues:[1,2]});r.acceptQuest(q.id);r.enterPersonalQuest(q.id);const {state:s,combat:c}=r.createBattle();c.rng=rng;c.lootRng=rng;let turns=0;
+ while(!['clear','gameover'].includes(s.phase)&&turns<80){if(s.phase==='enemy')c.startTurn();turns++;let side='attack',grade='S',scroll=s.hero.hp<s.battleContext.heroMaxHP*.65?'heal':'fire';if(q.mercenaryId==='bram'&&turns<=2){side='defense';grade='A';}if(q.mercenaryId==='kain'){grade='A';scroll='heal';if(s.hero.hp<s.battleContext.heroMaxHP*.55||turns%3===0){grade='S';scroll='heal';}if(s.enemies[0].hp/s.enemies[0].maxHP<=.3)grade='A';}solve(r,s,c,side,grade,scroll);}
+ assert.equal(s.phase,'clear',q.id+' seed '+seed);assert.equal(r.data.progress.questProgress[q.id].count,1,q.id+' actions/win seed '+seed);assert.ok(r.saveInfo.ok);personal.push({id:q.id,seed,turns,hp:s.hero.hp,casts:s.stats.scrolls,preparations:r.data.progress.questProgress[q.id].personal.actions,breaks:s.enemies.reduce((n,e)=>n+(e.boss?.breaks||0),0)});
+}
+// Same equipment, seeded targets, resources and adaptive policy at each stage.
+// Preparation flags stand in for prior story completion; arithmetic/core is real.
+const comparison=[];
+for(const m of [null,...MercenaryData])for(const stage of m?[1,2,3]:[1])for(const grade of ['A','S'])for(let seed=1;seed<=3;seed++){
+ const {r,rng}=setup(m?.id,seed);r.character.scrolls=[{type:'fire',uses:3},{type:'heal',uses:2}];if(m&&stage>=2){Object.assign(relation(r.data.progress,m.id),{affinityLevel:2,affinityProgress:3,personalQuestUnlocked:true,unlockedDialogues:[1,2]});if(stage===3){const q='personal-'+m.id,spec=PersonalQuestData.find(q=>q.mercenaryId===m.id);r.acceptQuest(q);r.data.progress.activeQuests=[];r.data.progress.completedQuests=[q];r.data.progress.questProgress[q]={count:1,scrolls:[],personal:{actions:spec.needed,won:true}};r.reportQuest(q);r.character.exp=0;r.character.gold=20000-m.hireCost;}}
+ r.enterDungeon('cursed-forest');const {state:s,combat:c}=r.createBattle();c.rng=rng;c.lootRng=rng;let turns=0;
+ while(!['clear','gameover'].includes(s.phase)&&turns<150){if(s.phase==='reward'){const pick=s.lootCandidates.find(x=>x==='heal')||s.lootCandidates[0];c.chooseReward(pick);r.recordLoot(s,pick);r.advanceBattle(s,c);continue;}if(s.phase==='enemy')c.startTurn();turns++;const alive=s.enemies.filter(e=>e.hp>0),incoming=alive.reduce((n,e)=>n+e.intent.attack,0),side=s.hero.shield<incoming&&(s.enemyTurn===1||s.hero.hp<90||alive.some(e=>e.intent.special==='poison'))?'defense':'attack';solve(r,s,c,side,grade,s.hero.hp<80?'heal':'fire');}
+ comparison.push({id:m?.id||'solo',stage,grade,seed,phase:s.phase,turns,hp:s.hero.hp,supports:r.data.progress.mercenaryStats.supports,cost:m?.hireCost||0});
+}
+await writeFile('AFFINITY-BALANCE-RESULTS-v2.9.json',JSON.stringify({fixture:'Lv7 steel_sword/leather_armor, deterministic full combat, personal quests carry prepared scrolls; comparison carries only fire3/heal2',personal,comparison},null,2));console.log('PASS '+personal.length+' full personal fights, '+comparison.length+' relation/grade/companion balance scenarios');

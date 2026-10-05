@@ -1,3 +1,4 @@
+import {PersonalQuestData} from './AffinityData.js';
 export const QuestConfig={maxActive:3};
 const q=(id,name,description,type,target,filter,reward,difficulty='보통',dungeon='old-prison')=>({id,name,description,type,target,filter,reward,difficulty,dungeon});
 export const QuestData=[
@@ -18,6 +19,7 @@ QuestData.push(
  q('collection-equipment','장비 수집가','장비 10종을 발견해요. 판매한 장비도 기록이 남아요.','COLLECT_EQUIPMENT',10,{}, {exp:30,gold:80},'수집','any'),
  q('collection-boss','수호자의 유산','보스 고유 장비 하나를 발견해요.','COLLECT_BOSS',1,{}, {exp:40,gold:60},'수집','any')
 );
+QuestData.push(...PersonalQuestData.map(q=>({...q,type:'PERSONAL_ADVENTURE',target:1,filter:{},difficulty:'동료 이야기',reward:{exp:40,gold:60,awaken:q.mercenaryId}})));
 export const questById=id=>QuestData.find(q=>q.id===id);
 // Additional quest kinds can be used by data without changing the battle core.
-export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY','COLLECT_MONSTERS','COLLECT_EQUIPMENT','COLLECT_BOSS'];
+export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY','COLLECT_MONSTERS','COLLECT_EQUIPMENT','COLLECT_BOSS','PERSONAL_ADVENTURE'];

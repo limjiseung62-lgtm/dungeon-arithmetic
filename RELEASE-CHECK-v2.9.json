@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "version": "2.9.0",
+  "unitTests": 476,
+  "baselineUnitTestsRetained": 412,
+  "newUnitTests": 64,
+  "browserSuites": 21,
+  "baselineBrowserSuites": 19,
+  "newBrowserSuites": 2,
+  "personalCombatScenarios": 30,
+  "relationshipBalanceScenarios": 114,
+  "productionBuild": "passed; source files and linked CSS verified",
+  "assetsPreserved": 75,
+  "previousTagsPreserved": 12,
+  "recoveryCommit": "8850aad0a705e07206ddb848b0098fd88bd76348",
+  "branch": "update/v2.9",
+  "targetLocalTag": "v2.9",
+  "remotePush": false,
+  "publicDeployment": false,
+  "checkedAt": "2026-10-05T10:53:45.069Z"
+}

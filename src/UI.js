@@ -1,3 +1,5 @@
+import {companionStoryHTML} from './CompanionView.js';
+import {relation} from './AffinitySystem.js';
 import {bossData,bossHint,bossTransitions,stoppedBossHeat,bossArmor} from './BossBattleSystem.js';
 import {inMine,heatForecast,bossPhase} from './HeatSystem.js';
 import {artHTML,installArtTheme} from './AssetManifest.js';
@@ -164,7 +166,7 @@ function preferences(){try{localStorage.setItem('dungeon-settings',JSON.stringif
 function rpgScreen(next,notice=''){if(isRPG()&&state&&rpg.run){rpg.captureBattle(state);rpg.save();}cancel();state=null;screen=next;settingsOpen=false;debugOpen=false;rpgNotice=notice;render();}
 function enterRPG(){playScope='rpg';const loaded=rpg.load();rpgNameDraft='';rpgScreen(loaded.data?'rpg-gate':['invalid','newer'].includes(loaded.status)?'rpg-gate':'rpg-create',loaded.message);}
 function createRPGCharacter(){if(screen!=='rpg-create')return;rpgNameDraft=document.querySelector('#character-name')?.value||'';try{rpg.create(rpgNameDraft);rpgScreen('rpg-opening:0',rpg.saveInfo.ok?'':rpg.saveInfo.message);}catch(error){rpgNotice=error.message;render();document.querySelector('#character-name')?.focus();}}
-function startRPGBattle(dungeonId='old-prison'){cancel();playScope='rpg';if(!rpg.run&&!rpg.enterDungeon(dungeonId))return;const built=rpg.createBattle();state=built.state;combat=built.combat;pads=createPads(1);specialHistory.clear();settingsOpen=false;debugOpen=false;rpgNotice='';screen='battle';lastSaved=null;if(built.pending){rolling=false;render();}else beginTurn(true);}
+function startRPGBattle(dungeonId='old-prison'){cancel();playScope='rpg';if(!rpg.run&&!rpg.enterDungeon(dungeonId))return;if(rpg.run?.personalQuestId&&!rpg.run.personalIntroSeen){rpgScreen('rpg-companions:'+rpg.run.companionId);app.insertAdjacentHTML('beforeend',companionStoryHTML(rpg.run.companionId,'start',true));return;}const built=rpg.createBattle();state=built.state;combat=built.combat;pads=createPads(1);specialHistory.clear();settingsOpen=false;debugOpen=false;rpgNotice='';screen='battle';lastSaved=null;if(built.pending){rolling=false;render();}else beginTurn(true);}
 function handleRPGAction(action,button=null){switch(action){
  case 'rpg-enter':enterRPG();break;
  case 'rpg-create-submit':createRPGCharacter();break;
@@ -192,6 +194,12 @@ function handleRPGAction(action,button=null){switch(action){
  case 'rpg-dungeon':rpgScreen('rpg-dungeon');break;
  case 'rpg-dungeon-start':if(!rpg.run&&rpg.data.progress.activeMercenary)rpgScreen('rpg-party:'+button.dataset.dungeon);else startRPGBattle(button?.dataset.dungeon);break;
  case 'rpg-party-depart':startRPGBattle(button?.dataset.dungeon);break;
+ case 'rpg-companions':rpgScreen('rpg-companions');break;
+ case 'rpg-companion-record':rpgScreen('rpg-companions:'+button.dataset.mercenary);break;
+ case 'rpg-personal-start':{const result=rpg.enterPersonalQuest(button.dataset.quest);if(result.ok)startRPGBattle();else{rpgNotice=result.message;render();}break;}
+ case 'rpg-personal-intro-done':if(rpg.run?.personalQuestId){rpg.run.personalIntroSeen=true;rpg.save();startRPGBattle();}break;
+ case 'rpg-companion-replay':{const r=relation(rpg.data.progress,button.dataset.mercenary);if(r.personalQuestUnlocked&&(button.dataset.chapter==='start'||r.personalQuestCompleted))app.insertAdjacentHTML('beforeend',companionStoryHTML(button.dataset.mercenary,button.dataset.chapter==='finish'?'finish':'start'));break;}
+ case 'rpg-companion-story-close':document.querySelector('.companion-story-overlay')?.remove();break;
  case 'rpg-mercenaries':rpgScreen('rpg-mercenaries');break;
  case 'rpg-mercenary-detail':app.insertAdjacentHTML('beforeend',mercenaryDetailHTML(button.dataset.mercenary));break;
  case 'rpg-mercenary-close':document.querySelectorAll('.mercenary-detail-overlay,.mercenary-confirm-overlay').forEach(e=>e.remove());break;
@@ -200,7 +208,7 @@ function handleRPGAction(action,button=null){switch(action){
  case 'rpg-mine-unlock-close':document.querySelector('.mine-unlock-overlay')?.remove();break;
  case 'rpg-guild':rpg.visitGuild();rpgScreen('rpg-guild');break;
  case 'rpg-quest-accept':rpgNotice=rpg.acceptQuest(button.dataset.quest).message;render();break;
- case 'rpg-quest-report':{const result=rpg.reportQuest(button.dataset.quest);rpgNotice=result.message;render();const up=result.levelUp;if(up?.to>up.from)app.insertAdjacentHTML('beforeend',`<div class="overlay story-level-overlay"><section class="modal level-up-banner" role="dialog" aria-modal="true" aria-label="레벨 업"><h2>레벨 업!</h2><b>레벨 ${up.from} → ${up.to}</b><p>최대 HP +${up.maxHP} · 공격력 +${up.attack} · 방어력 +${up.defense}</p><p>더 강해졌어요! 마왕의 성에 한 걸음 가까워졌어요.</p><button class="primary" data-action="rpg-level-close">모험 계속하기 →</button></section></div>`);break;}
+ case 'rpg-quest-report':{const result=rpg.reportQuest(button.dataset.quest);rpgNotice=result.message;render();if(result.awakening)app.insertAdjacentHTML('beforeend',companionStoryHTML(result.awakening.mercenaryId,'finish'));const up=result.levelUp;if(!result.awakening&&up?.to>up.from)app.insertAdjacentHTML('beforeend',`<div class="overlay story-level-overlay"><section class="modal level-up-banner" role="dialog" aria-modal="true" aria-label="레벨 업"><h2>레벨 업!</h2><b>레벨 ${up.from} → ${up.to}</b><p>최대 HP +${up.maxHP} · 공격력 +${up.attack} · 방어력 +${up.defense}</p><p>더 강해졌어요! 마왕의 성에 한 걸음 가까워졌어요.</p><button class="primary" data-action="rpg-level-close">모험 계속하기 →</button></section></div>`);break;}
  case 'rpg-level-close':document.querySelector('.story-level-overlay')?.remove();break;
  case 'rpg-save':rpg.save();rpgNotice=rpg.saveInfo.message;render();break;
  case 'rpg-return':if(rpg.returnToTown())rpgScreen('rpg-town','마을에 돌아왔어요. HP를 회복했습니다.');break;

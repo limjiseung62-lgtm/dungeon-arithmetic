@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "fixture": "prepared prior trust / owned gear, full unmodified personal fights and actual arithmetic UI",
+  "results": [
+    {
+      "actualPrisonClears": 2,
+      "trustStage": 2
+    },
+    {
+      "id": "rowen",
+      "turns": 3,
+      "casts": 2,
+      "actualInput": true,
+      "awake": true,
+      "receiptReloadNoReplay": true
+    },
+    {
+      "id": "bram",
+      "turns": 5,
+      "casts": 2,
+      "actualInput": true,
+      "awake": true,
+      "receiptReloadNoReplay": true
+    },
+    {
+      "id": "sera",
+      "turns": 3,
+      "casts": 2,
+      "actualInput": true,
+      "awake": true,
+      "receiptReloadNoReplay": true
+    },
+    {
+      "id": "luna",
+      "turns": 3,
+      "casts": 2,
+      "actualInput": true,
+      "awake": true,
+      "receiptReloadNoReplay": true
+    },
+    {
+      "id": "kain",
+      "turns": 7,
+      "casts": 1,
+      "actualInput": true,
+      "awake": true,
+      "receiptReloadNoReplay": true
+    },
+    {
+      "id": "elia",
+      "turns": 3,
+      "casts": 3,
+      "actualInput": true,
+      "awake": true,
+      "receiptReloadNoReplay": true
+    }
+  ],
+  "errors": []
+}

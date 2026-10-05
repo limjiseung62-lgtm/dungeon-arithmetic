@@ -147,8 +147,8 @@ export class CombatSystem{
     if(s.resolutionStage==='enemy'){
       if(s.enemies){while(this.currentEnemy()?.hp===0)s.enemyResolutionIndex++;if(!this.currentEnemy()||s.hero.hp===0){s.resolutionStage='status';return this.resolveNext();}}
       const e=this.currentEnemy(),intent=e?.intent||s.intent;
-      s.resolutionStage=s.enemies?'special':'status';const incoming=s.scrollStop?0:mitigateAttack(s,Math.round(intent.attack*(1-(e?.weaken||s.scrollWeaken||0))));const damage=takeDamage(s,incoming);
-      return this.emit('enemy',`${e?e.name+' · ':''}적의 공격 ${incoming} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,{...damage,attack:incoming,suppressed:!!s.scrollStop,enemyId:e?.id,monster:e?.monsterIndex});
+      s.resolutionStage=s.enemies?'special':'status';const incoming=s.scrollStop?0:mitigateAttack(s,Math.round(intent.attack*(1-(e?.weaken||s.scrollWeaken||0))));const damage=takeDamage(s,incoming,'enemy');
+      return this.emit('enemy',`${e?e.name+' · ':''}적의 공격 ${damage.absorbed+damage.hpDamage} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,{...damage,attack:damage.absorbed+damage.hpDamage,suppressed:!!s.scrollStop,enemyId:e?.id,monster:e?.monsterIndex});
     }
     if(s.resolutionStage==='status'){
       s.resolutionStage='end';const poison=tickPoison(s);
