@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "base": "v3.0 d925333",
+  "checks": [
+    {
+      "name": "all v30 assets preserved, binary media byte-exact and text Git CRLF normalized",
+      "count": 85,
+      "binaryMedia": 79
+    },
+    {
+      "name": "19 original core/balance modules unchanged (Git CRLF normalization)",
+      "passed": true
+    },
+    {
+      "name": "all four original boss configs unchanged",
+      "passed": true
+    },
+    {
+      "name": "16 old equipment rows unchanged",
+      "passed": true
+    },
+    {
+      "name": "26 existing quests unchanged",
+      "passed": true
+    },
+    {
+      "name": "growth, economics and all existing reward rows unchanged",
+      "passed": true
+    }
+  ]
+}

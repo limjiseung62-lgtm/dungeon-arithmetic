@@ -26,6 +26,9 @@ QuestData.push(...[
  ['ironwall-break','철벽 돌파','BOSS_BREAK',1,{},100,100],
  ['first-seal','첫 번째 봉인','KILL_MONSTER',1,{monster:'darkKnight'},120,130]
 ].map(([id,name,type,target,filter,exp,gold])=>({id,name,type,target,filter,dungeon:'black-fortress',difficulty:'제2막',description:type==='BOSS_BREAK'?'어둠의 기사의 자세를 한 번 붕괴시키세요.':name+' · 검은 성채에서 목표를 달성하세요.',reward:{exp,gold}})));
+QuestData.push(...[
+ ['twisted-books','뒤틀린 책장','KILL_MONSTER',4,{monster:'bookSpirit'},90,100],['silence-chaos','혼돈의 근원을 끊어라','KILL_MONSTER',2,{monster:'chaosApostle'},100,110],['see-truth','환영 너머의 진실','BOSS_BREAK',1,{},110,120],['second-seal','두 번째 봉인','KILL_MONSTER',1,{monster:'chaosMage'},140,150]
+].map(([id,name,type,target,filter,exp,gold])=>({id,name,type,target,filter,dungeon:'chaos-tower',difficulty:'제2막',description:type==='BOSS_BREAK'?'혼돈의 마법사의 환영을 BREAK로 붕괴시키세요.':name+' · 혼돈의 마탑에서 목표를 달성하세요.',reward:{exp,gold}})));
 export const questById=id=>QuestData.find(q=>q.id===id);
 // Additional quest kinds can be used by data without changing the battle core.
 export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY','COLLECT_MONSTERS','COLLECT_EQUIPMENT','COLLECT_BOSS','PERSONAL_ADVENTURE','BOSS_BREAK'];

@@ -1,0 +1,4 @@
+START story-browser.cjs
+PASS v2.6 opening, once/replay, main story, prices/comparison, touch, responsive, hover/focus, progress, production
+
+START mine-browser.cjs

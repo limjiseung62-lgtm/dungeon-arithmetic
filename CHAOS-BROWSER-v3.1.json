@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "turns": 38,
+  "rooms": 5,
+  "phases": [
+    1,
+    2,
+    3
+  ],
+  "checks": [
+    "ordinary input pagehide reload without manual save",
+    "once town story",
+    "auto main investigation",
+    "five real battles",
+    "priority enemies",
+    "three boss phases",
+    "second seal reload",
+    "skip no duplicate rewards",
+    "2/3 seals",
+    "dragon locked",
+    "codex",
+    "390/768/1920 cards",
+    "production debug hidden"
+  ],
+  "errors": []
+}

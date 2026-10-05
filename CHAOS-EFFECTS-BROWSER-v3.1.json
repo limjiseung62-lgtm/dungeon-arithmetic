@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "Elia main lore optional",
+    "own boss BGM",
+    "phase2 mask warning 10s/restore5s",
+    "unchanged dice and values",
+    "real and fake intents observable",
+    "phase3 exactly one enemy/three forms",
+    "final music",
+    "exact phase3 reload",
+    "wrong illusion preserves A success",
+    "right body S BREAK collapse",
+    "three responsive sizes"
+  ],
+  "errors": []
+}

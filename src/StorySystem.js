@@ -18,7 +18,9 @@ export function mainStory(p){
   {id:'war-declared',name:'마왕군의 선전포고',goal:'광산을 돌파하고 마을에서 마왕군의 움직임을 확인하세요.',done:campaign(p).openingSeen,action:'rpg-town',art:'fortress'},
   {id:'fortress-road',name:'검은 성채',goal:'길드에서 마왕군의 전초기지를 조사하고 성채로 향하세요.',done:campaign(p).fortressInvestigated,action:'rpg-guild',art:'fortress'},
   {id:'dark-seal',name:'첫 번째 봉인',goal:'검은 성채의 어둠의 기사를 쓰러뜨리고 봉인을 파괴하세요.',done:campaign(p).seals.darkness,action:'rpg-dungeon',art:'fortress'},
-  {id:'future',name:'혼돈의 마법사',goal:'남은 혼돈과 용의 봉인을 넘어 마왕의 성에 도달하세요. 다음 이야기에서 계속.',done:false,action:null,art:'fortress'}
+  {id:'twisted-space',name:'뒤틀린 공간',goal:'마을 사람들의 기억을 뒤튼 혼돈의 마력의 근원을 길드에서 조사하세요.',done:campaign(p).towerInvestigated,action:'rpg-guild',art:'tower'},
+  {id:'chaos-seal',name:'두 번째 봉인',goal:'혼돈의 마탑에서 마법진의 문양을 관찰하고 혼돈의 마법사를 쓰러뜨리세요.',done:campaign(p).seals.chaos,action:'rpg-dungeon',art:'tower'},
+  {id:'future',name:'용의 봉인',goal:'남은 용의 봉인을 넘어 마왕의 성에 도달하세요. 다음 이야기에서 계속.',done:false,action:null,art:'tower'}
  ];
  const current=steps.findIndex(s=>!s.done);
  return steps.map((s,i)=>({...s,status:s.done?'complete':i===current?'current':'locked'}));
@@ -38,15 +40,15 @@ export function nextGoal(data){
  if(!storyFlags(p).guildVisited)return {title:'먼저 모험가 길드를 방문하세요',text:'이 세계의 안내를 듣고 첫 번째 의뢰를 받아보세요.',action:'rpg-guild',label:'길드로 가기'};
  if(!Object.values(c.equipment).some(Boolean)&&c.inventory.items.length)return {title:'가방 속 장비를 장착하세요',text:'구매하거나 획득한 장비는 인벤토리에서 장착해야 능력치에 적용돼요.',action:'rpg-inventory',label:'장비 장착하기'};
  if(!Object.values(c.equipment).some(Boolean)&&EquipmentData.some(e=>!e.bossOnly&&e.buyPrice<=c.gold))return {title:'첫 장비로 더 강해지세요',text:`현재 ${c.gold}G로 장비를 살 수 있어요. 구매 후 인벤토리에서 장착하세요.`,action:'rpg-shop-weapon',label:'무기점 둘러보기'};
- if(['war-declared','fortress-road','dark-seal'].includes(main.id))return {title:main.name,text:main.goal,action:main.action,label:'제2막 목표 확인'};
+ if(['war-declared','fortress-road','dark-seal','twisted-space','chaos-seal'].includes(main.id))return {title:main.name,text:main.goal,action:main.action,label:'제2막 목표 확인'};
  if(main.id==='mine-giant')return {title:'불타는 광산을 조사하세요',text:'열기는 전투마다 초기화돼요. 장비·동료·치유와 정화 두루마리를 준비하고 공격과 방어를 판단하세요.',action:'rpg-dungeon',label:'광산 준비하기'};
  if(main.id==='mine-trace')return {title:'숲 아래에서 붉은 마력이 발견됐어요',text:'길드 마스터가 북쪽 광산의 단서를 기다립니다. 「붉은 마력의 흔적」을 확인하세요.',action:'rpg-guild',label:'광산 단서 확인'};
  if(p.activeQuests.length){const q=QuestData.find(q=>q.id===p.activeQuests[0]);return {title:q.name,text:`${q.description} · ${p.questProgress[q.id]?.count??0}/${q.target}`,action:'rpg-dungeon',label:'던전 준비하기'};}
- if(main.id==='future')return {title:'어둠의 봉인을 파괴했어요!',text:'남은 봉인 2개 · 혼돈의 영역과 용의 둥지는 다음 이야기에서 열립니다. 검은 성채의 보스 전리품에도 도전하세요.',action:'rpg-guild',label:'남은 의뢰 확인'};
+ if(main.id==='future')return {title:'두 번째 봉인을 파괴했어요!',text:'남은 봉인 1개 · 용의 둥지는 다음 이야기에서 열립니다. 검은 성채의 보스 전리품에도 도전하세요.',action:'rpg-guild',label:'남은 의뢰 확인'};
  if(!p.activeQuests.length&&main.id!=='guardian')return {title:'다음 모험의 의뢰를 받아보세요',text:main.goal,action:'rpg-guild',label:'길드로 가기'};
  if(p.unlockedDungeons.includes('cursed-forest')&&!p.activeMercenary)return {title:'저주받은 숲이 열렸어요 · 동료와 준비하세요',text:'독과 행동 방해에 대비해 장비와 두루마리를 준비하세요. 용병은 선택 사항이에요.',action:'rpg-mercenaries',label:'용병 길드 둘러보기'};
  return {title:main.name,text:main.goal,action:main.action,label:'다음 모험 준비하기'};
 }
 export function growthGoal(c){const required=nextLevelExp(c.level);return {max:c.level>=RPGConfig.maxLevel,remaining:Math.max(0,required-c.exp),next:c.level+1,growth:RPGConfig.growth};}
 export function equipmentComparison(c,item){const current=equipmentById(c.equipment?.[item.type]);return {current,deltas:Object.fromEntries(['attack','maxHP','defense'].map(k=>[k,(item.statModifiers[k]??0)-(current?.statModifiers[k]??0)]))};}
-export function effectText(item){const e=item.specialEffects;if(e.effectType==='BOSS_BREAK_BONUS')return '보스 BREAK 중 공격 A/S 피해 +'+e.value;if(e.effectType==='VICTORY_HEAL')return '전투 승리 후 HP +'+e.value+' · 최대 HP까지';if(!e.effectType)return '조건 없이 기본 능력치에 적용';if(e.effectType==='SCROLL_POWER_BONUS')return `${e.trigger} 등급 공격 후 두루마리 피해·회복·방어막 +${e.value} · 운석은 주 대상에 적용`;return `${Array.isArray(e.trigger)?e.trigger.join('/') : e.trigger} 등급 ${e.effectType==='ATTACK_GRADE_BONUS'?'공격 성공 시 추가 피해':'방어 성공 시 방어막 추가'} +${e.value}`;}
+export function effectText(item){const e=item.specialEffects;if(e.effectType==='CHAOS_REVEAL')return '목표 숫자 일시 가림 지속 −2초 · 주사위와 정답 판정 유지';if(e.effectType==='BOSS_BREAK_BONUS')return '보스 BREAK 중 공격 A/S 피해 +'+e.value;if(e.effectType==='VICTORY_HEAL')return '전투 승리 후 HP +'+e.value+' · 최대 HP까지';if(!e.effectType)return '조건 없이 기본 능력치에 적용';if(e.effectType==='SCROLL_POWER_BONUS')return `${e.trigger} 등급 공격 후 두루마리 피해·회복·방어막 +${e.value} · 운석은 주 대상에 적용`;return `${Array.isArray(e.trigger)?e.trigger.join('/') : e.trigger} 등급 ${e.effectType==='ATTACK_GRADE_BONUS'?'공격 성공 시 추가 피해':'방어 성공 시 방어막 추가'} +${e.value}`;}

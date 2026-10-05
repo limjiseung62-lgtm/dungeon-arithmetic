@@ -1,0 +1,29 @@
+START mine-browser.cjs
+PASS mine story/unlock, all five real UI battles, target choice, heat, timed boss entry, settlement reload, responsive, production 44
+
+START boss-save-browser.cjs
+PASS real RPG browser reload checkpoint
+
+START collection-browser.cjs
+PASS v2.8 encyclopedia / actual inputs for all boss first-kill, misses, pity / equipment / heal / rewards / reload / production / CLASS
+
+START collection-effects-browser.cjs
+PASS actual probability drops / attack and defense equipment effects / S-only block / collection quest report
+
+START affinity-browser.cjs
+PASS v2.9 real trust loop, six actual personal fights, report/awakening, resume/replay, responsive and production
+
+START affinity-effects-browser.cjs
+PASS all six awakened real UI supports, quotas, exact damage display, Sera reload and readable in-viewport awakening
+
+START fortress-browser.cjs
+PASS v3.0 campaign browser 41 real turns
+
+START fortress-effects-browser.cjs
+PASS knight/Kain phases defense music exact reload browser
+
+START chaos-browser.cjs
+PASS tower full browser 38 real turns
+
+START chaos-effects-browser.cjs
+PASS chaos mask/body/save/audio/browser effects

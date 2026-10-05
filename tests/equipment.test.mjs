@@ -8,7 +8,7 @@ import {validateSave} from '../src/SaveSystem.js';
 import {createRPGContext} from '../src/RPGConfig.js';
 import {createState} from '../src/GameState.js';
 const hero=()=>{const c=createCharacter('장비 용사');c.gold=10000;return c;};
-test('equipment catalog has 15 data-driven items and four Korean rarities',()=>{assert.equal(EquipmentData.length,16);assert.deepEqual(new Set(EquipmentData.map(i=>i.rarity)),new Set(['COMMON','UNCOMMON','RARE','EPIC']));});
+test('equipment catalog has 15 data-driven items and four Korean rarities',()=>{assert.equal(EquipmentData.length,17);assert.deepEqual(new Set(EquipmentData.map(i=>i.rarity)),new Set(['COMMON','UNCOMMON','RARE','EPIC']));});
 test('buy deducts exact gold and adds one inventory item',()=>{const c=hero(),before=c.gold;assert.equal(buyItem(c,'old_sword').ok,true);assert.equal(c.gold,before-100);assert.deepEqual(c.inventory.items,['old_sword']);});
 test('insufficient gold and unknown item do not mutate inventory',()=>{const c=createCharacter('가난한 용사');assert.equal(buyItem(c,'steel_sword').ok,false);assert.equal(c.inventory.items.length,0);assert.equal(buyItem(c,'missing').ok,false);});
 test('equip replaces old item and returns it to inventory',()=>{const c=hero();buyItem(c,'old_sword');buyItem(c,'steel_sword');assert.equal(equipItem(c,'old_sword').ok,true);assert.equal(equipItem(c,'steel_sword').ok,true);assert.equal(c.equipment.weapon,'steel_sword');assert.deepEqual(c.inventory.items,['old_sword']);});

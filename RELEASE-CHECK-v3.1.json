@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "unitTests": 578,
+  "browserSuites": 25,
+  "combatComparisons": 42,
+  "buildFilesVerified": 83,
+  "base": "d925333b44e668bd2b6d43723ca5b003f2a10a76",
+  "existingTags": 14,
+  "newArtwork": 8,
+  "originalAssetsPreserved": 85,
+  "publicPush": false,
+  "publicDeploy": false
+}
