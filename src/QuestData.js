@@ -20,6 +20,12 @@ QuestData.push(
  q('collection-boss','수호자의 유산','보스 고유 장비 하나를 발견해요.','COLLECT_BOSS',1,{}, {exp:40,gold:60},'수집','any')
 );
 QuestData.push(...PersonalQuestData.map(q=>({...q,type:'PERSONAL_ADVENTURE',target:1,filter:{},difficulty:'동료 이야기',reward:{exp:40,gold:60,awaken:q.mercenaryId}})));
+QuestData.push(...[
+ ['army-sweep','마왕군 소탕','KILL_MONSTER',4,{monster:'demonSoldier'},80,100],
+ ['commander-first','지휘관을 노려라','KILL_MONSTER',2,{monster:'demonCommander'},90,110],
+ ['ironwall-break','철벽 돌파','BOSS_BREAK',1,{},100,100],
+ ['first-seal','첫 번째 봉인','KILL_MONSTER',1,{monster:'darkKnight'},120,130]
+].map(([id,name,type,target,filter,exp,gold])=>({id,name,type,target,filter,dungeon:'black-fortress',difficulty:'제2막',description:type==='BOSS_BREAK'?'어둠의 기사의 자세를 한 번 붕괴시키세요.':name+' · 검은 성채에서 목표를 달성하세요.',reward:{exp,gold}})));
 export const questById=id=>QuestData.find(q=>q.id===id);
 // Additional quest kinds can be used by data without changing the battle core.
-export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY','COLLECT_MONSTERS','COLLECT_EQUIPMENT','COLLECT_BOSS','PERSONAL_ADVENTURE'];
+export const QuestTypes=['KILL_MONSTER','CLEAR_DUNGEON','ATTACK_GRADE_SUCCESS','DEFENSE_GRADE_SUCCESS','BLOCK_SPECIAL','USE_SCROLL','USE_DIFFERENT_SCROLLS','CLEAR_WITH_HP','CLEAR_WITHOUT_DEFEAT','MERCENARY_SUPPORT','CLEAR_WITH_MERCENARY','COLLECT_MONSTERS','COLLECT_EQUIPMENT','COLLECT_BOSS','PERSONAL_ADVENTURE','BOSS_BREAK'];

@@ -14,10 +14,10 @@ async function solve(grade='A'){
  await pad.locator('[data-action=submit]').click();await settle();
 }
 await page.goto('http://127.0.0.1:4173/?debug=1&v=2.8');await click('rpg-enter');await page.locator('#character-name').fill('도감 탐험가');await click('rpg-create-submit');await click('rpg-opening-skip');await click('rpg-collection');
-assert.equal(await page.locator('.collection-entry[data-known=true]').count(),1);assert.equal(await page.locator('.collection-entry[data-known=false]').count(),41);assert.equal(await page.locator('[data-collection-id=golem] img').count(),0);await shot('hidden-book');
+assert.equal(await page.locator('.collection-entry[data-known=true]').count(),1);assert.equal(await page.locator('.collection-entry[data-known=false]').count(),48);assert.equal(await page.locator('[data-collection-id=golem] img').count(),0);await shot('hidden-book');
 await page.reload();await click('rpg-enter');await click('rpg-continue');await click('rpg-dungeon');await click('rpg-dungeon-start');await skip();await page.waitForFunction(()=>window.dungeonDebug.timer.running);
 assert.deepEqual((await data()).progress.collection.monsters,['skeleton']);
-let turns=0;while(turns++<60){const phase=await settle();if(phase==='gameover')throw Error('first prison defeat');if(['reward','clear'].includes(phase)){await click('loot-choice');if(phase==='clear'){await click('rpg-return');break;}await click('next-monster');await skip();}else await solve('S');}
+let turns=0;while(turns++<60){const phase=await settle();if(phase==='gameover')throw Error('first prison defeat');if(['reward','clear'].includes(phase)){await click('loot-choice');if(phase==='clear'){await click('rpg-return');if(await page.locator('.act-two-scene').count())await click('rpg-act-skip');break;}await click('next-monster');await skip();}else await solve('S');}
 assert.ok(turns<60);assert.equal((await data()).progress.collection.defeatCounts.skeleton,1);await click('rpg-collection');assert.equal(await page.locator('[data-collection-id=skeleton]').getAttribute('data-known'),'true');await page.locator('[data-collection-id=skeleton] summary').click();await shot('first-discovery');
 // Keep all subsequent bosses at their genuine last-hit state. Input, reward ledger,
 // refresh, drops and equipment use the real application; RNG is deterministic.
@@ -42,7 +42,7 @@ for(const [boss,dungeon,item]of [['golem','old-prison','golem_core_shield'],['tr
   if(kill===5){await page.waitForTimeout(750);assert.ok(await page.locator('.boss-loot-discovery').count());await shot(boss+'-loot');}
   const before=structuredClone(after.character),receipt=after.progress.run.pendingLoot.receipt;await page.reload();await click('rpg-enter');await click('rpg-continue');await click('rpg-dungeon');await click('rpg-dungeon-start');
   assert.deepEqual((await data()).character,before);assert.deepEqual((await data()).progress.run.pendingLoot.receipt,receipt);assert.equal((await data()).progress.collection.bossLoot[boss].kills,kill);
-  await click('loot-choice');await click('rpg-return');
+  await click('loot-choice');await click('rpg-return');if(await page.locator('.act-two-scene').count())await click('rpg-act-skip');
  }
  results.push({boss,pity:rows,actualFinalHitInput:true,receiptRefreshNoReplay:true});
  await click('rpg-inventory');await page.locator('[data-action=rpg-equip][data-item="'+item+'"]').click();assert.ok(Object.values((await data()).character.equipment).includes(item));await shot(boss+'-equipped');await click('rpg-town');

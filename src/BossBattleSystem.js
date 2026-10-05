@@ -7,11 +7,11 @@ export function prepareBoss(s,e){const b=initBoss(e),d=bossData(e);if(!b||e.hp<=
 export function bossIntent(s,e,intent){const b=e.boss,d=bossData(e);if(!b)return intent;let special=intent.special,extra=0,label='',danger='주의';
  const patterns=d.patterns[b.phase-1],pattern=patterns[(s.enemyTurn-1)%patterns.length];special=pattern.special;extra=pattern.extra;label=pattern.label;
  if(d.strategy==='regeneration'&&b.seedTurns){special='regenSeed';label=b.phase===3?'마지막 재생':'재생의 씨앗';}
- if(b.phase>=2)danger='위험';if(b.phase===3)danger='치명적';
+ if(e.type==='darkKnight'&&b.phase===3&&['blackWave','execution'].includes(special)){b.pressure=Math.max(b.pressure,1);}if(b.phase>=2)danger='위험';if(b.phase===3)danger='치명적';
  const attack=intent.attack+d.phases[b.phase-1].attack;
  return {...intent,attack:b.breakTurns?Math.round(attack*.65):attack,special:b.breakTurns?'none':special,bossLabel:b.breakTurns?'약점 노출':label,danger:b.breakTurns?'일반':danger,extraDamage:extra};
 }
-export const bossArmor=(e,armor)=>bossData(e)?.removeArmorPhase&&e.boss?.phase>=bossData(e).removeArmorPhase?0:armor;
+export const bossArmor=(e,armor)=>e?.type==='darkKnight'&&(e.boss?.breakTurns||e.boss?.phase===3)?0:bossData(e)?.removeArmorPhase&&e.boss?.phase>=bossData(e).removeArmorPhase?0:armor;
 export function bossDamage(e,amount){const b=e?.boss;if(!b||amount<=0)return amount;const multiplier=b.breakTurns?bossData(e).bonus:(bossData(e).armorMultiplier?.[b.phase-1]||1);return Math.max(1,Math.round(amount*multiplier));}
 // This runs AFTER the student's hit. Triggering BREAK never adds instant damage.
 export function pressureBoss(e,grade){const b=e?.boss,d=bossData(e);if(!b||!d||e.hp<=0||b.breakTurns||b.phase<(d.activationPhase||1)||d.pressureWindow==='seed'&&!b.seedTurns)return false;
@@ -20,8 +20,8 @@ export function pressureBoss(e,grade){const b=e?.boss,d=bossData(e);if(!b||!d||e
 }
 export function blockBoss(e){if(e?.boss&&e.intent?.special==='regenSeed'){e.boss.seedTurns=0;e.boss.seedPressure=0;e.boss.seedCooldown=4;}}
 export function bossSpecial(s,e,sp){if(!e?.boss)return false;if(sp==='regenSeed'){const b=e.boss;if(b.seedTurns===1){e.hp=Math.min(e.maxHP,e.hp+bossData(e).seed.healing[b.phase-1]);b.seedCooldown=4;b.seedPressure=0;}return true;}
- if(['groundSmash','rootPrison'].includes(sp)){const damage=e.intent.extraDamage,absorbed=Math.min(s.hero.shield,damage);s.hero.shield-=absorbed;s.hero.hp=Math.max(0,s.hero.hp-damage+absorbed);return true;}return false;}
+ if(['groundSmash','rootPrison','blackWave','execution','strongThrust'].includes(sp)){const damage=e.intent.extraDamage,absorbed=Math.min(s.hero.shield,damage);s.hero.shield-=absorbed;s.hero.hp=Math.max(0,s.hero.hp-damage+absorbed);return true;}return false;}
 export function tickBoss(s){for(const e of s.enemies||[]){const b=e.boss;if(!b)continue;if(b.breakTurns)b.breakTurns--;if(b.seedTurns)b.seedTurns--;else if(b.seedCooldown)b.seedCooldown--;}}
 export const stoppedBossHeat=s=>(s.enemies||[]).some(e=>e.type==='flameGiant'&&e.hp>0&&e.boss?.breakTurns>0);
 export function bossTransitions(e){const b=e?.boss,d=bossData(e);if(!b)return [];const result=[];for(let phase=1;phase<=b.phase;phase++)if(!b.announced.includes(phase)){b.announced.push(phase);result.push({phase,...d.phases[phase-1]});}return result;}
-export function bossHint(e){const b=e?.boss,d=bossData(e);if(!b)return '';if(b.breakTurns)return `약점 노출 · BREAK · ${Math.min(d.duration,b.breakTurns)}턴 · 피해 +${Math.round((d.bonus-1)*100)}%${e.type==='flameGiant'?' · 열기 상승 정지':''}`;return `${d.meter} ${e.type==='treeGuardian'?b.seedPressure:b.pressure}/${d.limit}${e.type==='treeGuardian'?b.seedTurns?` · 재생까지 ${b.seedTurns}턴`:' · 씨앗 대기':e.type==='flameGiant'&&b.phase<3?' · 3단계에 활성':''}`;}
+export function bossHint(e){const b=e?.boss,d=bossData(e);if(!b)return '';if(b.breakTurns)return `${e.type==='darkKnight'?'자세 붕괴! · ':''}약점 노출 · BREAK · ${Math.min(d.duration,b.breakTurns)}턴 · 피해 +${Math.round((d.bonus-1)*100)}%${e.type==='flameGiant'?' · 열기 상승 정지':''}`;return `${d.meter} ${e.type==='treeGuardian'?b.seedPressure:b.pressure}/${d.limit}${e.type==='treeGuardian'?b.seedTurns?` · 재생까지 ${b.seedTurns}턴`:' · 씨앗 대기':e.type==='flameGiant'&&b.phase<3?' · 3단계에 활성':''}`;}

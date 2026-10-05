@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "turns": 41,
+  "viewports": [
+    390,
+    768,
+    1920
+  ],
+  "areas": 5,
+  "checks": [
+    "v29 migration",
+    "once opening skip/replay",
+    "military composition real arithmetic",
+    "morale",
+    "boss phases BREAK",
+    "save pending seal movie",
+    "seal skip no duplicate",
+    "world 7",
+    "quests",
+    "codex 5 new",
+    "production debug isolation"
+  ],
+  "errors": []
+}

@@ -1,0 +1,9 @@
+import {takeDamage} from './DefenseSystem.js';
+export const inFortress=s=>s?.battleContext?.mode==='rpg'&&s.battleContext.dungeonId==='black-fortress';
+export function initMorale(s){if(inFortress(s)){s.morale=0;s.moraleDefeated=[];}}
+export function moraleKills(s){if(!inFortress(s))return '';let commander=false;for(const e of s.enemies){if(e.hp>0||s.moraleDefeated.includes(e.id))continue;s.moraleDefeated.push(e.id);s.morale=Math.max(0,s.morale-(['demonCommander','darkPriest'].includes(e.type)?3:1));if(e.type==='demonCommander')commander=true;}if(s.enemies.some(e=>e.intent)){for(const e of s.enemies.filter(e=>e.hp>0)){const before=e.intent.moraleBonus||0;e.intent=fortressIntent(s,e,{...e.intent,attack:e.intent.attack-before});}}return commander?'적의 사기가 꺾였습니다!':' ';}
+export function fortressIntent(s,e,intent){if(!inFortress(s))return intent;const commander=s.enemies.some(a=>a.hp>0&&a.type==='demonCommander'&&a!==e),bonus=Math.floor((s.morale||0)/2)+(commander?2:0)+(s.darkBlessingTurn===s.enemyTurn?2:0);return {...intent,attack:intent.attack+bonus,moraleBonus:bonus};}
+export function tickMorale(s){if(!inFortress(s))return;moraleKills(s);s.morale=Math.min(6,(s.morale||0)+(s.enemies.some(e=>e.hp>0&&e.type==='demonCommander')?2:1));}
+export function fortressSpecial(s,e,sp){if(!inFortress(s)||!e)return false;if(sp==='darkBlessing'){s.darkBlessingTurn=s.enemyTurn+1;return true;}if(sp==='piercingArrow'){s.hero.hp=Math.max(0,s.hero.hp-1);takeDamage(s,3,'enemy');return true;}const amount={strongThrust:3,blackWave:7,execution:14}[sp];if(!amount)return false;takeDamage(s,amount,'enemy');return true;}
+export function fortressRelicBonus(s,e,grade){return e?.boss?.breakTurns>0&&['A','S'].includes(grade)?s.battleContext?.bossBreakBonus||0:0;}
+export function moraleHTML(s){return inFortress(s)?`<aside class="morale-hud"><b>⚔ 마왕군의 사기 ${s.morale||0} / 6</b><span>사기 2마다 공격 +1 · 지휘관 생존 시 아군 +2<br>지휘관·사제 처치 −3 / 병사·궁수 처치 −1</span></aside>`:'';}

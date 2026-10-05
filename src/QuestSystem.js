@@ -15,6 +15,7 @@ function matches(q,e){
  if(q.type==='PERSONAL_ADVENTURE')return e.personalQuestId===q.id&&e.mercenaryId===q.mercenaryId;
  switch(q.type){
  case 'COLLECT_MONSTERS':case 'COLLECT_EQUIPMENT':case 'COLLECT_BOSS':return e.type==='COLLECTION_UPDATED';
+ case 'BOSS_BREAK':return e.type==='BOSS_BREAK';
  case 'KILL_MONSTER':return e.type==='MONSTER_DEFEATED'&&(!f.monster||f.monster===e.monster);
  case 'ATTACK_GRADE_SUCCESS':return e.type==='ATTACK_SUCCESS'&&(!f.grades||f.grades.includes(e.grade));
  case 'DEFENSE_GRADE_SUCCESS':return e.type==='DEFENSE_SUCCESS'&&(!f.grades||f.grades.includes(e.grade));

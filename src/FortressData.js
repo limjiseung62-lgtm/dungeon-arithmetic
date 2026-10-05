@@ -1,0 +1,10 @@
+const entries=[['demonSoldier','마왕군 병사',96,9,2,['none','strongThrust']],['darkArcher','어둠의 궁수',80,9,0,['piercingArrow','none']],['demonCommander','마왕군 지휘관',120,10,3,['none','strongThrust']],['darkPriest','암흑 사제',82,7,1,['darkBlessing','none']],['darkKnight','어둠의 기사',300,13,5,['strongThrust']]];
+export const FortressMonsterData=entries.map(([id,name,hp,attack,armor,specials])=>{const line=text=>({text,speaker:name,duration:1400,voiceAsset:null});return {id,name,hp,attack,armor,specials,boss:id==='darkKnight',subtitle:id==='darkKnight'?'어둠의 봉인을 지키는 마왕군 군단장':'검은 성채의 마왕군',dialogues:{encounter:line('마왕님의 성채를 넘을 수는 없다!'),attack:line('마왕군의 일격!'),hit:line('정확한 계산이군.'),blocked:line('검격을 막아냈군!'),lowHP:line('아직 승부는 끝나지 않았다!'),defeat:line(id==='darkKnight'?'……강해졌군. 하지만 두 개의 봉인이 남아 있다. 그들을 넘어설 수 있을지는……':'우리의 사기가 꺾였군…'),special:Object.fromEntries(['strongThrust','piercingArrow','darkBlessing','blackWave','execution'].map(sp=>[sp,line('이 검을 받아 보아라!')]))}};});
+export const FortressProfiles=FortressMonsterData.map(m=>({id:m.id,hp:Array(4).fill(m.hp),attack:Array(4).fill(m.attack),attackPattern:[0,2,0],specials:m.specials}));
+export const FortressDungeon={id:'black-fortress',name:'검은 성채',recommendedLevel:8,description:'제2막 · 마왕군의 전초기지. 지휘관을 먼저 쓰러뜨려 사기를 꺾고 첫 번째 봉인을 파괴하세요.',clearReward:{exp:220,gold:240},encounters:[
+ {id:'fortress-gate',name:'철문 · 마왕군 경비대',enemies:[{type:'demonSoldier',hpModifier:.8},{type:'demonSoldier',hpModifier:.8}]},
+ {id:'fortress-training',name:'훈련장 · 검과 화살',enemies:[{type:'demonSoldier',hpModifier:.85},{type:'darkArcher'}]},
+ {id:'fortress-armory',name:'무기고 · 지휘관을 노려라',enemies:[{type:'demonCommander'},{type:'demonSoldier',hpModifier:.65,attackModifier:.5},{type:'demonSoldier',hpModifier:.65,attackModifier:.5}]},
+ {id:'fortress-hall',name:'붉은 회랑 · 어둠의 축복',enemies:[{type:'darkPriest'},{type:'demonCommander',hpModifier:.8,attackModifier:.7},{type:'darkArcher',hpModifier:.85,attackModifier:.7}]},
+ {id:'fortress-seal',name:'봉인의 탑 · 어둠의 기사',enemies:[{type:'darkKnight'}]}
+]};

@@ -6,7 +6,7 @@ import {LootTable} from './LootData.js';
 import {addGold,addExperience} from './CharacterSystem.js';
 import {grantLoot} from './LootSystem.js';
 export const BossLootConfig={chance:.25,guaranteedReplay:4};
-export const BossLootData=[
+export const BossLootData=[{boss:'darkKnight',item:'dark_greatsword',dungeon:'black-fortress'},
  {boss:'golem',item:'golem_core_shield',dungeon:'old-prison'},
  {boss:'treeGuardian',item:'life_seed',dungeon:'cursed-forest'},
  {boss:'flameGiant',item:'flame_greatsword',dungeon:'burning-mine'}

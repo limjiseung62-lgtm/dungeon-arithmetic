@@ -1,3 +1,4 @@
+import {initMorale,moraleKills,tickMorale,fortressSpecial,fortressRelicBonus} from './MoraleSystem.js';
 import {initBoss,prepareBoss,bossArmor,bossDamage,pressureBoss,bossSpecial,blockBoss,tickBoss,stoppedBossHeat} from './BossBattleSystem.js';
 import {inMine,mineSpecial,mineAttackDamage,tickMine,raiseHeat,bossPhase} from './HeatSystem.js';
 import {attackDamage,mitigateAttack,battleEncounters} from './BattleContext.js';
@@ -18,7 +19,7 @@ import {reserveAction} from './ActionQueue.js';
 export class CombatSystem{
   constructor(state,rng=Math.random,lootRng=Math.random){this.state=state;this.rng=rng;this.lootRng=lootRng;}
   configureEncounter(index=0,data=battleEncounters(this.state)[index]){
-    const s=this.state;s.encounterIndex=index;if(inMine(s))s.heatPoints=0;s.encounter=data;s.enemies=createEncounter(data,s.players,index);s.enemies.forEach(initBoss);s.monsterIndex=s.enemies[0].monsterIndex;s.enemyTurn=0;s.phase='ready';s.choices={};s.blockedList=[];s.nextBlockedList=[];s.nextBlocked=null;s.blocked=null;s.stolen=false;s.stolenDuration=null;s.curse=false;s.shifted=false;syncEncounter(s);return s.enemies;
+    const s=this.state;s.encounterIndex=index;if(inMine(s))s.heatPoints=0;s.encounter=data;s.enemies=createEncounter(data,s.players,index);s.enemies.forEach(initBoss);initMorale(s);s.monsterIndex=s.enemies[0].monsterIndex;s.enemyTurn=0;s.phase='ready';s.choices={};s.blockedList=[];s.nextBlockedList=[];s.nextBlocked=null;s.blocked=null;s.stolen=false;s.stolenDuration=null;s.curse=false;s.shifted=false;syncEncounter(s);return s.enemies;
   }
   assignTarget(action,enemy){action.enemyId=enemy.id;action.enemyName=enemy.name;if(action.actionType==='attack')action.baseDamage=attackDamage(this.state,action.targetGrade,bossArmor(enemy,monsterAt(enemy.monsterIndex).armor));}
   enemy(id){return this.state.enemies?.find(e=>e.id===id);}
@@ -40,7 +41,7 @@ export class CombatSystem{
   resolveTarget(action){
     const s=this.state;if(!s.enemies)return null;let e=this.enemy(action.enemyId);if(!e||e.hp<=0){const old=e;e=livingEnemies(s)[0];if(e){action.retargeted=old?`${old.name}이 이미 쓰러져 ${e.name}으로 공격 대상을 변경합니다!`:null;action.enemyId=e.id;action.enemyName=e.name;}}return e;
   }
-  emit(kind,text,extra={}){const event={kind,text,...extra};if(this.supportHook)event.support=this.supportHook(event,this.state);this.state.events.push(event);return event;}
+  emit(kind,text,extra={}){const event={kind,text,...extra};if(this.supportHook)event.support=this.supportHook(event,this.state);const morale=moraleKills(this.state);if(morale==='적의 사기가 꺾였습니다!')event.moraleBroken=true;this.state.events.push(event);return event;}
   startTurn(){
     const s=this.state;if(!['ready','enemy'].includes(s.phase))return false;
     if(!s.enemies&&s.enemyTurn===0){s.monsterMaxHP=encounterStats(s.monsterIndex,s.players).hp;if(s.monsterHP===monsterAt(s.monsterIndex).hp)s.monsterHP=s.monsterMaxHP;}
@@ -107,7 +108,7 @@ export class CombatSystem{
     if(e&&e.hp<=0)return this.emit('special-none','쓰러진 적은 행동하지 않습니다',extra);
     if(!force&&s.scrollStop)return this.emit('block','시간정지 · 특수 행동 억제',extra);
     if(!force&&(s.enemies?s.blockedIds.has(e?.id):s.specialBlocked)){if(sp!=='none'){blockBoss(e);s.stats.blocks++;return this.emit('block','SPECIAL BLOCKED!',extra);}return this.emit('special-none','특수능력 없음',extra);}
-    if(bossSpecial(s,e,sp)){syncEncounter(s);}else if(mineSpecial(s,e,sp)){}else if(sp==='guard'&&e){e.hp=Math.min(e.maxHP,e.hp+6);syncEncounter(s);}else applyStatus(s,sp,intent);
+    if(bossSpecial(s,e,sp)){syncEncounter(s);}else if(fortressSpecial(s,e,sp)){syncEncounter(s);}else if(mineSpecial(s,e,sp)){}else if(sp==='guard'&&e){e.hp=Math.min(e.maxHP,e.hp+6);syncEncounter(s);}else applyStatus(s,sp,intent);
     return sp!=='none'?this.emit(sp,SpecialNames[sp],extra):this.emit('special-none','특수능력 없음',extra);
   }
   resolveNext(){
@@ -118,7 +119,7 @@ export class CombatSystem{
         if(action.status!=='pending')return this.resolveNext();
         action.status='resolved';let event;
         if(action.actionType==='attack'){
-          const before=s.monsterHP,e=this.resolveTarget(action);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount);action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
+          const before=s.monsterHP,e=this.resolveTarget(action);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount+fortressRelicBonus(s,e,action.targetGrade));action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
           const bossBreak=pressureBoss(e,action.targetGrade);action.bossBreak=bossBreak;s.stats.attack[action.targetGrade]++;
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:action.baseDamage,bossBreak:action.bossBreak,breakDamage:action.breakDamage||0,enemyId:action.enemyId,action,retargeted:action.retargeted});
         }else if(action.actionType==='scroll'){
@@ -157,7 +158,7 @@ export class CombatSystem{
     if(s.resolutionStage==='end'){
       if(inMine(s)&&!s.mineStatusResolved){s.mineStatusResolved=true;const damage=tickMine(s);if(damage)return this.emit('burn',`화상 ${damage.burnDamage} · 열기 ${damage.heatDamage} 피해`,damage);}
       if(s.hero.hp===0){s.phase='gameover';return this.emit('gameover','GAME OVER');}
-      const heatStopped=stoppedBossHeat(s);tickBoss(s);if(inMine(s)&&!heatStopped){const boss=s.enemies.find(e=>e.hp>0&&e.type==='flameGiant');raiseHeat(s,boss&&bossPhase(boss)>=2?2:1);}s.phase='enemy';return this.emit('turn-end',`TURN ${s.turn+1}`);
+      const heatStopped=stoppedBossHeat(s);tickBoss(s);tickMorale(s);if(inMine(s)&&!heatStopped){const boss=s.enemies.find(e=>e.hp>0&&e.type==='flameGiant');raiseHeat(s,boss&&bossPhase(boss)>=2?2:1);}s.phase='enemy';return this.emit('turn-end',`TURN ${s.turn+1}`);
     }
     return null;
   }

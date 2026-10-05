@@ -1,0 +1,5 @@
+START affinity-browser.cjs
+PASS v2.9 real trust loop, six actual personal fights, report/awakening, resume/replay, responsive and production
+
+START affinity-effects-browser.cjs
+PASS all six awakened real UI supports, quotas, exact damage display, Sera reload and readable in-viewport awakening

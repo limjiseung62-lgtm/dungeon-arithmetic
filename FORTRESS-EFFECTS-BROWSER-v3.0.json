@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "completed Kain personal extra intro",
+    "intro timer paused",
+    "unique knight BGM",
+    "phase2 blackWave DefenseS",
+    "phase3 final music mood",
+    "boss shield morale phase exact reload",
+    "execution block",
+    "three responsive boss sizes"
+  ],
+  "snapshot": {
+    "hp": 85,
+    "morale": 4,
+    "shield": 52,
+    "phase": 3
+  },
+  "errors": []
+}

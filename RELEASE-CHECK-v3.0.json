@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unitTests": 510,
+  "browserSuites": 23,
+  "combatScenarios": 42,
+  "buildExact": true,
+  "oldAssets": 75,
+  "newRasterAssets": 9,
+  "newOriginalBGM": 1,
+  "branch": "update/v3.0",
+  "recovery": "v2.9",
+  "publicPush": false,
+  "publicDeployment": false
+}

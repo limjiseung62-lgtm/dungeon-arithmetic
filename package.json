@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "2.9.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -35,6 +35,12 @@
     "test:affinity:regression": "node tests/affinity-regression-run.cjs",
     "test:affinity:invariants": "node tests/affinity-invariants.mjs",
     "test:affinity:effects": "node tests/affinity-effects-browser.cjs",
-    "test:affinity:release": "node tests/affinity-release-check.mjs"
+    "test:affinity:release": "node tests/affinity-release-check.mjs",
+    "test:fortress": "node tests/fortress-browser.cjs",
+    "test:fortress:effects": "node tests/fortress-effects-browser.cjs",
+    "test:fortress:balance": "node tests/fortress-balance.mjs",
+    "test:fortress:invariants": "node tests/fortress-invariants.mjs",
+    "test:fortress:regression": "node tests/fortress-regression-run.cjs",
+    "test:fortress:release": "node tests/fortress-release-check.mjs"
   }
 }

@@ -22,7 +22,7 @@ export function awakenCompanion(p,id,questId){
  r.claimIds.push(claim);r.affinityLevel=3;r.affinityProgress=AffinityConfig.progressCap;r.personalQuestCompleted=true;r.awakenedSkillUnlocked=true;r.unlockedDialogues=[1,2,3];
  return {mercenaryId:id,skill:CompanionStories[id].skill,text:'진정한 동료 · '+CompanionStories[id].skill+' 해금!'};
 }
-export function departureLine(p,id,dungeonId){const r=relation(p,id),special=CompanionLines.region[id]?.[dungeonId];return special||CompanionStories[id].departures[r.affinityLevel-1];}
+export function departureLine(p,id,dungeonId){const r=relation(p,id);if(dungeonId==='black-fortress'&&r.affinityLevel>=2)return ({rowen:'지휘관의 움직임을 읽을게. 함께 사기를 꺾자!',bram:'성채의 검격은 무겁다. 네가 판단하는 동안 방패로 버티겠다.',sera:'어둠의 축복에 흔들리지 말아요. 당신 곁의 빛을 지킬게요.',luna:'저 사제의 마력부터 끊자. 성채의 봉인도 함께 읽어 볼게.',kain:'이 성채… 나를 쓰러뜨렸던 어둠의 기사가 기다리고 있다. 이번엔 함께 간다.',elia:'혼돈의 그림자가 성채 너머에 있구나. 먼저 어둠의 봉인을 넘어가렴.'})[id];const special=CompanionLines.region[id]?.[dungeonId];return special||CompanionStories[id].departures[r.affinityLevel-1];}
 export function situationalLine(p,run,event,state){
  const id=p.activeMercenary;if(!id||state.battleContext?.mode!=='rpg'||!p.mercenaryContractState)return null;
  if(run.personalQuestId==='personal-rowen'&&event.kind==='attack'&&event.action?.targetGrade==='S'&&!run.rowenDecisiveSeen&&state.enemies.some(e=>e.boss&&e.hp<=e.maxHP*.5)){
