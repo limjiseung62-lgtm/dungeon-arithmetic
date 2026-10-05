@@ -1,0 +1,92 @@
+[
+  {
+    "id": "dragonLizard",
+    "path": "assets/canyon-v32/dragonLizard.webp",
+    "width": 900,
+    "height": 600,
+    "bytes": 140612,
+    "alpha": true,
+    "transparentFraction": 0.5951740740740741
+  },
+  {
+    "id": "fireWyvern",
+    "path": "assets/canyon-v32/fireWyvern.webp",
+    "width": 900,
+    "height": 600,
+    "bytes": 183186,
+    "alpha": true,
+    "transparentFraction": 0.503724074074074
+  },
+  {
+    "id": "dragonGuard",
+    "path": "assets/canyon-v32/dragonGuard.webp",
+    "width": 900,
+    "height": 1080,
+    "bytes": 322586,
+    "alpha": true,
+    "transparentFraction": 0.3835648148148148
+  },
+  {
+    "id": "dragonShaman",
+    "path": "assets/canyon-v32/dragonShaman.webp",
+    "width": 900,
+    "height": 1080,
+    "bytes": 327450,
+    "alpha": true,
+    "transparentFraction": 0.3684434156378601
+  },
+  {
+    "id": "dragonGuardian",
+    "path": "assets/canyon-v32/dragonGuardian.webp",
+    "width": 900,
+    "height": 600,
+    "bytes": 202540,
+    "alpha": true,
+    "transparentFraction": 0.43316481481481484
+  },
+  {
+    "id": "canyon",
+    "path": "assets/canyon-v32/canyon.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 384558,
+    "alpha": false,
+    "transparentFraction": 0
+  },
+  {
+    "id": "dragonNest",
+    "path": "assets/canyon-v32/dragonNest.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 475720,
+    "alpha": false,
+    "transparentFraction": 0
+  },
+  {
+    "id": "dragon_heart",
+    "path": "assets/canyon-v32/dragon_heart.webp",
+    "width": 900,
+    "height": 900,
+    "bytes": 171336,
+    "alpha": true,
+    "transparentFraction": 0.6098333333333333
+  },
+  {
+    "id": "castleGate",
+    "path": "assets/canyon-v32/castleGate.webp",
+    "width": 900,
+    "height": 507,
+    "bytes": 149306,
+    "alpha": false,
+    "transparentFraction": 0
+  },
+  {
+    "id": "kingAwakens",
+    "path": "assets/canyon-v32/kingAwakens.webp",
+    "width": 1600,
+    "height": 900,
+    "bytes": 273558,
+    "alpha": false,
+    "transparentFraction": 0
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "turns": 43,
+  "rooms": 5,
+  "phases": [
+    1,
+    2,
+    3
+  ],
+  "states": [
+    "GROUNDED",
+    "FLYING",
+    "BROKEN"
+  ],
+  "pursuits": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "checks": [
+    "automatic town dragon story",
+    "sixth region unlocked through guild",
+    "five real UI battles",
+    "four pursuit cuts with paused timer",
+    "chosen reward reload no duplicates",
+    "Elia personal lore optional",
+    "all three phases",
+    "third seal reload",
+    "three seals",
+    "castle story OPEN without entry",
+    "replay idempotent",
+    "codex",
+    "responsive cards",
+    "production debug hidden"
+  ],
+  "errors": []
+}

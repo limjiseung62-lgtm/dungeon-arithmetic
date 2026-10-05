@@ -18,4 +18,5 @@ EquipmentData.push({id:'chaos_grimoire',name:'혼돈의 마도서',type:'accesso
  {id:'life_seed',name:'생명의 씨앗',type:'accessory',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'최대 HP +10 · 전투 승리 후 HP 4 회복',statModifiers:{maxHP:10},specialEffects:{effectType:'VICTORY_HEAL',trigger:'VICTORY',value:4}},
  {id:'flame_greatsword',name:'화염 거인의 대검',type:'weapon',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'공격력 +3 · A/S 공격 성공 시 화염 추가 피해 +2',statModifiers:{attack:3},specialEffects:{effectType:'ATTACK_GRADE_BONUS',trigger:['A','S'],value:2}}
 );
+EquipmentData.push({id:'dragon_heart',name:'용의 심장',type:'accessory',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'최대 HP +8 · 공격 S 성공 시 용혈 추가 피해 +2',statModifiers:{maxHP:8},specialEffects:{effectType:'ATTACK_GRADE_BONUS',trigger:'S',value:2}});
 export const equipmentById=id=>EquipmentData.find(item=>item.id===id)||null;

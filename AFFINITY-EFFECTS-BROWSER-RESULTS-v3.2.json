@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "fixture": "isolated awakened Lv7 owned gear, final encounter checkpoints; enemies and HP never changed mid-combat; Sera starts as a normally wounded 20HP hero",
+  "rows": [
+    {
+      "id": "rowen",
+      "support": {
+        "id": "0cfc08fd-324f-41f8-83b3-9ac521116c44:2:mercenary:1:attack:0",
+        "kind": "mercenary",
+        "mercenaryId": "rowen",
+        "grade": "B",
+        "effect": "damage",
+        "value": 7,
+        "enemyId": "forest-mushrooms-2-0",
+        "compact": false,
+        "text": "로웬 지원! 추가 피해 +7 · 관통 피해 +3",
+        "secondary": {
+          "enemyId": "forest-mushrooms-2-1",
+          "value": 3
+        },
+        "dialogue": "좋아! 지금이 기회야!"
+      },
+      "actualInput": true
+    },
+    {
+      "id": "rowen-boss",
+      "pressure": 2.25
+    },
+    {
+      "id": "bram",
+      "support": {
+        "id": "db2e64c3-06bd-4b77-8aa7-2d842d87647f:2:mercenary:1:defense:0",
+        "kind": "mercenary",
+        "mercenaryId": "bram",
+        "grade": "B",
+        "effect": "shield",
+        "value": 8,
+        "enemyId": null,
+        "compact": false,
+        "text": "브람 지원! 방어막 +8 · 이번 턴 강한 일반 반격 -3",
+        "dialogue": "저 석갑은 단단하다. A/S 공격으로 균열을 모아라."
+      },
+      "counter": {
+        "kind": "enemy",
+        "text": "골렘 · 적의 공격 14 · 방어막 흡수 14 · HP −0",
+        "absorbed": 14,
+        "hpDamage": 0,
+        "attack": 14,
+        "suppressed": false,
+        "enemyId": "boss-2-0",
+        "monster": 4,
+        "support": null,
+        "chaosWeakened": false
+      }
+    },
+    {
+      "id": "sera",
+      "support": {
+        "id": "0b22534c-fc9c-4ddc-92b2-6b97725dfa2f:sera-emergency",
+        "kind": "mercenary",
+        "mercenaryId": "sera",
+        "grade": "A",
+        "effect": "heal",
+        "value": 6,
+        "compact": true,
+        "text": "세라 · 생명의 기도! 긴급 회복 +6 (모험당 1회)",
+        "dialogue": "조심해! 지금은 방어를 준비하자."
+      },
+      "reloadEmergencyOnce": true
+    },
+    {
+      "id": "luna",
+      "healBoost": 9,
+      "damageBoost": 8,
+      "usedCharges": [
+        {
+          "type": "fire",
+          "uses": 2
+        },
+        {
+          "type": "heal",
+          "uses": 2
+        }
+      ]
+    },
+    {
+      "id": "kain",
+      "normal": {
+        "id": "fe5ea4f7-6edd-4511-b714-59ed09aa2eef:2:mercenary:1:attack:0",
+        "kind": "mercenary",
+        "mercenaryId": "kain",
+        "grade": "S",
+        "effect": "damage",
+        "value": 10,
+        "enemyId": "boss-2-0",
+        "compact": false,
+        "text": "카인 지원! 추가 피해 +10",
+        "dialogue": "좋아! 지금이 기회야!"
+      },
+      "break": {
+        "id": "fe5ea4f7-6edd-4511-b714-59ed09aa2eef:2:mercenary:4:attack:0",
+        "kind": "mercenary",
+        "mercenaryId": "kain",
+        "grade": "S",
+        "effect": "damage",
+        "value": 2,
+        "enemyId": "boss-2-0",
+        "compact": true,
+        "text": "카인 지원! 추가 피해 +2"
+      },
+      "breakActualInput": true
+    },
+    {
+      "id": "elia",
+      "support": {
+        "id": "76ed1d7e-d1c1-4d62-86c7-fcba180b0c82:2:mercenary:1:defense:0",
+        "kind": "mercenary",
+        "mercenaryId": "elia",
+        "grade": "S",
+        "effect": "shield",
+        "value": 13,
+        "enemyId": null,
+        "compact": false,
+        "text": "엘리아 지원! 방어막 +13 · 석갑이 피해를 줄입니다. 균열을 모으면 약점이 열립니다.",
+        "dialogue": "기억 너머의 길도 함께 찾으렴."
+      },
+      "combinedQuota": 3
+    }
+  ],
+  "errors": []
+}

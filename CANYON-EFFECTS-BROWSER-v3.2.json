@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "boss original music",
+    "real phase2 flight",
+    "exact flying reload",
+    "Rowen S wing assist no automatic landing",
+    "A completes BREAK",
+    "BROKEN no breath",
+    "390/768/1920 no overflow",
+    "final phase grounded",
+    "two-turn breath warning",
+    "one-turn countdown",
+    "Defense S blocks doom breath",
+    "final music"
+  ],
+  "errors": []
+}

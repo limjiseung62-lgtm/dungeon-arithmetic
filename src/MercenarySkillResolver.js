@@ -1,3 +1,4 @@
+import {assistWings} from './CanyonSystem.js';
 import {ScrollData} from './ScrollData.js';
 import {bossData} from './BossBattleSystem.js';
 import {relation} from './AffinitySystem.js';
@@ -39,7 +40,7 @@ export function skillExtras(data,run,m,event,state,result){
  if(m.id==='rowen'&&event.action?.targetGrade==='S'){
   const others=livingEnemies(state).filter(e=>e.id!==result.enemyId),second=others[0];
   if(second){const value=Math.min(second.hp,bossDamage(second,mineAttackDamage(state,second,null,3).amount));second.hp-=value;state.totalDamage+=value;syncEncounter(state);result.secondary={enemyId:second.id,value};result.text+=` · 관통 피해 +${value}`;}
-  else {const boss=livingEnemies(state).find(e=>e.boss);if(boss){const broke=pressureBoss(boss,'B');if(broke){event.bossBreak=true;if(event.action)event.action.bossBreak=true;}result.text+=' · 보스 BREAK 압박 +0.25';}}
+  else {const boss=livingEnemies(state).find(e=>e.boss);if(boss){const broke=boss.type==='dragonGuardian'?(assistWings(boss,.25),false):pressureBoss(boss,'B');if(broke){event.bossBreak=true;if(event.action)event.action.bossBreak=true;}result.text+=' · 보스 BREAK 압박 +0.25';}}
  }
  if(m.id==='elia'){const boss=livingEnemies(state).find(e=>e.boss);if(boss)result.text+=' · '+bossData(boss).phases[boss.boss.phase-1].hint;}
  return result;

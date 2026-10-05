@@ -42,3 +42,9 @@ export function installArtTheme(){
 }
 
 for(const id of ['bookSpirit','illusionist','chaosApostle','timeKeeper','chaosMage']){AssetPaths[id]='assets/chaos-v31/'+id+'.webp';ArtManifest[id]={src:AssetPaths[id],alt:({bookSpirit:'마도서 정령',illusionist:'환영술사',chaosApostle:'혼돈의 사도',timeKeeper:'시간 파수꾼',chaosMage:'혼돈의 마법사'})[id]};}ArtManifest.mageDown={src:'assets/chaos-v31/mageDown.webp',alt:'무릎 꿇은 혼돈의 마법사'};ArtManifest.tower={src:'assets/chaos-v31/tower.webp',alt:'혼돈의 마탑'};ArtManifest.chaos_grimoire={src:'assets/chaos-v31/chaos_grimoire.webp',thumb:'assets/chaos-v31/chaos_grimoire.webp',columns:1,index:0,alt:'혼돈의 마도서'};
+
+for(const id of ['dragonLizard','fireWyvern','dragonGuard','dragonShaman','dragonGuardian']){AssetPaths[id]='assets/canyon-v32/'+id+'.webp';ArtManifest[id]={src:AssetPaths[id],alt:id};}for(const id of ['canyon','dragonNest','dragon_heart'])ArtManifest[id]={src:'assets/canyon-v32/'+id+'.webp',alt:({canyon:'천공의 용암 협곡',dragonNest:'거대한 용의 둥지',dragon_heart:'용의 심장'})[id]};
+
+ArtManifest.dragon_heart={...ArtManifest.dragon_heart,thumb:ArtManifest.dragon_heart.src,columns:1,index:0};ArtManifest.castleGate={src:'assets/canyon-v32/castleGate.webp',alt:'결계가 열린 마왕의 성'};
+
+ArtManifest.kingAwakens={src:'assets/canyon-v32/kingAwakens.webp',alt:'왕좌에서 눈을 뜨는 마왕'};
