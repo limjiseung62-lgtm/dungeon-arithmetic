@@ -8,7 +8,7 @@ import {BossBattleData} from './BossBattleData.js';
 import {LootTable} from './LootData.js';
 import {artHTML} from './AssetManifest.js';
 import {collection,collectionProgress,CollectionRewards,BossLootData} from './CollectionSystem.js';
-const region=id=>id==='golem'||id==='spider'?'지하감옥 심층':DungeonData.find(d=>d.encounters.some(e=>e.enemies.some(m=>m.type===id)))?.name||'오래된 지하감옥';
+const region=id=>id==='demonKing'?'마왕의 왕좌':id==='golem'||id==='spider'?'지하감옥 심층':DungeonData.find(d=>d.encounters.some(e=>e.enemies.some(m=>m.type===id)))?.name||'오래된 지하감옥';
 const sources=(category,id)=>category==='equipment'&&equipmentById(id)?.bossOnly?BossBattleData[BossLootData.find(b=>b.item===id).boss].name+' 재도전':(category==='equipment'?'마을 상점 · ':'전투 승리 선택 · ')+[...new Set(Object.entries(LootTable).filter(([,t])=>t[category==='equipment'?'equipment':'scrolls'].includes(id)).map(([m])=>region(m)))].join(' · ');
 const labels={monsters:'몬스터',equipment:'장비',scrolls:'두루마리',bossLoot:'보스 전리품'};
 function monsterDetail(m,c){

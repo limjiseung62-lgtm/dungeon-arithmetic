@@ -1,4 +1,4 @@
-export const AffinityConfig={trustedAt:3,progressCap:6,clearPoints:{'old-prison':2,'cursed-forest':3,'burning-mine':3,'black-fortress':3,'chaos-tower':3,'sky-canyon':3,'demon-castle':3},bossBonus:1,repeatPoints:1};
+export const AffinityConfig={trustedAt:3,progressCap:6,clearPoints:{'demon-throne':3,'old-prison':2,'cursed-forest':3,'burning-mine':3,'black-fortress':3,'chaos-tower':3,'sky-canyon':3,'demon-castle':3},bossBonus:1,repeatPoints:1};
 export const RelationshipNames=['낯선 동료','믿을 수 있는 동료','진정한 동료'];
 const story=(id,theme,opening,background,ending,departures,start,finish,skill,skillText)=>({id,theme,chapters:[opening,background,ending],departures,start,finish,skill,skillText});
 export const CompanionStories={

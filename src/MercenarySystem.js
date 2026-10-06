@@ -30,7 +30,7 @@ export class MercenarySystem{
   return m.grades.includes(grade);
  }
  identity(event,state){return `${this.run.id}:${state.encounterIndex}:mercenary:${event.kind==='victory'?'win':state.turn+':'+event.kind+':'+(event.action?.playerId??0)}`;}
- available(event,state){const c=this.data.progress.mercenaryContractState,m=this.member;return this.eligible(event,state)&&!c.eventIds.includes(this.identity(event,state))&&(c.counts[state.encounterIndex]||0)<m.maxPerEncounter;}
+ available(event,state){const king=state.enemies?.find(e=>e.type==='demonKing');if(king&&king.boss.phase<3&&this.member&&(this.data.progress.mercenaryContractState.counts[state.encounterIndex]||0)>=this.member.maxPerEncounter-1)return false;const c=this.data.progress.mercenaryContractState,m=this.member;return this.eligible(event,state)&&!c.eventIds.includes(this.identity(event,state))&&(c.counts[state.encounterIndex]||0)<m.maxPerEncounter;}
  scrollModifier(action,state){return this.available({kind:'magic',type:action.scrollEffect,action},state)?skillValue(this.data,this.member,{kind:'magic',type:action.scrollEffect,action},state):0;}
  support(event,state){
   const c=this.data.progress.mercenaryContractState,m=this.member;if(!m||state.battleContext?.mode!=='rpg')return null;

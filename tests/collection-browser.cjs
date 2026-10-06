@@ -14,7 +14,7 @@ async function solve(grade='A'){
  await pad.locator('[data-action=submit]').click();await settle();
 }
 await page.goto('http://127.0.0.1:4173/?debug=1&v=2.8');await click('rpg-enter');await page.locator('#character-name').fill('도감 탐험가');await click('rpg-create-submit');await click('rpg-opening-skip');await click('rpg-collection');
-assert.equal(await page.locator('.collection-entry[data-known=true]').count(),1);assert.equal(await page.locator('.collection-entry[data-known=false]').count(),65);assert.equal(await page.locator('[data-collection-id=golem] img').count(),0);await shot('hidden-book');
+assert.equal(await page.locator('.collection-entry[data-known=true]').count(),1);assert.equal(await page.locator('.collection-entry[data-known=false]').count(),66);assert.equal(await page.locator('[data-collection-id=golem] img').count(),0);await shot('hidden-book');
 await page.reload();await click('rpg-enter');await click('rpg-continue');await click('rpg-dungeon');await click('rpg-dungeon-start');await skip();await page.waitForFunction(()=>window.dungeonDebug.timer.running);
 assert.deepEqual((await data()).progress.collection.monsters,['skeleton']);
 let turns=0;while(turns++<60){const phase=await settle();if(phase==='gameover')throw Error('first prison defeat');if(['reward','clear'].includes(phase)){await click('loot-choice');if(phase==='clear'){await click('rpg-return');if(await page.locator('.act-two-scene').count())await click('rpg-act-skip');break;}await click('next-monster');await skip();}else await solve('S');}

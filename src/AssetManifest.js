@@ -1,5 +1,5 @@
 // Presentation only. IDs never participate in save data or game rules.
-export const ArtManifest = {
+export const ArtManifest = {classroomReturn:{src:'assets/final-v34/classroomReturn.webp',alt:'교실로 돌아와 연필을 든 용사'},kingDown:{src:'assets/final-v34/kingDown.webp',alt:'마력을 잃고 무릎 꿇은 마왕'},demonKing:{src:'assets/final-v34/demonKing.webp',alt:'마왕 · 수와 연산의 법칙'},
  ...Object.fromEntries([['royalGuard','마왕의 근위병'],['abyssMage','심연 마도사'],['sealGuardian','봉인 수호자'],['castleInterior','마왕의 성 내부'],['sealChamber','봉인의 방'],['throneDoor','왕좌의 문']].map(([id,alt])=>[id,{src:'assets/castle-v33/'+id+'.webp',alt}])),
  town:{src:'assets/remaster/town.webp',alt:'바람빛 마을'},
  weapon:{src:'assets/remaster/weapon.webp',alt:'무기점'},
@@ -13,7 +13,7 @@ export const ArtManifest = {
  forest:{src:'assets/forest-v22.webp',alt:'저주받은 숲'},
 };
 for(const id of ['golem_core_shield','life_seed','flame_greatsword'])ArtManifest[id]={src:'assets/collection-v28/'+id+'.webp',alt:id,columns:1,index:0,thumb:'assets/collection-v28/'+id+'.webp'};
-export const AssetPaths={fireImp:'assets/mine-v26/fireImp.webp',lavaMiner:'assets/mine-v26/lavaMiner.webp',fireScorpion:'assets/mine-v26/fireScorpion.webp',magmaGuard:'assets/mine-v26/magmaGuard.webp',flameGiant:'assets/mine-v26/flameGiant.webp',dungeon:'assets/dungeon-v2.png',skeleton:'assets/skeleton-v2.png',goblin:'assets/goblin-v2.png',orc:'assets/orc-v2.png',spider:'assets/spider-v2.png',golem:'assets/golem-v2.png',vineSlime:'assets/vineSlime-v22.webp',shadowWolf:'assets/shadowWolf-v22.webp',mushroomSpirit:'assets/mushroomSpirit-v22.webp',forestSpirit:'assets/forestSpirit-v22.webp',treeGuardian:'assets/treeGuardian-v22.webp'};
+export const AssetPaths={demonKing:'assets/final-v34/demonKing.webp',fireImp:'assets/mine-v26/fireImp.webp',lavaMiner:'assets/mine-v26/lavaMiner.webp',fireScorpion:'assets/mine-v26/fireScorpion.webp',magmaGuard:'assets/mine-v26/magmaGuard.webp',flameGiant:'assets/mine-v26/flameGiant.webp',dungeon:'assets/dungeon-v2.png',skeleton:'assets/skeleton-v2.png',goblin:'assets/goblin-v2.png',orc:'assets/orc-v2.png',spider:'assets/spider-v2.png',golem:'assets/golem-v2.png',vineSlime:'assets/vineSlime-v22.webp',shadowWolf:'assets/shadowWolf-v22.webp',mushroomSpirit:'assets/mushroomSpirit-v22.webp',forestSpirit:'assets/forestSpirit-v22.webp',treeGuardian:'assets/treeGuardian-v22.webp'};
 for(const id of ['demonSoldier','darkArcher','demonCommander','darkPriest','darkKnight'])AssetPaths[id]='assets/fortress-v30/'+id+'.webp';ArtManifest.knightDown={src:'assets/fortress-v30/knightDown.webp',alt:'무릎 꿇은 어둠의 기사'};ArtManifest.throne={src:'assets/fortress-v30/throne.webp',alt:'마왕의 왕좌와 세 군단장'};ArtManifest.fortress={src:'assets/fortress-v30/fortress.webp',alt:'검은 성채'};ArtManifest.dark_greatsword={src:'assets/fortress-v30/dark_greatsword.webp',thumb:'assets/fortress-v30/dark_greatsword.webp',columns:1,index:0,alt:'흑기사의 대검'};
 for(const [id,src]of Object.entries(AssetPaths))ArtManifest[id]={src,alt:id};
 for(const id of ['rowen','bram','sera','luna','kain','elia'])ArtManifest[id]={src:`assets/mercenaries/${id}.webp`,alt:id};
@@ -51,3 +51,5 @@ ArtManifest.dragon_heart={...ArtManifest.dragon_heart,thumb:ArtManifest.dragon_h
 ArtManifest.kingAwakens={src:'assets/canyon-v32/kingAwakens.webp',alt:'왕좌에서 눈을 뜨는 마왕'};
 
 for(const id of ['royalGuard','abyssMage','sealGuardian'])AssetPaths[id]=ArtManifest[id].src;
+
+ArtManifest.demonKing.alt='마왕 · 수와 연산의 법칙';

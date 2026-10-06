@@ -6,7 +6,7 @@ export class BattlePresentationManager{
  constructor(variations=new AnimationVariationSystem()){this.variations=variations;this.combo=0;}
  decorate(event,state){
   const result={...event};
-  if(event.kind==='attack-windup'||event.kind==='attack'){result.grade=event.action?.targetGrade||'A';if(event.kind==='attack-windup')this.sword=this.variations.choose('sword',4);result.variation=this.sword??0;if(event.kind==='attack'){result.combo=++this.combo;result.finisher=state.monsterHP===0;}}
+  if(event.kind==='attack-windup'||event.kind==='attack'){result.grade=event.action?.targetGrade||'A';if(event.kind==='attack-windup')this.sword=this.variations.choose('sword',5);result.variation=this.sword??0;if(event.kind==='attack'){result.combo=++this.combo;result.finisher=state.monsterHP===0;}}
   if(event.kind==='enemy-windup')this.enemy=this.variations.choose('enemy-'+(event.monster??state.monsterIndex),3);
   if(event.kind==='enemy')result.variation=this.enemy??0;
   if(event.kind==='defense'||event.kind==='barrier')result.grade=event.action?.targetGrade||'S';

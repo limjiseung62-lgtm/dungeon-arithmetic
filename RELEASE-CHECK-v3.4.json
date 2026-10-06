@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "version": "3.4.0",
+  "base": "v3.3 a87f18d",
+  "unitTests": 705,
+  "browserRegressionSuites": 31,
+  "finalBattleComparisons": 42,
+  "awakenedCompanions": 6,
+  "actualScrollTypes": 9,
+  "buildFilesVerified": 225,
+  "originalAssetsPreserved": 113,
+  "oldTagsPreserved": 17,
+  "newArtwork": 3,
+  "newMusic": 4,
+  "publicPush": false,
+  "publicDeploy": false
+}

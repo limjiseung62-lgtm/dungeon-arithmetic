@@ -1,3 +1,4 @@
+import {KingProfile} from './FinalBattleData.js';
 import {CastleProfiles} from './CastleData.js';
 import {CanyonProfiles} from './CanyonData.js';
 import {ChaosProfiles} from './ChaosData.js';
@@ -13,7 +14,7 @@ export const BalanceProfiles=[
  {id:'golem',hp:[140,260,350,410],attack:[19,31,42,52],attackPattern:[0,10,4,12],specials:['shift','stone']},
 ];
 export function encounterStats(index,players=4,turn=1){
- const profile=BalanceProfiles[index]||[...ForestProfiles,...MineProfiles,...FortressProfiles,...ChaosProfiles,...CanyonProfiles,...CastleProfiles][index-BalanceProfiles.length];if(!profile)throw new Error('알 수 없는 몬스터');
+ const profile=BalanceProfiles[index]||[...ForestProfiles,...MineProfiles,...FortressProfiles,...ChaosProfiles,...CanyonProfiles,...CastleProfiles,KingProfile][index-BalanceProfiles.length];if(!profile)throw new Error('알 수 없는 몬스터');
  const count=Math.max(1,Math.min(4,Math.trunc(players)||1)),slot=count-1,step=Math.max(0,turn-1);
  return {hp:profile.hp[slot],attack:profile.attack[slot]+Math.round(profile.attackPattern[step%profile.attackPattern.length]*[.35,.55,.8,1][slot]),special:profile.specials[step%profile.specials.length]};
 }

@@ -1,0 +1,14 @@
+PASS goblin 45 second success, 60 second block, cinematic timer stopped, skip
+PASS curse success
+PASS curse blocked
+PASS web success
+PASS web blocked
+PASS poison success
+PASS poison blocked
+PASS shift success
+PASS shift blocked
+PASS stone success
+PASS stone blocked
+PASS mid-input timer pause/resume
+PASS browser audio activation, independent mute and volume
+PASS classroom board layout and no page errors

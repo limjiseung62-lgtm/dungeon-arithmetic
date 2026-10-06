@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "base": "v3.3 a87f18d",
+  "checks": [
+    {
+      "name": "v33 asset bytes preserved",
+      "files": 113,
+      "binary": 107
+    },
+    {
+      "name": "math/timer/growth/gear/scroll/quest and castle modules preserved",
+      "count": 20
+    },
+    {
+      "name": "all 6 old boss configs, 18 gear, 30 quests, economy/growth and old affinity rows preserved",
+      "passed": true
+    }
+  ],
+  "oldTags": 17
+}

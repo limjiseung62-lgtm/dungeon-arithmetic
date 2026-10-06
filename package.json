@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -61,6 +61,12 @@
     "test:castle:regression": "node tests/castle-regression-run.cjs",
     "test:castle:invariants": "node tests/castle-invariants.mjs",
     "test:castle:release": "node tests/castle-release-check.mjs",
-    "test:castle:assets": "node tests/castle-asset-audit.cjs"
+    "test:castle:assets": "node tests/castle-asset-audit.cjs",
+    "test:final": "node tests/final-browser.cjs",
+    "test:final:balance": "node tests/final-balance.mjs",
+    "test:final:presentation": "node tests/battle-presentation-v34-browser.cjs",
+    "test:final:regression": "node tests/final-regression-run.cjs",
+    "test:final:effects": "node tests/final-effects-browser.cjs",
+    "test:final:release": "node tests/final-release-check.mjs"
   }
 }

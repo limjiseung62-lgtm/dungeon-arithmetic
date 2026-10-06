@@ -1,0 +1,166 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "merc": "rowen",
+      "type": null,
+      "awakened": true,
+      "actualSupport": [
+        {
+          "id": "rowen",
+          "effect": "damage",
+          "value": 7
+        }
+      ],
+      "saved": true
+    },
+    {
+      "merc": "bram",
+      "type": null,
+      "awakened": true,
+      "actualSupport": [
+        {
+          "id": "bram",
+          "effect": "shield",
+          "value": 8
+        }
+      ],
+      "saved": true
+    },
+    {
+      "merc": "sera",
+      "type": null,
+      "awakened": true,
+      "actualSupport": [
+        {
+          "id": "sera",
+          "effect": "heal",
+          "value": 6
+        }
+      ],
+      "saved": true
+    },
+    {
+      "merc": "luna",
+      "type": "fire",
+      "awakened": true,
+      "actualSupport": [
+        {
+          "id": "luna",
+          "effect": "scroll",
+          "value": 8
+        }
+      ],
+      "saved": true
+    },
+    {
+      "merc": "kain",
+      "type": null,
+      "awakened": true,
+      "actualSupport": [
+        {
+          "id": "kain",
+          "effect": "damage",
+          "value": 13
+        }
+      ],
+      "saved": true
+    },
+    {
+      "merc": "elia",
+      "type": null,
+      "awakened": true,
+      "actualSupport": [
+        {
+          "id": "elia",
+          "effect": "damage",
+          "value": 11
+        }
+      ],
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "fire",
+      "casts": 1,
+      "damage": 22,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "iceStorm",
+      "casts": 1,
+      "damage": 16,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "ice",
+      "casts": 1,
+      "damage": 20,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "shield",
+      "casts": 1,
+      "damage": 0,
+      "heal": 0,
+      "shield": 36,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "heal",
+      "casts": 1,
+      "damage": 0,
+      "heal": 30,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "lightning",
+      "casts": 1,
+      "damage": 26,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "cleanse",
+      "casts": 1,
+      "damage": 0,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "meteor",
+      "casts": 1,
+      "damage": 48,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    },
+    {
+      "merc": null,
+      "type": "time",
+      "casts": 1,
+      "damage": 0,
+      "heal": 0,
+      "shield": 0,
+      "saved": true
+    }
+  ],
+  "errors": [],
+  "method": "prepared valid phase3 saves; six awakened hired companions and nine real S-scroll choices through UI, fresh browser contexts"
+}

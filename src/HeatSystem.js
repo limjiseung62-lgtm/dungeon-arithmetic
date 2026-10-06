@@ -1,6 +1,7 @@
+import {kingMechanic} from './FinalBattleData.js';
 import {castleMechanic,inCastle} from './CastleData.js';
 import {MineConfig as config} from './MineConfig.js';
-export const inMine=s=>s.battleContext?.mode==='rpg'&&(s.battleContext.dungeonId==='burning-mine'||castleMechanic(s,'heat'));
+export const inMine=s=>s.battleContext?.mode==='rpg'&&(s.battleContext.dungeonId==='burning-mine'||castleMechanic(s,'heat')||kingMechanic(s,'heat'));
 export function heatStage(s){if(!inMine(s))return 0;let stage=0;config.thresholds.forEach((n,i)=>{if((s.heatPoints||0)>=n)stage=i});return stage;}
 export function bossPhase(e){if(e.type!=='flameGiant')return 1;if(e.boss)return e.boss.phase;return e.hp<=e.maxHP*config.phases[2].at?3:e.hp<=e.maxHP*config.phases[1].at?2:1;}
 export function raiseHeat(s,amount=1){if(!inMine(s))return;const before=heatStage(s);s.heatPoints=Math.min(config.maxHeat,(s.heatPoints||0)+amount);return {from:before,to:heatStage(s)};}

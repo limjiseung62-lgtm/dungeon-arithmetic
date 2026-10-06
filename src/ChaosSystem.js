@@ -1,7 +1,8 @@
+import {kingMechanic} from './FinalBattleData.js';
 import {castleMechanic} from './CastleData.js';
 import {takeDamage} from './DefenseSystem.js';
 export const ChaosConfig={max:3,warningSeconds:10,maskSeconds:5,maskCount:2,timePenalty:5,illusionDamage:.6,bodyPressure:1};
-export const inTower=s=>s?.battleContext?.mode==='rpg'&&(s.battleContext.dungeonId==='chaos-tower'||castleMechanic(s,'chaos'));
+export const inTower=s=>s?.battleContext?.mode==='rpg'&&(s.battleContext.dungeonId==='chaos-tower'||castleMechanic(s,'chaos')||kingMechanic(s,'chaos'));
 export function initChaos(s){if(inTower(s)){s.chaos={level:0,defeated:[],shuffle:false,prophecy:false,mask:false,timePenalty:0};s.chaosTurn=null;}}
 export function chaosKills(s){if(!inTower(s))return false;let changed=false;for(const e of s.enemies){if(e.hp>0||s.chaos.defeated.includes(e.id))continue;s.chaos.defeated.push(e.id);if(['chaosApostle','illusionist','bookSpirit'].includes(e.type)){s.chaos.level=Math.max(0,s.chaos.level-1);changed=true;}}return changed;}
 // Presentation metadata never replaces dice, target values, grades or their solutions.

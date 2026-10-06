@@ -1,0 +1,46 @@
+✔ castle to throne retains paid companion, current HP, gold and unique contract (19.3227ms)
+✔ throne stays locked until the actual castle clear (9.7981ms)
+✔ v33 is additive and retains inventory/relations (3.2606ms)
+✔ phase transition 1 retains true math targets (8.9353ms)
+✔ phase transition 2 retains true math targets (4.5784ms)
+✔ phase transition 3 retains true math targets (5.9441ms)
+✔ only one past region active forest (3.9427ms)
+✔ only one past region active heat (4.2751ms)
+✔ only one past region active morale (2.8906ms)
+✔ only one past region active chaos (3.7664ms)
+✔ only one past region active breath (3.6511ms)
+✔ ordinary hits, scrolls and support cannot skip the last formula (5.8688ms)
+✔ storm consumes shields sequentially without duplicating damage (3.6514ms)
+✔ law collapse relocates only, correct equations stay correct (8.4581ms)
+✔ exact checkpoint and save restore phase 1 (5.5684ms)
+✔ exact checkpoint and save restore phase 2 (6.9571ms)
+✔ exact checkpoint and save restore phase 3 (5.8859ms)
+✔ BREAK removes dominance and cancels special effects (3.3434ms)
+✔ final solvable 0 with zero failure penalty (7.18ms)
+✔ final solvable 1 with zero failure penalty (8.3363ms)
+✔ final solvable 2 with zero failure penalty (6.5313ms)
+✔ final solvable 3 with zero failure penalty (7.11ms)
+✔ malformed final solver and status checkpoints are rejected (6.816ms)
+✔ correct final result commits victory/reward once and replay preserves data (10.5314ms)
+✔ ending refuses completion without victory and ends with same scene for every grade (4.915ms)
+✔ best companion handles ties and no companion safely (3.7356ms)
+✔ final input cannot drain timer or use the ordinary combat pad (4.8352ms)
+✔ successful formula reload resumes victory exactly once (5.9793ms)
+✔ one hired support is reserved for phase3 without raising overall cap (4.3362ms)
+✔ malformed ending flags do not replace the valid character (3.2128ms)
+✔ malformed saved adventure record is rejected (3.9447ms)
+✔ Defense S blocks king pattern kingSword (5.0878ms)
+✔ Defense S blocks king pattern lawCollapse (5.3218ms)
+✔ Defense S blocks king pattern magicStorm (2.8729ms)
+✔ Defense S blocks king pattern absoluteOrder (5.1711ms)
+✔ a successful counter that triggers BREAK emits a committed break event (3.941ms)
+✔ active throne checkpoint cannot be changed by town equipment or shopping (3.0519ms)
+✔ opening follows an actual king sword and pressure bonus cannot auto break (4.233ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 366.2041

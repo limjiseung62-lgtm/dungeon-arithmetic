@@ -1,0 +1,2 @@
+import {preparedCastle} from './castle-fixture.mjs';
+export function enterFinal(level=12,merc=null){const v=preparedCastle(level),r=v.r,p=r.data.progress;p.clearedDungeons.push('demon-castle');p.campaign.throneReached=true;p.campaign.throneSceneSeen=true;p.campaign.eliaTruthSeen=true;r.character.hp=r.character.maxHP;r.character.scrolls=[{type:'heal',uses:3},{type:'shield',uses:3},{type:'fire',uses:3},{type:'time',uses:2}];if(merc)r.hire(merc);if(!r.enterFinalBattle())throw Error('Final entry failed');const built=r.createBattle();return {...v,...built};}

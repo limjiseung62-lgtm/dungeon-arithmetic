@@ -1,0 +1,6 @@
+PASS real RPG creation / town / three fights / growth / loot / return / reload / continue / class isolation 11
+PASS pending loot reload without duplicate rewards / defeat keeps progress
+PASS production build and board layout
+PASS confirmed reset delays replacing save until valid name / keyboard Enter
+PASS storage denied stays playable, warns and retains current-window character
+PASS no browser exceptions

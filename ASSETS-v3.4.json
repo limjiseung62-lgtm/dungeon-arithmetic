@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "mode": "built-in imagegen for bitmap art; original local synthesis for WAV music",
+  "art": [
+    {
+      "file": "assets/final-v34/demonKing.webp",
+      "width": 733,
+      "height": 1100,
+      "bytes": 283492,
+      "alpha": true
+    },
+    {
+      "file": "assets/final-v34/kingDown.webp",
+      "width": 733,
+      "height": 1100,
+      "bytes": 267602,
+      "alpha": true
+    },
+    {
+      "file": "assets/final-v34/classroomReturn.webp",
+      "width": 1536,
+      "height": 864,
+      "bytes": 110548,
+      "alpha": false
+    }
+  ],
+  "audio": [
+    {
+      "file": "assets/audio/king-trial-v34.wav",
+      "seconds": 18,
+      "peak": 12041,
+      "bytes": 864044
+    },
+    {
+      "file": "assets/audio/king-dominion-v34.wav",
+      "seconds": 18,
+      "peak": 11623,
+      "bytes": 864044
+    },
+    {
+      "file": "assets/audio/king-true-v34.wav",
+      "seconds": 18,
+      "peak": 12031,
+      "bytes": 864044
+    },
+    {
+      "file": "assets/audio/ending-v34.wav",
+      "seconds": 20,
+      "peak": 9706,
+      "bytes": 960044
+    }
+  ]
+}

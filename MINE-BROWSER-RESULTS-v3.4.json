@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "turns": 45,
+  "bossPaused": true,
+  "utilityScrollsVerified": true,
+  "heatStages": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "errors": [],
+  "missing": []
+}

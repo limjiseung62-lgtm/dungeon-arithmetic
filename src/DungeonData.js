@@ -1,3 +1,4 @@
+import {FinalDungeon} from './FinalBattleData.js';
 import {CastleDungeon} from './CastleData.js';
 import {CanyonDungeon} from './CanyonData.js';
 import {ChaosDungeon} from './ChaosData.js';
@@ -12,4 +13,4 @@ export const ForestDungeon={id:'cursed-forest',name:'저주받은 숲',recommend
  {id:'forest-heart',name:'숲의 심장 · 고대 나무수호자',enemies:[{type:'treeGuardian'}],rewardModifier:1.25},
 ]};
 export const DungeonData=[RPGDungeonData,ForestDungeon,MineDungeon,FortressDungeon,ChaosDungeon,CanyonDungeon,CastleDungeon];
-export const dungeonById=id=>DungeonData.find(d=>d.id===id);
+export const dungeonById=id=>id===FinalDungeon.id?FinalDungeon:DungeonData.find(d=>d.id===id);

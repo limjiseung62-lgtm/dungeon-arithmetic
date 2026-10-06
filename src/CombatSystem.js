@@ -1,3 +1,4 @@
+import {finalGate,submitFinal,clearDominion} from './FinalBattleSystem.js';
 import {inCastle} from './CastleData.js';
 import {initCastle,castleTurn,castleDamage,elitePressure,assistElite,castleSpecial,tickCastle} from './CastleSystem.js';
 import {initCanyon,canyonTurn,canyonDamage,canyonSpecial,scrollWings,assistWings} from './CanyonSystem.js';
@@ -45,9 +46,9 @@ export class CombatSystem{
   resolveTarget(action){
     const s=this.state;if(!s.enemies)return null;let e=this.enemy(action.enemyId);if(!e||e.hp<=0){const old=e;e=livingEnemies(s)[0];if(e){action.retargeted=old?`${old.name}이 이미 쓰러져 ${e.name}으로 공격 대상을 변경합니다!`:null;action.enemyId=e.id;action.enemyName=e.name;}}return e;
   }
-  emit(kind,text,extra={}){const event={kind,text,...extra};const ctx=this.state.battleContext,a=event.action;if(ctx?.mode==='rpg'&&a){event.equipmentBonus=kind==='attack'?a.equipmentBonus||0:kind==='defense'?ctx.defenseGradeBonus?.(a.targetGrade)||0:kind==='magic'?a.equipmentBonus||0:0;if(event.equipmentBonus)event.text+=' · 장비 효과 +'+event.equipmentBonus;}if(this.supportHook)event.support=this.supportHook(event,this.state);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistWings(this.enemy(event.enemyId),.25);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistElite(this.state,this.enemy(event.enemyId));event.chaosWeakened=chaosKills(this.state);const morale=moraleKills(this.state);if(morale==='적의 사기가 꺾였습니다!')event.moraleBroken=true;this.state.events.push(event);return event;}
+  emit(kind,text,extra={}){const event={kind,text,...extra};const ctx=this.state.battleContext,a=event.action;if(ctx?.mode==='rpg'&&a){event.equipmentBonus=kind==='attack'?a.equipmentBonus||0:kind==='defense'?ctx.defenseGradeBonus?.(a.targetGrade)||0:kind==='magic'?a.equipmentBonus||0:0;if(event.equipmentBonus)event.text+=' · 장비 효과 +'+event.equipmentBonus;}if(this.supportHook)event.support=this.supportHook(event,this.state);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistWings(this.enemy(event.enemyId),.25);if(event.support&&kind==='attack'&&event.action?.targetGrade==='S'&&event.support.mercenaryId==='rowen')assistElite(this.state,this.enemy(event.enemyId));event.chaosWeakened=chaosKills(this.state);const morale=moraleKills(this.state);if(morale==='적의 사기가 꺾였습니다!')event.moraleBroken=true;clearDominion(this.state,this.state.enemies?.find(e=>e.type==='demonKing'));finalGate(this.state,this.rng);this.state.events.push(event);return event;}
   startTurn(){
-    const s=this.state;if(!['ready','enemy'].includes(s.phase))return false;
+    const s=this.state;if(s.kingFinal?.status==='pending'||!['ready','enemy'].includes(s.phase))return false;
     if(!s.enemies&&s.enemyTurn===0){s.monsterMaxHP=encounterStats(s.monsterIndex,s.players).hp;if(s.monsterHP===monsterAt(s.monsterIndex).hp)s.monsterHP=s.monsterMaxHP;}
     const generated=generateTurn(this.rng,s.targets.map(t=>t.value));
     s.dice=generated.dice;s.targets=generated.targets;s.turn++;s.stats.turns++;s.enemyTurn++;
@@ -59,8 +60,10 @@ export class CombatSystem{
     this.emit('roll',`TURN ${s.turn} · 새로운 주사위!`);
     if(s.actionsDone.every(Boolean))this.endTurn();return true;
   }
+  submitFinal(ids,ops){return submitFinal(this.state,ids,ops,this.rng);}
   assertPlayer(playerId){
     const s=this.state;
+    if(s.kingFinal?.status==='pending')throw new Error('마지막 수식 화면에서 계산해 주세요.');
     if(s.phase!=='playing')throw new Error('입력 시간이 끝났어요. 전투를 지켜봐 주세요.');
     if(!Number.isInteger(playerId)||playerId<0||playerId>=s.players)throw new Error('올바른 플레이어를 선택하세요.');
     if(s.choices?.[playerId])throw new Error('먼저 공격 또는 차단 대상을 선택하세요.');
@@ -90,7 +93,7 @@ export class CombatSystem{
   }
   pass(playerId=this.state.player){this.assertPlayer(playerId);this.emit('pass',`${playerId+1}P PASS`);this.completePlayer(playerId);}
   timeUpdate(seconds){
-    const s=this.state;if(s.phase!=='playing')return;
+    const s=this.state;if(s.kingFinal?.status==='pending'||s.phase!=='playing')return;
     if(this.awaitingChoices())return;
     s.seconds=Math.max(0,seconds);s.elapsed=s.duration-s.seconds;
     if(this.awaitingChoices())return;
@@ -111,7 +114,7 @@ export class CombatSystem{
     const extra={special:sp,enemyId:e?.id,monster:e?.monsterIndex};
     if(e&&e.hp<=0)return this.emit('special-none','쓰러진 적은 행동하지 않습니다',extra);
     if(!force&&s.scrollStop)return this.emit('block','시간정지 · 특수 행동 억제',extra);
-    if(!force&&(s.enemies?s.blockedIds.has(e?.id):s.specialBlocked)){if(sp!=='none'){blockBoss(e);s.stats.blocks++;return this.emit('block','SPECIAL BLOCKED!',extra);}return this.emit('special-none','특수능력 없음',extra);}
+    if(!force&&(s.enemies?s.blockedIds.has(e?.id):s.specialBlocked)){if(sp!=='none'){const beforeBreak=e?.boss?.breakTurns||0;blockBoss(e);s.stats.blocks++;return this.emit('block','SPECIAL BLOCKED!',{...extra,...(e?.type==='demonKing'&&!beforeBreak&&e.boss.breakTurns?{bossBreak:true}:{})});}return this.emit('special-none','특수능력 없음',extra);}
     if(castleSpecial(s,e,sp)){syncEncounter(s);}else if(canyonSpecial(s,e,sp)){syncEncounter(s);}else if(chaosSpecial(s,e,sp)){syncEncounter(s);}else if(bossSpecial(s,e,sp)){syncEncounter(s);}else if(fortressSpecial(s,e,sp)){syncEncounter(s);}else if(mineSpecial(s,e,sp)){}else if(sp==='guard'&&e){e.hp=Math.min(e.maxHP,e.hp+6);syncEncounter(s);}else applyStatus(s,sp,intent);
     return sp!=='none'?this.emit(sp,SpecialNames[sp],extra):this.emit('special-none','특수능력 없음',extra);
   }
@@ -123,7 +126,7 @@ export class CombatSystem{
         if(action.status!=='pending')return this.resolveNext();
         action.status='resolved';let event;
         if(action.actionType==='attack'){
-          const before=s.monsterHP,e=this.resolveTarget(action);action.equipmentBonus=(s.battleContext?.attackGradeBonus?.(action.targetGrade)||0)+(['A','S'].includes(action.targetGrade)&&(e?.elite?.breakTurns||e?.boss?.breakTurns)?s.battleContext?.bossBreakBonus||0:0);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount+fortressRelicBonus(s,e,action.targetGrade));amount=castleDamage(s,e,canyonDamage(s,e,action.targetGrade,bodyDamage(s,e,action,amount)));action.illusionHit=bodyActive(s)&&action.appearance!==s.chaosTurn.body;action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
+          const before=s.monsterHP,e=this.resolveTarget(action);action.bossRelicBonus=fortressRelicBonus(s,e,action.targetGrade);action.equipmentBonus=(s.battleContext?.attackGradeBonus?.(action.targetGrade)||0)+(['A','S'].includes(action.targetGrade)&&(e?.elite?.breakTurns||e?.boss?.breakTurns)?s.battleContext?.bossBreakBonus||0:0);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount+fortressRelicBonus(s,e,action.targetGrade));amount=castleDamage(s,e,canyonDamage(s,e,action.targetGrade,bodyDamage(s,e,action,amount)));action.illusionHit=bodyActive(s)&&action.appearance!==s.chaosTurn.body;action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
           const bossBreak=elitePressure(s,e,action.targetGrade)||(bodyBreak(s,e,action)&&pressureBoss(e,action.targetGrade));if(bossBreak&&e.type==='chaosMage')collapseIllusions(s);action.bossBreak=bossBreak;s.stats.attack[action.targetGrade]++;
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:action.baseDamage,bossBreak:action.bossBreak,breakDamage:action.breakDamage||0,enemyId:action.enemyId,action,retargeted:action.retargeted});
         }else if(action.actionType==='scroll'){
