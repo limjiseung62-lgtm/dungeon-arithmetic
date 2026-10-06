@@ -1,0 +1,20 @@
+{
+  "phase": "resolution",
+  "events": [
+    {
+      "kind": "reserved",
+      "text": "1P · 공격 A 예약",
+      "target": "attack-A",
+      "playerId": 0,
+      "support": null,
+      "chaosWeakened": false
+    },
+    {
+      "kind": "battle",
+      "text": "BATTLE!",
+      "support": null,
+      "chaosWeakened": false
+    }
+  ],
+  "pad": []
+}

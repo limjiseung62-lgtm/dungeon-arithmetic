@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "actualGrades": [
+    "C",
+    "B",
+    "A",
+    "S"
+  ],
+  "observed": [
+    "bp-layer bp-battle:B",
+    "bp-layer bp-attack-windup:C",
+    "bp-layer bp-attack:C",
+    "bp-layer bp-total:B",
+    "bp-layer bp-enemy-windup:B",
+    "bp-layer bp-enemy:B",
+    "bp-layer bp-turn-end:B",
+    "bp-layer bp-attack-windup:B",
+    "bp-layer bp-attack:B",
+    "bp-layer bp-attack-windup:A",
+    "bp-layer bp-attack:A",
+    "bp-layer bp-attack-windup:S",
+    "bp-layer bp-attack:S"
+  ],
+  "audit": {
+    "spells": [
+      {
+        "type": "fire",
+        "nodes": 18
+      },
+      {
+        "type": "iceStorm",
+        "nodes": 23
+      },
+      {
+        "type": "ice",
+        "nodes": 20
+      },
+      {
+        "type": "shield",
+        "nodes": 2
+      },
+      {
+        "type": "heal",
+        "nodes": 3
+      },
+      {
+        "type": "lightning",
+        "nodes": 18
+      },
+      {
+        "type": "cleanse",
+        "nodes": 2
+      },
+      {
+        "type": "meteor",
+        "nodes": 19
+      },
+      {
+        "type": "time",
+        "nodes": 2
+      }
+    ],
+    "peak": {
+      "nodes": 1,
+      "handles": 2,
+      "animations": 1
+    },
+    "cleared": 0,
+    "unchanged": true,
+    "max": 0.20000004768371582
+  },
+  "syntheticSpellVisualAudit": true,
+  "errors": []
+}

@@ -1,0 +1,11 @@
+{
+  "method": "CDP captureScreenshot triggered by actual timeline; capture latency can differ from trigger",
+  "shots": [
+    "cutin",
+    "charge",
+    "trail",
+    "contact",
+    "damage",
+    "restore"
+  ]
+}

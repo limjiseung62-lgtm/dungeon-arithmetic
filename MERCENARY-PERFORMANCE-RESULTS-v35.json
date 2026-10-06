@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "method": "Edge headless 1024x768; live battle stage; isolated MercenaryPresentation, predecoded hired artwork, default speed1; no screenshot during60frames; no rule changes to CLASS",
+  "samples": [
+    {
+      "member": "rowen",
+      "medianMS": 4.199999999999932,
+      "p95MS": 12.5,
+      "maxMS": 37.5,
+      "samples": 60
+    },
+    {
+      "member": "bram",
+      "medianMS": 4.199999999999818,
+      "p95MS": 4.400000000000091,
+      "maxMS": 4.5,
+      "samples": 60
+    },
+    {
+      "member": "sera",
+      "medianMS": 4.2000000000000455,
+      "p95MS": 4.2999999999999545,
+      "maxMS": 16.700000000000045,
+      "samples": 60
+    },
+    {
+      "member": "luna",
+      "medianMS": 4.199999999999818,
+      "p95MS": 4.400000000000091,
+      "maxMS": 8.5,
+      "samples": 60
+    },
+    {
+      "member": "kain",
+      "medianMS": 4.199999999999818,
+      "p95MS": 4.300000000000182,
+      "maxMS": 8.299999999999955,
+      "samples": 60
+    },
+    {
+      "member": "elia",
+      "medianMS": 4.199999999999818,
+      "p95MS": 4.300000000000182,
+      "maxMS": 28.90000000000009,
+      "samples": 60
+    }
+  ],
+  "errors": []
+}

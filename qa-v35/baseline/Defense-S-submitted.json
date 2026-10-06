@@ -1,0 +1,26 @@
+{
+  "phase": "resolution",
+  "events": [
+    {
+      "kind": "roll",
+      "text": "TURN 2 · 새로운 주사위!",
+      "support": null,
+      "chaosWeakened": false
+    },
+    {
+      "kind": "reserved",
+      "text": "1P · 방어 S 예약",
+      "target": "defense-S",
+      "playerId": 0,
+      "support": null,
+      "chaosWeakened": false
+    },
+    {
+      "kind": "battle",
+      "text": "BATTLE!",
+      "support": null,
+      "chaosWeakened": false
+    }
+  ],
+  "pad": []
+}

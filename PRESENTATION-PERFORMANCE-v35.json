@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "method": "Headless Edge 1024x768, actual five S turns each; no screenshots or screencast during RAF measurement; CPU1x and CPU4x, not physical tablet",
+  "rows": [
+    {
+      "throttle": 1,
+      "width": 1024,
+      "height": 768,
+      "runs": 5,
+      "medianFrameMS": 4.199999999999818,
+      "p95FrameMS": 8.199999999998909,
+      "maxFrameMS": 108.39999999999964,
+      "samples": 2001,
+      "maxSequenceMS": 1965.7999999523163,
+      "cleanup": true
+    },
+    {
+      "throttle": 4,
+      "width": 1024,
+      "height": 768,
+      "runs": 5,
+      "medianFrameMS": 8.199999999999818,
+      "p95FrameMS": 29.799999999999272,
+      "maxFrameMS": 283.2000000000003,
+      "samples": 955,
+      "maxSequenceMS": 2272,
+      "cleanup": true
+    }
+  ]
+}

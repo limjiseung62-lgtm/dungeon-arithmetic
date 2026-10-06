@@ -1,0 +1,28 @@
+{
+  "phase": "resolution",
+  "events": [
+    {
+      "kind": "roll",
+      "text": "TURN 1 · 새로운 주사위!",
+      "chaosWeakened": false
+    },
+    {
+      "kind": "roll",
+      "text": "TURN 2 · 새로운 주사위!",
+      "chaosWeakened": false
+    },
+    {
+      "kind": "reserved",
+      "text": "1P · 공격 S 예약",
+      "target": "attack-S",
+      "playerId": 0,
+      "chaosWeakened": false
+    },
+    {
+      "kind": "battle",
+      "text": "BATTLE!",
+      "chaosWeakened": false
+    }
+  ],
+  "pad": []
+}

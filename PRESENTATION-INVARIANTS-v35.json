@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "base": "v3.4 6bdcf67",
+  "unchangedSourceModules": 79,
+  "allowedPresentationChanges": [
+    "UI.js",
+    "BattleDirector.js",
+    "AudioManager.js"
+  ],
+  "originalAssets": 121,
+  "tags": 18,
+  "battleCoreUnchanged": true,
+  "saveDataUnchanged": true,
+  "gearMercScrollBossDataUnchanged": true,
+  "classRpgEndingLogicUnchanged": true
+}

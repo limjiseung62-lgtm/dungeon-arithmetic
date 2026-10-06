@@ -1,0 +1,186 @@
+{
+  "method": "Sampled CDP screencast frames, original timestamps retained; not a continuous video",
+  "frames": [
+    {
+      "index": 0,
+      "time": 1791270079.591,
+      "file": "0000.webp"
+    },
+    {
+      "index": 2,
+      "time": 1791270080.523891,
+      "file": "0002.webp"
+    },
+    {
+      "index": 4,
+      "time": 1791270080.59614,
+      "file": "0004.webp"
+    },
+    {
+      "index": 6,
+      "time": 1791270080.633836,
+      "file": "0006.webp"
+    },
+    {
+      "index": 9,
+      "time": 1791270081.548184,
+      "file": "0009.webp"
+    },
+    {
+      "index": 11,
+      "time": 1791270081.834974,
+      "file": "0011.webp"
+    },
+    {
+      "index": 13,
+      "time": 1791270081.845248,
+      "file": "0013.webp"
+    },
+    {
+      "index": 15,
+      "time": 1791270081.894456,
+      "file": "0015.webp"
+    },
+    {
+      "index": 17,
+      "time": 1791270081.928001,
+      "file": "0017.webp"
+    },
+    {
+      "index": 19,
+      "time": 1791270081.983589,
+      "file": "0019.webp"
+    },
+    {
+      "index": 21,
+      "time": 1791270082.018478,
+      "file": "0021.webp"
+    },
+    {
+      "index": 24,
+      "time": 1791270082.088913,
+      "file": "0024.webp"
+    },
+    {
+      "index": 26,
+      "time": 1791270082.123542,
+      "file": "0026.webp"
+    },
+    {
+      "index": 28,
+      "time": 1791270082.162276,
+      "file": "0028.webp"
+    },
+    {
+      "index": 30,
+      "time": 1791270082.203134,
+      "file": "0030.webp"
+    },
+    {
+      "index": 32,
+      "time": 1791270082.238634,
+      "file": "0032.webp"
+    },
+    {
+      "index": 34,
+      "time": 1791270082.328018,
+      "file": "0034.webp"
+    },
+    {
+      "index": 36,
+      "time": 1791270082.373071,
+      "file": "0036.webp"
+    },
+    {
+      "index": 39,
+      "time": 1791270082.433929,
+      "file": "0039.webp"
+    },
+    {
+      "index": 41,
+      "time": 1791270082.48619,
+      "file": "0041.webp"
+    },
+    {
+      "index": 43,
+      "time": 1791270082.52479,
+      "file": "0043.webp"
+    },
+    {
+      "index": 45,
+      "time": 1791270082.572517,
+      "file": "0045.webp"
+    },
+    {
+      "index": 47,
+      "time": 1791270082.615716,
+      "file": "0047.webp"
+    },
+    {
+      "index": 49,
+      "time": 1791270082.660853,
+      "file": "0049.webp"
+    },
+    {
+      "index": 51,
+      "time": 1791270082.697035,
+      "file": "0051.webp"
+    },
+    {
+      "index": 54,
+      "time": 1791270082.752769,
+      "file": "0054.webp"
+    },
+    {
+      "index": 56,
+      "time": 1791270082.794342,
+      "file": "0056.webp"
+    },
+    {
+      "index": 58,
+      "time": 1791270082.833209,
+      "file": "0058.webp"
+    },
+    {
+      "index": 60,
+      "time": 1791270082.876831,
+      "file": "0060.webp"
+    },
+    {
+      "index": 62,
+      "time": 1791270082.923076,
+      "file": "0062.webp"
+    },
+    {
+      "index": 64,
+      "time": 1791270082.962635,
+      "file": "0064.webp"
+    },
+    {
+      "index": 66,
+      "time": 1791270083.001591,
+      "file": "0066.webp"
+    },
+    {
+      "index": 69,
+      "time": 1791270083.055922,
+      "file": "0069.webp"
+    },
+    {
+      "index": 71,
+      "time": 1791270083.126797,
+      "file": "0071.webp"
+    },
+    {
+      "index": 73,
+      "time": 1791270083.522384,
+      "file": "0073.webp"
+    },
+    {
+      "index": 75,
+      "time": 1791270083.551385,
+      "file": "0075.webp"
+    }
+  ],
+  "originalFrameCount": 76
+}

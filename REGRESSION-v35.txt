@@ -1,0 +1,112 @@
+START update-v11-browser.cjs
+PASS spell fire one charge, paused timer, distinct effect
+PASS spell ice one charge, paused timer, distinct effect
+PASS spell shield one charge, paused timer, distinct effect
+PASS spell heal one charge, paused timer, distinct effect
+PASS spell lightning one charge, paused timer, distinct effect
+PASS spell cleanse one charge, paused timer, distinct effect
+PASS spell meteor one charge, paused timer, distinct effect
+PASS spell time one charge, paused timer, distinct effect
+PASS preserve scroll on Attack S
+PASS 4 combo labels, nonrepeat slash variations, no extra damage
+PASS 3 unique loot, selected reward, HP carry/shield reset, board four pads
+PASS v1.1 actual touch UI and no errors
+
+START presentation-browser.cjs
+PASS goblin 45 second success, 60 second block, cinematic timer stopped, skip
+PASS curse success
+PASS curse blocked
+PASS web success
+PASS web blocked
+PASS poison success
+PASS poison blocked
+PASS shift success
+PASS shift blocked
+PASS stone success
+PASS stone blocked
+PASS mid-input timer pause/resume
+PASS browser audio activation, independent mute and volume
+PASS classroom board layout and no page errors
+
+START quality-browser.cjs
+PASS music continuity; recorded swing/impact spacing 0.1306666666666665 seconds; impact frame delta 0
+PASS Korean title/setup/story/settings/input/attacks/spells/all specials; mobile/tablet/board; no browser errors
+
+START balance-browser.cjs
+{"players":1,"mode":"sequential","policy":"adaptive","phase":"clear","turns":[3,3,4,4,14],"hp":33,"shield":2}
+{"players":2,"mode":"sequential","policy":"adaptive","phase":"clear","turns":[2,4,5,7,10],"hp":131,"shield":2}
+{"players":3,"mode":"sequential","policy":"adaptive","phase":"clear","turns":[3,4,5,7,10],"hp":164,"shield":0}
+{"players":4,"mode":"sequential","policy":"adaptive","phase":"clear","turns":[3,4,6,6,9],"hp":170,"shield":4}
+{"players":4,"mode":"sequential","policy":"attack-all","phase":"gameover","turns":[3,4,2,0,0],"hp":0,"shield":0}
+{"players":4,"mode":"sequential","policy":"defense-all","phase":"playing","turns":[10,0,0,0,0],"hp":180,"shield":690}
+{"players":4,"mode":"sequential","policy":"one-defense","phase":"gameover","turns":[3,4,5,5,1],"hp":0,"shield":0}
+{"players":4,"mode":"sequential","policy":"balanced","phase":"clear","turns":[4,5,7,7,8],"hp":140,"shield":52}
+{"players":4,"mode":"sequential","policy":"attack-S","phase":"clear","turns":[4,5,7,7,8],"hp":140,"shield":26}
+{"players":4,"mode":"sequential","policy":"defense-S","phase":"clear","turns":[4,5,7,7,8],"hp":140,"shield":52}
+{"players":4,"mode":"simultaneous","policy":"adaptive","phase":"clear","turns":[3,4,6,6,9],"hp":170,"shield":4}
+PASS actual touch UI campaigns: all party sizes, all six policies, 4-pad simultaneous, scaled HP and existing cutscenes
+
+START balance-targets.cjs
+CHECK web 2
+CHECK web 4
+CHECK web 6
+CHECK web 8
+CHECK stone 2
+CHECK stone 4
+CHECK stone 6
+CHECK stone 8
+PASS actual cutscenes and pads: web/petrify rotate 2P→3P→4P→1P; exactly one next-turn action blocked
+
+START remaster-browser.cjs
+PASS remaster screens, responsive layouts, production assets, missing image fallback 25
+
+START story-browser.cjs
+PASS v2.6 opening, once/replay, main story, prices/comparison, touch, responsive, hover/focus, progress, production
+
+START mine-browser.cjs
+PASS mine story/unlock, all five real UI battles, target choice, heat, timed boss entry, settlement reload, responsive, production 43
+
+START boss-save-browser.cjs
+PASS real RPG browser reload checkpoint
+
+START collection-browser.cjs
+PASS v2.8 encyclopedia / actual inputs for all boss first-kill, misses, pity / equipment / heal / rewards / reload / production / CLASS
+
+START collection-effects-browser.cjs
+PASS actual probability drops / attack and defense equipment effects / S-only block / collection quest report
+
+START affinity-browser.cjs
+PASS v2.9 real trust loop, six actual personal fights, report/awakening, resume/replay, responsive and production
+
+START affinity-effects-browser.cjs
+PASS all six awakened real UI supports, quotas, exact damage display, Sera reload and readable in-viewport awakening
+
+START fortress-browser.cjs
+PASS v3.0 campaign browser 41 real turns
+
+START fortress-effects-browser.cjs
+PASS knight/Kain phases defense music exact reload browser
+
+START chaos-browser.cjs
+PASS tower full browser 38 real turns
+
+START chaos-effects-browser.cjs
+PASS chaos mask/body/save/audio/browser effects
+
+START canyon-browser.cjs
+PASS canyon full browser 49 real turns
+
+START canyon-effects-browser.cjs
+PASS dragon flight / BREAK / breath / exact save / responsive / audio
+
+START castle-browser.cjs
+PASS castle browser 52 real turns
+
+START castle-effects-browser.cjs
+PASS castle elite / gear / BREAK / record
+
+START battle-presentation-v34-browser.cjs
+PASS v34 settings / four real math grades / nine visual grammars / bounded cleanup / no logic mutation
+
+START final-browser.cjs
+PASS final full UI 17 combat turns + final equation

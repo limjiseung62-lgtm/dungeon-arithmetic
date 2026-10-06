@@ -1,0 +1,379 @@
+{
+  "passed": true,
+  "rows": {
+    "skeleton": {
+      "src": "assets/skeleton-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "paint": {
+        "x": 0.0126953125,
+        "y": 0.009114583333333334,
+        "w": 0.9765625,
+        "h": 0.9850260416666666
+      }
+    },
+    "goblin": {
+      "src": "assets/goblin-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "paint": {
+        "x": 0.0205078125,
+        "y": 0.008463541666666666,
+        "w": 0.9658203125,
+        "h": 0.9765625
+      }
+    },
+    "orc": {
+      "src": "assets/orc-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "paint": {
+        "x": 0.009765625,
+        "y": 0.0078125,
+        "w": 0.98828125,
+        "h": 0.982421875
+      }
+    },
+    "spider": {
+      "src": "assets/spider-v2.png",
+      "width": 1536,
+      "height": 1024,
+      "paint": {
+        "x": 0.012369791666666666,
+        "y": 0.0126953125,
+        "w": 0.98046875,
+        "h": 0.9716796875
+      }
+    },
+    "golem": {
+      "src": "assets/golem-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "paint": {
+        "x": 0.0087890625,
+        "y": 0.006510416666666667,
+        "w": 0.984375,
+        "h": 0.986328125
+      }
+    },
+    "vineSlime": {
+      "src": "assets/vineSlime-v22.webp",
+      "width": 1312,
+      "height": 1199,
+      "paint": {
+        "x": 0.010670731707317074,
+        "y": 0.010008340283569641,
+        "w": 0.9778963414634146,
+        "h": 0.9766472060050042
+      }
+    },
+    "shadowWolf": {
+      "src": "assets/shadowWolf-v22.webp",
+      "width": 1536,
+      "height": 1024,
+      "paint": {
+        "x": 0.055338541666666664,
+        "y": 0.0068359375,
+        "w": 0.9140625,
+        "h": 0.9853515625
+      }
+    },
+    "mushroomSpirit": {
+      "src": "assets/mushroomSpirit-v22.webp",
+      "width": 1224,
+      "height": 1285,
+      "paint": {
+        "x": 0.024509803921568627,
+        "y": 0.0023346303501945525,
+        "w": 0.9714052287581699,
+        "h": 0.9953307392996109
+      }
+    },
+    "forestSpirit": {
+      "src": "assets/forestSpirit-v22.webp",
+      "width": 1024,
+      "height": 1536,
+      "paint": {
+        "x": 0.0107421875,
+        "y": 0.0078125,
+        "w": 0.9833984375,
+        "h": 0.9765625
+      }
+    },
+    "treeGuardian": {
+      "src": "assets/treeGuardian-v22.webp",
+      "width": 1247,
+      "height": 1261,
+      "paint": {
+        "x": 0.008821170809943865,
+        "y": 0.007137192704203013,
+        "w": 0.983159582999198,
+        "h": 0.9865186360031721
+      }
+    },
+    "fireImp": {
+      "src": "assets/mine-v26/fireImp.webp",
+      "width": 640,
+      "height": 960,
+      "paint": {
+        "x": 0.0953125,
+        "y": 0.011458333333333333,
+        "w": 0.86875,
+        "h": 0.9770833333333333
+      }
+    },
+    "lavaMiner": {
+      "src": "assets/mine-v26/lavaMiner.webp",
+      "width": 640,
+      "height": 960,
+      "paint": {
+        "x": 0.0078125,
+        "y": 0.011458333333333333,
+        "w": 0.971875,
+        "h": 0.9833333333333333
+      }
+    },
+    "fireScorpion": {
+      "src": "assets/mine-v26/fireScorpion.webp",
+      "width": 640,
+      "height": 960,
+      "paint": {
+        "x": 0.0359375,
+        "y": 0.015625,
+        "w": 0.953125,
+        "h": 0.946875
+      }
+    },
+    "magmaGuard": {
+      "src": "assets/mine-v26/magmaGuard.webp",
+      "width": 640,
+      "height": 960,
+      "paint": {
+        "x": 0.0078125,
+        "y": 0.007291666666666667,
+        "w": 0.984375,
+        "h": 0.9822916666666667
+      }
+    },
+    "flameGiant": {
+      "src": "assets/mine-v26/flameGiant.webp",
+      "width": 640,
+      "height": 960,
+      "paint": {
+        "x": 0.009375,
+        "y": 0.004166666666666667,
+        "w": 0.984375,
+        "h": 0.984375
+      }
+    },
+    "demonSoldier": {
+      "src": "assets/fortress-v30/demonSoldier.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.00625,
+        "y": 0.0033333333333333335,
+        "w": 0.98625,
+        "h": 0.9925
+      }
+    },
+    "darkArcher": {
+      "src": "assets/fortress-v30/darkArcher.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.025,
+        "y": 0,
+        "w": 0.96375,
+        "h": 1
+      }
+    },
+    "demonCommander": {
+      "src": "assets/fortress-v30/demonCommander.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.005,
+        "y": 0.0025,
+        "w": 0.98875,
+        "h": 0.9958333333333333
+      }
+    },
+    "darkPriest": {
+      "src": "assets/fortress-v30/darkPriest.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.015,
+        "y": 0.004166666666666667,
+        "w": 0.97125,
+        "h": 0.9891666666666666
+      }
+    },
+    "darkKnight": {
+      "src": "assets/fortress-v30/darkKnight.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.0025,
+        "y": 0.0016666666666666668,
+        "w": 0.99625,
+        "h": 0.9958333333333333
+      }
+    },
+    "bookSpirit": {
+      "src": "assets/chaos-v31/bookSpirit.webp",
+      "width": 800,
+      "height": 839,
+      "paint": {
+        "x": 0.02625,
+        "y": 0.0011918951132300357,
+        "w": 0.96125,
+        "h": 0.9976162097735399
+      }
+    },
+    "illusionist": {
+      "src": "assets/chaos-v31/illusionist.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.0325,
+        "y": 0.011666666666666667,
+        "w": 0.935,
+        "h": 0.9766666666666667
+      }
+    },
+    "chaosApostle": {
+      "src": "assets/chaos-v31/chaosApostle.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.025,
+        "y": 0.005833333333333334,
+        "w": 0.95875,
+        "h": 0.9866666666666667
+      }
+    },
+    "timeKeeper": {
+      "src": "assets/chaos-v31/timeKeeper.webp",
+      "width": 800,
+      "height": 953,
+      "paint": {
+        "x": 0.0275,
+        "y": 0.0031479538300104933,
+        "w": 0.96125,
+        "h": 0.9905561385099685
+      }
+    },
+    "chaosMage": {
+      "src": "assets/chaos-v31/chaosMage.webp",
+      "width": 800,
+      "height": 1200,
+      "paint": {
+        "x": 0.01125,
+        "y": 0.0016666666666666668,
+        "w": 0.98625,
+        "h": 0.9983333333333333
+      }
+    },
+    "dragonLizard": {
+      "src": "assets/canyon-v32/dragonLizard.webp",
+      "width": 900,
+      "height": 600,
+      "paint": {
+        "x": 0.021111111111111112,
+        "y": 0.02666666666666667,
+        "w": 0.9455555555555556,
+        "h": 0.875
+      }
+    },
+    "fireWyvern": {
+      "src": "assets/canyon-v32/fireWyvern.webp",
+      "width": 900,
+      "height": 600,
+      "paint": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.9966666666666667
+      }
+    },
+    "dragonGuard": {
+      "src": "assets/canyon-v32/dragonGuard.webp",
+      "width": 900,
+      "height": 1080,
+      "paint": {
+        "x": 0.02,
+        "y": 0,
+        "w": 0.9688888888888889,
+        "h": 0.9731481481481481
+      }
+    },
+    "dragonShaman": {
+      "src": "assets/canyon-v32/dragonShaman.webp",
+      "width": 900,
+      "height": 1080,
+      "paint": {
+        "x": 0.023333333333333334,
+        "y": 0.003703703703703704,
+        "w": 0.9588888888888889,
+        "h": 0.9916666666666667
+      }
+    },
+    "dragonGuardian": {
+      "src": "assets/canyon-v32/dragonGuardian.webp",
+      "width": 900,
+      "height": 600,
+      "paint": {
+        "x": 0.0033333333333333335,
+        "y": 0.006666666666666667,
+        "w": 0.9933333333333333,
+        "h": 0.9433333333333334
+      }
+    },
+    "royalGuard": {
+      "src": "assets/castle-v33/royalGuard.webp",
+      "width": 667,
+      "height": 1000,
+      "paint": {
+        "x": 0.025487256371814093,
+        "y": 0,
+        "w": 0.9445277361319341,
+        "h": 0.982
+      }
+    },
+    "abyssMage": {
+      "src": "assets/castle-v33/abyssMage.webp",
+      "width": 667,
+      "height": 1000,
+      "paint": {
+        "x": 0.0239880059970015,
+        "y": 0.005,
+        "w": 0.9610194902548725,
+        "h": 0.987
+      }
+    },
+    "sealGuardian": {
+      "src": "assets/castle-v33/sealGuardian.webp",
+      "width": 667,
+      "height": 1000,
+      "paint": {
+        "x": 0.01649175412293853,
+        "y": 0.005,
+        "w": 0.9685157421289355,
+        "h": 0.976
+      }
+    },
+    "demonKing": {
+      "src": "assets/final-v34/demonKing.webp",
+      "width": 733,
+      "height": 1100,
+      "paint": {
+        "x": 0.015006821282401092,
+        "y": 0.0018181818181818182,
+        "w": 0.9809004092769441,
+        "h": 0.9945454545454545
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+after camera measured: skeleton 60% / goblin 50% / golem 94% / treeGuardian 94% / flameGiant 100% / darkKnight 94% / chaosMage 94% / dragonGuardian 94% / demonKing 94%

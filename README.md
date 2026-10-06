@@ -1,4 +1,10 @@
-# 던전탈출 사칙연산 v3.4
+# 던전탈출 사칙연산 — v3.5 Phase 1 프로토타입
+
+v3.4 게임 시스템을 유지하며 1인칭 기본 전투 구도와 Attack S 한 장면을 재구성한 로컬 검수판입니다. 브랜치: `update/v3.5-presentation`. 공식 v3.5 태그, push, 공개 배포는 하지 않았습니다. 게임/저장 버전은3.4를 유지합니다.
+
+`node server.mjs`로 실행한 뒤 `/qa-v35/review.html`에서 아홉 몬스터 전후 비교, S 단계별 화면, 태블릿과 다중 적 구도, 기준14장면 캡처를 확인할 수 있습니다. [검수 보고서](TEST-REPORT-v35-presentation.md), [장면 분석](PRESENTATION-REVIEW-v35.md), [원화 프롬프트](ART-PROMPTS-v35.md), `PRESENTATION-GATE-v35.json`에 범위와 검증 결과를 기록했습니다. C/B/A·방어·주문·용병·보스 마무리의 전면 리메이크는 다음 단계입니다.
+
+## 보존된 v3.4 게임
 
 FINAL BATTLE & CINEMATIC UPDATE · RPG 본편 1차 완결.
 

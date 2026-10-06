@@ -67,6 +67,12 @@
     "test:final:presentation": "node tests/battle-presentation-v34-browser.cjs",
     "test:final:regression": "node tests/final-regression-run.cjs",
     "test:final:effects": "node tests/final-effects-browser.cjs",
-    "test:final:release": "node tests/final-release-check.mjs"
+    "test:final:release": "node tests/final-release-check.mjs",
+    "test:prototype": "node tests/attack-s35-browser.cjs",
+    "test:prototype:layout": "node tests/presentation-v35-responsive.cjs",
+    "test:prototype:regression": "node tests/presentation-v35-regression.cjs",
+    "test:prototype:invariants": "node tests/presentation-v35-invariants.mjs",
+    "test:prototype:performance": "node tests/presentation-v35-performance.cjs",
+    "test:prototype:gate": "node tests/presentation-v35-gate.mjs"
   }
 }

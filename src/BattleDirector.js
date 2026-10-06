@@ -3,7 +3,7 @@ import {BattlePresentationManager,AnimationVariationSystem} from './AnimationVar
 const sharedVariations=new AnimationVariationSystem();
 // Presentation controls pacing; all rule changes occur only in CombatSystem.resolveNext.
 export class BattleDirector{
-  constructor(combat,{effects,update,finish,scale=()=>1,special=null,dialogue=null,audio=null,beforeEnemy=null,selectScroll=null}){Object.assign(this,{combat,effects,update,finish,scale,special,dialogue,audio,beforeEnemy,selectScroll});this.presentation=new BattlePresentationManager(sharedVariations);this.skipped=false;this.cancelled=false;this.pending=new Set();}
+  constructor(combat,{effects,update,finish,scale=()=>1,special=null,dialogue=null,audio=null,beforeEnemy=null,selectScroll=null,attackS=null}){Object.assign(this,{combat,effects,update,finish,scale,special,dialogue,audio,beforeEnemy,selectScroll,attackS});this.presentation=new BattlePresentationManager(sharedVariations);this.skipped=false;this.cancelled=false;this.pending=new Set();}
   skip(){this.skipped=true;for(const item of this.pending){clearTimeout(item.handle);item.resolve();}this.pending.clear();}
   wait(milliseconds){if(this.skipped)return Promise.resolve();return new Promise(resolve=>{const item={resolve,handle:setTimeout(()=>{this.pending.delete(item);resolve();},milliseconds*this.scale())};this.pending.add(item);});}
   cancel(){this.cancelled=true;for(const item of this.pending){clearTimeout(item.handle);item.resolve();}this.pending.clear();}
@@ -13,6 +13,7 @@ export class BattleDirector{
     while(!this.cancelled&&this.combat.state.phase==='resolution'){
       const s=this.combat.state,next=s.resolutionStage==='actions'?s.actionQueue[s.resolutionIndex]:null;
       if(s.resolutionStage==='special'&&this.special){await this.special(()=>{if(this.cancelled)return;const event=this.combat.resolveNext();this.update(event);});continue;}
+      if(next?.actionType==='attack'&&next.status==='pending'&&next.targetGrade==='S'&&this.attackS){const event=await this.attackS({action:next,state:s,windup:this.presentation.decorate({kind:'attack-windup',action:next},s),wait:ms=>this.wait(ms),scale:this.scale(),skipped:()=>this.skipped,valid:()=>!this.cancelled,commit:()=>{const e=this.combat.resolveNext();return e?this.presentation.decorate(e,s):null;},update:event=>this.update(event)});if(this.cancelled)return;if(event&&this.dialogue)await this.dialogue(event);continue;}
       if(next?.actionType==='attack'&&next.status==='pending'){this.audio?.play('whoosh',{grade:next.targetGrade});this.present({kind:'attack-windup',text:'검격 준비',action:next});await this.wait((ImpactTiming[next.targetGrade]||ImpactTiming.B).prepare);if(this.cancelled)return;}
       if(s.resolutionStage==='enemy'&&!s.scrollStop&&(!s.enemies||this.combat.currentEnemy()?.hp>0)){if(this.beforeEnemy)await this.beforeEnemy();if(this.cancelled)return;this.audio?.play('windup');this.present({kind:'enemy-windup',text:'적의 공격 준비',enemyId:this.combat.currentEnemy()?.id,monster:this.combat.currentEnemy()?.monsterIndex});await this.wait(s.enemies?.length>1?180:500);if(this.cancelled)return;}
       if(next?.actionType==='scroll'&&next.status==='pending'){

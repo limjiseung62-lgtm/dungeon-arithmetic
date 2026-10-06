@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "monsterComparisons": 9,
+  "baselineScenes": 14,
+  "phaseImages": 6,
+  "slider": true,
+  "mobileOverflow": false,
+  "errors": []
+}

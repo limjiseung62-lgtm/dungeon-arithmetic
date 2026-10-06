@@ -1,0 +1,1556 @@
+{
+  "passed": true,
+  "tag": "v3.4",
+  "commit": "6bdcf67c8413ccfc1832a4af7267177b52308e64",
+  "scenes": 14,
+  "rows": [
+    {
+      "scene": "Attack-C",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "C",
+          "damage": 10
+        },
+        {
+          "kind": "total",
+          "damage": 10
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 1.3013333333333332,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 1.32,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 1.48,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 2.072,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 2.1706666666666665,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 2.24,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 2.32,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 2.3306666666666667,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 3.04,
+          "grade": "C",
+          "asset": true,
+          "gain": 0.19439999759197235
+        },
+        {
+          "name": "attack",
+          "time": 3.16,
+          "grade": "C",
+          "asset": true,
+          "gain": 0.30959999561309814
+        },
+        {
+          "name": "total",
+          "time": 3.4106666666666667,
+          "asset": false
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Attack-B",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "B",
+          "damage": 17
+        },
+        {
+          "kind": "total",
+          "damage": 17
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.36,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.37066666666666664,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.56,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.712,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.7706666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.8106666666666666,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.84,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.8506666666666667,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.552,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.2321999967098236
+        },
+        {
+          "name": "attack",
+          "time": 1.72,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.36980000138282776
+        },
+        {
+          "name": "total",
+          "time": 2.04,
+          "asset": false
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Attack-A",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "A",
+          "damage": 27
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.5013333333333333,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.512,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.7413333333333333,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.8906666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.9813333333333333,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.0213333333333334,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.08,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.1413333333333333,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.2106666666666666,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.2213333333333334,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.9306666666666668,
+          "grade": "A",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 2.1706666666666665,
+          "grade": "A",
+          "asset": true,
+          "gain": 0.4300000071525574
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Attack-S",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 27
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.2613333333333333,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.2613333333333333,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.38133333333333336,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.512,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.552,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.5706666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.592,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6106666666666667,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.64,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.64,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.3413333333333333,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 1.7013333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Defense-S",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "defense",
+          "grade": "S"
+        },
+        {
+          "kind": "barrier",
+          "grade": "S"
+        },
+        {
+          "kind": "total",
+          "damage": 0
+        },
+        {
+          "kind": "enemy"
+        },
+        {
+          "kind": "block"
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.5413333333333333,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.5413333333333333,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.672,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.792,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.8613333333333333,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.9013333333333333,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.9306666666666666,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.96,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.0106666666666666,
+          "asset": false
+        },
+        {
+          "name": "defense",
+          "time": 1.72,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.30000001192092896
+        },
+        {
+          "name": "barrier",
+          "time": 2.3306666666666667,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.30000001192092896
+        },
+        {
+          "name": "total",
+          "time": 2.792,
+          "asset": false
+        },
+        {
+          "name": "windup",
+          "time": 3.64,
+          "asset": false
+        },
+        {
+          "name": "collision",
+          "time": 4.16,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3799999952316284
+        },
+        {
+          "name": "steal",
+          "time": 6.872,
+          "asset": false
+        },
+        {
+          "name": "block",
+          "time": 7.52,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.4399999976158142
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Scroll-fire",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 27
+        },
+        {
+          "kind": "magic",
+          "grade": "S",
+          "damage": 22
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.30133333333333334,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.30133333333333334,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.472,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 1.0106666666666666,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.0613333333333332,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.112,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.192,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.232,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.2906666666666666,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.2906666666666666,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 2,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 2.36,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "scroll-open",
+          "time": 3.2,
+          "grade": "B",
+          "type": "fire",
+          "asset": true,
+          "gain": 0.20000000298023224
+        },
+        {
+          "name": "charge",
+          "time": 3.752,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.2199999988079071
+        },
+        {
+          "name": "launch",
+          "time": 4.210666666666667,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "magic",
+          "time": 4.581333333333333,
+          "grade": "S",
+          "type": "fire",
+          "asset": true,
+          "gain": 0.5
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Scroll-lightning",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 25
+        },
+        {
+          "kind": "magic",
+          "grade": "S",
+          "damage": 56
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.37066666666666664,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.37066666666666664,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.5306666666666666,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "turn-end",
+          "time": 2.272,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 2.272,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 3.48,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 3.570666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 3.6213333333333333,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 3.68,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 3.7413333333333334,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 3.8,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 3.9013333333333335,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 4.6,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 4.981333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "scroll-open",
+          "time": 5.941333333333334,
+          "grade": "B",
+          "type": "lightning",
+          "asset": true,
+          "gain": 0.20000000298023224
+        },
+        {
+          "name": "charge",
+          "time": 6.490666666666667,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.2199999988079071
+        },
+        {
+          "name": "launch",
+          "time": 6.952,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "magic",
+          "time": 7.32,
+          "grade": "S",
+          "type": "lightning",
+          "asset": true,
+          "gain": 0.5
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Scroll-meteor",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "roll"
+        },
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 27
+        },
+        {
+          "kind": "magic",
+          "grade": "S",
+          "damage": 48
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.32,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.32,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.5013333333333333,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.92,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.96,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.0506666666666666,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.1013333333333333,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.16,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.16,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.872,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 2.24,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "scroll-open",
+          "time": 3.16,
+          "grade": "B",
+          "type": "meteor",
+          "asset": true,
+          "gain": 0.20000000298023224
+        },
+        {
+          "name": "charge",
+          "time": 3.712,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.2199999988079071
+        },
+        {
+          "name": "launch",
+          "time": 4.16,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "magic",
+          "time": 4.52,
+          "grade": "S",
+          "type": "meteor",
+          "asset": true,
+          "gain": 0.5
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Mercenary-rowen",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "A",
+          "damage": 23,
+          "support": "rowen"
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.3413333333333333,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.3413333333333333,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.5413333333333333,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.5413333333333333,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.6906666666666667,
+          "asset": "golem-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.792,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.84,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.88,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.92,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.952,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.0213333333333334,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.032,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.7306666666666666,
+          "grade": "A",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 1.9706666666666666,
+          "grade": "A",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "attack",
+          "time": 1.9813333333333334,
+          "grade": "B",
+          "type": "shield",
+          "asset": true,
+          "gain": 0.36980000138282776
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Awakened-kain",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 35,
+          "support": "kain"
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.512,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.512,
+          "asset": false
+        },
+        {
+          "name": "break",
+          "time": 0.52,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.52,
+          "asset": false
+        },
+        {
+          "name": "break",
+          "time": 0.52,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.52,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.52,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.52,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.592,
+          "asset": "knight-boss-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.832,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.9306666666666666,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.9893333333333333,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.0506666666666666,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.12,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.1706666666666667,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.1706666666666667,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.88,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 2.2613333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "attack",
+          "time": 2.272,
+          "grade": "S",
+          "type": "shield",
+          "asset": true,
+          "gain": 0.4300000071525574
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "BREAK",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "A",
+          "damage": 23
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.32,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.3253333333333333,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.5306666666666666,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.5306666666666666,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.72,
+          "asset": "golem-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.84,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.8906666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.952,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.0213333333333334,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.08,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.1413333333333333,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.1413333333333333,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.84,
+          "grade": "A",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 2.1013333333333333,
+          "grade": "A",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "break",
+          "time": 2.112,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 2.112,
+          "asset": false
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Boss-phase",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "C",
+          "damage": 10
+        },
+        {
+          "kind": "total",
+          "damage": 10
+        },
+        {
+          "kind": "enemy"
+        },
+        {
+          "kind": "shift"
+        },
+        {
+          "kind": "turn-end"
+        },
+        {
+          "kind": "roll"
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.36,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.36,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.6106666666666667,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.6106666666666667,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.792,
+          "asset": "golem-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.9706666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.04,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.1013333333333333,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.16,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.1706666666666667,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.872,
+          "grade": "C",
+          "asset": true,
+          "gain": 0.19439999759197235
+        },
+        {
+          "name": "attack",
+          "time": 2,
+          "grade": "C",
+          "asset": true,
+          "gain": 0.30959999561309814
+        },
+        {
+          "name": "total",
+          "time": 2.2506666666666666,
+          "asset": false
+        },
+        {
+          "name": "windup",
+          "time": 3.1013333333333333,
+          "asset": false
+        },
+        {
+          "name": "enemy",
+          "time": 3.632,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "shift",
+          "time": 6.330666666666667,
+          "asset": false
+        },
+        {
+          "name": "break",
+          "time": 6.992,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "turn-end",
+          "time": 8.090666666666667,
+          "asset": false
+        },
+        {
+          "name": "break",
+          "time": 8.901333333333334,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 8.901333333333334,
+          "asset": false
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Final-formula",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 8
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.2906666666666667,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.2906666666666667,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.432,
+          "asset": "king-trial-v34"
+        },
+        {
+          "name": "turn-end",
+          "time": 0.432,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.432,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.7306666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.7706666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.792,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.8213333333333334,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.8506666666666667,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.8906666666666667,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.9013333333333333,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.6,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 1.96,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        }
+      ],
+      "timerRunning": false
+    },
+    {
+      "scene": "Final-hit",
+      "method": "real equation buttons, prepared valid save where needed",
+      "events": [
+        {
+          "kind": "reserved"
+        },
+        {
+          "kind": "battle"
+        },
+        {
+          "kind": "attack",
+          "grade": "S",
+          "damage": 8
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.312,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.312,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.44,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.44,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.4613333333333333,
+          "asset": "king-trial-v34"
+        },
+        {
+          "name": "number",
+          "time": 0.7306666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.7706666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.792,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.8213333333333334,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.84,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.872,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.872,
+          "asset": false
+        },
+        {
+          "name": "whoosh",
+          "time": 1.5706666666666667,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.27000001072883606
+        },
+        {
+          "name": "attack",
+          "time": 1.9413333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "attack",
+          "time": 4.9013333333333335,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.4300000071525574
+        },
+        {
+          "name": "battle",
+          "time": 5.701333333333333,
+          "asset": false
+        }
+      ],
+      "timerRunning": false
+    }
+  ]
+}

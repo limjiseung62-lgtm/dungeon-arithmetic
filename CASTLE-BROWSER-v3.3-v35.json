@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "turns": 52,
+  "rooms": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "restGain": 34,
+  "checks": [
+    "Act III automatic opening",
+    "special departure preparation",
+    "actual six battles through math input",
+    "ordinary exact F5",
+    "once rest F5",
+    "owned gear/no shopping",
+    "Elia direct truth",
+    "throne reward F5 idempotent",
+    "castle reward preserved at final intro",
+    "intro cancellation returns to town",
+    "three responsive widths",
+    "elite codex",
+    "production hidden debug"
+  ],
+  "errors": []
+}

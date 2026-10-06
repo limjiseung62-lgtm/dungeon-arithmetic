@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "images": [
+    {
+      "file": "assets/presentation-v35/slash.webp",
+      "width": 1400,
+      "height": 933,
+      "bytes": 280160,
+      "transparentRatio": 0.7140001531159087,
+      "paintedRatio": 0.22061705711223395
+    },
+    {
+      "file": "assets/presentation-v35/magic.webp",
+      "width": 1400,
+      "height": 933,
+      "bytes": 299250,
+      "transparentRatio": 0.74221558719951,
+      "paintedRatio": 0.19345888837850253
+    },
+    {
+      "file": "assets/presentation-v35/impactAtlas.webp",
+      "width": 1400,
+      "height": 933,
+      "bytes": 713866,
+      "transparentRatio": 0.3694250497626703,
+      "paintedRatio": 0.3268886847343439
+    }
+  ],
+  "audio": {
+    "file": "assets/audio/s35-low-impact.wav",
+    "bytes": 20204,
+    "rate": 24000,
+    "seconds": 0.42,
+    "peakPCM": 7676,
+    "clipped": false
+  }
+}

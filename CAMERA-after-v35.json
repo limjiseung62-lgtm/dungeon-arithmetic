@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "label": "after",
+  "rows": [
+    {
+      "type": "skeleton",
+      "stage": {
+        "w": 1252,
+        "h": 482
+      },
+      "image": {
+        "w": 195.71875,
+        "h": 293.59375,
+        "top": 99.53125
+      },
+      "paintedRatio": 0.5999947913289894,
+      "sourcePixels": 1536,
+      "imageScale": 0.19114176432291666,
+      "overflow": false
+    },
+    {
+      "type": "goblin",
+      "stage": {
+        "w": 1252,
+        "h": 482
+      },
+      "image": {
+        "w": 164.515625,
+        "h": 246.78125,
+        "top": 148.328125
+      },
+      "paintedRatio": 0.49999442832598534,
+      "sourcePixels": 1536,
+      "imageScale": 0.16066487630208334,
+      "overflow": false
+    },
+    {
+      "type": "golem",
+      "stage": {
+        "w": 1252,
+        "h": 482
+      },
+      "image": {
+        "w": 443.0625,
+        "h": 664.59375,
+        "top": 25.578125
+      },
+      "paintedRatio": 0.9379566240112811,
+      "sourcePixels": 1536,
+      "imageScale": 0.43267822265625,
+      "overflow": false
+    },
+    {
+      "type": "treeGuardian",
+      "stage": {
+        "w": 1252,
+        "h": 482
+      },
+      "image": {
+        "w": 541.140625,
+        "h": 547.203125,
+        "top": 26
+      },
+      "paintedRatio": 0.937955406324757,
+      "sourcePixels": 1261,
+      "imageScale": 0.4339437946074544,
+      "overflow": false
+    },
+    {
+      "type": "flameGiant",
+      "stage": {
+        "w": 1252,
+        "h": 482
+      },
+      "image": {
+        "w": 645.1505126953125,
+        "h": 967.736083984375,
+        "top": -164.78167724609375
+      },
+      "paintedRatio": 1,
+      "sourcePixels": 960,
+      "imageScale": 1.0080584208170573,
+      "overflow": false
+    },
+    {
+      "type": "darkKnight",
+      "stage": {
+        "w": 1252,
+        "h": 482
+      },
+      "image": {
+        "w": 380.75,
+        "h": 571.125,
+        "top": 28.953125
+      },
+      "paintedRatio": 0.9379564315352698,
+      "sourcePixels": 1200,
+      "imageScale": 0.4759375,
+      "overflow": false
+    },
+    {
+      "type": "chaosMage",
+      "stage": {
+        "w": 1252,
+        "h": 417
+      },
+      "image": {
+        "w": 300.734375,
+        "h": 451.109375,
+        "top": 25.265625
+      },
+      "paintedRatio": 0.9376079761191047,
+      "sourcePixels": 1200,
+      "imageScale": 0.37592447916666666,
+      "overflow": false
+    },
+    {
+      "type": "dragonGuardian",
+      "stage": {
+        "w": 1252,
+        "h": 422
+      },
+      "image": {
+        "w": 939.421875,
+        "h": 626.28125,
+        "top": 22.140625
+      },
+      "paintedRatio": 0.937640205371248,
+      "sourcePixels": 600,
+      "imageScale": 1.0438020833333332,
+      "overflow": false
+    },
+    {
+      "type": "demonKing",
+      "stage": {
+        "w": 1252,
+        "h": 432
+      },
+      "image": {
+        "w": 367.59375,
+        "h": 551.640625,
+        "top": 25.90625
+      },
+      "paintedRatio": 0.9377101089015151,
+      "sourcePixels": 1100,
+      "imageScale": 0.5014914772727272,
+      "overflow": false
+    }
+  ]
+}

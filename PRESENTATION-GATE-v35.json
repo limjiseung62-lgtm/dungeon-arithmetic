@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "First person camera and Attack S prototype only",
+  "unitTests": 712,
+  "existingBrowserSuites": 31,
+  "existingTestFilesUnchanged": 117,
+  "prototypeCases": 12,
+  "responsiveCases": 22,
+  "baselineScenes": 14,
+  "productionFiles": 237,
+  "originalTags": 18,
+  "formalV35Tag": false,
+  "push": false,
+  "deployment": false
+}

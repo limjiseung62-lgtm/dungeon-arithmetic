@@ -1,0 +1,1252 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "name": "solo-class",
+      "elapsed": 1953.6000001430511,
+      "damage": 27,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.7000000476837158
+        },
+        {
+          "stage": "cutin",
+          "time": 182.10000014305115
+        },
+        {
+          "stage": "charge",
+          "time": 530
+        },
+        {
+          "stage": "trail",
+          "time": 790.9000000953674
+        },
+        {
+          "stage": "contact",
+          "time": 1015.9000000953674
+        },
+        {
+          "stage": "reaction",
+          "time": 1129.9000000953674
+        },
+        {
+          "stage": "damage",
+          "time": 1411.9000000953674
+        },
+        {
+          "stage": "restore",
+          "time": 1767
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.36,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.37066666666666664,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.752,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.8213333333333334,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.912,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.9706666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 1.04,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 1.112,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 1.192,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 1.232,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.9706666666666666,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 2.76,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 2.992,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 2.992,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "golem",
+      "elapsed": 1929.4000000953674,
+      "damage": 23,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.2999999523162842
+        },
+        {
+          "stage": "cutin",
+          "time": 180.90000009536743
+        },
+        {
+          "stage": "charge",
+          "time": 523.7999999523163
+        },
+        {
+          "stage": "trail",
+          "time": 784.2999999523163
+        },
+        {
+          "stage": "contact",
+          "time": 1003.4000000953674
+        },
+        {
+          "stage": "reaction",
+          "time": 1115.0999999046326
+        },
+        {
+          "stage": "damage",
+          "time": 1397.5999999046326
+        },
+        {
+          "stage": "restore",
+          "time": 1749
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.552,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.552,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.6613333333333333,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.6613333333333333,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.7813333333333333,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.832,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.8613333333333333,
+          "asset": "golem-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.88,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.912,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.9306666666666666,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.952,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.9706666666666667,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.68,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 2.461333333333333,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 2.68,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 2.68,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "staff",
+      "elapsed": 1938.3000001907349,
+      "damage": 35,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.8000001907348633
+        },
+        {
+          "stage": "cutin",
+          "time": 184.20000004768372
+        },
+        {
+          "stage": "charge",
+          "time": 526
+        },
+        {
+          "stage": "trail",
+          "time": 788.8000001907349
+        },
+        {
+          "stage": "contact",
+          "time": 1004.7000000476837
+        },
+        {
+          "stage": "reaction",
+          "time": 1118.8000001907349
+        },
+        {
+          "stage": "damage",
+          "time": 1402.6000001430511
+        },
+        {
+          "stage": "restore",
+          "time": 1754.7000000476837
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.432,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.44,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.5306666666666666,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.592,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6213333333333333,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.6506666666666666,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "operator",
+          "time": 0.672,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.7013333333333334,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.72,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.7413333333333333,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.4613333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 2.2506666666666666,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 2.461333333333333,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 2.461333333333333,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "flame-sword",
+      "elapsed": 1931,
+      "damage": 37,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.2999999523162842
+        },
+        {
+          "stage": "cutin",
+          "time": 181.79999995231628
+        },
+        {
+          "stage": "charge",
+          "time": 523.1000001430511
+        },
+        {
+          "stage": "trail",
+          "time": 786.1000001430511
+        },
+        {
+          "stage": "contact",
+          "time": 1001.6000001430511
+        },
+        {
+          "stage": "reaction",
+          "time": 1112.9000000953674
+        },
+        {
+          "stage": "damage",
+          "time": 1396.5
+        },
+        {
+          "stage": "restore",
+          "time": 1747.7999999523163
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.472,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.472,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.56,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.6213333333333333,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.6506666666666666,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.672,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.6906666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.7306666666666667,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.7706666666666667,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.8,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.512,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 2.2906666666666666,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 2.512,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 2.512,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "fast",
+      "elapsed": 1193.5,
+      "damage": 27,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.39999985694885254
+        },
+        {
+          "stage": "cutin",
+          "time": 111.59999990463257
+        },
+        {
+          "stage": "charge",
+          "time": 321.59999990463257
+        },
+        {
+          "stage": "trail",
+          "time": 478.2999999523163
+        },
+        {
+          "stage": "contact",
+          "time": 616.5999999046326
+        },
+        {
+          "stage": "reaction",
+          "time": 694.0999999046326
+        },
+        {
+          "stage": "damage",
+          "time": 866.7999999523163
+        },
+        {
+          "stage": "restore",
+          "time": 1081.0999999046326
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.28,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.2906666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.432,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.5013333333333333,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.56,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.5706666666666667,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.6213333333333333,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6613333333333333,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.7013333333333334,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.7306666666666667,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.16,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 1.64,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 1.7813333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 1.7813333333333334,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "reduced",
+      "elapsed": 1098.7000000476837,
+      "damage": 23,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.40000009536743164
+        },
+        {
+          "stage": "cutin",
+          "time": 124.70000004768372
+        },
+        {
+          "stage": "charge",
+          "time": 265
+        },
+        {
+          "stage": "trail",
+          "time": 425.09999990463257
+        },
+        {
+          "stage": "contact",
+          "time": 536.0999999046326
+        },
+        {
+          "stage": "reaction",
+          "time": 541.0999999046326
+        },
+        {
+          "stage": "damage",
+          "time": 642.5
+        },
+        {
+          "stage": "restore",
+          "time": 994.9000000953674
+        }
+      ],
+      "audio": [
+        {
+          "name": "break",
+          "time": 0.32,
+          "grade": "B",
+          "asset": true,
+          "gain": 0.3199999928474426
+        },
+        {
+          "name": "battle",
+          "time": 0.32,
+          "asset": false
+        },
+        {
+          "name": "turn-end",
+          "time": 0.432,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.432,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.52,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.5706666666666667,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.6,
+          "asset": "golem-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.6213333333333333,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.64,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6506666666666666,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.672,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.6906666666666667,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.392,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 1.8213333333333332,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 1.9306666666666668,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 1.9306666666666668,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "simple",
+      "elapsed": 842.6000001430511,
+      "damage": 27,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.7000000476837158
+        },
+        {
+          "stage": "cutin",
+          "time": 93.40000009536743
+        },
+        {
+          "stage": "charge",
+          "time": 199.60000014305115
+        },
+        {
+          "stage": "trail",
+          "time": 322.2999999523163
+        },
+        {
+          "stage": "contact",
+          "time": 409.5
+        },
+        {
+          "stage": "reaction",
+          "time": 417.5
+        },
+        {
+          "stage": "damage",
+          "time": 497.7999999523163
+        },
+        {
+          "stage": "restore",
+          "time": 762.7000000476837
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.2613333333333333,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.272,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.392,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.45066666666666666,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.49066666666666664,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.5306666666666666,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "operator",
+          "time": 0.56,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.64,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.6613333333333333,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.2,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 1.52,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 1.6106666666666667,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 1.6106666666666667,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "skip",
+      "elapsed": 177.89999985694885,
+      "damage": 27,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.39999985694885254
+        },
+        {
+          "stage": "cutin",
+          "time": 170.89999985694885
+        },
+        {
+          "stage": "charge",
+          "time": 171.09999990463257
+        },
+        {
+          "stage": "trail",
+          "time": 171.09999990463257
+        },
+        {
+          "stage": "contact",
+          "time": 177.5
+        },
+        {
+          "stage": "reaction",
+          "time": 177.89999985694885
+        },
+        {
+          "stage": "damage",
+          "time": 177.89999985694885
+        },
+        {
+          "stage": "restore",
+          "time": 177.89999985694885
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.312,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.312,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.42133333333333334,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.49066666666666664,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.5306666666666666,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "number",
+          "time": 0.552,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.6,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6506666666666666,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.7013333333333334,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.7306666666666667,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.44,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "cancel-before",
+      "cancelled": true,
+      "status": "pending"
+    },
+    {
+      "name": "cancel-after",
+      "cancelled": true,
+      "status": "resolved"
+    },
+    {
+      "name": "multi",
+      "elapsed": 1927.1000001430511,
+      "damage": 25,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.40000009536743164
+        },
+        {
+          "stage": "cutin",
+          "time": 184.20000004768372
+        },
+        {
+          "stage": "charge",
+          "time": 526.2000000476837
+        },
+        {
+          "stage": "trail",
+          "time": 788.5
+        },
+        {
+          "stage": "contact",
+          "time": 1001.4000000953674
+        },
+        {
+          "stage": "reaction",
+          "time": 1115.2000000476837
+        },
+        {
+          "stage": "damage",
+          "time": 1395.9000000953674
+        },
+        {
+          "stage": "restore",
+          "time": 1746.6000001430511
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.28,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.2906666666666667,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.5306666666666666,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "turn-end",
+          "time": 2.432,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 2.432,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 3.3813333333333335,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 3.432,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 3.461333333333333,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 3.490666666666667,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 3.512,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 3.541333333333333,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 3.6106666666666665,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 4.32,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 5.112,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 5.32,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 5.32,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    },
+    {
+      "name": "asset-failure",
+      "elapsed": 1922.6000001430511,
+      "damage": 27,
+      "assetFailures": [
+        "slash",
+        "magic",
+        "impactAtlas"
+      ],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.5
+        },
+        {
+          "stage": "cutin",
+          "time": 181.80000019073486
+        },
+        {
+          "stage": "charge",
+          "time": 525.3000001907349
+        },
+        {
+          "stage": "trail",
+          "time": 786.8000001907349
+        },
+        {
+          "stage": "contact",
+          "time": 992.8000001907349
+        },
+        {
+          "stage": "reaction",
+          "time": 1105.9000000953674
+        },
+        {
+          "stage": "damage",
+          "time": 1390.8000001907349
+        },
+        {
+          "stage": "restore",
+          "time": 1741.6000001430511
+        }
+      ],
+      "audio": [
+        {
+          "name": "turn-end",
+          "time": 0.312,
+          "asset": false
+        },
+        {
+          "name": "roll",
+          "time": 0.312,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.42133333333333334,
+          "asset": false
+        },
+        {
+          "name": "music",
+          "time": 0.5013333333333333,
+          "asset": "dungeon-suite"
+        },
+        {
+          "name": "operator",
+          "time": 0.512,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.552,
+          "asset": false
+        },
+        {
+          "name": "operator",
+          "time": 0.592,
+          "asset": false
+        },
+        {
+          "name": "number",
+          "time": 0.6266666666666667,
+          "asset": false
+        },
+        {
+          "name": "reserved",
+          "time": 0.672,
+          "asset": false
+        },
+        {
+          "name": "battle",
+          "time": 0.68,
+          "asset": false
+        },
+        {
+          "name": "charge",
+          "time": 1.4,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.0989999994635582
+        },
+        {
+          "name": "whoosh",
+          "time": 2.1813333333333333,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.16200000047683716
+        },
+        {
+          "name": "attack",
+          "time": 2.392,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.257999986410141
+        },
+        {
+          "name": "s35-low",
+          "time": 2.392,
+          "grade": "S",
+          "asset": true,
+          "gain": 0.10499999672174454
+        }
+      ],
+      "cleanup": true,
+      "statsUnchangedExceptOneAttack": true
+    }
+  ]
+}

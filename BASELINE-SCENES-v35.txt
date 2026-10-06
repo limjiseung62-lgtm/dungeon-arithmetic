@@ -1,0 +1,15 @@
+START Attack-C
+START Attack-B
+START Attack-A
+START Attack-S
+START Defense-S
+START Scroll-fire
+START Scroll-lightning
+START Scroll-meteor
+START Mercenary-rowen
+START Awakened-kain
+START BREAK
+START Boss-phase
+START Final-formula
+START Final-hit
+PASS 14 actual baseline scenes with screenshots and video
