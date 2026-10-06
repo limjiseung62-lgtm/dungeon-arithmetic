@@ -1,0 +1,1061 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "level": 11,
+      "merc": "solo",
+      "supports": 0,
+      "grade": "A",
+      "turns": 27,
+      "hp": 117,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "solo",
+      "supports": 0,
+      "grade": "S",
+      "turns": 17,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "rowen",
+      "supports": 3,
+      "grade": "A",
+      "turns": 27,
+      "hp": 117,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "rowen",
+      "supports": 3,
+      "grade": "S",
+      "turns": 17,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "rowen+sera",
+      "supports": 4,
+      "grade": "A",
+      "turns": 27,
+      "hp": 122,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "rowen+sera",
+      "supports": 4,
+      "grade": "S",
+      "turns": 17,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "rowen+bram+sera",
+      "supports": 7,
+      "grade": "A",
+      "turns": 27,
+      "hp": 119,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "rowen+bram+sera",
+      "supports": 7,
+      "grade": "S",
+      "turns": 18,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "kain+elia+sol",
+      "supports": 3,
+      "grade": "A",
+      "turns": 29,
+      "hp": 114,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "kain+elia+sol",
+      "supports": 6,
+      "grade": "S",
+      "turns": 18,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "aiden+rafa+kain",
+      "supports": 4,
+      "grade": "A",
+      "turns": 27,
+      "hp": 117,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "aiden+rafa+kain",
+      "supports": 6,
+      "grade": "S",
+      "turns": 17,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "luna+tobin+sol",
+      "supports": 0,
+      "grade": "A",
+      "turns": 27,
+      "hp": 117,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "luna+tobin+sol",
+      "supports": 3,
+      "grade": "S",
+      "turns": 19,
+      "hp": 149,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "sera+iris+mirin",
+      "supports": 3,
+      "grade": "A",
+      "turns": 27,
+      "hp": 128,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 11,
+      "merc": "sera+iris+mirin",
+      "supports": 1,
+      "grade": "S",
+      "turns": 17,
+      "hp": 150,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "solo",
+      "supports": 0,
+      "grade": "A",
+      "turns": 27,
+      "hp": 122,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "solo",
+      "supports": 0,
+      "grade": "S",
+      "turns": 17,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "rowen",
+      "supports": 3,
+      "grade": "A",
+      "turns": 27,
+      "hp": 122,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "rowen",
+      "supports": 3,
+      "grade": "S",
+      "turns": 17,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "rowen+sera",
+      "supports": 4,
+      "grade": "A",
+      "turns": 27,
+      "hp": 127,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "rowen+sera",
+      "supports": 4,
+      "grade": "S",
+      "turns": 17,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "rowen+bram+sera",
+      "supports": 7,
+      "grade": "A",
+      "turns": 27,
+      "hp": 124,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "rowen+bram+sera",
+      "supports": 7,
+      "grade": "S",
+      "turns": 18,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "kain+elia+sol",
+      "supports": 3,
+      "grade": "A",
+      "turns": 29,
+      "hp": 119,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "kain+elia+sol",
+      "supports": 6,
+      "grade": "S",
+      "turns": 18,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "aiden+rafa+kain",
+      "supports": 4,
+      "grade": "A",
+      "turns": 27,
+      "hp": 122,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "aiden+rafa+kain",
+      "supports": 6,
+      "grade": "S",
+      "turns": 17,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "luna+tobin+sol",
+      "supports": 0,
+      "grade": "A",
+      "turns": 27,
+      "hp": 122,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "luna+tobin+sol",
+      "supports": 3,
+      "grade": "S",
+      "turns": 19,
+      "hp": 154,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "sera+iris+mirin",
+      "supports": 3,
+      "grade": "A",
+      "turns": 27,
+      "hp": 133,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 12,
+      "merc": "sera+iris+mirin",
+      "supports": 1,
+      "grade": "S",
+      "turns": 17,
+      "hp": 155,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "solo",
+      "supports": 0,
+      "grade": "A",
+      "turns": 27,
+      "hp": 127,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "solo",
+      "supports": 0,
+      "grade": "S",
+      "turns": 17,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "rowen",
+      "supports": 3,
+      "grade": "A",
+      "turns": 27,
+      "hp": 127,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "rowen",
+      "supports": 3,
+      "grade": "S",
+      "turns": 17,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "rowen+sera",
+      "supports": 4,
+      "grade": "A",
+      "turns": 27,
+      "hp": 132,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "rowen+sera",
+      "supports": 4,
+      "grade": "S",
+      "turns": 17,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "rowen+bram+sera",
+      "supports": 7,
+      "grade": "A",
+      "turns": 27,
+      "hp": 129,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "rowen+bram+sera",
+      "supports": 7,
+      "grade": "S",
+      "turns": 18,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "kain+elia+sol",
+      "supports": 3,
+      "grade": "A",
+      "turns": 29,
+      "hp": 124,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "kain+elia+sol",
+      "supports": 6,
+      "grade": "S",
+      "turns": 18,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "aiden+rafa+kain",
+      "supports": 4,
+      "grade": "A",
+      "turns": 27,
+      "hp": 127,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "aiden+rafa+kain",
+      "supports": 6,
+      "grade": "S",
+      "turns": 17,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "luna+tobin+sol",
+      "supports": 0,
+      "grade": "A",
+      "turns": 27,
+      "hp": 127,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "luna+tobin+sol",
+      "supports": 3,
+      "grade": "S",
+      "turns": 19,
+      "hp": 159,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "sera+iris+mirin",
+      "supports": 3,
+      "grade": "A",
+      "turns": 27,
+      "hp": 138,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos",
+        "breath"
+      ],
+      "valid": true,
+      "error": ""
+    },
+    {
+      "level": 13,
+      "merc": "sera+iris+mirin",
+      "supports": 1,
+      "grade": "S",
+      "turns": 17,
+      "hp": 160,
+      "phase": "clear",
+      "phases": [
+        1,
+        2,
+        3
+      ],
+      "regions": [
+        "forest",
+        "heat",
+        "morale",
+        "chaos"
+      ],
+      "valid": true,
+      "error": ""
+    }
+  ]
+}

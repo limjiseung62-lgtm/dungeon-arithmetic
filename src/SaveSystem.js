@@ -1,4 +1,6 @@
+import {seedLegendary,validateLegendary} from './LegendarySystem.js';
 import {CastleDungeon} from './CastleData.js';
+import {migrateRoster,validateRoster} from './MercenaryRoster.js';
 import {blankCampaign,validateCampaign} from './ActTwoSystem.js';
 import {blankRelationships,validateRelationships} from './AffinitySystem.js';
 import {personalQuestById} from './AffinityData.js';
@@ -27,6 +29,8 @@ export function migrateSave(value){
  if(value?.saveVersion===4&&value.progress?.campaign===undefined){value=structuredClone(value);value.progress.campaign=blankCampaign();}
  if(value?.saveVersion===4&&value.progress?.campaign){const c=value.progress.campaign;const keys=['actThreeSeen','eliaTruthSeen','throneReached','throneSceneSeen','dragonOpeningSeen','canyonInvestigated','dragonDefeated','dragonSealSeen','castleOpened','chaosOpeningSeen','towerInvestigated','mageDefeated','chaosSealSeen'];if(keys.some(k=>c[k]===undefined)){value=structuredClone(value);for(const k of keys)if(value.progress.campaign[k]===undefined)value.progress.campaign[k]=false;}}
  if(value?.saveVersion===4&&value.progress?.storyCompleted===undefined){value=structuredClone(value);value.progress.storyCompleted=false;value.progress.endingSeen=false;}
+ if(value?.saveVersion===4){value=structuredClone(value);const records=blankRelationships();value.progress.mercenaryRelations={...records,...value.progress.mercenaryRelations};migrateRoster(value);seedLegendary(value);value.progress.rebuildSchema=1;value.saveVersion=5;}
+ if(value?.saveVersion===5&&value.progress.rebuildSchema===undefined){value=structuredClone(value);seedLegendary(value);value.progress.rebuildSchema=1;}
  return value;
 }
 export function validateSave(raw){
@@ -34,8 +38,10 @@ export function validateSave(raw){
  if(!data.meta||typeof data.meta.createdAt!=='string'||typeof data.meta.updatedAt!=='string')throw new Error('저장 정보가 올바르지 않습니다.');
  if(!validateCampaign(data.progress))throw new Error('봉인 이야기 기록이 올바르지 않습니다.');
  if(!validateRelationships(data.progress))throw new Error('동료 관계 기록이 올바르지 않습니다.');
+ if(!validateRoster(data.progress))throw new Error('동료 보유·후보·출전 기록이 올바르지 않습니다.');
+ if(data.progress.rebuildSchema!==1||!validateLegendary(data.progress,data.character))throw new Error('전설 무기 획득 기록이 올바르지 않습니다.');
  if(!validateCollection(data.progress))throw new Error('도감 기록이 올바르지 않습니다.');
- const c=data.character,p=data.progress;if(p.finalRecord!==undefined){const q=p.finalRecord,nonnegative=n=>integer(n,0,1e9);if(!q||!integer(q.level,1,RPGConfig.maxLevel)||['clears','attackS','defenseS','quests','bosses','finalBreaks'].some(k=>!nonnegative(q[k]))||!integer(q.highestAffinity,1,3)||!q.collection?.counts||!q.collection?.totals||['monsters','equipment','scrolls','bossLoot'].some(k=>!nonnegative(q.collection.counts[k])||!integer(q.collection.totals[k],1,1e9)||q.collection.counts[k]>q.collection.totals[k])||!Array.isArray(q.companions)||q.companions.length>6||q.companions.some(m=>!mercenaryById(m.id)||m.name!==mercenaryById(m.id).name||!integer(m.runs,1,1e9))||new Set(q.companions.map(m=>m.id)).size!==q.companions.length)throw new Error('모험 기록이 올바르지 않습니다.');}if(p.endingCompanion!==undefined&&p.endingCompanion!==null&&!mercenaryById(p.endingCompanion))throw new Error('작별 동료 기록이 올바르지 않습니다.');if(typeof p.storyCompleted!=='boolean'||typeof p.endingSeen!=='boolean'||p.endingSeen&&!p.storyCompleted||p.storyCompleted&&!p.clearedDungeons.includes('demon-throne')||p.finalRecord!==undefined&&(!p.storyCompleted||!p.finalRecord||!Number.isInteger(p.finalRecord.level)))throw new Error('엔딩 기록이 올바르지 않습니다.');if(p.run?.finalBreaks!==undefined&&(!integer(p.run.finalBreaks,0,1e9)||p.run.dungeonId!=='demon-throne'))throw new Error('최종 BREAK 기록이 올바르지 않습니다.');if(p.run?.endingStage!==undefined&&(!integer(p.run.endingStage,0,11)||p.run.dungeonId!=='demon-throne'||p.run.status!=='clear'))throw new Error('엔딩 장면 기록이 올바르지 않습니다.');if(p.run?.bossCheckpoint?.king&&p.run.dungeonId!=='demon-throne')throw new Error('최종전 기록이 올바르지 않습니다.');if(!c||!p||validateName(c.name)!==c.name)throw new Error('캐릭터 기록이 올바르지 않습니다.');
+ const c=data.character,p=data.progress;if(p.finalRecord!==undefined){const q=p.finalRecord,nonnegative=n=>integer(n,0,1e9);if(!q||!integer(q.level,1,RPGConfig.maxLevel)||['clears','attackS','defenseS','quests','bosses','finalBreaks'].some(k=>!nonnegative(q[k]))||!integer(q.highestAffinity,1,3)||!q.collection?.counts||!q.collection?.totals||['monsters','equipment','scrolls','bossLoot'].some(k=>!nonnegative(q.collection.counts[k])||!integer(q.collection.totals[k],1,1e9)||q.collection.counts[k]>q.collection.totals[k])||!Array.isArray(q.companions)||q.companions.length>18||q.companions.some(m=>!mercenaryById(m.id)||m.name!==mercenaryById(m.id).name||!integer(m.runs,1,1e9))||new Set(q.companions.map(m=>m.id)).size!==q.companions.length)throw new Error('모험 기록이 올바르지 않습니다.');}if(p.endingCompanion!==undefined&&p.endingCompanion!==null&&!mercenaryById(p.endingCompanion))throw new Error('작별 동료 기록이 올바르지 않습니다.');if(typeof p.storyCompleted!=='boolean'||typeof p.endingSeen!=='boolean'||p.endingSeen&&!p.storyCompleted||p.storyCompleted&&!p.clearedDungeons.includes('demon-throne')||p.finalRecord!==undefined&&(!p.storyCompleted||!p.finalRecord||!Number.isInteger(p.finalRecord.level)))throw new Error('엔딩 기록이 올바르지 않습니다.');if(p.run?.finalBreaks!==undefined&&(!integer(p.run.finalBreaks,0,1e9)||p.run.dungeonId!=='demon-throne'))throw new Error('최종 BREAK 기록이 올바르지 않습니다.');if(p.run?.endingStage!==undefined&&(!integer(p.run.endingStage,0,11)||p.run.dungeonId!=='demon-throne'||p.run.status!=='clear'))throw new Error('엔딩 장면 기록이 올바르지 않습니다.');if(p.run?.bossCheckpoint?.king&&p.run.dungeonId!=='demon-throne')throw new Error('최종전 기록이 올바르지 않습니다.');if(!c||!p||validateName(c.name)!==c.name)throw new Error('캐릭터 기록이 올바르지 않습니다.');
  if(p.story!==undefined&&(!p.story||typeof p.story.openingSeen!=='boolean'||typeof p.story.guildVisited!=='boolean'))throw new Error('이야기 기록이 올바르지 않습니다.');
  if(!c.inventory||!Array.isArray(c.inventory.items)||c.inventory.items.some(id=>!equipmentId(id)))throw new Error('인벤토리 기록이 올바르지 않습니다.');normalizeEquipment(c);if(!Array.isArray(c.inventory.items)||c.inventory.items.some(id=>typeof id!=='string'||!equipmentId(id)))throw new Error('인벤토리 기록이 올바르지 않습니다.');for(const slot of ['weapon','armor','accessory'])if(c.equipment[slot]!==null&&(!equipmentId(c.equipment[slot])||equipmentType(c.equipment[slot])!==slot))throw new Error('장비 기록이 올바르지 않습니다.');const derived=finalStats(c),base=characterStats(c.level);if(c.attack!==base.attack||c.defense!==base.defense||c.maxHP!==derived.maxHP||c.hp>c.maxHP)throw new Error('장비 능력치 기록이 올바르지 않습니다.');
  for(const [key,min,max]of [['level',1,RPGConfig.maxLevel],['exp',0,1e9],['maxHP',1,10000],['hp',0,c.maxHP],['attack',1,1000],['defense',0,1000],['gold',0,1e9]])if(!integer(c[key],min,max))throw new Error('캐릭터 능력치 기록이 올바르지 않습니다.');
@@ -71,17 +77,17 @@ export function validateSave(raw){
  return structuredClone(data);
 }
 export class SaveSystem{
- constructor(storage=null){this.storage=storage;}
+ constructor(storage=null){this.storage=storage;this.legacySource=null;}
  load(){
-  if(!this.storage)return {status:'unavailable',data:null,message:'이 브라우저에서 저장 공간을 사용할 수 없어요. 이 모험은 창을 닫으면 사라집니다.'};
+  this.legacySource=null;if(!this.storage)return {status:'unavailable',data:null,message:'이 브라우저에서 저장 공간을 사용할 수 없어요. 이 모험은 창을 닫으면 사라집니다.'};
   let raw,backup;try{raw=this.storage.getItem(RPGConfig.saveKey);backup=this.storage.getItem(RPGConfig.backupKey);}catch{return {status:'unavailable',data:null,message:'저장 공간에 접근할 수 없어요. 이 모험은 창을 닫으면 사라집니다.'};}
   if(!raw&&!backup)return {status:'empty',data:null,message:''};
-  try{const parsed=JSON.parse(raw);if(parsed?.saveVersion>RPGConfig.saveVersion)return {status:'newer',data:null,message:'더 최신 버전의 모험 기록이 있어요. 원래 기록을 보존했습니다.'};return {status:'ready',data:validateSave(parsed),message:''};}catch{}
-  try{return {status:'recovered',data:validateSave(JSON.parse(backup)),message:'손상된 기록 대신 이전 자동 저장을 불러왔어요.'};}catch{return {status:'invalid',data:null,message:'모험 기록을 읽지 못했어요. 기존 기록을 보존했습니다. 새 모험은 확인 후 시작할 수 있어요.'};}
+  try{const parsed=JSON.parse(raw);if(parsed?.saveVersion>RPGConfig.saveVersion)return {status:'newer',data:null,message:'더 최신 버전의 모험 기록이 있어요. 원래 기록을 보존했습니다.'};const data=validateSave(parsed);if(parsed.saveVersion<=RPGConfig.previousSaveVersion)this.legacySource=raw;return {status:'ready',data,message:''};}catch{}
+  try{const parsed=JSON.parse(backup),data=validateSave(parsed);if(parsed.saveVersion<=RPGConfig.previousSaveVersion)this.legacySource=backup;return {status:'recovered',data,message:'손상된 기록 대신 이전 자동 저장을 불러왔어요.'};}catch{return {status:'invalid',data:null,message:'모험 기록을 읽지 못했어요. 기존 기록을 보존했습니다. 새 모험은 확인 후 시작할 수 있어요.'};}
  }
  save(data){
   if(!this.storage)return {ok:false,message:'저장 공간을 사용할 수 없어 현재 모험이 저장되지 않았어요.'};
-  try{const checked=validateSave(data),json=JSON.stringify(checked),previous=this.storage.getItem(RPGConfig.saveKey);if(previous){try{validateSave(JSON.parse(previous));this.storage.setItem(RPGConfig.backupKey,previous);}catch{}}
+  try{const checked=validateSave(data),json=JSON.stringify(checked),previous=this.storage.getItem(RPGConfig.saveKey);let archiveSource=this.legacySource;if(previous){try{const raw=JSON.parse(previous);validateSave(raw);if(raw.saveVersion<=RPGConfig.previousSaveVersion)archiveSource=previous;}catch{}}if(archiveSource&&!this.storage.getItem(RPGConfig.migrationArchiveKey))this.storage.setItem(RPGConfig.migrationArchiveKey,archiveSource);if(previous){try{validateSave(JSON.parse(previous));this.storage.setItem(RPGConfig.backupKey,previous);}catch{}}
    this.storage.setItem(RPGConfig.saveKey,json);return {ok:true,message:'모험을 저장했습니다.'};
   }catch{return {ok:false,message:'모험을 저장하지 못했어요. 저장 공간 설정을 확인하고 이 창을 유지해 주세요.'};}
  }

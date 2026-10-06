@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "bounds": [
+    {
+      "x": 12,
+      "y": 779,
+      "width": 462,
+      "height": 270,
+      "bottom": 1049
+    },
+    {
+      "x": 490,
+      "y": 779,
+      "width": 462,
+      "height": 270,
+      "bottom": 1049
+    },
+    {
+      "x": 968,
+      "y": 779,
+      "width": 462,
+      "height": 270,
+      "bottom": 1049
+    },
+    {
+      "x": 1446,
+      "y": 779,
+      "width": 462,
+      "height": 270,
+      "bottom": 1049
+    }
+  ],
+  "result": {
+    "hp": 152,
+    "combo": [
+      {
+        "kind": "coop-combo",
+        "text": "완벽한 협동!",
+        "damage": 9,
+        "requested": 9,
+        "contributors": 4,
+        "players": 4,
+        "quality": "A",
+        "sCount": 1,
+        "perfect": true,
+        "chaosWeakened": false
+      }
+    ],
+    "attacks": [
+      {
+        "kind": "attack",
+        "text": "1P ⚔ DAMAGE 27",
+        "damage": 27,
+        "bossBreak": false,
+        "breakDamage": 0,
+        "enemyId": "coop-entry-0-0",
+        "action": {
+          "playerId": 0,
+          "targetGrade": "S",
+          "targetValue": 54,
+          "targetId": "attack-S",
+          "expression": "(8 × 7) − 2",
+          "actionType": "attack",
+          "baseDamage": 27,
+          "order": 0,
+          "status": "resolved",
+          "enemyId": "coop-entry-0-0",
+          "enemyName": "스켈레톤 병사",
+          "bossRelicBonus": 0,
+          "equipmentBonus": 0,
+          "illusionHit": false,
+          "breakDamage": 0,
+          "bossBreak": false
+        },
+        "chaosWeakened": false
+      },
+      {
+        "kind": "attack",
+        "text": "3P ⚔ DAMAGE 17",
+        "damage": 17,
+        "bossBreak": false,
+        "breakDamage": 0,
+        "enemyId": "coop-entry-0-0",
+        "action": {
+          "playerId": 2,
+          "targetGrade": "B",
+          "targetValue": 16,
+          "targetId": "attack-B",
+          "expression": "2 × 8",
+          "actionType": "attack",
+          "baseDamage": 17,
+          "order": 1,
+          "status": "resolved",
+          "enemyId": "coop-entry-0-0",
+          "enemyName": "스켈레톤 병사",
+          "bossRelicBonus": 0,
+          "equipmentBonus": 0,
+          "illusionHit": false,
+          "breakDamage": 0,
+          "bossBreak": false
+        },
+        "chaosWeakened": false
+      },
+      {
+        "kind": "attack",
+        "text": "2P ⚔ DAMAGE 27",
+        "damage": 27,
+        "bossBreak": false,
+        "breakDamage": 0,
+        "enemyId": "coop-entry-0-0",
+        "action": {
+          "playerId": 1,
+          "targetGrade": "A",
+          "targetValue": 3,
+          "targetId": "attack-A",
+          "expression": "(2 + 8) − 7",
+          "actionType": "attack",
+          "baseDamage": 27,
+          "order": 2,
+          "status": "resolved",
+          "enemyId": "coop-entry-0-0",
+          "enemyName": "스켈레톤 병사",
+          "bossRelicBonus": 0,
+          "equipmentBonus": 0,
+          "illusionHit": false,
+          "breakDamage": 0,
+          "bossBreak": false
+        },
+        "chaosWeakened": false
+      },
+      {
+        "kind": "attack",
+        "text": "4P ⚔ DAMAGE 10",
+        "damage": 10,
+        "bossBreak": false,
+        "breakDamage": 0,
+        "enemyId": "coop-entry-0-0",
+        "action": {
+          "playerId": 3,
+          "targetGrade": "C",
+          "targetValue": 6,
+          "targetId": "attack-C",
+          "expression": "8 − 2",
+          "actionType": "attack",
+          "baseDamage": 10,
+          "order": 3,
+          "status": "resolved",
+          "enemyId": "coop-entry-0-0",
+          "enemyName": "스켈레톤 병사",
+          "bossRelicBonus": 0,
+          "equipmentBonus": 0,
+          "illusionHit": false,
+          "breakDamage": 0,
+          "bossBreak": false
+        },
+        "chaosWeakened": false
+      }
+    ],
+    "nodes": 0
+  },
+  "errors": []
+}

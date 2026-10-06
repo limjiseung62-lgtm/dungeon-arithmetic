@@ -1,0 +1,44 @@
+✔ 2 participants share one team HP and 60-second simultaneous turn (10.6913ms)
+✔ 3 participants share one team HP and 60-second simultaneous turn (3.5387ms)
+✔ 4 participants share one team HP and 60-second simultaneous turn (4.0573ms)
+✔ four independent input objects never overwrite one another (1.5997ms)
+✔ submit order 0→1→2→3 produces one early resolution and distinct claims (6.6165ms)
+✔ submit order 3→2→1→0 produces one early resolution and distinct claims (3.6262ms)
+✔ submit order 1→3→0→2 produces one early resolution and distinct claims (4.0145ms)
+✔ submit order 0→2→1→3 produces one early resolution and distinct claims (2.2406ms)
+✔ same target first valid submit wins while other player retains action (4.3982ms)
+✔ wrong equations do not change other players or claim targets (4.4364ms)
+✔ completed player locks and cannot submit a second action (1.4639ms)
+✔ three completed players plus timeout use only their results and restore fourth next turn (10.8776ms)
+✔ zero successful players still receive one counterattack and next turn (6.9621ms)
+✔ last submit and timeout race resolves once false (2.7882ms)
+✔ last submit and timeout race resolves once true (3.2349ms)
+✔ perfect team bonus uses actual primary damage and applies exactly once (3.1001ms)
+✔ defense participates in perfect cooperation without inventing damage (5.1072ms)
+✔ boss Defense S credits the student and blocks only the special (5.4882ms)
+✔ player-selected target is frozen at submission without blocking teammates (3.3771ms)
+✔ S scroll selection is reserved with its player and has no input-phase consumption (5.8914ms)
+✔ S can be conserved without a selection modal or consumed charge (2.6541ms)
+✔ C B A S contribute increasing integer pressure and BREAK adds no immediate damage (2.7338ms)
+✔ run buff attack is once per battle and new run starts empty (4.0786ms)
+✔ run buff defense is once per battle and new run starts empty (5.6776ms)
+✔ run buff time is once per battle and new run starts empty (5.3541ms)
+✔ time buff changes shared next input duration only (6.377ms)
+✔ short seal does not remove a player for an entire turn (10.019ms)
+✔ time theft normal cuts the current shared clock once (4.5407ms)
+✔ time theft hard cuts the current shared clock once (5.311ms)
+✔ Defense S prevents current-turn theft (2.2581ms)
+✔ CLASS never owns RPG gold gear mercenaries or legendary ledgers (33.5227ms)
+✔ legacy CLASS arithmetic remains exact outside opt-in coop context (0.8176ms)
+✔ difficulty changes enemy strength rather than arithmetic engine settings (6.6051ms)
+✔ native painted breath and king sword use real art instead of emoji (0.6395ms)
+✔ partial collaboration keeps the actual player identities in its presentation event (4.3663ms)
+✔ two-player run scales encounter HP independently of mathematical targets (4.909ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 728.6547

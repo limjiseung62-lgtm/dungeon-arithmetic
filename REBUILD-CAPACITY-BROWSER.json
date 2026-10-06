@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "fullSlots": 6,
+  "freedSlots": 5,
+  "recruited": "mirin",
+  "retainedAwakenedRelationship": true,
+  "reRecruitRestoresLevel3QuestAwakening": true,
+  "partyDepartureWarning": true,
+  "errors": []
+}

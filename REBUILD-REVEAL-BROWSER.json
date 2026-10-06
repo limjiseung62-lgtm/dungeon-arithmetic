@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "choice": "equip",
+      "weapon": "earth_shatterer",
+      "actualArithmeticKill": true,
+      "reload": true
+    },
+    {
+      "choice": "store",
+      "weapon": null,
+      "actualArithmeticKill": true,
+      "reload": true
+    }
+  ]
+}

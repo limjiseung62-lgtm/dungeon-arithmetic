@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "method": "Seven actual solo dungeon simulations with fixed seed and generated S arithmetic, standard fixture equipment and bounded scrolls; excludes one-time quest income and equipment sales",
+  "runs": [
+    {
+      "id": "old-prison",
+      "level": 1,
+      "turns": 10,
+      "hp": 85,
+      "gold": 175,
+      "runsForCheapestRecruit": {
+        "B": 3,
+        "A": 7,
+        "S": 15
+      }
+    },
+    {
+      "id": "cursed-forest",
+      "level": 4,
+      "turns": 20,
+      "hp": 86,
+      "gold": 411,
+      "runsForCheapestRecruit": {
+        "B": 2,
+        "A": 3,
+        "S": 7
+      }
+    },
+    {
+      "id": "burning-mine",
+      "level": 7,
+      "turns": 39,
+      "hp": 73,
+      "gold": 769,
+      "runsForCheapestRecruit": {
+        "B": 1,
+        "A": 2,
+        "S": 4
+      }
+    },
+    {
+      "id": "black-fortress",
+      "level": 9,
+      "turns": 69,
+      "hp": 86,
+      "gold": 1074,
+      "runsForCheapestRecruit": {
+        "B": 1,
+        "A": 2,
+        "S": 3
+      }
+    },
+    {
+      "id": "chaos-tower",
+      "level": 10,
+      "turns": 53,
+      "hp": 107,
+      "gold": 1162,
+      "runsForCheapestRecruit": {
+        "B": 1,
+        "A": 2,
+        "S": 3
+      }
+    },
+    {
+      "id": "sky-canyon",
+      "level": 11,
+      "turns": 58,
+      "hp": 74,
+      "gold": 1315,
+      "runsForCheapestRecruit": {
+        "B": 1,
+        "A": 1,
+        "S": 2
+      }
+    },
+    {
+      "id": "demon-castle",
+      "level": 12,
+      "turns": 72,
+      "hp": 73,
+      "gold": 1820,
+      "runsForCheapestRecruit": {
+        "B": 1,
+        "A": 1,
+        "S": 2
+      }
+    }
+  ],
+  "questGold": 2605,
+  "shopWeapons": [
+    {
+      "id": "old_sword",
+      "price": 100,
+      "attack": 2
+    },
+    {
+      "id": "steel_sword",
+      "price": 220,
+      "attack": 4
+    },
+    {
+      "id": "rogue_dagger",
+      "price": 380,
+      "attack": 3
+    },
+    {
+      "id": "sage_staff",
+      "price": 650,
+      "attack": 3
+    }
+  ],
+  "recruitPrices": [
+    {
+      "id": "rowen",
+      "grade": "B",
+      "price": 520
+    },
+    {
+      "id": "bram",
+      "grade": "B",
+      "price": 500
+    },
+    {
+      "id": "sera",
+      "grade": "A",
+      "price": 1200
+    },
+    {
+      "id": "luna",
+      "grade": "A",
+      "price": 1400
+    },
+    {
+      "id": "kain",
+      "grade": "S",
+      "price": 2600
+    },
+    {
+      "id": "elia",
+      "grade": "S",
+      "price": 2900
+    },
+    {
+      "id": "aiden",
+      "grade": "B",
+      "price": 560
+    },
+    {
+      "id": "nox",
+      "grade": "A",
+      "price": 1450
+    },
+    {
+      "id": "iris",
+      "grade": "B",
+      "price": 520
+    },
+    {
+      "id": "tobin",
+      "grade": "B",
+      "price": 600
+    },
+    {
+      "id": "rafa",
+      "grade": "A",
+      "price": 1300
+    },
+    {
+      "id": "boris",
+      "grade": "A",
+      "price": 1500
+    },
+    {
+      "id": "lyra",
+      "grade": "B",
+      "price": 550
+    },
+    {
+      "id": "rune",
+      "grade": "A",
+      "price": 1350
+    },
+    {
+      "id": "faye",
+      "grade": "B",
+      "price": 580
+    },
+    {
+      "id": "vero",
+      "grade": "A",
+      "price": 1400
+    },
+    {
+      "id": "sol",
+      "grade": "S",
+      "price": 2800
+    },
+    {
+      "id": "mirin",
+      "grade": "S",
+      "price": 2700
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "rows": [
+    {
+      "n": 2,
+      "difficulty": "easy",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 4,
+      "hp": 92,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "easy",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 19,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 10.1,
+        "at45s": 16.5
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "easy",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 4,
+      "hp": 105,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "easy",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 19,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 10.1,
+        "at45s": 16.5
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "normal",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 13,
+      "encounters": 4,
+      "hp": 14,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 6.9,
+        "at45s": 11.3
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "normal",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 23,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 12.3,
+        "at45s": 19.9
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "normal",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 13,
+      "encounters": 4,
+      "hp": 24,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 6.9,
+        "at45s": 11.3
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "normal",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 23,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 12.3,
+        "at45s": 19.9
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "hard",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 12,
+      "encounters": 3,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 6.4,
+        "at45s": 10.4
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "hard",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 27,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 14.4,
+        "at45s": 23.4
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "hard",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 13,
+      "encounters": 3,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 6.9,
+        "at45s": 11.3
+      }
+    },
+    {
+      "n": 2,
+      "difficulty": "hard",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 28,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 14.9,
+        "at45s": 24.3
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "easy",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 13,
+      "encounters": 4,
+      "hp": 9,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 6.9,
+        "at45s": 11.3
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "easy",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 17,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 9.1,
+        "at45s": 14.7
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "easy",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 12,
+      "encounters": 4,
+      "hp": 51,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 6.4,
+        "at45s": 10.4
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "easy",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 16,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 8.5,
+        "at45s": 13.9
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "normal",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "normal",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 20,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 10.7,
+        "at45s": 17.3
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "normal",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "normal",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 19,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 10.1,
+        "at45s": 16.5
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "hard",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "hard",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 23,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 12.3,
+        "at45s": 19.9
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "hard",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 3,
+      "difficulty": "hard",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 22,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 11.7,
+        "at45s": 19.1
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "easy",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 12,
+      "encounters": 3,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 6.4,
+        "at45s": 10.4
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "easy",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 16,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 8.5,
+        "at45s": 13.9
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "easy",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 13,
+      "encounters": 4,
+      "hp": 30,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 6.9,
+        "at45s": 11.3
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "easy",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 15,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 8,
+        "at45s": 13
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "normal",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "normal",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 20,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 10.7,
+        "at45s": 17.3
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "normal",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "normal",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 18,
+      "encounters": 4,
+      "hp": 180,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 9.6,
+        "at45s": 15.6
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "hard",
+      "route": "golem",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "hard",
+      "route": "golem",
+      "policy": "mixed",
+      "turns": 23,
+      "encounters": 4,
+      "hp": 123,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 12.3,
+        "at45s": 19.9
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "hard",
+      "route": "dragon",
+      "policy": "attack",
+      "turns": 10,
+      "encounters": 2,
+      "hp": 0,
+      "phase": "gameover",
+      "estimatedMinutes": {
+        "at25s": 5.3,
+        "at45s": 8.7
+      }
+    },
+    {
+      "n": 4,
+      "difficulty": "hard",
+      "route": "dragon",
+      "policy": "mixed",
+      "turns": 21,
+      "encounters": 4,
+      "hp": 155,
+      "phase": "clear",
+      "estimatedMinutes": {
+        "at25s": 11.2,
+        "at45s": 18.2
+      }
+    }
+  ]
+}

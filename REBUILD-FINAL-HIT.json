@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "visibleBossUntilContact": true,
+  "exactDamage": true,
+  "before": {
+    "damage": 8,
+    "hp": 55
+  },
+  "after": {
+    "damage": 63,
+    "hp": 0,
+    "roots": 0,
+    "run": {
+      "grade": "S",
+      "weaponId": "old_sword",
+      "weaponType": "SWORD",
+      "profile": null,
+      "elapsed": 1861.9000000953674,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.20000004768371582
+        },
+        {
+          "stage": "cutin",
+          "time": 181.5
+        },
+        {
+          "stage": "charge",
+          "time": 465.40000009536743
+        },
+        {
+          "stage": "trail",
+          "time": 727.9000000953674
+        },
+        {
+          "stage": "contact",
+          "time": 933.2000000476837
+        },
+        {
+          "stage": "reaction",
+          "time": 1046.9000000953674
+        },
+        {
+          "stage": "damage",
+          "time": 1329.2000000476837
+        },
+        {
+          "stage": "restore",
+          "time": 1680.4000000953674
+        }
+      ]
+    }
+  },
+  "cleanup": true
+}

@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -73,6 +73,26 @@
     "test:prototype:regression": "node tests/presentation-v35-regression.cjs",
     "test:prototype:invariants": "node tests/presentation-v35-invariants.mjs",
     "test:prototype:performance": "node tests/presentation-v35-performance.cjs",
-    "test:prototype:gate": "node tests/presentation-v35-gate.mjs"
+    "test:prototype:gate": "node tests/presentation-v35-gate.mjs",
+    "test:rebuild:motion": "node tests/rebuild-motion-browser.cjs",
+    "test:rebuild:legendary": "node tests/rebuild-legendary-browser.cjs",
+    "test:rebuild:reveal": "node tests/rebuild-reveal-browser.cjs",
+    "test:rebuild:guild": "node tests/rebuild-guild-browser.cjs",
+    "test:rebuild:capacity": "node tests/rebuild-capacity-browser.cjs",
+    "test:rebuild:smoke": "node tests/rebuild-rpg-smoke.cjs",
+    "test:rebuild:balance": "node tests/rebuild-party-balance.mjs",
+    "test:rebuild:economy": "node tests/rebuild-economy.mjs",
+    "test:rebuild:painted": "node tests/rebuild-painted-browser.cjs",
+    "test:rebuild:production": "node tests/rebuild-production-browser.cjs",
+    "test:rebuild:performance": "node tests/rebuild-legendary-performance.cjs",
+    "test:rebuild:controls": "node tests/rebuild-presentation-controls.cjs",
+    "test:rebuild:final-hit": "node tests/rebuild-final-hit-browser.cjs",
+    "test:rebuild:enemy": "node tests/rebuild-enemy-browser.cjs",
+    "test:coop": "node --test tests/class-coop.test.mjs",
+    "test:coop:browser": "node tests/class-coop-browser.cjs",
+    "test:coop:viewport": "node tests/class-coop-viewport.cjs",
+    "test:coop:run": "node tests/class-coop-run-browser.cjs",
+    "test:coop:balance": "node tests/class-coop-balance.mjs",
+    "test:coop:performance": "node tests/class-coop-performance.cjs"
   }
 }

@@ -1,0 +1,1 @@
+export const RecruitConfig=Object.freeze({candidateCount:5,partyLimit:3,initialSlots:6,midSlots:8,finalSlots:10,gradeWeights:{B:.55,A:.35,S:.1},sGuaranteedAfter:4,damageBudgetRatio:.65,refreshOn:['clear','defeat']});

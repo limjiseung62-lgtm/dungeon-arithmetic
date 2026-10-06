@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "files": 121,
+  "changed": [],
+  "baselineTextDifferences": [
+    "ART-DIRECTION.md",
+    "audio/AUDIO-PRODUCTION.md",
+    "audio/generate-v34.cjs"
+  ],
+  "reference": "Media byte comparison with v3.4; documentation/generator compared with pre-task HEAD after Git line-ending normalization"
+}

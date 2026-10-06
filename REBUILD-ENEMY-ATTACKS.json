@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "type": "orc",
+      "firstPerson": true,
+      "magicApproach": true,
+      "events": 1
+    },
+    {
+      "type": "flameGiant",
+      "firstPerson": true,
+      "magicApproach": false,
+      "events": 1
+    },
+    {
+      "type": "dragonGuardian",
+      "firstPerson": true,
+      "magicApproach": false,
+      "events": 1
+    },
+    {
+      "type": "dragonGuardian",
+      "special": "doomBreath",
+      "painted": true,
+      "method": "prepared intent; actual Defense C input and special presentation"
+    },
+    {
+      "type": "demonKing",
+      "special": "kingSword",
+      "painted": true,
+      "method": "prepared intent; actual Defense C input and special presentation"
+    }
+  ]
+}

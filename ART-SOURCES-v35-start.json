@@ -1,0 +1,22 @@
+[
+  {
+    "id": "coop",
+    "prompt": "Use case: stylized-concept. Asset: large key visual for the cooperative half of a Korean elementary-school arithmetic fantasy RPG start screen. Original premium painterly 2D anime fantasy illustration, richly painted textures, antique gold light and cool indigo shadows, cohesive with illustrated fantasy RPG characters. Wide landscape composition, not a UI mockup. A colossal moss-covered stone golem with glowing turquoise core towers over an ancient dungeon chamber, its head and massive arms dominate the upper and central image. Four distinct young adventurer silhouettes seen from behind across the foreground, fully clothed blue/gold fantasy armor and cloaks, together confronting the same golem. Four clearly separated converging powers: a gold sword slash, a teal magic lance, an emerald magical shield protecting the group, and a violet rune spell. Strong scale difference and cooperative intent; dynamic but legible shapes, not cluttered. Leave the lower quarter comparatively calm and dark for HTML Korean text overlay, with the scene continuing underneath; keep focal faces/core in the upper middle safe area. No printed words, letters, numbers, UI panels, buttons, border, logo, watermark, gore, photorealism, 3D rendering, chibi or pixel art. Children-safe sense of courage and shared adventure.",
+    "source": "C:/Users/사용자/.codex/generated_images/01a0ff8e-6c5c-7e51-8989-0b476ea54593/exec-8f04b4a0-3579-4db5-90da-f561d8cfdfbc.png",
+    "mode": "built-in image_gen",
+    "target": "assets/start-v35/coop.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 603090
+  },
+  {
+    "id": "rpg",
+    "prompt": "Use case: stylized-concept. Asset: large key visual for the solo RPG half of a Korean elementary-school arithmetic fantasy game start screen. Image 1 is a character identity/style reference only, not an edit target. Create a new full landscape scene in premium painterly 2D anime fantasy illustration with antique gold highlights and cool indigo shadows. Match the referenced hero's friendly young male face, tousled dark brown hair, blue hooded cloak, silver armor with gold details, ivory tunic, straight sword and blue shield with a gold star. The hero must be large in the foreground, occupying roughly half the canvas height or more, three-quarter view looking toward the viewer and distant adventure, face and upper torso in upper-middle safe area, no tiny floating full-body cutout. Behind him in the middle distance a warm lantern-lit fantasy village and small companion silhouettes; in the far distance a vast forest, fiery mountain and looming dark castle with a huge dragon silhouette. Show an expansive world and a personal journey of growth. Wide landscape composition, layered depth, striking coherent scene rather than a thumbnail on a card. Leave lower quarter comparatively calm/dark for HTML Korean text overlay while the painted scene continues underneath. No printed words, letters, numbers, interface, panels, button, border, logo, watermark, gore, photorealism, 3D rendering, chibi or pixel art.",
+    "source": "C:/Users/사용자/.codex/generated_images/01a0ff8e-6c5c-7e51-8989-0b476ea54593/exec-75fea083-adeb-41d6-bbb1-07ae5cb3d381.png",
+    "mode": "built-in image_gen",
+    "target": "assets/start-v35/rpg.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 489246
+  }
+]

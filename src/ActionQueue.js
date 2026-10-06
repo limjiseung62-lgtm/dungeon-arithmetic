@@ -8,12 +8,12 @@ export function reserveAction(state,target,expression,playerId){
   if(target.side==='attack'){
     add('attack',{baseDamage:attackDamage(state,target.grade,state.enemies?0:MonsterData[state.monsterIndex].armor)});
     if(target.grade==='S'){
-      const slot=state.scrolls[state.scrollIndex];
+      const selected=state.battleContext.coop?state.coopScrollChoices?.[playerId]:undefined,slot=state.battleContext.coop&&!selected?null:selected==='__skip'?null:selected?state.scrolls.find(v=>v.type===selected):state.scrolls[state.scrollIndex];
       if(slot){const reservations=state.actionQueue.filter(a=>a.actionType==='scroll'&&a.scrollSlot===slot).length;
         if(slot.uses>reservations)add('scroll',{scrollSlot:slot,scrollEffect:slot.type,...ScrollData[slot.type]});}
     }
   }else{
-    add('defense',{shieldGain:config.defense[target.grade]+(state.battleContext?.defenseGradeBonus?.(target.grade)||0)});
+    add('defense',{shieldGain:Math.round((config.defense[target.grade]+(state.battleContext?.defenseGradeBonus?.(target.grade)||0))*(state.battleContext.coop?1+(state.coopRun?.buffs.defense||0):1))});
     if(target.grade==='S'){state.blockReserved=true;add('block',{specialBlock:true});}
   }
 }

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "id": "rich",
+      "commits": 1,
+      "cleaned": true,
+      "limited": false,
+      "elapsed": 1883.2999999523163,
+      "failures": []
+    },
+    {
+      "id": "simple",
+      "commits": 1,
+      "cleaned": true,
+      "limited": true,
+      "elapsed": 911.7999999523163,
+      "failures": []
+    },
+    {
+      "id": "reduced",
+      "commits": 1,
+      "cleaned": true,
+      "limited": true,
+      "elapsed": 1223.4000000953674,
+      "failures": []
+    },
+    {
+      "id": "fast-repeat",
+      "commits": 2,
+      "repeatElapsed": 898.7999999523163,
+      "cleaned": true,
+      "limited": false,
+      "elapsed": 1138,
+      "failures": []
+    },
+    {
+      "id": "missing-textures",
+      "commits": 1,
+      "cleaned": true,
+      "limited": false,
+      "elapsed": 1869.4000000953674,
+      "failures": [
+        "slash",
+        "magic",
+        "material"
+      ]
+    },
+    {
+      "id": "skip",
+      "commits": 1,
+      "cleaned": true,
+      "limited": false,
+      "elapsed": 11.899999856948853,
+      "failures": []
+    },
+    {
+      "id": "cancel-before-contact",
+      "commits": 0,
+      "cleaned": true
+    },
+    {
+      "id": "cancel-after-contact",
+      "commits": 1,
+      "cleaned": true
+    }
+  ]
+}

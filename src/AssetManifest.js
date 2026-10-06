@@ -1,3 +1,5 @@
+import {ExtraMercenaryData} from './ExtraMercenaryData.js';
+import {LegendaryData} from './LegendaryData.js';
 // Presentation only. IDs never participate in save data or game rules.
 export const ArtManifest = {classroomReturn:{src:'assets/final-v34/classroomReturn.webp',alt:'교실로 돌아와 연필을 든 용사'},kingDown:{src:'assets/final-v34/kingDown.webp',alt:'마력을 잃고 무릎 꿇은 마왕'},demonKing:{src:'assets/final-v34/demonKing.webp',alt:'마왕 · 수와 연산의 법칙'},
  ...Object.fromEntries([['royalGuard','마왕의 근위병'],['abyssMage','심연 마도사'],['sealGuardian','봉인 수호자'],['castleInterior','마왕의 성 내부'],['sealChamber','봉인의 방'],['throneDoor','왕좌의 문']].map(([id,alt])=>[id,{src:'assets/castle-v33/'+id+'.webp',alt}])),
@@ -30,6 +32,7 @@ for(const [group,ids] of Object.entries(groups)) ids.forEach((id,index)=>{
 export function artHTML(id,{className='',label='',eager=false,full=false,deferFull=false}={}) {
  const a=ArtManifest[id];if(!a)return `<span class="art-fallback">${label||'모험의 유물'}</span>`;
  const alt=label||a.alt;
+ if(a.nativePortrait)return `<img role="img" class="environment-art relic-art ${className}" data-art="${id}" src="${a.src}" alt="${alt}" width="667" height="1000" loading="${eager?'eager':'lazy'}" decoding="async" style="object-fit:contain">`;
  if(a.columns){const n=a.columns,x=a.index%n,y=Math.floor(a.index/n);
  return `<svg class="relic-art ${className}" data-art="${id}" viewBox="0 0 100 100" role="img" aria-label="${alt}"><title>${alt}</title><svg viewBox="${x*100} ${y*100} 100 100" x="0" y="0" width="100" height="100" overflow="hidden"><image href="${full&&!deferFull?a.src:a.thumb}" ${deferFull?`data-full-src="${a.src}"`:''} width="${n*100}" height="${n*100}" preserveAspectRatio="none"/></svg></svg>`;}
  return `<img class="environment-art ${className}" role="img" data-art="${id}" src="${a.src}" alt="${alt}" width="${id==='hero'?667:1600}" height="${id==='hero'?1000:900}" loading="${eager?'eager':'lazy'}" decoding="async" draggable="false">`;
@@ -53,3 +56,6 @@ ArtManifest.kingAwakens={src:'assets/canyon-v32/kingAwakens.webp',alt:'왕좌에
 for(const id of ['royalGuard','abyssMage','sealGuardian'])AssetPaths[id]=ArtManifest[id].src;
 
 ArtManifest.demonKing.alt='마왕 · 수와 연산의 법칙';
+
+for(const m of ExtraMercenaryData)ArtManifest[m.id]={src:m.portraitAsset,alt:m.name+' · '+m.role};
+for(const item of LegendaryData)ArtManifest[item.id]={src:item.asset,thumb:item.asset,columns:1,index:0,nativePortrait:true,alt:item.name};

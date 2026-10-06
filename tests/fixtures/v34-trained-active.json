@@ -1,0 +1,240 @@
+{
+  "saveVersion": 4,
+  "character": {
+    "name": "기존 저장 용사",
+    "level": 1,
+    "exp": 0,
+    "maxHP": 100,
+    "attack": 10,
+    "defense": 5,
+    "hp": 100,
+    "gold": 3940,
+    "scrolls": [
+      {
+        "type": "fire",
+        "uses": 3
+      }
+    ],
+    "equipment": {
+      "weapon": null,
+      "armor": null,
+      "accessory": null
+    },
+    "equippedWeapon": null,
+    "equippedArmor": null,
+    "equippedAccessory": null,
+    "inventory": {
+      "items": [],
+      "materials": []
+    }
+  },
+  "progress": {
+    "storyCompleted": false,
+    "endingSeen": false,
+    "campaign": {
+      "actThreeSeen": false,
+      "eliaTruthSeen": false,
+      "throneReached": false,
+      "throneSceneSeen": false,
+      "openingSeen": false,
+      "fortressInvestigated": false,
+      "knightDefeated": false,
+      "sealSceneSeen": false,
+      "chaosOpeningSeen": false,
+      "towerInvestigated": false,
+      "mageDefeated": false,
+      "chaosSealSeen": false,
+      "dragonOpeningSeen": false,
+      "canyonInvestigated": false,
+      "dragonDefeated": false,
+      "dragonSealSeen": false,
+      "castleOpened": false,
+      "seals": {
+        "darkness": false,
+        "chaos": false,
+        "dragon": false
+      }
+    },
+    "mercenaryRelations": {
+      "rowen": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "bram": {
+        "affinityLevel": 2,
+        "affinityProgress": 3,
+        "completedDungeonsTogether": 1,
+        "dungeonCounts": {
+          "old-prison": 1
+        },
+        "personalQuestUnlocked": true,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1,
+          2
+        ],
+        "claimIds": [
+          "old-clear"
+        ]
+      },
+      "sera": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "luna": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "kain": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "elia": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      }
+    },
+    "collection": {
+      "monsters": [
+        "skeleton"
+      ],
+      "equipment": [],
+      "scrolls": [
+        "fire"
+      ],
+      "defeatCounts": {},
+      "killIds": [],
+      "bossLoot": {},
+      "claimedCollectionRewards": []
+    },
+    "story": {
+      "openingSeen": false,
+      "guildVisited": false
+    },
+    "activeQuests": [],
+    "completedQuests": [],
+    "rewardedQuests": [],
+    "questProgress": {},
+    "questEventIds": [
+      "collection:0:0:1",
+      "collection:1:0:1"
+    ],
+    "activeMercenary": "rowen",
+    "mercenaryContractState": {
+      "id": "1791288136409-2t6cyqva9vw",
+      "purchaseToken": "rowen",
+      "status": "active",
+      "runId": "a47ba583-653d-4be8-b026-1d5d240df92a",
+      "counts": {},
+      "eventIds": [],
+      "successfulEncounters": []
+    },
+    "mercenaryStats": {
+      "hires": 1,
+      "supports": 0,
+      "ended": 0
+    },
+    "unlockedDungeons": [
+      "old-prison"
+    ],
+    "dungeonClearHistory": [],
+    "lootHistory": [],
+    "clearedDungeons": [],
+    "run": {
+      "id": "a47ba583-653d-4be8-b026-1d5d240df92a",
+      "dungeonId": "old-prison",
+      "nextEncounter": 0,
+      "status": "active",
+      "completed": [],
+      "clearBonusGranted": false,
+      "pendingLoot": null,
+      "stats": {
+        "turns": 1,
+        "attack": {
+          "S": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "defense": {
+          "S": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "blocks": 0,
+        "scrolls": 0
+      },
+      "poison": 0,
+      "bossCheckpoint": null
+    },
+    "completedRuns": 0,
+    "stats": {
+      "turns": 0,
+      "attack": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "defense": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "blocks": 0,
+      "scrolls": 0
+    }
+  },
+  "meta": {
+    "createdAt": "2026-10-06T12:02:16.406Z",
+    "updatedAt": "2026-10-06T12:02:16.414Z"
+  }
+}

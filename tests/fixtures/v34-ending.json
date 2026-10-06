@@ -1,0 +1,376 @@
+{
+  "saveVersion": 4,
+  "character": {
+    "name": "혼돈 관찰자",
+    "level": 12,
+    "exp": 360,
+    "maxHP": 155,
+    "attack": 32,
+    "defense": 16,
+    "hp": 155,
+    "gold": 4380,
+    "scrolls": [
+      {
+        "type": "heal",
+        "uses": 3
+      },
+      {
+        "type": "shield",
+        "uses": 3
+      },
+      {
+        "type": "fire",
+        "uses": 6
+      },
+      {
+        "type": "time",
+        "uses": 2
+      }
+    ],
+    "equipment": {
+      "weapon": null,
+      "armor": null,
+      "accessory": null
+    },
+    "equippedWeapon": null,
+    "equippedArmor": null,
+    "equippedAccessory": null,
+    "inventory": {
+      "items": [],
+      "materials": []
+    }
+  },
+  "progress": {
+    "storyCompleted": true,
+    "endingSeen": true,
+    "campaign": {
+      "actThreeSeen": true,
+      "eliaTruthSeen": true,
+      "throneReached": true,
+      "throneSceneSeen": true,
+      "openingSeen": true,
+      "fortressInvestigated": true,
+      "knightDefeated": true,
+      "sealSceneSeen": true,
+      "chaosOpeningSeen": true,
+      "towerInvestigated": true,
+      "mageDefeated": true,
+      "chaosSealSeen": true,
+      "dragonOpeningSeen": true,
+      "canyonInvestigated": true,
+      "dragonDefeated": true,
+      "dragonSealSeen": true,
+      "castleOpened": true,
+      "seals": {
+        "darkness": true,
+        "chaos": true,
+        "dragon": true
+      }
+    },
+    "mercenaryRelations": {
+      "rowen": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "bram": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "sera": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "luna": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "kain": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "elia": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      }
+    },
+    "collection": {
+      "monsters": [
+        "demonKing"
+      ],
+      "equipment": [],
+      "scrolls": [
+        "fire",
+        "heal",
+        "shield",
+        "time"
+      ],
+      "defeatCounts": {
+        "demonKing": 1
+      },
+      "killIds": [
+        "4bdcc368-d641-475a-96ad-ad119db6805a:0:kill:final-king-0-0"
+      ],
+      "bossLoot": {},
+      "claimedCollectionRewards": []
+    },
+    "story": {
+      "openingSeen": true,
+      "guildVisited": true,
+      "mineInvestigated": true
+    },
+    "activeQuests": [],
+    "completedQuests": [],
+    "rewardedQuests": [
+      "forest-road"
+    ],
+    "questProgress": {
+      "forest-road": {
+        "count": 1,
+        "scrolls": []
+      }
+    },
+    "questEventIds": [
+      "collection:0:0:1",
+      "collection:0:0:4",
+      "collection:1:0:4",
+      "4bdcc368-d641-475a-96ad-ad119db6805a:0:kill:final-king-0-0",
+      "4bdcc368-d641-475a-96ad-ad119db6805a:clear"
+    ],
+    "activeMercenary": "kain",
+    "mercenaryContractState": {
+      "id": "1791290665186-j6egssbtpbb",
+      "purchaseToken": "kain",
+      "status": "active",
+      "runId": "4bdcc368-d641-475a-96ad-ad119db6805a",
+      "counts": {},
+      "eventIds": [],
+      "successfulEncounters": []
+    },
+    "mercenaryStats": {
+      "hires": 1,
+      "supports": 0,
+      "ended": 0
+    },
+    "unlockedDungeons": [
+      "old-prison",
+      "cursed-forest",
+      "burning-mine",
+      "black-fortress",
+      "chaos-tower",
+      "sky-canyon",
+      "demon-castle",
+      "demon-throne"
+    ],
+    "dungeonClearHistory": [
+      {
+        "id": "4bdcc368-d641-475a-96ad-ad119db6805a:clear",
+        "dungeonId": "demon-throne",
+        "hpRatio": 1,
+        "defeated": false,
+        "mercenaryId": "kain"
+      }
+    ],
+    "lootHistory": [
+      {
+        "id": "4bdcc368-d641-475a-96ad-ad119db6805a:0",
+        "dungeonId": "demon-throne",
+        "loot": {
+          "gold": 180,
+          "scrolls": [],
+          "equipment": []
+        }
+      }
+    ],
+    "clearedDungeons": [
+      "old-prison",
+      "cursed-forest",
+      "burning-mine",
+      "black-fortress",
+      "chaos-tower",
+      "sky-canyon",
+      "demon-castle",
+      "demon-throne"
+    ],
+    "run": {
+      "id": "4bdcc368-d641-475a-96ad-ad119db6805a",
+      "dungeonId": "demon-throne",
+      "nextEncounter": 1,
+      "status": "clear",
+      "completed": [
+        0
+      ],
+      "clearBonusGranted": true,
+      "pendingLoot": {
+        "encounterIndex": 0,
+        "candidates": [
+          "fire",
+          "time",
+          "meteor"
+        ],
+        "chosen": true,
+        "type": "fire",
+        "receipt": {
+          "affinity": null,
+          "personalQuestId": null,
+          "reward": {
+            "exp": 180,
+            "gold": 180
+          },
+          "bonus": {
+            "exp": 180,
+            "gold": 250
+          },
+          "levelUp": {
+            "from": 12,
+            "to": 12,
+            "maxHP": 0,
+            "attack": 0,
+            "defense": 0
+          },
+          "final": true,
+          "drops": {
+            "gold": 180,
+            "scrolls": [],
+            "equipment": []
+          },
+          "uniqueItems": [],
+          "victoryHeal": 0,
+          "enemyNames": [
+            "마왕"
+          ]
+        }
+      },
+      "stats": {
+        "turns": 1,
+        "attack": {
+          "S": 1,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "defense": {
+          "S": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "blocks": 0,
+        "scrolls": 0
+      },
+      "poison": 0,
+      "bossCheckpoint": null,
+      "finalBreaks": 0
+    },
+    "completedRuns": 0,
+    "stats": {
+      "turns": 0,
+      "attack": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "defense": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "blocks": 0,
+      "scrolls": 0
+    },
+    "endingCompanion": "kain",
+    "finalRecord": {
+      "level": 12,
+      "clears": 1,
+      "collection": {
+        "counts": {
+          "monsters": 1,
+          "equipment": 0,
+          "scrolls": 4,
+          "bossLoot": 0
+        },
+        "totals": {
+          "monsters": 34,
+          "equipment": 18,
+          "scrolls": 9,
+          "bossLoot": 6
+        },
+        "found": 5,
+        "total": 67,
+        "percent": 7
+      },
+      "attackS": 1,
+      "defenseS": 0,
+      "quests": 1,
+      "bosses": 1,
+      "companions": [
+        {
+          "id": "kain",
+          "name": "카인",
+          "runs": 1
+        }
+      ],
+      "highestAffinity": 1,
+      "finalBreaks": 0
+    }
+  },
+  "meta": {
+    "createdAt": "2026-10-06T12:44:25.179Z",
+    "updatedAt": "2026-10-06T12:44:25.195Z"
+  }
+}

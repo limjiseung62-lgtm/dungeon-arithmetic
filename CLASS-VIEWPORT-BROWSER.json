@@ -1,0 +1,182 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "scene": "start",
+      "w": 1920,
+      "h": 1080,
+      "overflow": false
+    },
+    {
+      "scene": "start",
+      "w": 1366,
+      "h": 768,
+      "overflow": false
+    },
+    {
+      "scene": "start",
+      "w": 1024,
+      "h": 768,
+      "overflow": false
+    },
+    {
+      "scene": "start",
+      "w": 768,
+      "h": 1024,
+      "overflow": false
+    },
+    {
+      "layout": "four-horizontal",
+      "pads": [
+        {
+          "x": 12,
+          "y": 779,
+          "w": 462,
+          "h": 270,
+          "bottom": 1049
+        },
+        {
+          "x": 490,
+          "y": 779,
+          "w": 462,
+          "h": 270,
+          "bottom": 1049
+        },
+        {
+          "x": 968,
+          "y": 779,
+          "w": 462,
+          "h": 270,
+          "bottom": 1049
+        },
+        {
+          "x": 1446,
+          "y": 779,
+          "w": 462,
+          "h": 270,
+          "bottom": 1049
+        }
+      ],
+      "stage": 574
+    },
+    {
+      "layout": "two-by-two",
+      "pads": [
+        {
+          "x": 12,
+          "y": 509,
+          "w": 462,
+          "h": 540,
+          "bottom": 1049
+        },
+        {
+          "x": 490,
+          "y": 509,
+          "w": 462,
+          "h": 540,
+          "bottom": 1049
+        },
+        {
+          "x": 968,
+          "y": 509,
+          "w": 462,
+          "h": 540,
+          "bottom": 1049
+        },
+        {
+          "x": 1446,
+          "y": 509,
+          "w": 462,
+          "h": 540,
+          "bottom": 1049
+        }
+      ],
+      "stage": 304
+    },
+    {
+      "scene": "class",
+      "w": 1366,
+      "h": 768,
+      "pads": [
+        {
+          "x": 12,
+          "y": 467,
+          "w": 323.5,
+          "h": 270,
+          "bottom": 737
+        },
+        {
+          "x": 351.5,
+          "y": 467,
+          "w": 323.5,
+          "h": 270,
+          "bottom": 737
+        },
+        {
+          "x": 691,
+          "y": 467,
+          "w": 323.5,
+          "h": 270,
+          "bottom": 737
+        },
+        {
+          "x": 1030.5,
+          "y": 467,
+          "w": 323.5,
+          "h": 270,
+          "bottom": 737
+        }
+      ],
+      "stage": 262
+    },
+    {
+      "scene": "class",
+      "w": 1024,
+      "h": 768,
+      "pads": [
+        {
+          "x": 12,
+          "y": 467,
+          "w": 244.75,
+          "h": 270,
+          "bottom": 737
+        },
+        {
+          "x": 263.75,
+          "y": 467,
+          "w": 244.75,
+          "h": 270,
+          "bottom": 737
+        },
+        {
+          "x": 515.5,
+          "y": 467,
+          "w": 244.75,
+          "h": 270,
+          "bottom": 737
+        },
+        {
+          "x": 767.25,
+          "y": 467,
+          "w": 244.75,
+          "h": 270,
+          "bottom": 737
+        }
+      ],
+      "stage": 262
+    },
+    {
+      "flow": "two true concurrent touch contacts, independent pads, no compatibility-click duplication",
+      "passed": true
+    },
+    {
+      "flow": "three successful plus timeout, missing student returns",
+      "passed": true
+    },
+    {
+      "flow": "zero completed timeout returns",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

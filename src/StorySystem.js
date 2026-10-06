@@ -1,3 +1,4 @@
+import {finalStats} from './EquipmentSystem.js';
 import {campaign} from './ActTwoSystem.js';
 import {RPGConfig,nextLevelExp} from './RPGConfig.js';
 import {QuestData} from './QuestData.js';
@@ -57,5 +58,5 @@ export function nextGoal(data){
  return {title:main.name,text:main.goal,action:main.action,label:'다음 모험 준비하기'};
 }
 export function growthGoal(c){const required=nextLevelExp(c.level);return {max:c.level>=RPGConfig.maxLevel,remaining:Math.max(0,required-c.exp),next:c.level+1,growth:RPGConfig.growth};}
-export function equipmentComparison(c,item){const current=equipmentById(c.equipment?.[item.type]);return {current,deltas:Object.fromEntries(['attack','maxHP','defense'].map(k=>[k,(item.statModifiers[k]??0)-(current?.statModifiers[k]??0)]))};}
-export function effectText(item){const e=item.specialEffects;if(e.effectType==='CHAOS_REVEAL')return '목표 숫자 일시 가림 지속 −2초 · 주사위와 정답 판정 유지';if(e.effectType==='BOSS_BREAK_BONUS')return '보스 BREAK 중 공격 A/S 피해 +'+e.value;if(e.effectType==='VICTORY_HEAL')return '전투 승리 후 HP +'+e.value+' · 최대 HP까지';if(!e.effectType)return '조건 없이 기본 능력치에 적용';if(e.effectType==='SCROLL_POWER_BONUS')return `${e.trigger} 등급 공격 후 두루마리 피해·회복·방어막 +${e.value} · 운석은 주 대상에 적용`;return `${Array.isArray(e.trigger)?e.trigger.join('/') : e.trigger} 등급 ${e.effectType==='ATTACK_GRADE_BONUS'?'공격 성공 시 추가 피해':'방어 성공 시 방어막 추가'} +${e.value}`;}
+export function equipmentComparison(c,item){const current=equipmentById(c.equipment?.[item.type]);const before=finalStats(c),copy=structuredClone(c);copy.equipment[item.type]=item.id;const after=finalStats(copy);return {current,before,after,deltas:Object.fromEntries(['attack','maxHP','defense'].map(k=>[k,(item.statModifiers[k]??0)-(current?.statModifiers[k]??0)]))};}
+export function effectText(item){const e=item.specialEffects;if(Array.isArray(e))return e.map(value=>effectText({...item,specialEffects:value})).join(' · ');if(e.effectType==='CHAOS_REVEAL')return '목표 숫자 일시 가림 지속 −2초 · 주사위와 정답 판정 유지';if(e.effectType==='BOSS_BREAK_BONUS')return '보스 BREAK 중 공격 A/S 피해 +'+e.value;if(e.effectType==='VICTORY_HEAL')return '전투 승리 후 HP +'+e.value+' · 최대 HP까지';if(!e.effectType)return '조건 없이 기본 능력치에 적용';if(e.effectType==='SCROLL_POWER_BONUS')return `${e.trigger} 등급 공격 후 두루마리 피해·회복·방어막 +${e.value} · 운석은 주 대상에 적용`;return `${Array.isArray(e.trigger)?e.trigger.join('/') : e.trigger} 등급 ${e.effectType==='ATTACK_GRADE_BONUS'?'공격 성공 시 추가 피해':'방어 성공 시 방어막 추가'} +${e.value}`;}

@@ -1,49 +1,37 @@
+import {ScrollData} from './ScrollData.js';
 import {skillValue,skillExtras,emergencySupport} from './MercenarySkillResolver.js';
-import {bossDamage} from './BossBattleSystem.js';
+import {bossDamage,pressureBoss,bossData} from './BossBattleSystem.js';
 import {mineAttackDamage} from './HeatSystem.js';
 import {mercenaryById} from './MercenaryData.js';
 import {heroMaxHP} from './BattleContext.js';
 import {syncEncounter,livingEnemies} from './EncounterData.js';
-export const blankMercenaries=()=>({activeMercenary:null,mercenaryContractState:null,mercenaryStats:{hires:0,supports:0,ended:0}});
-export function hireMercenary(data,id,{confirm=false,token=id}={}){
- const p=data.progress,m=mercenaryById(id);
- if(!m||p.run)return {ok:false,message:'던전을 마친 뒤 고용할 수 있어요.'};
- if(p.mercenaryContractState?.purchaseToken===token||p.activeMercenary===id)return {ok:false,message:'이미 이 용병과 계약 중입니다.'};
- if(data.character.gold<m.hireCost)return {ok:false,message:'골드가 부족합니다.'};
- if(p.activeMercenary&&!confirm)return {ok:false,needsConfirmation:true,message:`현재 ${mercenaryById(p.activeMercenary).name}과 계약 중입니다. 환불 없이 계약을 해제하고 ${m.name}을 고용할까요?`};
- data.character.gold-=m.hireCost;p.activeMercenary=id;
- p.mercenaryContractState={id:`${Date.now()}-${Math.random().toString(36).slice(2)}`,purchaseToken:token,status:'waiting',runId:null,counts:{},eventIds:[],successfulEncounters:[]};
- p.mercenaryStats.hires++;return {ok:true,message:`${m.name}과 던전 1회 계약! 고용비 ${m.hireCost}G를 지불했습니다.`};
-}
-export function bindContract(p,run){const c=p.mercenaryContractState;if(c&&p.activeMercenary&&c.status==='waiting'){c.status='active';c.runId=run.id;}}
-export function endContract(p,run){const c=p.mercenaryContractState;if(!c||c.status!=='active'||c.runId!==run.id)return false;p.activeMercenary=null;p.mercenaryContractState=null;p.mercenaryStats.ended++;return true;}
+import {blankRoster,recruitMercenary,syncPartyAlias} from './MercenaryRoster.js';
+import {RecruitConfig as config} from './RecruitConfig.js';
+export const blankMercenaries=()=>({...blankRoster(),activeMercenary:null,mercenaryContractState:null,mercenaryStats:{hires:0,supports:0,ended:0}});
+// The player-facing candidate transaction checks the five persisted guild offers.
+export const hireMercenary=(data,id,options={})=>recruitMercenary(data,id,{candidateOnly:false,token:options.token??null});
+export function bindContract(p,run){run.partyState??={members:[...p.activeParty],counts:Object.fromEntries(p.activeParty.map(id=>[id,{}])),eventIds:[],successfulEncounters:[]};syncPartyAlias(p);}
+export function endContract(p,run){if(!run.partyState)return false;p.mercenaryStats.ended++;p.mercenaryContractState=p.activeParty.length?{id:'owned-party',purchaseToken:'permanent-party',status:'waiting',runId:null,counts:{},eventIds:[],successfulEncounters:[]}:null;return true;}
 export class MercenarySystem{
- constructor(data,run){this.data=data;this.run=run;}
- get member(){const p=this.data.progress,c=p.mercenaryContractState;return c?.status==='active'&&c.runId===this.run.id?mercenaryById(p.activeMercenary):null;}
- eligible(event,state){
-  const m=this.member,c=this.data.progress.mercenaryContractState;if(!m||state.battleContext?.mode!=='rpg')return false;
-  const grade=event.action?.targetGrade,kind=event.kind;
-  if(kind==='victory')return m.trigger==='victory'&&c.successfulEncounters.includes(state.encounterIndex)&&!this.run.completed.includes(state.encounterIndex);
-  if(m.trigger==='dual')return ['attack','defense'].includes(kind)&&grade==='S';
-  if(kind!==m.trigger)return false;
-  if(kind==='magic')return grade==='S'&&!!event.type;
-  return m.grades.includes(grade);
- }
- identity(event,state){return `${this.run.id}:${state.encounterIndex}:mercenary:${event.kind==='victory'?'win':state.turn+':'+event.kind+':'+(event.action?.playerId??0)}`;}
- available(event,state){const king=state.enemies?.find(e=>e.type==='demonKing');if(king&&king.boss.phase<3&&this.member&&(this.data.progress.mercenaryContractState.counts[state.encounterIndex]||0)>=this.member.maxPerEncounter-1)return false;const c=this.data.progress.mercenaryContractState,m=this.member;return this.eligible(event,state)&&!c.eventIds.includes(this.identity(event,state))&&(c.counts[state.encounterIndex]||0)<m.maxPerEncounter;}
- scrollModifier(action,state){return this.available({kind:'magic',type:action.scrollEffect,action},state)?skillValue(this.data,this.member,{kind:'magic',type:action.scrollEffect,action},state):0;}
- support(event,state){
-  const c=this.data.progress.mercenaryContractState,m=this.member;if(!m||state.battleContext?.mode!=='rpg')return null;
-  if(['attack','defense'].includes(event.kind)&&!c.successfulEncounters.includes(state.encounterIndex))c.successfulEncounters.push(state.encounterIndex);
-  const emergency=emergencySupport(this.data,this.run,m,event,state);if(emergency)return emergency;
-  if(!this.available(event,state))return null;
-  let effect=m.effect==='adaptive'?(event.kind==='defense'?'shield':'damage'):m.effect,value=skillValue(this.data,m,event,state),actual=0,enemyId=null;
-  if(effect==='damage'){const enemy=livingEnemies(state).find(e=>e.id===event.enemyId)||livingEnemies(state)[0];if(!enemy)return null;actual=Math.min(enemy.hp,bossDamage(enemy,mineAttackDamage(state,enemy,null,value).amount));enemy.hp-=actual;enemyId=enemy.id;syncEncounter(state);state.totalDamage+=actual;}
-  else if(effect==='shield'){actual=value;state.hero.shield+=actual;}
-  else if(effect==='heal'){actual=Math.min(value,heroMaxHP(state)-state.hero.hp);state.hero.hp+=actual;}
-  else if(effect==='scroll'){if(!event.mercenaryBoost)return null;actual=event.mercenaryBoost;}
-  const id=this.identity(event,state);c.eventIds.push(id);c.counts[state.encounterIndex]=(c.counts[state.encounterIndex]||0)+1;this.data.progress.mercenaryStats.supports++;
-  const result={id,kind:'mercenary',mercenaryId:m.id,grade:m.grade,effect,value:actual,enemyId,compact:c.counts[state.encounterIndex]>1,text:`${m.name} 지원! ${effect==='damage'?'추가 피해':effect==='shield'?'방어막':effect==='heal'?'HP 회복':'두루마리 강화'} +${actual}`};
-  return skillExtras(this.data,this.run,m,event,state,result);
+ constructor(data,run){this.data=data;this.run=run;this.magicContributions=new Map();}
+ get members(){return (this.run.partyState?.members||[]).filter(id=>this.data.progress.ownedMercenaries.includes(id)).map(mercenaryById).filter(Boolean);}
+ get member(){return this.members[0]||null;}
+ identity(event,state,m=this.member){return `${this.run.id}:${state.encounterIndex}:mercenary:${m?.id}:${event.kind==='victory'?'win':state.turn+':'+event.kind+':'+(event.action?.playerId??0)}`;}
+ eligible(event,state,m=this.member){if(!m||state.battleContext?.mode!=='rpg')return false;const grade=event.action?.targetGrade,kind=event.kind,l=this.run.partyState;if(kind==='victory')return m.trigger==='victory'&&l.successfulEncounters.includes(state.encounterIndex)&&!this.run.completed.includes(state.encounterIndex);if(m.trigger==='dual')return ['attack','defense'].includes(kind)&&grade==='S';if(kind!==m.trigger)return false;if(kind==='magic')return grade==='S'&&!!event.type;if(!m.grades.includes(grade))return false;if(m.effect==='pressure')return livingEnemies(state).some(e=>{const d=bossData(e),b=e.boss;return d&&b&&!b.breakTurns&&b.phase>=(d.activationPhase||1)&&(d.pressureWindow!=='seed'||b.seedTurns)&&(e.type!=='dragonGuardian'||b.stance==='FLYING')&&(d.pressure.B||0)>0;});if(m.effect==='bossDamage')return livingEnemies(state).some(e=>e.boss);if(m.effect==='cleanseHeal')return state.hero.poison>0||state.hero.hp<heroMaxHP(state);if(m.effect==='multi')return livingEnemies(state).some(e=>e.id!==event.enemyId);if(m.effect==='longDamage')return state.enemyTurn>=3;if(m.effect==='crisisGuard')return state.hero.hp<=heroMaxHP(state)*.35;return true;}
+ available(event,state,m=this.member){const l=this.run.partyState;if(!l||!this.eligible(event,state,m))return false;const count=l.counts[m.id]?.[state.encounterIndex]||0,king=state.enemies?.find(e=>e.type==='demonKing');if(king&&king.boss.phase<3&&count>=m.maxPerEncounter-1)return false;return !l.eventIds.includes(this.identity(event,state,m))&&count<m.maxPerEncounter;}
+ value(m,event,state){const raw=skillValue(this.data,m,event,state),r=this.data.progress.mercenaryRelations[m.id];return !m.isCoreMercenary||r.awakenedSkillUnlocked?raw:Math.max(1,m.supportValue+(r.affinityLevel>=2?1:0));}
+ scrollModifier(action,state){const event={kind:'magic',type:action.scrollEffect,action},wanted=this.members.filter(m=>this.available(event,state,m)).map(m=>({id:m.id,value:this.value(m,event,state)})),total=wanted.reduce((n,v)=>n+v.value,0),budget=Math.min(6,total,ScrollData[action.scrollEffect]?.heal?Math.max(0,heroMaxHP(state)-state.hero.hp-ScrollData[action.scrollEffect].heal-(state.battleContext?.scrollPowerBonus?.('S')||0)):6),contributions=wanted.map(v=>({id:v.id,value:total?Math.floor(v.value/total*budget):0,fraction:total?v.value/total*budget%1:0}));let remaining=budget-contributions.reduce((n,v)=>n+v.value,0);for(const v of [...contributions].sort((a,b)=>b.fraction-a.fraction)){if(remaining--<=0)break;v.value++;}this.magicContributions.set(this.identity(event,state,{id:'scroll'}),contributions.filter(v=>v.value>0));return budget;}
+ damageAllowances(event,state,budget){const wanted=this.members.filter(m=>this.available(event,state,m)&&['damage','adaptive','bossDamage','longDamage','multi'].includes(m.effect)).map(m=>{const enemy=m.effect==='multi'?livingEnemies(state).find(e=>e.id!==event.enemyId):m.effect==='bossDamage'?livingEnemies(state).find(e=>e.boss):livingEnemies(state).find(e=>e.id===event.enemyId)||livingEnemies(state)[0];if(!enemy)return {id:m.id,wanted:0};let raw=this.value(m,event,state);if(m.effect==='bossDamage'&&enemy.boss?.phase>=2)raw+=2;const secondary=m.id==='rowen'&&this.data.progress.mercenaryRelations.rowen.awakenedSkillUnlocked&&livingEnemies(state).some(e=>e.id!==enemy.id)?3:0;return {id:m.id,wanted:Math.min(enemy.hp,bossDamage(enemy,mineAttackDamage(state,enemy,null,raw).amount))+secondary};});const total=wanted.reduce((sum,x)=>sum+x.wanted,0),out=new Map();if(total<=budget){for(const x of wanted)out.set(x.id,x.wanted);return out;}const fractions=wanted.map(x=>{const exact=x.wanted/total*budget,value=Math.floor(exact);out.set(x.id,value);return {id:x.id,fraction:exact-value};}).sort((a,b)=>b.fraction-a.fraction);let left=budget-[...out.values()].reduce((a,b)=>a+b,0);for(const x of fractions){if(left--<=0)break;out.set(x.id,out.get(x.id)+1);}return out;}
+ support(event,state){const l=this.run.partyState;if(!l||state.battleContext?.mode!=='rpg')return [];if(['attack','defense'].includes(event.kind)&&!l.successfulEncounters.includes(state.encounterIndex))l.successfulEncounters.push(state.encounterIndex);const results=[];let budget=event.kind==='attack'?Math.floor((event.damage||0)*config.damageBudgetRatio):0;const allowances=event.kind==='attack'?this.damageAllowances(event,state,budget):new Map();
+ for(const m of this.members){const emergency=emergencySupport(this.data,this.run,m,event,state,l);if(emergency){emergency.awakened=true;results.push(emergency);}if(!this.available(event,state,m))continue;let memberBudget=allowances.get(m.id)??budget,reserveSecondary=m.id==='rowen'&&this.data.progress.mercenaryRelations.rowen.awakenedSkillUnlocked&&livingEnemies(state).some(e=>e.id!==event.enemyId)?Math.min(3,Math.floor(memberBudget*.25)):0;let effect=m.effect==='adaptive'?(event.kind==='defense'?'shield':'damage'):m.effect,value=this.value(m,event,state),actual=0,enemyId=null,extra={};let enemy=livingEnemies(state).find(e=>e.id===event.enemyId)||livingEnemies(state)[0];
+ if(['damage','bossDamage','longDamage','multi'].includes(effect)){if(effect==='multi')enemy=livingEnemies(state).find(e=>e.id!==event.enemyId);if(effect==='bossDamage')enemy=livingEnemies(state).find(e=>e.boss);if(!enemy||budget<=0)continue;if(effect==='bossDamage'&&enemy.boss?.phase>=2)value+=2;actual=Math.min(enemy.hp,budget,Math.max(0,memberBudget-reserveSecondary),bossDamage(enemy,mineAttackDamage(state,enemy,null,value).amount));if(!actual)continue;enemy.hp-=actual;enemyId=enemy.id;state.totalDamage+=actual;budget-=actual;syncEncounter(state);effect='damage';}
+ else if(['shield','runeGuard','crisisGuard'].includes(effect)){actual=m.effect==='adaptive'&&!this.data.progress.mercenaryRelations[m.id].awakenedSkillUnlocked?m.supportValue+(this.data.progress.mercenaryRelations[m.id].affinityLevel>=2?1:0):value;state.hero.shield+=actual;if(effect==='runeGuard'){state.hero.burn=0;extra.cleansed='burn';}effect='shield';}
+ else if(effect==='heal'||effect==='cleanseHeal'){actual=Math.min(value,heroMaxHP(state)-state.hero.hp);state.hero.hp+=actual;if(effect==='cleanseHeal'){state.hero.poison=0;extra.cleansed='poison';}effect='heal';}
+ else if(['scroll','scrollGuard','cooling'].includes(effect)){const contribution=this.magicContributions.get(this.identity(event,state,{id:'scroll'}))?.find(v=>v.id===m.id);if(!event.mercenaryBoost||!contribution)continue;actual=contribution.value;if(effect==='scrollGuard'){state.hero.shield+=2;extra.shield=2;}if(effect==='cooling'&&['burning-mine','demon-castle'].includes(state.battleContext.dungeonId)){state.heatPoints=Math.max(0,(state.heatPoints||0)-1);extra.heat=-1;}effect='scroll';}
+ else if(effect==='pressure'){const boss=livingEnemies(state).find(e=>e.boss);if(!boss)continue;const d=bossData(boss),key=boss.type==='treeGuardian'?'seedPressure':'pressure';for(let i=0;i<value;i++){if(boss.boss.breakTurns)break;actual+=Math.min(d.pressure.B||0,d.limit-boss.boss[key]);if(pressureBoss(boss,'B'))event.bossBreak=true;}enemyId=boss.id;}
+ else if(effect==='time'){actual=Math.min(value,6-(l.nextTimeBonus||0));l.nextTimeBonus=(l.nextTimeBonus||0)+actual;}
+ else continue;
+ const id=this.identity(event,state,m);l.eventIds.push(id);l.counts[m.id]??={};l.counts[m.id][state.encounterIndex]=(l.counts[m.id][state.encounterIndex]||0)+1;this.data.progress.mercenaryStats.supports++;const awakened=!!this.data.progress.mercenaryRelations[m.id].awakenedSkillUnlocked,result={id,kind:'mercenary',mercenaryId:m.id,grade:m.grade,effect,value:actual,enemyId,...extra,awakened,compact:!awakened,text:`${m.name} 지원! ${effect==='damage'?'추가 피해':effect==='shield'?'방어막':effect==='heal'?'HP 회복':effect==='pressure'?'BREAK 압박':effect==='time'?'다음 계산 시간':'두루마리 강화'} +${actual}${effect==='time'?'초':''}${extra.cleansed?' · '+(extra.cleansed==='poison'?'중독':'화상')+' 정화':''}${extra.shield?' · 방어막 +'+extra.shield:''}${extra.heat<0?' · 열기 −1':''}`,dialogue:m.dialogues[state.turn%m.dialogues.length]};skillExtras(this.data,this.run,m,event,state,result,{damageBudget:Math.min(budget,Math.max(0,memberBudget-actual))});budget-=result.secondary?.value||0;results.push(result);}
+ if(event.kind==='magic')this.magicContributions.delete(this.identity(event,state,{id:'scroll'}));syncPartyAlias(this.data.progress);return results.sort((a,b)=>Number(a.awakened)-Number(b.awakened));
  }
 }

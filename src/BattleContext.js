@@ -4,5 +4,5 @@ export function createClassContext(){return {mode:'class',heroMaxHP:GameConfig.h
 export const contextOf=s=>s?.battleContext||createClassContext();
 export const heroMaxHP=s=>contextOf(s).heroMaxHP;
 export const battleEncounters=s=>contextOf(s).encounters;
-export function attackDamage(s,grade,armor=0){const c=contextOf(s);return Math.max(1,GameConfig.attack[grade]+(c.attackBonus||0)+(c.attackGradeBonus?.(grade)||0)-armor);}
+export function attackDamage(s,grade,armor=0){const c=contextOf(s);return Math.max(1,Math.round((GameConfig.attack[grade]+(c.attackBonus||0)+(c.attackGradeBonus?.(grade)||0)+(c.weaponGradeBonus?.(grade)||0)-armor)*(c.coop?1+(s.coopRun?.buffs.attack||0):1)));}
 export function mitigateAttack(s,incoming){const c=contextOf(s),reduction=Math.min(c.defenseMitigation||0,Math.floor(incoming*(c.maxMitigationRatio||0)));return Math.max(incoming>0?1:0,incoming-reduction);}

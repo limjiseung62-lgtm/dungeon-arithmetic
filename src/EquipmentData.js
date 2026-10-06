@@ -1,4 +1,5 @@
-export const RarityNames={COMMON:'일반',UNCOMMON:'고급',RARE:'희귀',EPIC:'영웅'};
+import {LegendaryData} from './LegendaryData.js';
+export const RarityNames={COMMON:'일반',UNCOMMON:'고급',RARE:'희귀',EPIC:'영웅',LEGENDARY:'전설'};
 export const EquipmentData=[
  {id:'old_sword',name:'낡은 검',type:'weapon',rarity:'COMMON',buyPrice:100,sellPrice:50,icon:'⚔️',description:'공격력 +2',statModifiers:{attack:2},specialEffects:{}},
  {id:'steel_sword',name:'강철검',type:'weapon',rarity:'UNCOMMON',buyPrice:220,sellPrice:110,icon:'🗡️',description:'공격력 +4',statModifiers:{attack:4},specialEffects:{}},
@@ -19,4 +20,7 @@ EquipmentData.push({id:'chaos_grimoire',name:'혼돈의 마도서',type:'accesso
  {id:'flame_greatsword',name:'화염 거인의 대검',type:'weapon',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'공격력 +3 · A/S 공격 성공 시 화염 추가 피해 +2',statModifiers:{attack:3},specialEffects:{effectType:'ATTACK_GRADE_BONUS',trigger:['A','S'],value:2}}
 );
 EquipmentData.push({id:'dragon_heart',name:'용의 심장',type:'accessory',rarity:'EPIC',bossOnly:true,buyPrice:0,sellPrice:200,description:'최대 HP +8 · 공격 S 성공 시 용혈 추가 피해 +2',statModifiers:{maxHP:8},specialEffects:{effectType:'ATTACK_GRADE_BONUS',trigger:'S',value:2}});
+const types={old_sword:'SWORD',steel_sword:'SWORD',rogue_dagger:'DAGGER',sage_staff:'STAFF',dark_greatsword:'GREATSWORD',flame_greatsword:'GREATSWORD'};
+for(const item of EquipmentData)if(item.type==='weapon')item.weaponType=types[item.id];
+EquipmentData.push(...LegendaryData);
 export const equipmentById=id=>EquipmentData.find(item=>item.id===id)||null;

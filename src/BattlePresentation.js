@@ -1,3 +1,4 @@
+import {paintedCombatEffects} from './PaintedCombatEffects.js';
 import {artHTML} from './AssetManifest.js';
 import {equipmentById} from './EquipmentData.js';
 import {monsterAt} from './MonsterRegistry.js';
@@ -40,6 +41,7 @@ export class BattlePresentation{
   if(event.type==='meteor'){create('div','bp-meteor-sky');create('div','bp-meteor');}
   if(event.type==='heal'){create('div','bp-heal-pillar');create('b','bp-life-number','HP +'+(event.heal||0));}if(event.type==='cleanse')create('div','bp-shattered-chain');if(event.type==='shield')create('div','bp-shield-panels');if(event.type==='time')create('div','bp-time-clock','◷');
  }
+ paintedCombatEffects(event,root,{create,animate:(...args)=>this.animate(...args),prefs:p,target});
  const equipment=equipmentPresentation(this.character(),event);if(equipment.length){const proc=create('div','bp-equipment');for(const item of equipment){const badge=document.createElement('span');badge.dataset.equipment=item.id;badge.innerHTML=artHTML(item.id,{eager:true});const text=document.createElement('b');text.textContent=item.name;badge.append(text);proc.append(badge);}const total=document.createElement('small');total.textContent=(event.kind==='victory'?'생명의 씨앗 · 실제 HP 회복 +':'장비 효과 +')+event.equipmentBonus;proc.append(total);}
  this.later(()=>{root.remove();this.nodes.delete(root);},life);
  }

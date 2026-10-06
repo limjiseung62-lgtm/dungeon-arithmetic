@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "turns": 12,
+  "casts": 5,
+  "legends": 1,
+  "breaks": 1,
+  "breakFixture": "Valid golem phase2 HP90/pressure3 breakpoint; generated S arithmetic causes BREAK",
+  "selectedAffinityOnly": true,
+  "candidateRefreshOnce": true,
+  "reload": true,
+  "errors": []
+}

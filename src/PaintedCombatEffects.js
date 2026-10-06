@@ -1,0 +1,23 @@
+// Read-only decoration. The caller owns nodes and animation cancellation.
+export function paintedCombatEffects(event,root,{create,animate,prefs,target}){
+ const atlas=(name,cell,cls)=>{const node=create('div','painted-combat '+cls);node.innerHTML=`<svg viewBox="0 0 100 100" aria-hidden="true"><svg viewBox="${cell%2*100} ${Math.floor(cell/2)*100} 100 100" width="100" height="100"><image href="assets/combat-v35/${name}.webp" width="200" height="200" preserveAspectRatio="none"/></svg></svg>`;return node;};
+ const motion=(node,frames,duration)=>{if(!prefs.reduced&&prefs.detail!=='simple')animate(node,frames,{duration:prefs.fast?duration*.65:duration});};
+ if(['magic-launch','magic'].includes(event.kind)){
+  const cells={fire:0,ice:1,iceStorm:1,lightning:2,meteor:3};
+  const cell=cells[event.type],sprite=cell===undefined?atlas('sigilAtlas',event.type==='heal'||event.type==='cleanse'?1:2,'painted-spell utility'):atlas('spellAtlas',cell,'painted-spell '+event.type);
+  if(event.kind==='magic-launch')motion(sprite,[{opacity:0,transform:'translate(32%,35%) scale(.3)'},{opacity:1,transform:'translate(0,0) scale(1)'}],350);
+  else motion(sprite,[{opacity:.5,transform:'scale(.8)'},{opacity:1,transform:'scale(1.12)'},{opacity:0,transform:'scale(1.18)'}],800);
+ }
+ if(['defense','barrier','block'].includes(event.kind)||event.kind==='enemy'&&event.absorbed>0){
+  const shield=(Number(root.ownerDocument?.querySelector('#shield-value')?.textContent)||0)+(event.absorbed||0),grade=event.kind==='enemy'?(shield>=24?'S':shield>=16?'A':shield>=10?'B':'C'):event.grade||event.action?.targetGrade||'S',barrier=['A','S'].includes(grade)?atlas('sigilAtlas',2,'painted-barrier'):atlas('supportAtlas',3,'painted-barrier');barrier.dataset.grade=grade;
+  motion(barrier,[{opacity:0,transform:'scale(.7)'},{opacity:1,transform:'scale(1)'},{opacity:.55,transform:'scale(1.02)'}],450);
+  if(event.kind==='block')motion(atlas('sigilAtlas',2,'painted-block'),[{opacity:1,transform:'scale(.5) rotate(-12deg)'},{opacity:0,transform:'scale(1.6) rotate(12deg)'}],650);
+ }
+ if(event.bossBreak){const cracks=atlas('sigilAtlas',3,'painted-break');motion(cracks,[{opacity:0,transform:'scale(.5)'},{opacity:1,transform:'scale(1.1)'},{opacity:0,transform:'scale(1.3)'}],800);}
+ if(event.bossPhaseTransition){const cell=event.bossType==='treeGuardian'?1:event.bossType==='demonKing'?2:event.bossType==='golem'?3:0,aura=atlas('sigilAtlas',cell,'painted-phase');root.dataset.bossType=event.bossType;motion(aura,[{opacity:0,transform:'scale(.6)'},{opacity:.8,transform:'scale(1.15)'},{opacity:.4,transform:'scale(1)'}],1000);const body=target?.querySelector('.enemy-body');if(body)motion(body,[{transform:'scale(1)'},{transform:'scale(1.13)'},{transform:'scale(1.13)'},{transform:'scale(1)'}],1800);}
+ if(event.kind==='enemy-windup'||event.kind==='enemy'&&!event.suppressed){
+  const type=target?.dataset.type||'',caster=type==='orc'||/mage|shaman|priest|spirit|illusion|apostle|book|timeKeeper/i.test(type),body=target?.querySelector('.enemy-body')||target?.querySelector('img'),windup=event.kind==='enemy-windup';if(caster){const magic=atlas('sigilAtlas',/forest|mushroom/i.test(type)?1:0,'painted-enemy-magic');motion(magic,windup?[{opacity:0,transform:'translateY(-80px) scale(.12)'},{opacity:.9,transform:'translateY(0) scale(.7)'}]:[{opacity:1,transform:'scale(.9)'},{opacity:.7,transform:'scale(1.35)'},{opacity:0,transform:'scale(1.5)'}],windup?400:300);}
+  if(body)motion(body,windup?[{transform:'scale(1)'},{transform:'scale(1.04) translateY(-2%)'}]:[{transform:'scale(1.04)'},{transform:`scale(${caster?1.08:1.22}) translateY(3%)`},{transform:'scale(1)'}],windup?400:450);
+ }
+}
+export function specialPaintedArtwork(special){if(['kingSword','execution','blackWave','strongThrust'].includes(special))return '<img src="assets/presentation-v35/slash.webp" alt="">';const map={kingBreath:['spellAtlas',0],doomBreath:['spellAtlas',0],smallBreath:['spellAtlas',0],fireBombard:['spellAtlas',3],dragonThreat:['spellAtlas',0],curse:['sigilAtlas',0],spaceCollapse:['sigilAtlas',0],chaosExplosion:['sigilAtlas',0],heatSpark:['spellAtlas',0],flameFist:['spellAtlas',0],magicStorm:['spellAtlas',2],lavaSlam:['sigilAtlas',3],groundSmash:['sigilAtlas',3],rootPrison:['sigilAtlas',1],regenSeed:['sigilAtlas',1],lawCollapse:['sigilAtlas',0],absoluteOrder:['sigilAtlas',2]},entry=map[special];if(!entry)return null;const [name,cell]=entry;return `<svg viewBox="0 0 100 100" aria-hidden="true"><svg viewBox="${cell%2*100} ${Math.floor(cell/2)*100} 100 100" width="100" height="100"><image href="assets/combat-v35/${name}.webp" width="200" height="200" preserveAspectRatio="none"/></svg></svg>`;}

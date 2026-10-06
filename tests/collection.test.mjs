@@ -1,3 +1,4 @@
+import {legacyV34} from './legacy-v34-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {RPGMode} from '../src/RPGMode.js';
@@ -16,16 +17,16 @@ import {deepSimulation} from './deep-balance.mjs';
 const make=()=>{const records=new Map(),storage={getItem:k=>records.get(k)||null,setItem:(k,v)=>records.set(k,v)},r=new RPGMode(storage,()=>.99);r.create('수집 용사');return {r,storage};};
 test('v2.7 migration preserves every old field, resources, quests, contract, run and loot',()=>{
  const {r}=make();r.character.gold=4000;r.buy('steel_sword');r.equip('steel_sword');r.buy('iron_armor');r.acceptQuest('brain-power');r.hire('sera');r.finishOpening();r.enterDungeon();r.createBattle();
- const old=structuredClone(r.data);delete old.progress.collection;const before=structuredClone(old),next=migrateSave(old);
- assert.deepEqual(old,before);assert.deepEqual(next.character,old.character);const progress={...next.progress};delete progress.collection;assert.deepEqual(progress,old.progress);assert.deepEqual(next.meta,old.meta);assert.deepEqual(migrateSave(next),next);assert.doesNotThrow(()=>validateSave(next));
+ const old=legacyV34(structuredClone(r.data));delete old.progress.collection;const before=structuredClone(old),next=migrateSave(old);
+ assert.deepEqual(old,before);assert.deepEqual(next.character,old.character);for(const [key,value]of Object.entries(old.progress)){if(key==='run'){for(const [field,record]of Object.entries(value))assert.deepEqual(next.progress.run[field],record,field);}else assert.deepEqual(next.progress[key],value,key);}assert.deepEqual(next.meta,old.meta);assert.deepEqual(migrateSave(next),next);assert.doesNotThrow(()=>validateSave(next));
  assert.ok(next.progress.collection.equipment.includes('steel_sword'));assert.ok(next.progress.collection.scrolls.includes('fire'));
 });
 test('migration infers historical discovered gear even if sold and does not invent defeat counts',()=>{
- const {r}=make();r.data.progress.lootHistory=[{id:'past',dungeonId:'old-prison',loot:{gold:15,scrolls:['ice'],equipment:['old_sword']}}];r.data.progress.clearedDungeons=['old-prison'];delete r.data.progress.collection;
+ const {r}=make();r.data.progress.lootHistory=[{id:'past',dungeonId:'old-prison',loot:{gold:15,scrolls:['ice'],equipment:['old_sword']}}];r.data.progress.clearedDungeons=['old-prison'];delete r.data.progress.collection;legacyV34(r.data);
  const migrated=migrateSave(r.data);assert.ok(migrated.progress.collection.equipment.includes('old_sword'));assert.ok(migrated.progress.collection.monsters.includes('orc'));assert.deepEqual(migrated.progress.collection.defeatCounts,{});assert.equal(migrated.progress.collection.bossLoot.golem,undefined);
 });
 test('legacy forest and mine clears make first v2.8 replay eligible without extra first-clear penalty',()=>{
- const {r}=make();r.data.progress.clearedDungeons=['cursed-forest','burning-mine'];delete r.data.progress.collection;const p=migrateSave(r.data).progress;
+ const {r}=make();r.data.progress.clearedDungeons=['cursed-forest','burning-mine'];delete r.data.progress.collection;legacyV34(r.data);const p=migrateSave(r.data).progress;
  assert.equal(rollBossUnique(p,'treeGuardian',()=>0),'life_seed');assert.equal(rollBossUnique(p,'flameGiant',()=>0),'flame_greatsword');
 });
 test('encounter registers before any kill and repeated encounter does not duplicate',()=>{
@@ -57,9 +58,9 @@ test('seed heals four only on committed victory; caps max and cannot duplicate r
 });
 test('seed stacks conservatively with Sera and never exceeds max HP',()=>{
  const {r}=make();r.character.gold=4000;r.character.inventory.items.push('life_seed');r.equip('life_seed');r.hire('sera');r.enterDungeon();const {state}=r.createBattle(),merc=new MercenarySystem(r.data,r.run);state.hero.hp=90;
- merc.support({kind:'attack',action:{targetGrade:'A',playerId:0}},state);merc.support({kind:'victory'},state);assert.equal(state.hero.hp,102);state.enemies.forEach(e=>e.hp=0);state.phase='reward';state.lootCandidates=['fire','ice','heal'];assert.equal(r.awardBattle(state).victoryHeal,4);assert.equal(r.character.hp,106);assert.equal(effectBonus(r.character,'VICTORY_HEAL','VICTORY'),4);
+ merc.support({kind:'attack',action:{targetGrade:'A',playerId:0}},state);merc.support({kind:'victory'},state);assert.equal(state.hero.hp,95);state.enemies.forEach(e=>e.hp=0);state.phase='reward';state.lootCandidates=['fire','ice','heal'];assert.equal(r.awardBattle(state).victoryHeal,4);assert.equal(r.character.hp,99);assert.equal(effectBonus(r.character,'VICTORY_HEAL','VICTORY'),4);
 });
-test('collection totals include 15 monsters, 15 gear, 9 scrolls and 3 boss relic entries',()=>{const {r}=make();assert.deepEqual(collectionProgress(r.data.progress).totals,{monsters:34,equipment:18,scrolls:9,bossLoot:6});assert.equal(collectionProgress(r.data.progress).total,67);});
+test('collection totals include 15 monsters, 15 gear, 9 scrolls and 3 boss relic entries',()=>{const {r}=make();assert.deepEqual(collectionProgress(r.data.progress).totals,{monsters:34,equipment:25,scrolls:9,bossLoot:6});assert.equal(collectionProgress(r.data.progress).total,74);});
 test('discovery refuses invalid types and IDs without modifying progress',()=>{const {r}=make(),before=structuredClone(collection(r.data.progress));assert.equal(discover(r.data.progress,'equipment','invalid'),false);assert.equal(discover(r.data.progress,'invalid','skeleton'),false);assert.deepEqual(collection(r.data.progress),before);});
 for(const reward of CollectionRewards)test(reward.id+' milestone claim is one-time through reload',()=>{
  const {r}=make();for(const m of AllMonsterData)discover(r.data.progress,'monsters',m.id);for(const e of EquipmentData)discover(r.data.progress,'equipment',e.id);
@@ -79,14 +80,14 @@ for(const grade of ['A','S'])test('real shield '+grade+' input gets +3 while onl
 });
 for(const grade of ['B','A','S'])test('real greatsword '+grade+' input adds fire damage only for A/S',()=>{
  const {r}=make();r.character.inventory.items.push('flame_greatsword');r.equip('flame_greatsword');r.enterDungeon();const {state,combat}=r.createBattle(),t=state.targets.find(t=>t.side==='attack'&&t.grade===grade);combat.submit(t.solution.ids,t.solution.ops);
- assert.equal(state.actionQueue.find(a=>a.actionType==='attack').baseDamage,GameConfig.attack[grade]+1+(grade==='B'?0:2));
+ assert.equal(state.actionQueue.find(a=>a.actionType==='attack').baseDamage,GameConfig.attack[grade]+1+(grade==='B'?0:4));
 });
 test('seed victory heals only missing HP and repeated receipt cannot heal again',()=>{
  const {r}=make();r.character.inventory.items.push('life_seed');r.equip('life_seed');r.character.hp=108;r.enterDungeon();const {state,combat}=r.createBattle();state.enemies.forEach(e=>e.hp=0);combat.win();const receipt=r.awardBattle(state);assert.equal(receipt.victoryHeal,2);assert.equal(r.character.hp,110);assert.equal(r.awardBattle(state),false);
 });
 test('collection migration preserves actual v2.7 boss checkpoint and pending calculations',()=>{
  const {r}=make(),p=r.data.progress;p.clearedDungeons=['old-prison'];p.unlockedDungeons.push('cursed-forest');p.rewardedQuests=['forest-road'];p.questProgress['forest-road']={count:1,scrolls:[]};r.enterDungeon('cursed-forest');r.run.nextEncounter=4;const {state}=r.createBattle();state.enemies[0].hp=45;state.hero.shield=80;r.captureBattle(state);
- const old=structuredClone(r.data);delete old.progress.collection;const cp=structuredClone(old.progress.run.bossCheckpoint),next=validateSave(old);assert.deepEqual(next.progress.run.bossCheckpoint,cp);assert.deepEqual(next.character,old.character);
+ const old=legacyV34(structuredClone(r.data));delete old.progress.collection;const cp=structuredClone(old.progress.run.bossCheckpoint),next=validateSave(old);assert.deepEqual(next.progress.run.bossCheckpoint,cp);assert.deepEqual(next.character,old.character);
 });
 for(const grade of ['A','S'])test('recommended Lv4 deep replay clears with actual '+grade+' arithmetic and no unique equipment',()=>{
  const result=deepSimulation('adaptive',1,grade,4);assert.equal(result.phase,'clear');assert.ok(result.hp>0);assert.ok(result.totalTurns<=40);

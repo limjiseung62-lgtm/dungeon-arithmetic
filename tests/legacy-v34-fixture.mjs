@@ -1,0 +1,2 @@
+// Historical fixtures omit fields that did not exist in the v3.4 save format.
+export function legacyV34(data){data.saveVersion=4;for(const key of ['ownedMercenaries','activeParty','mercenaryRecruitPool','mercenaryRecords','recruitmentState','rebuildSchema','legendaryDrops','legendaryAcquired','legendaryRewardQueue'])delete data.progress[key];if(data.progress.run)delete data.progress.run.partyState;return data;}

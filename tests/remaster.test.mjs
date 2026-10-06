@@ -5,7 +5,7 @@ import {ArtManifest,artHTML,installArtTheme} from '../src/AssetManifest.js';
 import {EquipmentData} from '../src/EquipmentData.js';
 import {ScrollData} from '../src/ScrollData.js';
 const root=new URL('../',import.meta.url);
-test('all fifteen equipment IDs map to real premium raster assets',()=>{assert.equal(EquipmentData.length,18);for(const e of EquipmentData){assert.ok(ArtManifest[e.id]);assert.ok(fs.existsSync(new URL(ArtManifest[e.id].src,root)));assert.match(artHTML(e.id,{label:e.name}),/role="img"/);}});
+test('all fifteen equipment IDs map to real premium raster assets',()=>{assert.equal(EquipmentData.filter(e=>e.rarity!=='LEGENDARY').length,18);assert.equal(EquipmentData.length,25);for(const e of EquipmentData){assert.ok(ArtManifest[e.id]);assert.ok(fs.existsSync(new URL(ArtManifest[e.id].src,root)));assert.match(artHTML(e.id,{label:e.name}),/role="img"/);}});
 test('nine scrolls share stable artwork IDs and bounded atlas cells',()=>{for(const id of Object.keys(ScrollData)){const a=ArtManifest[id];assert.equal(a.columns,3);assert.ok(a.index>=0&&a.index<9);assert.match(artHTML(id),new RegExp('data-art="'+id+'"'));}});
 test('thumbnail paths exist while enlarged items use full resolution',()=>{for(const e of EquipmentData)assert.ok(fs.existsSync(new URL(ArtManifest[e.id].thumb,root)));assert.match(artHTML('sage_ring'),/accessories-thumb.webp/);assert.match(artHTML('sage_ring',{full:true}),/accessories.webp/);});
 test('all environment and hero files exist with bounded WebP size',()=>{for(const a of JSON.parse(fs.readFileSync(new URL('ASSETS-v2.4.json',root)))){assert.ok(a.bytes<1000000);assert.ok(a.width>=512);assert.ok(fs.existsSync(new URL(a.filename,root)));}});

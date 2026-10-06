@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "mathRounds": 17,
+  "combatTurns": 16,
+  "finalSubmissions": 2,
+  "phases": [
+    1,
+    2,
+    3
+  ],
+  "regions": [
+    "forest",
+    "heat"
+  ],
+  "checks": [
+    "actual generated math UI",
+    "phase 4 prevents HP zero",
+    "exact final formula reload",
+    "valid wrong equation no penalty",
+    "three widths",
+    "correct final strike",
+    "ending scene4 F5 no duplicate",
+    "storyCompleted",
+    "ending replay record unchanged",
+    "postgame town",
+    "king rematch",
+    "production hidden debug"
+  ],
+  "errors": []
+}

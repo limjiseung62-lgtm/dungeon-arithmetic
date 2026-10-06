@@ -4,7 +4,7 @@ import {RPGMode} from '../src/RPGMode.js';
 import {characterStats} from '../src/RPGConfig.js';
 import {PersonalQuestData} from '../src/AffinityData.js';
 import {relation} from '../src/AffinitySystem.js';
-import {MercenaryData} from '../src/MercenaryData.js';
+import {CoreMercenaryData as MercenaryData} from '../src/MercenaryData.js';
 function setup(id,seed){let v=seed;const rng=()=>{v=(v*1664525+1013904223)>>>0;return v/4294967296;};const r=new RPGMode({getItem(){return null;},setItem(){}},rng);r.create('동료 전략가');Object.assign(r.character,{level:7,exp:0,...characterStats(7),gold:20000});r.character.inventory.items=['steel_sword','leather_armor'];r.equip('steel_sword');r.equip('leather_armor');r.character.hp=r.character.maxHP;r.character.scrolls=[{type:'heal',uses:9},{type:'fire',uses:9},{type:'shield',uses:9},{type:'cleanse',uses:9}];const p=r.data.progress;p.unlockedDungeons=['old-prison','cursed-forest','burning-mine'];p.clearedDungeons=['old-prison','cursed-forest'];p.story.mineInvestigated=true;p.rewardedQuests=['forest-road'];p.questProgress['forest-road']={count:1,scrolls:[]};if(id)r.hire(id);return {r,rng};}
 function solve(r,s,c,side,grade,scroll){const t=s.targets.find(t=>t.side===side&&t.grade===grade);c.submit(t.solution.ids,t.solution.ops);if(c.awaitingChoices())c.chooseTarget(0,s.enemies.find(e=>e.hp>0&&(side==='attack'||e.intent.special!=='none'))?.id||s.enemies.find(e=>e.hp>0).id);while(s.phase==='resolution'){const a=s.resolutionStage==='actions'?s.actionQueue[s.resolutionIndex]:null;if(a?.actionType==='scroll'){const index=s.scrolls.findIndex(x=>x.type===scroll);c.chooseScroll(a,index>=0?index:null);}r.onBattleEvent(c.resolveNext(),s);}}
 const personal=[];
