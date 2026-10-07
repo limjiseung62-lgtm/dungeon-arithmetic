@@ -1,0 +1,1357 @@
+{
+  "saveVersion": 5,
+  "character": {
+    "name": "혼돈 관찰자",
+    "level": 12,
+    "exp": 0,
+    "maxHP": 155,
+    "attack": 32,
+    "defense": 16,
+    "hp": 155,
+    "gold": 4480,
+    "scrolls": [
+      {
+        "type": "fire",
+        "uses": 3
+      },
+      {
+        "type": "lightning",
+        "uses": 3
+      },
+      {
+        "type": "meteor",
+        "uses": 3
+      },
+      {
+        "type": "heal",
+        "uses": 3
+      }
+    ],
+    "equipment": {
+      "weapon": null,
+      "armor": null,
+      "accessory": null
+    },
+    "equippedWeapon": null,
+    "equippedArmor": null,
+    "equippedAccessory": null,
+    "inventory": {
+      "items": [
+        "earth_shatterer"
+      ],
+      "materials": []
+    }
+  },
+  "progress": {
+    "storyCompleted": true,
+    "endingSeen": true,
+    "campaign": {
+      "actThreeSeen": true,
+      "eliaTruthSeen": true,
+      "throneReached": true,
+      "throneSceneSeen": true,
+      "openingSeen": true,
+      "fortressInvestigated": true,
+      "knightDefeated": true,
+      "sealSceneSeen": true,
+      "chaosOpeningSeen": true,
+      "towerInvestigated": true,
+      "mageDefeated": true,
+      "chaosSealSeen": true,
+      "dragonOpeningSeen": true,
+      "canyonInvestigated": true,
+      "dragonDefeated": true,
+      "dragonSealSeen": true,
+      "castleOpened": true,
+      "seals": {
+        "darkness": true,
+        "chaos": true,
+        "dragon": true
+      }
+    },
+    "mercenaryRelations": {
+      "rowen": {
+        "affinityLevel": 3,
+        "affinityProgress": 6,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": true,
+        "personalQuestCompleted": true,
+        "awakenedSkillUnlocked": true,
+        "unlockedDialogues": [
+          1,
+          2,
+          3
+        ],
+        "claimIds": [
+          "personal-report:personal-rowen"
+        ]
+      },
+      "bram": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "sera": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "luna": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "kain": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "elia": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "aiden": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "nox": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "iris": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "tobin": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "rafa": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "boris": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "lyra": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "rune": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "faye": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "vero": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "sol": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      },
+      "mirin": {
+        "affinityLevel": 1,
+        "affinityProgress": 0,
+        "completedDungeonsTogether": 0,
+        "dungeonCounts": {},
+        "personalQuestUnlocked": false,
+        "personalQuestCompleted": false,
+        "awakenedSkillUnlocked": false,
+        "unlockedDialogues": [
+          1
+        ],
+        "claimIds": []
+      }
+    },
+    "collection": {
+      "monsters": [
+        "demonKing"
+      ],
+      "equipment": [
+        "earth_shatterer"
+      ],
+      "scrolls": [
+        "fire",
+        "heal",
+        "shield",
+        "time",
+        "lightning",
+        "meteor"
+      ],
+      "defeatCounts": {},
+      "killIds": [],
+      "bossLoot": {},
+      "claimedCollectionRewards": []
+    },
+    "legendaryDrops": {
+      "golem": {
+        "attempts": 1,
+        "acquired": true,
+        "eventIds": [
+          "v35-acquired"
+        ]
+      },
+      "treeGuardian": {
+        "attempts": 3,
+        "acquired": false,
+        "eventIds": [
+          "v35-pity-1",
+          "v35-pity-2",
+          "v35-pity-3"
+        ]
+      }
+    },
+    "legendaryAcquired": [
+      "earth_shatterer"
+    ],
+    "legendaryRewardQueue": [],
+    "rebuildSchema": 1,
+    "story": {
+      "openingSeen": true,
+      "guildVisited": true,
+      "mineInvestigated": true
+    },
+    "activeQuests": [],
+    "completedQuests": [],
+    "rewardedQuests": [
+      "forest-road",
+      "personal-rowen"
+    ],
+    "questProgress": {
+      "forest-road": {
+        "count": 1,
+        "scrolls": []
+      },
+      "personal-rowen": {
+        "count": 1,
+        "scrolls": [],
+        "personal": {
+          "actions": 2,
+          "won": true
+        }
+      }
+    },
+    "questEventIds": [
+      "collection:0:0:1",
+      "collection:0:0:4",
+      "collection:1:0:4",
+      "collection:1:0:6"
+    ],
+    "ownedMercenaries": [
+      "rowen"
+    ],
+    "activeParty": [
+      "rowen"
+    ],
+    "mercenaryRecruitPool": [
+      "nox",
+      "aiden",
+      "vero",
+      "boris",
+      "lyra"
+    ],
+    "mercenaryRecords": {
+      "discovered": [
+        "nox",
+        "aiden",
+        "vero",
+        "boris",
+        "lyra",
+        "rowen"
+      ],
+      "recruited": [
+        "rowen"
+      ],
+      "departed": []
+    },
+    "recruitmentState": {
+      "revision": 1,
+      "withoutS": 1,
+      "refreshRunIds": []
+    },
+    "activeMercenary": "rowen",
+    "mercenaryContractState": {
+      "id": "owned-party",
+      "purchaseToken": "permanent-party",
+      "status": "active",
+      "runId": "21bed8ec-3798-4882-a60e-a3a044ecb3e1",
+      "counts": {},
+      "eventIds": [],
+      "successfulEncounters": []
+    },
+    "mercenaryStats": {
+      "hires": 1,
+      "supports": 0,
+      "ended": 0
+    },
+    "unlockedDungeons": [
+      "old-prison",
+      "cursed-forest",
+      "burning-mine",
+      "black-fortress",
+      "chaos-tower",
+      "sky-canyon",
+      "demon-castle",
+      "demon-throne"
+    ],
+    "dungeonClearHistory": [],
+    "lootHistory": [],
+    "clearedDungeons": [
+      "old-prison",
+      "cursed-forest",
+      "burning-mine",
+      "black-fortress",
+      "chaos-tower",
+      "sky-canyon",
+      "demon-castle",
+      "demon-throne"
+    ],
+    "run": {
+      "id": "21bed8ec-3798-4882-a60e-a3a044ecb3e1",
+      "dungeonId": "demon-throne",
+      "nextEncounter": 0,
+      "status": "active",
+      "completed": [],
+      "clearBonusGranted": false,
+      "pendingLoot": null,
+      "stats": {
+        "turns": 1,
+        "attack": {
+          "S": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "defense": {
+          "S": 0,
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "blocks": 0,
+        "scrolls": 0
+      },
+      "poison": 0,
+      "partyState": {
+        "members": [
+          "rowen"
+        ],
+        "counts": {
+          "rowen": {}
+        },
+        "eventIds": [],
+        "successfulEncounters": [],
+        "nextTimeBonus": 0
+      },
+      "bossCheckpoint": {
+        "encounterIndex": 0,
+        "king": {
+          "mode": null,
+          "regionTurn": 0,
+          "regionIndex": 0,
+          "orderTurn": 0,
+          "swordTurn": 0,
+          "opening": false,
+          "shuffleNext": false
+        },
+        "enemies": [
+          {
+            "id": "final-king-0-0",
+            "monsterIndex": 33,
+            "type": "demonKing",
+            "name": "마왕",
+            "hp": 680,
+            "maxHP": 680,
+            "attackModifier": 1,
+            "specialModifier": 1,
+            "enrage": 0,
+            "weaken": 0,
+            "intent": {
+              "attack": 12,
+              "special": "none",
+              "slot": 0,
+              "seconds": 45,
+              "locks": 1,
+              "bossLabel": "왕의 시험 · 일반 공격",
+              "danger": "주의",
+              "extraDamage": 0
+            },
+            "boss": {
+              "phase": 1,
+              "pressure": 0,
+              "breakTurns": 0,
+              "seedTurns": 0,
+              "seedPressure": 0,
+              "seedCooldown": 0,
+              "announced": [],
+              "breaks": 0
+            },
+            "bossPhase": 1
+          }
+        ],
+        "scrollIndex": 0,
+        "enemyTurn": 1,
+        "turn": 1,
+        "phase": "playing",
+        "dice": [
+          7,
+          9,
+          9
+        ],
+        "targets": [
+          {
+            "value": 54,
+            "score": 7,
+            "grade": "S",
+            "solution": {
+              "ids": [
+                0,
+                1,
+                2
+              ],
+              "ops": [
+                "×",
+                "−"
+              ],
+              "value": 54,
+              "expression": "(7 × 9) − 9",
+              "steps": [
+                "7 × 9 = 63",
+                "63 − 9 = 54"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  0,
+                  1,
+                  2
+                ],
+                "ops": [
+                  "×",
+                  "−"
+                ],
+                "value": 54,
+                "expression": "(7 × 9) − 9",
+                "steps": [
+                  "7 × 9 = 63",
+                  "63 − 9 = 54"
+                ]
+              },
+              {
+                "ids": [
+                  0,
+                  2,
+                  1
+                ],
+                "ops": [
+                  "×",
+                  "−"
+                ],
+                "value": 54,
+                "expression": "(7 × 9) − 9",
+                "steps": [
+                  "7 × 9 = 63",
+                  "63 − 9 = 54"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  0,
+                  2
+                ],
+                "ops": [
+                  "×",
+                  "−"
+                ],
+                "value": 54,
+                "expression": "(9 × 7) − 9",
+                "steps": [
+                  "9 × 7 = 63",
+                  "63 − 9 = 54"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0,
+                  1
+                ],
+                "ops": [
+                  "×",
+                  "−"
+                ],
+                "value": 54,
+                "expression": "(9 × 7) − 9",
+                "steps": [
+                  "9 × 7 = 63",
+                  "63 − 9 = 54"
+                ]
+              }
+            ],
+            "side": "attack",
+            "id": "attack-S",
+            "used": false,
+            "position": 0
+          },
+          {
+            "value": 88,
+            "score": 6,
+            "grade": "S",
+            "solution": {
+              "ids": [
+                1,
+                2,
+                0
+              ],
+              "ops": [
+                "×",
+                "+"
+              ],
+              "value": 88,
+              "expression": "(9 × 9) + 7",
+              "steps": [
+                "9 × 9 = 81",
+                "81 + 7 = 88"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  1,
+                  2,
+                  0
+                ],
+                "ops": [
+                  "×",
+                  "+"
+                ],
+                "value": 88,
+                "expression": "(9 × 9) + 7",
+                "steps": [
+                  "9 × 9 = 81",
+                  "81 + 7 = 88"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  1,
+                  0
+                ],
+                "ops": [
+                  "×",
+                  "+"
+                ],
+                "value": 88,
+                "expression": "(9 × 9) + 7",
+                "steps": [
+                  "9 × 9 = 81",
+                  "81 + 7 = 88"
+                ]
+              }
+            ],
+            "side": "defense",
+            "id": "defense-S",
+            "used": false,
+            "position": 0
+          },
+          {
+            "value": 11,
+            "score": 5,
+            "grade": "A",
+            "solution": {
+              "ids": [
+                1,
+                2,
+                0
+              ],
+              "ops": [
+                "+",
+                "−"
+              ],
+              "value": 11,
+              "expression": "(9 + 9) − 7",
+              "steps": [
+                "9 + 9 = 18",
+                "18 − 7 = 11"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  1,
+                  0,
+                  2
+                ],
+                "ops": [
+                  "−",
+                  "+"
+                ],
+                "value": 11,
+                "expression": "(9 − 7) + 9",
+                "steps": [
+                  "9 − 7 = 2",
+                  "2 + 9 = 11"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  2,
+                  0
+                ],
+                "ops": [
+                  "+",
+                  "−"
+                ],
+                "value": 11,
+                "expression": "(9 + 9) − 7",
+                "steps": [
+                  "9 + 9 = 18",
+                  "18 − 7 = 11"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0,
+                  1
+                ],
+                "ops": [
+                  "−",
+                  "+"
+                ],
+                "value": 11,
+                "expression": "(9 − 7) + 9",
+                "steps": [
+                  "9 − 7 = 2",
+                  "2 + 9 = 11"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  1,
+                  0
+                ],
+                "ops": [
+                  "+",
+                  "−"
+                ],
+                "value": 11,
+                "expression": "(9 + 9) − 7",
+                "steps": [
+                  "9 + 9 = 18",
+                  "18 − 7 = 11"
+                ]
+              }
+            ],
+            "side": "attack",
+            "id": "attack-A",
+            "used": false,
+            "position": 1
+          },
+          {
+            "value": 7,
+            "score": 5,
+            "grade": "A",
+            "solution": {
+              "ids": [
+                0,
+                1,
+                2
+              ],
+              "ops": [
+                "+",
+                "−"
+              ],
+              "value": 7,
+              "expression": "(7 + 9) − 9",
+              "steps": [
+                "7 + 9 = 16",
+                "16 − 9 = 7"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  0,
+                  1,
+                  2
+                ],
+                "ops": [
+                  "+",
+                  "−"
+                ],
+                "value": 7,
+                "expression": "(7 + 9) − 9",
+                "steps": [
+                  "7 + 9 = 16",
+                  "16 − 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  0,
+                  1,
+                  2
+                ],
+                "ops": [
+                  "×",
+                  "÷"
+                ],
+                "value": 7,
+                "expression": "(7 × 9) ÷ 9",
+                "steps": [
+                  "7 × 9 = 63",
+                  "63 ÷ 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  0,
+                  2,
+                  1
+                ],
+                "ops": [
+                  "+",
+                  "−"
+                ],
+                "value": 7,
+                "expression": "(7 + 9) − 9",
+                "steps": [
+                  "7 + 9 = 16",
+                  "16 − 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  0,
+                  2,
+                  1
+                ],
+                "ops": [
+                  "×",
+                  "÷"
+                ],
+                "value": 7,
+                "expression": "(7 × 9) ÷ 9",
+                "steps": [
+                  "7 × 9 = 63",
+                  "63 ÷ 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  0,
+                  2
+                ],
+                "ops": [
+                  "+",
+                  "−"
+                ],
+                "value": 7,
+                "expression": "(9 + 7) − 9",
+                "steps": [
+                  "9 + 7 = 16",
+                  "16 − 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  0,
+                  2
+                ],
+                "ops": [
+                  "×",
+                  "÷"
+                ],
+                "value": 7,
+                "expression": "(9 × 7) ÷ 9",
+                "steps": [
+                  "9 × 7 = 63",
+                  "63 ÷ 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  2,
+                  0
+                ],
+                "ops": [
+                  "÷",
+                  "×"
+                ],
+                "value": 7,
+                "expression": "(9 ÷ 9) × 7",
+                "steps": [
+                  "9 ÷ 9 = 1",
+                  "1 × 7 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0,
+                  1
+                ],
+                "ops": [
+                  "+",
+                  "−"
+                ],
+                "value": 7,
+                "expression": "(9 + 7) − 9",
+                "steps": [
+                  "9 + 7 = 16",
+                  "16 − 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0,
+                  1
+                ],
+                "ops": [
+                  "×",
+                  "÷"
+                ],
+                "value": 7,
+                "expression": "(9 × 7) ÷ 9",
+                "steps": [
+                  "9 × 7 = 63",
+                  "63 ÷ 9 = 7"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  1,
+                  0
+                ],
+                "ops": [
+                  "÷",
+                  "×"
+                ],
+                "value": 7,
+                "expression": "(9 ÷ 9) × 7",
+                "steps": [
+                  "9 ÷ 9 = 1",
+                  "1 × 7 = 7"
+                ]
+              }
+            ],
+            "side": "defense",
+            "id": "defense-A",
+            "used": false,
+            "position": 1
+          },
+          {
+            "value": 63,
+            "score": 2,
+            "grade": "B",
+            "solution": {
+              "ids": [
+                0,
+                1
+              ],
+              "ops": [
+                "×"
+              ],
+              "value": 63,
+              "expression": "7 × 9",
+              "steps": [
+                "7 × 9 = 63"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  0,
+                  1
+                ],
+                "ops": [
+                  "×"
+                ],
+                "value": 63,
+                "expression": "7 × 9",
+                "steps": [
+                  "7 × 9 = 63"
+                ]
+              },
+              {
+                "ids": [
+                  0,
+                  2
+                ],
+                "ops": [
+                  "×"
+                ],
+                "value": 63,
+                "expression": "7 × 9",
+                "steps": [
+                  "7 × 9 = 63"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  0
+                ],
+                "ops": [
+                  "×"
+                ],
+                "value": 63,
+                "expression": "9 × 7",
+                "steps": [
+                  "9 × 7 = 63"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0
+                ],
+                "ops": [
+                  "×"
+                ],
+                "value": 63,
+                "expression": "9 × 7",
+                "steps": [
+                  "9 × 7 = 63"
+                ]
+              }
+            ],
+            "side": "attack",
+            "id": "attack-B",
+            "used": false,
+            "position": 2
+          },
+          {
+            "value": 1,
+            "score": 3,
+            "grade": "B",
+            "solution": {
+              "ids": [
+                1,
+                2
+              ],
+              "ops": [
+                "÷"
+              ],
+              "value": 1,
+              "expression": "9 ÷ 9",
+              "steps": [
+                "9 ÷ 9 = 1"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  1,
+                  2
+                ],
+                "ops": [
+                  "÷"
+                ],
+                "value": 1,
+                "expression": "9 ÷ 9",
+                "steps": [
+                  "9 ÷ 9 = 1"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  1
+                ],
+                "ops": [
+                  "÷"
+                ],
+                "value": 1,
+                "expression": "9 ÷ 9",
+                "steps": [
+                  "9 ÷ 9 = 1"
+                ]
+              }
+            ],
+            "side": "defense",
+            "id": "defense-B",
+            "used": false,
+            "position": 2
+          },
+          {
+            "value": 18,
+            "score": 0,
+            "grade": "C",
+            "solution": {
+              "ids": [
+                1,
+                2
+              ],
+              "ops": [
+                "+"
+              ],
+              "value": 18,
+              "expression": "9 + 9",
+              "steps": [
+                "9 + 9 = 18"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  1,
+                  0,
+                  2
+                ],
+                "ops": [
+                  "−",
+                  "×"
+                ],
+                "value": 18,
+                "expression": "(9 − 7) × 9",
+                "steps": [
+                  "9 − 7 = 2",
+                  "2 × 9 = 18"
+                ]
+              },
+              {
+                "ids": [
+                  1,
+                  2
+                ],
+                "ops": [
+                  "+"
+                ],
+                "value": 18,
+                "expression": "9 + 9",
+                "steps": [
+                  "9 + 9 = 18"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0,
+                  1
+                ],
+                "ops": [
+                  "−",
+                  "×"
+                ],
+                "value": 18,
+                "expression": "(9 − 7) × 9",
+                "steps": [
+                  "9 − 7 = 2",
+                  "2 × 9 = 18"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  1
+                ],
+                "ops": [
+                  "+"
+                ],
+                "value": 18,
+                "expression": "9 + 9",
+                "steps": [
+                  "9 + 9 = 18"
+                ]
+              }
+            ],
+            "side": "attack",
+            "id": "attack-C",
+            "used": false,
+            "position": 3
+          },
+          {
+            "value": 2,
+            "score": 1,
+            "grade": "C",
+            "solution": {
+              "ids": [
+                1,
+                0
+              ],
+              "ops": [
+                "−"
+              ],
+              "value": 2,
+              "expression": "9 − 7",
+              "steps": [
+                "9 − 7 = 2"
+              ]
+            },
+            "solutions": [
+              {
+                "ids": [
+                  1,
+                  0
+                ],
+                "ops": [
+                  "−"
+                ],
+                "value": 2,
+                "expression": "9 − 7",
+                "steps": [
+                  "9 − 7 = 2"
+                ]
+              },
+              {
+                "ids": [
+                  2,
+                  0
+                ],
+                "ops": [
+                  "−"
+                ],
+                "value": 2,
+                "expression": "9 − 7",
+                "steps": [
+                  "9 − 7 = 2"
+                ]
+              }
+            ],
+            "side": "defense",
+            "id": "defense-C",
+            "used": false,
+            "position": 3
+          }
+        ],
+        "duration": 60,
+        "seconds": 60,
+        "elapsed": 0,
+        "actionQueue": [],
+        "actionsDone": [
+          false
+        ],
+        "player": 0,
+        "resolutionIndex": 0,
+        "resolutionStage": null,
+        "totalDamage": 0,
+        "scrollStop": false,
+        "scrollWeaken": 0,
+        "specialBlocked": false,
+        "blockReserved": false,
+        "curse": false,
+        "shifted": false,
+        "blocked": null,
+        "blockedList": [],
+        "nextBlocked": null,
+        "nextBlockedList": [],
+        "stolen": false,
+        "stolenDuration": null,
+        "mineStatusResolved": false,
+        "choices": {},
+        "intent": {
+          "attack": 12,
+          "special": "none",
+          "slot": 0,
+          "seconds": 45,
+          "locks": 1,
+          "bossLabel": "왕의 시험 · 일반 공격",
+          "danger": "주의",
+          "extraDamage": 0
+        },
+        "hero": {
+          "hp": 155,
+          "shield": 0,
+          "poison": 0,
+          "burn": 0
+        },
+        "heatPoints": 0,
+        "morale": 0,
+        "moraleDefeated": [],
+        "darkBlessingTurn": 0,
+        "chaos": {
+          "level": 0,
+          "defeated": [],
+          "shuffle": false,
+          "prophecy": false,
+          "mask": false,
+          "timePenalty": 0
+        },
+        "chaosTurn": null,
+        "chaosTutorial": false,
+        "blockedIds": [],
+        "blockReservedIds": []
+      }
+    },
+    "completedRuns": 0,
+    "stats": {
+      "turns": 0,
+      "attack": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "defense": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "blocks": 0,
+      "scrolls": 0
+    }
+  },
+  "meta": {
+    "createdAt": "2026-10-07T03:55:44.955Z",
+    "updatedAt": "2026-10-07T03:55:44.970Z"
+  }
+}

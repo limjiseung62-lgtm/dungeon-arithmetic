@@ -1,0 +1,37 @@
+.enemy-attack{position:absolute;inset:0;z-index:32;pointer-events:none;overflow:hidden;isolation:isolate;--enemy-color:#d8c79b}
+.enemy-attack[data-material=ember]{--enemy-color:#f1a24e}.enemy-attack[data-material=leaf]{--enemy-color:#a4d58c}.enemy-attack[data-material=void]{--enemy-color:#b9a1db}.enemy-attack[data-material=scale]{--enemy-color:#deb16d}
+.enemy-attack-tell{position:absolute;left:50%;bottom:17%;translate:-50% 0;font-size:clamp(18px,2.2vw,30px);color:#f8e3b3;background:#102938dc;padding:8px 18px;word-break:keep-all;text-align:center;max-width:80%;border-left:3px solid var(--enemy-color)}
+.enemy-attack[data-boss=true] .enemy-attack-tell{font-size:clamp(23px,3vw,38px);padding:12px 24px;border-left-width:6px}
+.enemy-attack-shape{position:absolute;left:50%;top:42%;translate:-50% -50%;width:35%;aspect-ratio:1;opacity:0;transform-origin:center}
+.enemy-attack-shape img,.enemy-attack-shape svg{width:100%;height:100%;object-fit:contain}
+.enemy-attack[data-phase=attack] .enemy-attack-shape,.enemy-attack[data-phase=hit] .enemy-attack-shape{opacity:1}
+.enemy-attack[data-phase=reaction] .enemy-attack-shape,.enemy-attack[data-phase=recovery] .enemy-attack-shape{display:none}
+.enemy-attack[data-archetype=MAGIC] .enemy-attack-shape{width:clamp(160px,34%,430px);mix-blend-mode:screen}
+.enemy-attack[data-archetype=FIRE] .enemy-attack-shape{width:45%;mix-blend-mode:screen}
+.enemy-attack[data-archetype=RANGED] .enemy-attack-shape{width:23%;aspect-ratio:4;rotate:20deg}
+.enemy-attack[data-archetype=STAB] .enemy-attack-shape{width:28%;height:12%;aspect-ratio:auto;background:linear-gradient(110deg,transparent,#d1d1bb 40%,#f3ead5 75%,transparent);clip-path:polygon(0 42%,75% 30%,100% 50%,75% 68%,0 58%);rotate:28deg}
+.enemy-attack[data-type=goblin][data-variant="1"] .enemy-attack-shape{rotate:-28deg;left:43%}
+.enemy-attack[data-archetype=CLAW] .enemy-attack-shape{width:43%;rotate:-23deg;display:flex;gap:12%;align-items:center}
+.enemy-attack[data-archetype=CLAW] .enemy-attack-shape i{display:block;width:13%;height:90%;background:linear-gradient(0deg,transparent,var(--enemy-color),#fff2d2);clip-path:polygon(75% 0,100% 0,35% 100%,0 100%)}
+.enemy-attack[data-archetype=CLAW][data-variant="1"] .enemy-attack-shape{rotate:28deg}
+.enemy-attack[data-archetype=BITE] .enemy-attack-shape{width:52%;aspect-ratio:1.6}
+.enemy-attack[data-archetype=CHARGE] .enemy-attack-shape{border-radius:45% 60% 30% 55%;width:45%;height:40%;border:8px solid var(--enemy-color);background:#b5dca533}
+.enemy-attack[data-archetype=SHIELD_BASH] .enemy-attack-shape{width:32%;aspect-ratio:.8;border:10px double #bcbea8;border-radius:20% 20% 45% 45%;background:linear-gradient(120deg,#21323b,#a5a38b,#263b45);box-shadow:inset 0 0 25px #142530}
+.enemy-attack-limb{position:absolute;inset:0;transform-origin:48% 55%;pointer-events:none;z-index:2;clip-path:polygon(3% 31%,64% 30%,70% 100%,0 100%)}
+.enemy-limb-art{max-width:none!important;max-height:none!important;object-fit:contain}
+.enemy-attack[data-archetype=HEAVY] .enemy-attack-shape{display:none}
+.enemy-attack-impact{position:absolute;inset:0;opacity:0;box-shadow:inset 0 0 55px 10px #c16d3b75;background:radial-gradient(ellipse at 50% 75%,transparent 40%,#ad623a44);border-bottom:4px solid #e9c18c}
+.enemy-attack[data-archetype=HEAVY] .enemy-attack-impact{box-shadow:inset 0 -60px 65px -40px #dfc493;clip-path:polygon(0 0,100% 0,100% 100%,80% 100%,75% 88%,65% 100%,48% 85%,36% 100%,20% 91%,0 100%)}
+.enemy-attack[data-archetype=MAGIC] .enemy-attack-impact{box-shadow:inset 0 0 65px 12px #977ad177;border:3px double #bea0dc;clip-path:none}
+.enemy-attack[data-archetype=FIRE] .enemy-attack-impact{box-shadow:inset 0 0 75px 20px #df741477}
+.enemy-attack[data-blocked=true] .enemy-attack-impact{inset:12% 8%;clip-path:none!important;border:7px double #b2d7d5;border-radius:45% 45% 15% 15%;background:#609cb733;box-shadow:0 0 22px #9acdd988,inset 0 0 28px #81bec45e}
+.enemy-attack-result{position:absolute;left:50%;bottom:10%;translate:-50% 0;font-size:clamp(18px,2.4vw,32px);color:#fff0c9;text-shadow:0 2px 8px #000;background:#102735e8;padding:9px 16px;white-space:nowrap;opacity:0}
+.enemy-attack[data-phase=hit] .enemy-attack-result,.enemy-attack[data-phase=reaction] .enemy-attack-result,.enemy-attack[data-phase=recovery] .enemy-attack-result{opacity:1}
+.incoming-hp-hit{outline:2px solid #ed9e74;outline-offset:-2px}
+@media(max-width:600px){.enemy-attack-result{white-space:normal;text-align:center;width:85%;font-size:18px}.enemy-attack-tell{bottom:24%;font-size:18px}}
+
+.time-theft-target{position:relative;overflow:visible}.time-theft-slice{position:absolute;left:0;top:50%;width:100%;height:5px;background:#f2d5a6;transform:rotate(-22deg) scaleX(0);z-index:8;box-shadow:0 0 12px #f6de9b}.time-theft-slice.cut{transform:rotate(-22deg) scaleX(1);transition:transform .1s}.time-theft-knife{position:absolute;left:25%;top:40%;width:25%;height:8%;background:#e2ddc4;clip-path:polygon(0 20%,80% 40%,100% 50%,80% 60%,0 80%);opacity:0}.time-theft-attack[data-phase=attack] .time-theft-knife{opacity:1;transform:translate(50%,-80%) rotate(-30deg);transition:transform .15s}.time-theft-attack[data-phase=hit] .time-theft-knife{opacity:0}
+
+.battle-stage:has(.special-steal) .monster-image[data-steal-actor=true]{animation:steal-approach .6s ease-out both!important;transform-origin:50% 25%}.special-steal .special-projectile{color:#e7dfbc;transform:rotate(-30deg);font-size:85px}.special-steal.impact .special-projectile{translate:20% -100%;transition:translate .18s}@keyframes steal-approach{from{transform:scale(1)}to{transform:scale(1.25) translateX(-2%)}}@media(prefers-reduced-motion:reduce){.battle-stage:has(.special-steal) .monster-image[data-steal-actor=true]{animation:none!important}}.reduced-motion .battle-stage:has(.special-steal) .monster-image[data-steal-actor=true]{animation:none!important}
+
+.enemy-attack[data-archetype][data-phase=reaction] .enemy-attack-shape,.enemy-attack[data-archetype][data-phase=recovery] .enemy-attack-shape{display:none}

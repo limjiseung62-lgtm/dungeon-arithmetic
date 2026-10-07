@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "types": [
+    "skeleton",
+    "goblin",
+    "orc",
+    "golem",
+    "flameGiant",
+    "darkKnight",
+    "chaosMage",
+    "dragonGuardian",
+    "demonKing"
+  ],
+  "method": "capture-only extra 1200ms presentation waits; actual rendering, not fabricated images; normal timing separately verified in QUALITY-ENEMY-v351.json"
+}

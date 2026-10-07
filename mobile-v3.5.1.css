@@ -1,0 +1,40 @@
+/* Mobile presentation only: combat rules and the whiteboard pad layout are unchanged. */
+@media(max-width:900px){
+  .start-v35 .start-worlds{grid-template-columns:minmax(0,1fr);gap:18px}
+  .start-v35 .start-option.play-mode-card{width:100%;min-width:0;height:clamp(350px,94vw,430px)}
+  .start-v35 .start-copy{left:20px;right:20px;bottom:20px;min-width:0}
+  .start-v35 .start-copy h2{font-size:36px;line-height:1.15;white-space:nowrap}
+  .start-v35 .start-copy p{font-size:15px;line-height:1.6;word-break:keep-all;overflow-wrap:break-word}
+  .start-v35 .start-copy small{font-size:12px;letter-spacing:.04em;word-break:keep-all}
+  .start-v35 .start-cta{min-height:44px;padding:10px 16px;gap:18px;white-space:nowrap;flex-shrink:0;font-size:16px}
+  .start-v35 .start-heading h1{font-size:clamp(30px,8vw,42px);line-height:1.12;word-break:keep-all}
+  .start-v35 .start-heading h1 span{display:block}
+  .start-v35 .start-footer{word-break:keep-all;line-height:1.6}
+  .scroll-choice-overlay .modal,.inventory-overlay .modal,.reward-modal{max-height:calc(100dvh - 28px);overflow-y:auto;overscroll-behavior:contain}
+  .scroll-cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px}
+  .scroll-cards .scroll-card{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:14px;min-width:0;height:auto;word-break:keep-all;text-align:left}
+  .scroll-cards .scroll-card>span{position:static!important;display:flex;align-items:center;justify-content:center;width:100%;height:112px;min-height:112px;transform:none!important}
+  .scroll-cards .scroll-card>span>.relic-art{position:static!important;display:block;width:108px!important;height:108px!important;max-width:100%;max-height:112px;transform:none!important;flex:none}
+  .scroll-cards .scroll-card>small,.scroll-cards .scroll-card>strong,.scroll-cards .scroll-card>p,.scroll-cards .scroll-card>b{position:static!important;inset:auto!important;transform:none!important;max-width:100%;margin:0;line-height:1.5}
+  .scroll-cards .scroll-card>strong{font-size:17px;word-break:keep-all}
+  .scroll-cards .scroll-card>p{font-size:14px;min-height:0;flex:1}
+  .scroll-cards .scroll-card>b{font-size:14px}
+  .scroll-card[disabled]{opacity:.5;cursor:not-allowed}
+  .scroll-card:focus-visible{outline:3px solid #ffe0a2;outline-offset:3px}
+  .selection-hint{font-size:14px;line-height:1.6;color:#e9d9b2}
+  .rpg-shell h1,.rpg-shell h2,.equipment-copy,.quest-card,.loot-card,.collection-card{word-break:keep-all;overflow-wrap:break-word}
+  .rpg-shell .equipment-card{min-width:0}
+}
+@media(hover:none){.start-v35 .start-option:hover>img{transform:none;filter:none}.start-v35 .start-option:hover .start-cta{background:#163342b8}}
+.rpg-quick-nav{position:fixed;z-index:75;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));translate:-50% 0;display:flex;gap:10px;padding:8px;background:#102d38f2;border:1px solid #a7956a;border-radius:10px;box-shadow:0 5px 18px #0005;max-width:calc(100vw - 24px);backdrop-filter:blur(5px)}
+.rpg-quick-nav[hidden]{display:none}
+.rpg-quick-nav button{min-height:44px;padding:8px 16px;white-space:nowrap;word-break:keep-all;font-size:14px;touch-action:manipulation}
+.rpg-shell.quick-nav-space{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+.target-focus-label{position:absolute;left:50%;top:12px;translate:-50% 0;pointer-events:none;max-width:45%;padding:5px 10px;background:#102c38de;color:#efe3c6;border-radius:6px;font-size:13px;word-break:keep-all;text-align:center;z-index:8}
+@media(max-width:600px){.target-focus-label{top:68px;font-size:11px;max-width:80%}.rpg-quick-nav{width:calc(100vw - 24px);justify-content:center}.rpg-quick-nav button{flex:1}}
+
+.target-focus-label{left:auto;right:12px;top:auto;bottom:12px;translate:none;max-width:40%}@media(max-width:600px){.target-focus-label{top:auto;bottom:12px;max-width:70%}}
+
+@media(max-width:900px){.rpg-result{max-height:calc(100dvh - 28px);overflow-y:auto;overscroll-behavior:contain}.reward-scroll{display:flex;align-items:center;gap:10px;word-break:keep-all}.reward-scroll>.relic-art{position:static!important;width:64px!important;height:64px!important;flex:none;transform:none!important}}
+
+.battle-stage[data-pov=v35] .combat-target.attack{animation:none;transition:background .2s,border-color .2s,opacity .15s;transform:translate(-50%,-50%)}
