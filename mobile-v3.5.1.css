@@ -19,7 +19,7 @@
   .scroll-cards .scroll-card>strong{font-size:17px;word-break:keep-all}
   .scroll-cards .scroll-card>p{font-size:14px;min-height:0;flex:1}
   .scroll-cards .scroll-card>b{font-size:14px}
-  .scroll-card[disabled]{opacity:.5;cursor:not-allowed}
+  .scroll-card[disabled]{opacity:1;cursor:not-allowed}
   .scroll-card:focus-visible{outline:3px solid #ffe0a2;outline-offset:3px}
   .selection-hint{font-size:14px;line-height:1.6;color:#e9d9b2}
   .rpg-shell h1,.rpg-shell h2,.equipment-copy,.quest-card,.loot-card,.collection-card{word-break:keep-all;overflow-wrap:break-word}

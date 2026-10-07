@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "scenario": "C-B-A-S",
+      "source": "1P · C 공격 · 검격",
+      "grade": "C",
+      "focus": 303.19999999925494,
+      "stop": 51.90000000037253,
+      "damage": 300.5
+    },
+    {
+      "scenario": "C-B-A-S",
+      "source": "2P · B 공격 · 마법",
+      "grade": "B",
+      "focus": 301.69999999925494,
+      "stop": 82.40000000037253,
+      "damage": 320.59999999962747
+    },
+    {
+      "scenario": "C-B-A-S",
+      "source": "3P · A 공격 · 연속 찌르기",
+      "grade": "A",
+      "focus": 323.80000000074506,
+      "stop": 113.40000000037253,
+      "damage": 341.30000000074506
+    },
+    {
+      "scenario": "C-B-A-S",
+      "source": "4P · S 공격 · 강한 내려치기",
+      "grade": "S",
+      "focus": 351,
+      "stop": 163.19999999925494,
+      "damage": 363.59999999962747
+    },
+    {
+      "scenario": "high-grade",
+      "source": "1P · S 공격 · 검격",
+      "grade": "S",
+      "focus": 351.5,
+      "stop": 160.5,
+      "damage": 360.40000000037253
+    },
+    {
+      "scenario": "high-grade",
+      "source": "3P · A 공격 · 연속 찌르기",
+      "grade": "A",
+      "focus": 322.59999999962747,
+      "stop": 111.39999999850988,
+      "damage": 344.19999999925494
+    },
+    {
+      "scenario": "three-success",
+      "source": "1P · C 공격 · 검격",
+      "grade": "C",
+      "focus": 302.7999999988824,
+      "stop": 50.29999999888241,
+      "damage": 302
+    },
+    {
+      "scenario": "three-success",
+      "source": "3P · A 공격 · 연속 찌르기",
+      "grade": "A",
+      "focus": 322.30000000074506,
+      "stop": 110.5,
+      "damage": 340.5
+    },
+    {
+      "scenario": "three-success",
+      "source": "4P · S 공격 · 강한 내려치기",
+      "grade": "S",
+      "focus": 351.2999999988824,
+      "stop": 162.40000000037253,
+      "damage": 362.69999999925494
+    },
+    {
+      "scenario": "defense-S",
+      "source": "1P · S 공격 · 검격",
+      "grade": "S",
+      "focus": 353.5,
+      "stop": 162.30000000074506,
+      "damage": 360.19999999925494
+    },
+    {
+      "scenario": "defense-S",
+      "source": "3P · A 공격 · 연속 찌르기",
+      "grade": "A",
+      "focus": 322.80000000074506,
+      "stop": 113.60000000149012,
+      "damage": 342
+    },
+    {
+      "scenario": "defense-S",
+      "source": "4P · B 공격 · 강한 내려치기",
+      "grade": "B",
+      "focus": 301.09999999962747,
+      "stop": 83.70000000111759,
+      "damage": 324.40000000037253
+    }
+  ]
+}

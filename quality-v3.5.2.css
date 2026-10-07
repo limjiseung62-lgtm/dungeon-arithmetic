@@ -1,0 +1,34 @@
+/* Surfaces own their readable foreground; the dark art theme no longer changes --ink. */
+.modal{--disabled-bg:#d9d5c9;--disabled-ink:#465047}
+.modal.scroll-choice,.modal.reward-modal,.modal.rpg-result,.inventory-modal,.scroll-choice-modal{--disabled-bg:#34474c;--disabled-ink:#dbe4df}
+.modal button:disabled,.modal button[aria-disabled=true]{opacity:1;background:var(--disabled-bg);color:var(--disabled-ink);border-color:#7e8c83;box-shadow:none;cursor:not-allowed}
+.modal button:disabled :is(small,strong,p,b),.modal button[aria-disabled=true] :is(small,strong,p,b){color:inherit;opacity:1}
+.modal button:disabled .relic-art{filter:grayscale(.65)}
+.coop-reward .modal{max-width:760px}
+.coop-reward .modal>small,.coop-run-result>small{display:block;color:#40594f;font-size:15px;line-height:1.6}
+.coop-reward .modal>p{font-size:16px}
+.coop-reward .modal>h2{line-height:1.4;word-break:keep-all}
+.modal .eyebrow{color:#67572f}
+.modal:is(.scroll-choice,.reward-modal,.rpg-result) .eyebrow{color:#e1ca99}
+.student-focus{position:absolute;left:16px;top:14px;z-index:60;padding:10px 20px;border:2px solid #efd18e;border-radius:10px;background:#112c39;color:#ffebbc;font-size:clamp(21px,1.8vw,32px);line-height:1.35;box-shadow:0 5px 18px #0006;max-width:calc(100% - 32px);word-break:keep-all;pointer-events:none}
+.combat-attack[data-combat-phase=focus] .student-focus{left:50%;top:18%;translate:-50% 0;white-space:nowrap;font-size:clamp(28px,2.6vw,48px)}
+.combat-attack[data-combat-phase=focus] .combat-rank{opacity:0}
+.coop-shell[data-student-focus] :is(.game-header,.battle-heading,.team-hud,.cinematic-queue){opacity:.35;transition:opacity .1s}
+.coop-shell[data-student-focus] .cinematic-top{opacity:.2}
+.coop-shell[data-focus-kind=defense] .team-hud{opacity:1}
+.student-shield{position:absolute;left:50%;top:44%;translate:-50% -50%;font-size:110px;z-index:45;opacity:0;filter:drop-shadow(0 0 16px #a8eada);pointer-events:none}
+.enemy-attack[data-defense-focus=true][data-phase=attack] .student-shield{opacity:.75}
+.enemy-attack[data-defense-focus=true][data-phase=hit] .student-shield{opacity:1;transform:scale(1.18)}
+.enemy-attack[data-defense-focus=true][data-phase=reaction] .student-shield{opacity:.65}
+.enemy-attack[data-defense-focus=true][data-phase=hit] .enemy-attack-shape{animation-play-state:paused}
+.special-sequence[data-defender] .student-focus{z-index:70;top:14px;left:16px;bottom:auto;transform:none}
+.special-sequence[data-defense-phase=collision] .special-barrier{filter:brightness(1.6);animation-play-state:paused}
+.special-sequence[data-defense-phase=success] .student-focus{border-color:#b9efcd;color:#defbe8}
+@media(max-width:600px){.coop-reward .modal{padding:22px}.coop-reward .modal>h2{font-size:23px}.coop-reward .modal>small{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.coop-shell[data-student-focus] :is(.game-header,.battle-heading,.team-hud,.cinematic-queue){transition:none}}
+
+.modal h2{word-break:keep-all;overflow-wrap:break-word}
+.input-pad button:disabled{opacity:1;background:#e3e3d9;color:#526257;box-shadow:none}
+.input-pad button:disabled small{color:#526257}
+.coop-shell .pad-steps,.coop-shell .pad-message{color:#bdcfc5}
+.coop-shell .pad-message.error{color:#ffb69e}

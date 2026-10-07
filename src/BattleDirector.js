@@ -9,7 +9,7 @@ export class BattleDirector{
   cancel(){this.cancelled=true;for(const item of this.pending){clearTimeout(item.handle);item.resolve();}this.pending.clear();}
   present(event){this.effects(this.presentation.decorate(event,this.combat.state));}
   async run(){
-    if(!this.attackPresentation){this.present({kind:'battle',text:'BATTLE!'});await this.wait(700);}else if(this.coopPresentation){const round=this.combat.state.coopRound;this.present({kind:'battle',text:round.early?'전원 준비 완료! 공격 개시!':round.contributors.length?round.contributors.length+'명의 힘이 준비되었습니다!':'공격 준비 실패 · 반격에 대비!'});await this.wait(round.contributors.length?500:200);}else await this.wait(80);
+    if(!this.attackPresentation){this.present({kind:'battle',text:'BATTLE!'});await this.wait(700);}else if(this.coopPresentation){const round=this.combat.state.coopRound;this.present({kind:'battle',text:round.early?'전원 준비 완료! 공격 개시!':round.contributors.length?round.contributors.length+'명의 힘이 준비되었습니다!':'공격 준비 실패 · 반격에 대비!'});await this.wait(round.contributors.length?300:200);}else await this.wait(80);
     while(!this.cancelled&&this.combat.state.phase==='resolution'){
       const s=this.combat.state,next=s.resolutionStage==='actions'?s.actionQueue[s.resolutionIndex]:null;
       if(s.resolutionStage==='special'&&this.special){await this.special(()=>{if(this.cancelled)return;const event=this.combat.resolveNext();this.update(event);});continue;}

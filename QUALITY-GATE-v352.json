@@ -1,0 +1,14 @@
+{
+  "version": "3.5.2",
+  "tests": 859,
+  "baseline": 851,
+  "newTests": 8,
+  "battleComparisons": 42,
+  "oldTags": 20,
+  "saveVersion": 5,
+  "reports": 9,
+  "build": "PASS",
+  "production": "PASS",
+  "public": "pending deployment",
+  "physicalDevice": false
+}

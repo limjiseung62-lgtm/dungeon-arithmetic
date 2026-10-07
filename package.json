@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "3.5.1",
+  "version": "3.5.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -94,9 +94,11 @@
     "test:coop:run": "node tests/class-coop-run-browser.cjs",
     "test:coop:balance": "node tests/class-coop-balance.mjs",
     "test:coop:performance": "node tests/class-coop-performance.cjs",
-    "test:quality:mobile": "node tests/quality-mobile-v351.cjs",
-    "test:quality:enemy": "node tests/quality-enemy-v351.cjs",
-    "test:quality:coop": "node tests/quality-coop-v351.cjs",
-    "test:quality:production": "node tests/quality-site-v351.cjs"
+    "test:quality:mobile": "node tests/quality-mobile-v352.cjs",
+    "test:quality:enemy": "node tests/quality-enemy-v352.cjs",
+    "test:quality:coop": "node tests/quality-coop-v352.cjs",
+    "test:quality:production": "node tests/quality-site-v352.cjs",
+    "test:quality:surfaces": "node tests/quality-surfaces-v352.cjs",
+    "test:quality:interrupt": "node tests/quality-interrupt-v352.cjs"
   }
 }

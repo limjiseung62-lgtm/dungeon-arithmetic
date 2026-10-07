@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "stopAt": "focus",
+      "cleanup": true,
+      "reload": true
+    },
+    {
+      "stopAt": "contact",
+      "cleanup": true,
+      "reload": true
+    },
+    {
+      "stopAt": "damage",
+      "cleanup": true,
+      "reload": true
+    }
+  ]
+}

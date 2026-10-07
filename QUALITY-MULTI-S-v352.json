@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "method": "presentation-only committed-result fixture; target claim/combat state never changed",
+  "runs": [
+    {
+      "grade": "S",
+      "weaponId": "steel_sword",
+      "weaponType": "SWORD",
+      "profile": null,
+      "elapsed": 1798.199999999255,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "focus",
+          "time": 0.30000000074505806
+        },
+        {
+          "stage": "anticipation",
+          "time": 351.80000000074506
+        },
+        {
+          "stage": "cutin",
+          "time": 534.9000000003725
+        },
+        {
+          "stage": "charge",
+          "time": 535
+        },
+        {
+          "stage": "trail",
+          "time": 685.8000000007451
+        },
+        {
+          "stage": "contact",
+          "time": 939.8000000007451
+        },
+        {
+          "stage": "reaction",
+          "time": 1102.5999999996275
+        },
+        {
+          "stage": "damage",
+          "time": 1265
+        },
+        {
+          "stage": "restore",
+          "time": 1627.4000000003725
+        }
+      ],
+      "commits": 1
+    },
+    {
+      "grade": "S",
+      "weaponId": "sage_staff",
+      "weaponType": "STAFF",
+      "profile": null,
+      "elapsed": 1803,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "focus",
+          "time": 0.09999999962747097
+        },
+        {
+          "stage": "anticipation",
+          "time": 353.59999999962747
+        },
+        {
+          "stage": "cutin",
+          "time": 535.5999999996275
+        },
+        {
+          "stage": "charge",
+          "time": 539.9000000003725
+        },
+        {
+          "stage": "trail",
+          "time": 691.1999999992549
+        },
+        {
+          "stage": "contact",
+          "time": 943.3000000007451
+        },
+        {
+          "stage": "reaction",
+          "time": 1107.699999999255
+        },
+        {
+          "stage": "damage",
+          "time": 1270.5
+        },
+        {
+          "stage": "restore",
+          "time": 1632.0999999996275
+        }
+      ],
+      "commits": 1
+    },
+    {
+      "grade": "A",
+      "weaponId": "rogue_dagger",
+      "weaponType": "DAGGER",
+      "profile": null,
+      "elapsed": 1553.8999999985099,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "focus",
+          "time": 0
+        },
+        {
+          "stage": "anticipation",
+          "time": 320.2999999988824
+        },
+        {
+          "stage": "cutin",
+          "time": 491.2999999988824
+        },
+        {
+          "stage": "charge",
+          "time": 495.7999999988824
+        },
+        {
+          "stage": "trail",
+          "time": 599.3999999985099
+        },
+        {
+          "stage": "contact",
+          "time": 812.2999999988824
+        },
+        {
+          "stage": "reaction",
+          "time": 924.3999999985099
+        },
+        {
+          "stage": "damage",
+          "time": 1058.199999999255
+        },
+        {
+          "stage": "restore",
+          "time": 1399.7999999988824
+        }
+      ],
+      "commits": 1
+    },
+    {
+      "grade": "S",
+      "weaponId": "dark_greatsword",
+      "weaponType": "GREATSWORD",
+      "profile": null,
+      "elapsed": 1843.699999999255,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "focus",
+          "time": 0
+        },
+        {
+          "stage": "anticipation",
+          "time": 352.19999999925494
+        },
+        {
+          "stage": "cutin",
+          "time": 535.4000000003725
+        },
+        {
+          "stage": "charge",
+          "time": 584
+        },
+        {
+          "stage": "trail",
+          "time": 735.1999999992549
+        },
+        {
+          "stage": "contact",
+          "time": 985.9000000003725
+        },
+        {
+          "stage": "reaction",
+          "time": 1147.7999999988824
+        },
+        {
+          "stage": "damage",
+          "time": 1310.699999999255
+        },
+        {
+          "stage": "restore",
+          "time": 1673.0999999996275
+        }
+      ],
+      "commits": 1
+    }
+  ],
+  "unchangedHP": true,
+  "nodes": 0
+}

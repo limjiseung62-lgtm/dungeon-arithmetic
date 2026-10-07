@@ -1,0 +1,1093 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "name": "C-B-A-S",
+      "defense": {
+        "type": "skeleton",
+        "archetype": "SLASH",
+        "boss": false,
+        "variant": 0,
+        "name": "검을 들어 베기",
+        "material": "metal",
+        "sound": "metal",
+        "timing": [
+          270,
+          290,
+          65,
+          220,
+          180
+        ],
+        "intentName": "",
+        "special": "none",
+        "elapsed": 1036.9000000003725,
+        "trace": [
+          {
+            "phase": "anticipation",
+            "time": 0.09999999962747097
+          },
+          {
+            "phase": "attack",
+            "time": 270.59999999962747
+          },
+          {
+            "phase": "hit",
+            "time": 562
+          },
+          {
+            "phase": "reaction",
+            "time": 630.8000000007451
+          },
+          {
+            "phase": "recovery",
+            "time": 854.8000000007451
+          }
+        ],
+        "commits": 1,
+        "hpDamage": 7,
+        "absorbed": 0
+      },
+      "focusRemaining": 0,
+      "seen": [
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "focus",
+          "time": 4500.5,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "anticipation",
+          "time": 4803.699999999255,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "cutin",
+          "time": 4907.4000000003725,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "charge",
+          "time": 4907.800000000745,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "trail",
+          "time": 4971.5999999996275,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "contact",
+          "time": 5110.5,
+          "damage": "10"
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "reaction",
+          "time": 5162.4000000003725,
+          "damage": "10"
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "damage",
+          "time": 5248.800000000745,
+          "damage": "10"
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "restore",
+          "time": 5549.300000000745,
+          "damage": "10"
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "focus",
+          "time": 5686.5,
+          "damage": ""
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "anticipation",
+          "time": 5988.199999999255,
+          "damage": ""
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "cutin",
+          "time": 6132.5,
+          "damage": ""
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "charge",
+          "time": 6137,
+          "damage": ""
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "trail",
+          "time": 6218.4000000003725,
+          "damage": ""
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "contact",
+          "time": 6377.699999999255,
+          "damage": "17"
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "reaction",
+          "time": 6460.0999999996275,
+          "damage": "17"
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "damage",
+          "time": 6562.5999999996275,
+          "damage": "17"
+        },
+        {
+          "source": "2P · B 공격 · 마법",
+          "grade": "B",
+          "phase": "restore",
+          "time": 6883.199999999255,
+          "damage": "17"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "focus",
+          "time": 7030.199999999255,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "anticipation",
+          "time": 7354,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "cutin",
+          "time": 7524.199999999255,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "charge",
+          "time": 7529.0999999996275,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "trail",
+          "time": 7634.5999999996275,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "contact",
+          "time": 7848.9000000003725,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "reaction",
+          "time": 7962.300000000745,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "damage",
+          "time": 8096.0999999996275,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "restore",
+          "time": 8437.400000000373,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "focus",
+          "time": 8595,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "anticipation",
+          "time": 8946,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "cutin",
+          "time": 9128.300000000745,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "charge",
+          "time": 9175.300000000745,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "trail",
+          "time": 9328,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "contact",
+          "time": 9582.5,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "reaction",
+          "time": 9745.699999999255,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "damage",
+          "time": 9906.900000000373,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "restore",
+          "time": 10270.5,
+          "damage": "27"
+        }
+      ],
+      "maxRoots": 1,
+      "events": [
+        {
+          "kind": "attack",
+          "player": 0,
+          "damage": 10
+        },
+        {
+          "kind": "attack",
+          "player": 1,
+          "damage": 17
+        },
+        {
+          "kind": "attack",
+          "player": 2,
+          "damage": 27
+        },
+        {
+          "kind": "attack",
+          "player": 3,
+          "damage": 27
+        },
+        {
+          "kind": "coop-combo",
+          "damage": 9
+        }
+      ],
+      "remaining": 0,
+      "attackSpan": 5466.800000000745,
+      "errors": []
+    },
+    {
+      "name": "high-grade",
+      "defense": {
+        "type": "skeleton",
+        "archetype": "SLASH",
+        "boss": false,
+        "variant": 0,
+        "name": "검을 들어 베기",
+        "material": "metal",
+        "sound": "metal",
+        "timing": [
+          270,
+          290,
+          65,
+          220,
+          180
+        ],
+        "intentName": "",
+        "special": "none",
+        "elapsed": 1633,
+        "trace": [
+          {
+            "phase": "defense-focus",
+            "playerId": 1,
+            "time": 0
+          },
+          {
+            "phase": "defense-focus",
+            "playerId": 3,
+            "time": 303.80000000074506
+          },
+          {
+            "phase": "anticipation",
+            "time": 604
+          },
+          {
+            "phase": "attack",
+            "time": 875
+          },
+          {
+            "phase": "hit",
+            "time": 1166.300000000745
+          },
+          {
+            "phase": "reaction",
+            "time": 1232.4000000003725
+          },
+          {
+            "phase": "recovery",
+            "time": 1452.7000000011176
+          }
+        ],
+        "commits": 1,
+        "hpDamage": 0,
+        "absorbed": 7
+      },
+      "focusRemaining": 0,
+      "seen": [
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "focus",
+          "time": 4457.60000000149,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "anticipation",
+          "time": 4809.10000000149,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "cutin",
+          "time": 4993.10000000149,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "charge",
+          "time": 5038.700000001118,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "trail",
+          "time": 5193.200000001118,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "contact",
+          "time": 5450.60000000149,
+          "damage": "27"
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "reaction",
+          "time": 5611.10000000149,
+          "damage": "27"
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "damage",
+          "time": 5772.200000001118,
+          "damage": "27"
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "restore",
+          "time": 6132.60000000149,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "focus",
+          "time": 6498.9000000003725,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "anticipation",
+          "time": 6821.5,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "cutin",
+          "time": 6992.4000000003725,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "charge",
+          "time": 6997,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "trail",
+          "time": 7101.60000000149,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "contact",
+          "time": 7316.10000000149,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "reaction",
+          "time": 7427.5,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "damage",
+          "time": 7557.800000000745,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "restore",
+          "time": 7902,
+          "damage": "27"
+        }
+      ],
+      "maxRoots": 1,
+      "events": [
+        {
+          "kind": "attack",
+          "player": 0,
+          "damage": 27
+        },
+        {
+          "kind": "defense",
+          "player": 1
+        },
+        {
+          "kind": "attack",
+          "player": 2,
+          "damage": 27
+        },
+        {
+          "kind": "defense",
+          "player": 3
+        },
+        {
+          "kind": "coop-combo",
+          "damage": 6
+        }
+      ],
+      "remaining": 0,
+      "attackSpan": 3092.89999999851,
+      "errors": []
+    },
+    {
+      "name": "three-success",
+      "defense": {
+        "type": "skeleton",
+        "archetype": "SLASH",
+        "boss": false,
+        "variant": 0,
+        "name": "검을 들어 베기",
+        "material": "metal",
+        "sound": "metal",
+        "timing": [
+          270,
+          290,
+          65,
+          220,
+          180
+        ],
+        "intentName": "",
+        "special": "none",
+        "elapsed": 1036.300000000745,
+        "trace": [
+          {
+            "phase": "anticipation",
+            "time": 0
+          },
+          {
+            "phase": "attack",
+            "time": 271
+          },
+          {
+            "phase": "hit",
+            "time": 561.7000000011176
+          },
+          {
+            "phase": "reaction",
+            "time": 630.2000000011176
+          },
+          {
+            "phase": "recovery",
+            "time": 853.2000000011176
+          }
+        ],
+        "commits": 1,
+        "hpDamage": 7,
+        "absorbed": 0
+      },
+      "focusRemaining": 0,
+      "seen": [
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "focus",
+          "time": 4389.700000001118,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "anticipation",
+          "time": 4692.5,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "cutin",
+          "time": 4796,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "charge",
+          "time": 4796.5,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "trail",
+          "time": 4858.9000000003725,
+          "damage": ""
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "contact",
+          "time": 4996.10000000149,
+          "damage": "10"
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "reaction",
+          "time": 5046.4000000003725,
+          "damage": "10"
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "damage",
+          "time": 5132.200000001118,
+          "damage": "10"
+        },
+        {
+          "source": "1P · C 공격 · 검격",
+          "grade": "C",
+          "phase": "restore",
+          "time": 5434.200000001118,
+          "damage": "10"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "focus",
+          "time": 5573.5,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "anticipation",
+          "time": 5895.800000000745,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "cutin",
+          "time": 6066.5,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "charge",
+          "time": 6070.800000000745,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "trail",
+          "time": 6171.200000001118,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "contact",
+          "time": 6386.200000001118,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "reaction",
+          "time": 6496.700000001118,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "damage",
+          "time": 6629.700000001118,
+          "damage": "27"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "restore",
+          "time": 6970.200000001118,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "focus",
+          "time": 7124.10000000149,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "anticipation",
+          "time": 7475.4000000003725,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "cutin",
+          "time": 7659,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "charge",
+          "time": 7705.300000000745,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "trail",
+          "time": 7859.10000000149,
+          "damage": ""
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "contact",
+          "time": 8113.9000000003725,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "reaction",
+          "time": 8276.300000000745,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "damage",
+          "time": 8438.300000000745,
+          "damage": "27"
+        },
+        {
+          "source": "4P · S 공격 · 강한 내려치기",
+          "grade": "S",
+          "phase": "restore",
+          "time": 8801,
+          "damage": "27"
+        }
+      ],
+      "maxRoots": 1,
+      "events": [
+        {
+          "kind": "attack",
+          "player": 0,
+          "damage": 10
+        },
+        {
+          "kind": "attack",
+          "player": 2,
+          "damage": 27
+        },
+        {
+          "kind": "attack",
+          "player": 3,
+          "damage": 27
+        },
+        {
+          "kind": "coop-combo",
+          "damage": 2
+        }
+      ],
+      "remaining": 0,
+      "attackSpan": 4108.5,
+      "errors": []
+    },
+    {
+      "name": "defense-S",
+      "defense": {
+        "type": "golem",
+        "archetype": "HEAVY",
+        "boss": true,
+        "variant": 0,
+        "name": "무거운 내려치기",
+        "material": "stone",
+        "sound": "rock",
+        "timing": [
+          649,
+          448,
+          100,
+          319,
+          307
+        ],
+        "intentName": "",
+        "special": "groundSmash",
+        "elapsed": 2135.60000000149,
+        "trace": [
+          {
+            "phase": "defense-focus",
+            "playerId": 1,
+            "time": 0
+          },
+          {
+            "phase": "anticipation",
+            "time": 302.6000000014901
+          },
+          {
+            "phase": "attack",
+            "time": 952.4000000003725
+          },
+          {
+            "phase": "hit",
+            "time": 1402.9000000003725
+          },
+          {
+            "phase": "reaction",
+            "time": 1505.300000000745
+          },
+          {
+            "phase": "recovery",
+            "time": 1827.5
+          }
+        ],
+        "commits": 1,
+        "hpDamage": 10,
+        "absorbed": 26
+      },
+      "focusRemaining": 0,
+      "seen": [
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "focus",
+          "time": 4699.0999999996275,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "anticipation",
+          "time": 5052.5999999996275,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "cutin",
+          "time": 5236.199999999255,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "charge",
+          "time": 5283.800000000745,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "trail",
+          "time": 5436.0999999996275,
+          "damage": ""
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "contact",
+          "time": 5694.5999999996275,
+          "damage": "17"
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "reaction",
+          "time": 5856.9000000003725,
+          "damage": "17"
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "damage",
+          "time": 6020,
+          "damage": "17"
+        },
+        {
+          "source": "1P · S 공격 · 검격",
+          "grade": "S",
+          "phase": "restore",
+          "time": 6380.199999999255,
+          "damage": "17"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "focus",
+          "time": 6863.699999999255,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "anticipation",
+          "time": 7186.5,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "cutin",
+          "time": 7357.5,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "charge",
+          "time": 7362.300000000745,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "trail",
+          "time": 7466.199999999255,
+          "damage": ""
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "contact",
+          "time": 7682.199999999255,
+          "damage": "17"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "reaction",
+          "time": 7795.800000000745,
+          "damage": "17"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "damage",
+          "time": 7928.5999999996275,
+          "damage": "17"
+        },
+        {
+          "source": "3P · A 공격 · 연속 찌르기",
+          "grade": "A",
+          "phase": "restore",
+          "time": 8270.599999999627,
+          "damage": "17"
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "focus",
+          "time": 8427.800000000745,
+          "damage": ""
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "anticipation",
+          "time": 8728.900000000373,
+          "damage": ""
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "cutin",
+          "time": 8869.599999999627,
+          "damage": ""
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "charge",
+          "time": 8874.300000000745,
+          "damage": ""
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "trail",
+          "time": 8957.599999999627,
+          "damage": ""
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "contact",
+          "time": 9116.099999999627,
+          "damage": "9"
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "reaction",
+          "time": 9199.800000000745,
+          "damage": "9"
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "damage",
+          "time": 9304.099999999627,
+          "damage": "9"
+        },
+        {
+          "source": "4P · B 공격 · 강한 내려치기",
+          "grade": "B",
+          "phase": "restore",
+          "time": 9628.5,
+          "damage": "9"
+        }
+      ],
+      "maxRoots": 1,
+      "events": [
+        {
+          "kind": "attack",
+          "player": 0,
+          "damage": 17
+        },
+        {
+          "kind": "defense",
+          "player": 1
+        },
+        {
+          "kind": "attack",
+          "player": 2,
+          "damage": 17
+        },
+        {
+          "kind": "attack",
+          "player": 3,
+          "damage": 9
+        },
+        {
+          "kind": "coop-combo",
+          "damage": 5
+        },
+        {
+          "kind": "block",
+          "blockedBy": 1
+        }
+      ],
+      "remaining": 0,
+      "attackSpan": 4575.9000000003725,
+      "errors": []
+    }
+  ],
+  "rulePreserved": "S target exclusive; high-grade mixed queue is legal"
+}

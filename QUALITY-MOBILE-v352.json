@@ -1,0 +1,682 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "width": 360,
+      "height": 800,
+      "start": [
+        {
+          "x": 16,
+          "y": 160.1875,
+          "width": 328,
+          "height": 350,
+          "cta": {
+            "x": 37,
+            "y": 445.1875,
+            "width": 153.625,
+            "height": 44,
+            "top": 445.1875,
+            "right": 190.625,
+            "bottom": 489.1875,
+            "left": 37
+          }
+        },
+        {
+          "x": 16,
+          "y": 528.1875,
+          "width": 328,
+          "height": 350,
+          "cta": {
+            "x": 37,
+            "y": 813.1875,
+            "width": 153.625,
+            "height": 44,
+            "top": 813.1875,
+            "right": 190.625,
+            "bottom": 857.1875,
+            "left": 37
+          }
+        }
+      ],
+      "cards": [
+        {
+          "image": {
+            "x": 61,
+            "y": 220.890625,
+            "width": 238,
+            "height": 112,
+            "top": 220.890625,
+            "right": 299,
+            "bottom": 332.890625,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 368.875,
+            "width": 238,
+            "height": 25.5,
+            "top": 368.875,
+            "right": 299,
+            "bottom": 394.375,
+            "left": 61
+          },
+          "rarity": "일반",
+          "count": "3회",
+          "description": "적에게 추가 피해 22"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 494.375,
+            "width": 238,
+            "height": 112,
+            "top": 494.375,
+            "right": 299,
+            "bottom": 606.375,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 642.359375,
+            "width": 238,
+            "height": 25.5,
+            "top": 642.359375,
+            "right": 299,
+            "bottom": 667.859375,
+            "left": 61
+          },
+          "rarity": "희귀",
+          "count": "3회",
+          "description": "첫 적 26 → 다음 적 18 → 마지막 적 12 · 한 적이면 총 26"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 788.859375,
+            "width": 238,
+            "height": 112,
+            "top": 788.859375,
+            "right": 299,
+            "bottom": 900.859375,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 936.84375,
+            "width": 238,
+            "height": 25.5,
+            "top": 936.84375,
+            "right": 299,
+            "bottom": 962.34375,
+            "left": 61
+          },
+          "rarity": "영웅",
+          "count": "3회",
+          "description": "중심 적 48 · 주변 적 각각 12 · 1회"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 1062.34375,
+            "width": 238,
+            "height": 112,
+            "top": 1062.34375,
+            "right": 299,
+            "bottom": 1174.34375,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 1210.328125,
+            "width": 238,
+            "height": 25.5,
+            "top": 1210.328125,
+            "right": 299,
+            "bottom": 1235.828125,
+            "left": 61
+          },
+          "rarity": "희귀",
+          "count": "3회",
+          "description": "공동 HP 30 회복 · 최대 HP까지"
+        }
+      ],
+      "targetBoxes": [
+        {
+          "x": 55.546875,
+          "y": 314.296875,
+          "width": 71.0625,
+          "height": 45,
+          "top": 314.296875,
+          "right": 126.609375,
+          "bottom": 359.296875,
+          "left": 55.546875
+        },
+        {
+          "x": 240.609375,
+          "y": 356.296875,
+          "width": 56.625,
+          "height": 45,
+          "top": 356.296875,
+          "right": 297.234375,
+          "bottom": 401.296875,
+          "left": 240.609375
+        },
+        {
+          "x": 81.296875,
+          "y": 418.453125,
+          "width": 70.8125,
+          "height": 45,
+          "top": 418.453125,
+          "right": 152.109375,
+          "bottom": 463.453125,
+          "left": 81.296875
+        },
+        {
+          "x": 208.0625,
+          "y": 441.140625,
+          "width": 67.125,
+          "height": 45,
+          "top": 441.140625,
+          "right": 275.1875,
+          "bottom": 486.140625,
+          "left": 208.0625
+        }
+      ],
+      "navigation": [
+        {
+          "action": "rpg-records",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-guild",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-collection",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-inventory",
+          "long": false,
+          "passed": true
+        },
+        {
+          "action": "rpg-mercenaries",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-weapon",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-armor",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-accessory",
+          "long": true,
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "start": [
+        {
+          "x": 16,
+          "y": 162.875,
+          "width": 358,
+          "height": 366.59375,
+          "cta": {
+            "x": 37,
+            "y": 464.46875,
+            "width": 153.625,
+            "height": 44,
+            "top": 464.46875,
+            "right": 190.625,
+            "bottom": 508.46875,
+            "left": 37
+          }
+        },
+        {
+          "x": 16,
+          "y": 547.46875,
+          "width": 358,
+          "height": 366.59375,
+          "cta": {
+            "x": 37,
+            "y": 849.0625,
+            "width": 153.625,
+            "height": 44,
+            "top": 849.0625,
+            "right": 190.625,
+            "bottom": 893.0625,
+            "left": 37
+          }
+        }
+      ],
+      "cards": [
+        {
+          "image": {
+            "x": 61,
+            "y": 230.140625,
+            "width": 268,
+            "height": 112,
+            "top": 230.140625,
+            "right": 329,
+            "bottom": 342.140625,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 378.125,
+            "width": 268,
+            "height": 25.5,
+            "top": 378.125,
+            "right": 329,
+            "bottom": 403.625,
+            "left": 61
+          },
+          "rarity": "일반",
+          "count": "3회",
+          "description": "적에게 추가 피해 22"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 503.625,
+            "width": 268,
+            "height": 112,
+            "top": 503.625,
+            "right": 329,
+            "bottom": 615.625,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 651.609375,
+            "width": 268,
+            "height": 25.5,
+            "top": 651.609375,
+            "right": 329,
+            "bottom": 677.109375,
+            "left": 61
+          },
+          "rarity": "희귀",
+          "count": "3회",
+          "description": "첫 적 26 → 다음 적 18 → 마지막 적 12 · 한 적이면 총 26"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 798.109375,
+            "width": 268,
+            "height": 112,
+            "top": 798.109375,
+            "right": 329,
+            "bottom": 910.109375,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 946.09375,
+            "width": 268,
+            "height": 25.5,
+            "top": 946.09375,
+            "right": 329,
+            "bottom": 971.59375,
+            "left": 61
+          },
+          "rarity": "영웅",
+          "count": "3회",
+          "description": "중심 적 48 · 주변 적 각각 12 · 1회"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 1071.59375,
+            "width": 268,
+            "height": 112,
+            "top": 1071.59375,
+            "right": 329,
+            "bottom": 1183.59375,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 1219.578125,
+            "width": 268,
+            "height": 25.5,
+            "top": 1219.578125,
+            "right": 329,
+            "bottom": 1245.078125,
+            "left": 61
+          },
+          "rarity": "희귀",
+          "count": "3회",
+          "description": "공동 HP 30 회복 · 최대 HP까지"
+        }
+      ],
+      "targetBoxes": [
+        {
+          "x": 64.21875,
+          "y": 391.5,
+          "width": 68.125,
+          "height": 45,
+          "top": 391.5,
+          "right": 132.34375,
+          "bottom": 436.5,
+          "left": 64.21875
+        },
+        {
+          "x": 249.953125,
+          "y": 378.5,
+          "width": 56.65625,
+          "height": 45,
+          "top": 378.5,
+          "right": 306.609375,
+          "bottom": 423.5,
+          "left": 249.953125
+        },
+        {
+          "x": 86.0859375,
+          "y": 465.5,
+          "width": 67.140625,
+          "height": 45,
+          "top": 465.5,
+          "right": 153.2265625,
+          "bottom": 510.5,
+          "left": 86.0859375
+        },
+        {
+          "x": 263.1953125,
+          "y": 441.5,
+          "width": 57.046875,
+          "height": 45,
+          "top": 441.5,
+          "right": 320.2421875,
+          "bottom": 486.5,
+          "left": 263.1953125
+        }
+      ],
+      "navigation": [
+        {
+          "action": "rpg-records",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-guild",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-collection",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-inventory",
+          "long": false,
+          "passed": true
+        },
+        {
+          "action": "rpg-mercenaries",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-weapon",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-armor",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-accessory",
+          "long": true,
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "start": [
+        {
+          "x": 16,
+          "y": 166.8125,
+          "width": 380,
+          "height": 387.265625,
+          "cta": {
+            "x": 37,
+            "y": 489.078125,
+            "width": 153.625,
+            "height": 44,
+            "top": 489.078125,
+            "right": 190.625,
+            "bottom": 533.078125,
+            "left": 37
+          }
+        },
+        {
+          "x": 16,
+          "y": 572.078125,
+          "width": 380,
+          "height": 387.265625,
+          "cta": {
+            "x": 37,
+            "y": 894.34375,
+            "width": 153.625,
+            "height": 44,
+            "top": 894.34375,
+            "right": 190.625,
+            "bottom": 938.34375,
+            "left": 37
+          }
+        }
+      ],
+      "cards": [
+        {
+          "image": {
+            "x": 61,
+            "y": 245.046875,
+            "width": 290,
+            "height": 112,
+            "top": 245.046875,
+            "right": 351,
+            "bottom": 357.046875,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 393.03125,
+            "width": 290,
+            "height": 25.5,
+            "top": 393.03125,
+            "right": 351,
+            "bottom": 418.53125,
+            "left": 61
+          },
+          "rarity": "일반",
+          "count": "3회",
+          "description": "적에게 추가 피해 22"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 518.53125,
+            "width": 290,
+            "height": 112,
+            "top": 518.53125,
+            "right": 351,
+            "bottom": 630.53125,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 666.515625,
+            "width": 290,
+            "height": 25.5,
+            "top": 666.515625,
+            "right": 351,
+            "bottom": 692.015625,
+            "left": 61
+          },
+          "rarity": "희귀",
+          "count": "3회",
+          "description": "첫 적 26 → 다음 적 18 → 마지막 적 12 · 한 적이면 총 26"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 813.015625,
+            "width": 290,
+            "height": 112,
+            "top": 813.015625,
+            "right": 351,
+            "bottom": 925.015625,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 961,
+            "width": 290,
+            "height": 25.5,
+            "top": 961,
+            "right": 351,
+            "bottom": 986.5,
+            "left": 61
+          },
+          "rarity": "영웅",
+          "count": "3회",
+          "description": "중심 적 48 · 주변 적 각각 12 · 1회"
+        },
+        {
+          "image": {
+            "x": 61,
+            "y": 1086.5,
+            "width": 290,
+            "height": 112,
+            "top": 1086.5,
+            "right": 351,
+            "bottom": 1198.5,
+            "left": 61
+          },
+          "name": {
+            "x": 61,
+            "y": 1234.484375,
+            "width": 290,
+            "height": 25.5,
+            "top": 1234.484375,
+            "right": 351,
+            "bottom": 1259.984375,
+            "left": 61
+          },
+          "rarity": "희귀",
+          "count": "3회",
+          "description": "공동 HP 30 회복 · 최대 HP까지"
+        }
+      ],
+      "targetBoxes": [
+        {
+          "x": 68.640625,
+          "y": 391.5,
+          "width": 69.84375,
+          "height": 45,
+          "top": 391.5,
+          "right": 138.484375,
+          "bottom": 436.5,
+          "left": 68.640625
+        },
+        {
+          "x": 260.96875,
+          "y": 378.5,
+          "width": 56.625,
+          "height": 45,
+          "top": 378.5,
+          "right": 317.59375,
+          "bottom": 423.5,
+          "left": 260.96875
+        },
+        {
+          "x": 97.6484375,
+          "y": 465.5,
+          "width": 66.015625,
+          "height": 45,
+          "top": 465.5,
+          "right": 163.6640625,
+          "bottom": 510.5,
+          "left": 97.6484375
+        },
+        {
+          "x": 219.71875,
+          "y": 441.5,
+          "width": 67.125,
+          "height": 45,
+          "top": 441.5,
+          "right": 286.84375,
+          "bottom": 486.5,
+          "left": 219.71875
+        }
+      ],
+      "navigation": [
+        {
+          "action": "rpg-records",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-guild",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-collection",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-inventory",
+          "long": false,
+          "passed": true
+        },
+        {
+          "action": "rpg-mercenaries",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-weapon",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-armor",
+          "long": true,
+          "passed": true
+        },
+        {
+          "action": "rpg-shop-accessory",
+          "long": true,
+          "passed": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "physicalAndroidImagesAccessible": false,
+  "reference": "user reported Android defects; public viewport reproduction permitted by final instructions"
+}

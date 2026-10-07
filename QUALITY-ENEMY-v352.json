@@ -1,0 +1,1892 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "type": "skeleton",
+      "geometry": {
+        "faces": [
+          {
+            "x": 638.3813615333773,
+            "y": 86.13600000000004,
+            "width": 49.23727693324521,
+            "height": 69.83999999999999,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 468.3671875,
+            "y": 135.421875,
+            "width": 83.015625,
+            "height": 53
+          },
+          {
+            "x": 797.2265625,
+            "y": 174.21875,
+            "width": 61.796875,
+            "height": 53
+          },
+          {
+            "x": 569.9375,
+            "y": 231.640625,
+            "width": 81.1875,
+            "height": 53
+          },
+          {
+            "x": 686.6953125,
+            "y": 252.59375,
+            "width": 78.484375,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "skeleton",
+          "archetype": "SLASH",
+          "boss": false,
+          "variant": 0,
+          "name": "검을 들어 베기",
+          "material": "metal",
+          "sound": "metal",
+          "timing": [
+            270,
+            290,
+            65,
+            220,
+            180
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1035.7999999998137,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 270.79999999981374
+            },
+            {
+              "phase": "hit",
+              "time": 565.3999999994412
+            },
+            {
+              "phase": "reaction",
+              "time": 631.7999999998137
+            },
+            {
+              "phase": "recovery",
+              "time": 854
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 5
+        },
+        {
+          "type": "skeleton",
+          "archetype": "SLASH",
+          "boss": false,
+          "variant": 1,
+          "name": "검을 들어 베기",
+          "material": "metal",
+          "sound": "metal",
+          "timing": [
+            270,
+            290,
+            65,
+            220,
+            180
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1034.5999999996275,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 272.29999999981374
+            },
+            {
+              "phase": "hit",
+              "time": 563.0999999996275
+            },
+            {
+              "phase": "reaction",
+              "time": 631.2000000001863
+            },
+            {
+              "phase": "recovery",
+              "time": 851.7000000001863
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 5
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "goblin",
+      "geometry": {
+        "faces": [
+          {
+            "x": 630.86416,
+            "y": 154.24,
+            "width": 76.27167999999999,
+            "height": 89.17,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 466.59375,
+            "y": 185.578125,
+            "width": 83.6875,
+            "height": 53
+          },
+          {
+            "x": 797.640625,
+            "y": 185.578125,
+            "width": 63.84375,
+            "height": 53
+          },
+          {
+            "x": 568,
+            "y": 274.75,
+            "width": 81.25,
+            "height": 53
+          },
+          {
+            "x": 688.890625,
+            "y": 296.4375,
+            "width": 77.8125,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "goblin",
+          "archetype": "STAB",
+          "boss": false,
+          "variant": 0,
+          "name": "빈틈을 노리는 찌르기",
+          "material": "arcane",
+          "sound": "fast",
+          "timing": [
+            160,
+            170,
+            45,
+            140,
+            160
+          ],
+          "intentName": "",
+          "special": "steal",
+          "elapsed": 682.5,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 161.70000000018626
+            },
+            {
+              "phase": "hit",
+              "time": 332.59999999962747
+            },
+            {
+              "phase": "reaction",
+              "time": 378.59999999962747
+            },
+            {
+              "phase": "recovery",
+              "time": 520.5999999996275
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 7
+        },
+        {
+          "type": "goblin",
+          "archetype": "STAB",
+          "boss": false,
+          "variant": 1,
+          "name": "빈틈을 노리는 찌르기",
+          "material": "arcane",
+          "sound": "fast",
+          "timing": [
+            160,
+            170,
+            45,
+            140,
+            160
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 682.7999999998137,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 162.09999999962747
+            },
+            {
+              "phase": "hit",
+              "time": 332.8999999994412
+            },
+            {
+              "phase": "reaction",
+              "time": 379.59999999962747
+            },
+            {
+              "phase": "recovery",
+              "time": 520.7000000001863
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 8
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "orc",
+      "geometry": {
+        "faces": [
+          {
+            "x": 636.8091451292246,
+            "y": 111.00000000000004,
+            "width": 64.3817097415507,
+            "height": 90,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 467.671875,
+            "y": 193.5,
+            "width": 81.53125,
+            "height": 53
+          },
+          {
+            "x": 721.2421875,
+            "y": 180.5,
+            "width": 64.515625,
+            "height": 53
+          },
+          {
+            "x": 551.609375,
+            "y": 267.5,
+            "width": 81.875,
+            "height": 53
+          },
+          {
+            "x": 704.1953125,
+            "y": 294.5,
+            "width": 78.484375,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "orc",
+          "archetype": "MAGIC",
+          "boss": false,
+          "variant": 0,
+          "name": "마력 집중 · 투사체",
+          "material": "arcane",
+          "sound": "magic",
+          "timing": [
+            430,
+            350,
+            70,
+            220,
+            200
+          ],
+          "intentName": "",
+          "special": "curse",
+          "elapsed": 1286.4000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 432
+            },
+            {
+              "phase": "hit",
+              "time": 787.6000000005588
+            },
+            {
+              "phase": "reaction",
+              "time": 863.8000000007451
+            },
+            {
+              "phase": "recovery",
+              "time": 1086
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 9
+        },
+        {
+          "type": "orc",
+          "archetype": "MAGIC",
+          "boss": false,
+          "variant": 1,
+          "name": "마력 집중 · 투사체",
+          "material": "arcane",
+          "sound": "magic",
+          "timing": [
+            430,
+            350,
+            70,
+            220,
+            200
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1286.2999999998137,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 432.79999999981374
+            },
+            {
+              "phase": "hit",
+              "time": 784.6999999992549
+            },
+            {
+              "phase": "reaction",
+              "time": 858.8999999994412
+            },
+            {
+              "phase": "recovery",
+              "time": 1083
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 2,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "magmaGuard",
+      "geometry": {
+        "faces": [
+          {
+            "x": 351.355737009544,
+            "y": 68.86000000000006,
+            "width": 73.32852598091198,
+            "height": 102.89999999999999,
+            "kind": "face"
+          },
+          {
+            "x": 878.2730033003302,
+            "y": 116.88000000000004,
+            "width": 63.13399339933993,
+            "height": 88.2,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 280.359375,
+            "y": 193.5,
+            "width": 81.53125,
+            "height": 53
+          },
+          {
+            "x": 452.34375,
+            "y": 152.125,
+            "width": 63.84375,
+            "height": 53
+          },
+          {
+            "x": 282.453125,
+            "y": 293.5,
+            "width": 77.34375,
+            "height": 53
+          },
+          {
+            "x": 433.5703125,
+            "y": 282.453125,
+            "width": 78.484375,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "fireScorpion",
+          "archetype": "STAB",
+          "boss": false,
+          "variant": 0,
+          "name": "빈틈을 노리는 찌르기",
+          "material": "ember",
+          "sound": "fast",
+          "timing": [
+            160,
+            170,
+            45,
+            140,
+            160
+          ],
+          "intentName": "",
+          "special": "burn",
+          "elapsed": 686.7999999998137,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 162.29999999981374
+            },
+            {
+              "phase": "hit",
+              "time": 336.8999999994412
+            },
+            {
+              "phase": "reaction",
+              "time": 383.70000000018626
+            },
+            {
+              "phase": "recovery",
+              "time": 526
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 3,
+          "absorbed": 2
+        },
+        {
+          "type": "fireScorpion",
+          "archetype": "STAB",
+          "boss": false,
+          "variant": 1,
+          "name": "빈틈을 노리는 찌르기",
+          "material": "ember",
+          "sound": "fast",
+          "timing": [
+            160,
+            170,
+            45,
+            140,
+            160
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 684.9000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 160.59999999962747
+            },
+            {
+              "phase": "hit",
+              "time": 334.59999999962747
+            },
+            {
+              "phase": "reaction",
+              "time": 381.90000000037253
+            },
+            {
+              "phase": "recovery",
+              "time": 522
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 4,
+          "absorbed": 1
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "darkArcher",
+      "geometry": {
+        "faces": [
+          {
+            "x": 356.85748110831236,
+            "y": 116.88000000000004,
+            "width": 62.3250377833753,
+            "height": 88.2,
+            "kind": "face"
+          },
+          {
+            "x": 879.6168,
+            "y": 116.88000000000004,
+            "width": 60.446400000000004,
+            "height": 88.2,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 279.2578125,
+            "y": 243.5,
+            "width": 83.734375,
+            "height": 53
+          },
+          {
+            "x": 475.765625,
+            "y": 193.5,
+            "width": 65.34375,
+            "height": 53
+          },
+          {
+            "x": 280.1875,
+            "y": 338.5,
+            "width": 81.875,
+            "height": 53
+          },
+          {
+            "x": 421.1484375,
+            "y": 296.1875,
+            "width": 77.859375,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "darkArcher",
+          "archetype": "RANGED",
+          "boss": false,
+          "variant": 0,
+          "name": "활시위 · 화살",
+          "material": "arcane",
+          "sound": "arrow",
+          "timing": [
+            320,
+            250,
+            55,
+            180,
+            170
+          ],
+          "intentName": "",
+          "special": "piercingArrow",
+          "elapsed": 990.0999999996275,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 323.19999999925494
+            },
+            {
+              "phase": "hit",
+              "time": 578.1999999992549
+            },
+            {
+              "phase": "reaction",
+              "time": 637.1999999992549
+            },
+            {
+              "phase": "recovery",
+              "time": 818.1999999992549
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 5,
+          "absorbed": 2
+        },
+        {
+          "type": "darkArcher",
+          "archetype": "RANGED",
+          "boss": false,
+          "variant": 1,
+          "name": "활시위 · 화살",
+          "material": "arcane",
+          "sound": "arrow",
+          "timing": [
+            320,
+            250,
+            55,
+            180,
+            170
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 990.8000000007451,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 322.09999999962747
+            },
+            {
+              "phase": "hit",
+              "time": 576.2000000011176
+            },
+            {
+              "phase": "reaction",
+              "time": 635.5
+            },
+            {
+              "phase": "recovery",
+              "time": 819.4000000003725
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 7,
+          "absorbed": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "royalGuard",
+      "geometry": {
+        "faces": [
+          {
+            "x": 275.41892138492875,
+            "y": 63.213480000000054,
+            "width": 64.64215723014256,
+            "height": 94.46219999999998,
+            "kind": "face"
+          },
+          {
+            "x": 636.4731089108911,
+            "y": 74.90880000000001,
+            "width": 65.05378217821782,
+            "height": 90.88199999999999,
+            "kind": "face"
+          },
+          {
+            "x": 996.9143272131147,
+            "y": 63.213480000000054,
+            "width": 66.69134557377049,
+            "height": 94.46219999999998,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 553.2890625,
+            "y": 133.234375,
+            "width": 60.640625,
+            "height": 53
+          },
+          {
+            "x": 722.1328125,
+            "y": 145.34375,
+            "width": 64.515625,
+            "height": 53
+          },
+          {
+            "x": 552.765625,
+            "y": 233.203125,
+            "width": 77.96875,
+            "height": 53
+          },
+          {
+            "x": 712.390625,
+            "y": 260.46875,
+            "width": 63.65625,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "sealGuardian",
+          "archetype": "HEAVY",
+          "boss": false,
+          "variant": 0,
+          "name": "무거운 내려치기",
+          "material": "stone",
+          "sound": "rock",
+          "timing": [
+            550,
+            380,
+            100,
+            270,
+            260
+          ],
+          "intentName": "",
+          "special": "sealBarrier",
+          "elapsed": 1577,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 552.9000000003725
+            },
+            {
+              "phase": "hit",
+              "time": 935.6999999992549
+            },
+            {
+              "phase": "reaction",
+              "time": 1042.199999999255
+            },
+            {
+              "phase": "recovery",
+              "time": 1315.7999999988824
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 4,
+          "absorbed": 0
+        },
+        {
+          "type": "sealGuardian",
+          "archetype": "HEAVY",
+          "boss": false,
+          "variant": 1,
+          "name": "무거운 내려치기",
+          "material": "stone",
+          "sound": "rock",
+          "timing": [
+            550,
+            380,
+            100,
+            270,
+            260
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1577.9000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 552.8000000007451
+            },
+            {
+              "phase": "hit",
+              "time": 935.6000000014901
+            },
+            {
+              "phase": "reaction",
+              "time": 1042.800000000745
+            },
+            {
+              "phase": "recovery",
+              "time": 1317.1000000014901
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 4,
+          "absorbed": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "shadowWolf",
+      "geometry": {
+        "faces": [
+          {
+            "x": 602.209117938553,
+            "y": 111.00000000000004,
+            "width": 133.58176412289396,
+            "height": 90,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 452.1875,
+            "y": 168.5,
+            "width": 82.96875,
+            "height": 53
+          },
+          {
+            "x": 804.5546875,
+            "y": 180.5,
+            "width": 79.546875,
+            "height": 53
+          },
+          {
+            "x": 468.2734375,
+            "y": 267.5,
+            "width": 84.203125,
+            "height": 53
+          },
+          {
+            "x": 791.3125,
+            "y": 294.5,
+            "width": 64.28125,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "shadowWolf",
+          "archetype": "BITE",
+          "boss": false,
+          "variant": 0,
+          "name": "다가오는 송곳니",
+          "material": "arcane",
+          "sound": "creature",
+          "timing": [
+            260,
+            250,
+            70,
+            190,
+            190
+          ],
+          "intentName": "",
+          "special": "steal",
+          "elapsed": 969.5,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 260.90000000037253
+            },
+            {
+              "phase": "hit",
+              "time": 513
+            },
+            {
+              "phase": "reaction",
+              "time": 588.4000000003725
+            },
+            {
+              "phase": "recovery",
+              "time": 779.2000000011176
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 8
+        },
+        {
+          "type": "shadowWolf",
+          "archetype": "BITE",
+          "boss": false,
+          "variant": 1,
+          "name": "다가오는 송곳니",
+          "material": "arcane",
+          "sound": "creature",
+          "timing": [
+            260,
+            250,
+            70,
+            190,
+            190
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 966.5,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 261.7999999988824
+            },
+            {
+              "phase": "hit",
+              "time": 512.5999999996275
+            },
+            {
+              "phase": "reaction",
+              "time": 584.1999999992549
+            },
+            {
+              "phase": "recovery",
+              "time": 775.0999999996275
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 10
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "golem",
+      "geometry": {
+        "faces": [
+          {
+            "x": 532.3163263366337,
+            "y": 42.0304,
+            "width": 139.56734732673272,
+            "height": 196.65600000000003,
+            "kind": "face"
+          },
+          {
+            "x": 554.1237243564357,
+            "y": 219.0208,
+            "width": 95.95255128712874,
+            "height": 131.104,
+            "kind": "core"
+          }
+        ],
+        "targets": [
+          {
+            "x": 404.6796875,
+            "y": 166.296875,
+            "width": 63.359375,
+            "height": 53
+          },
+          {
+            "x": 736.296875,
+            "y": 264.625,
+            "width": 63.09375,
+            "height": 53
+          },
+          {
+            "x": 407.7109375,
+            "y": 389.171875,
+            "width": 83.484375,
+            "height": 53
+          },
+          {
+            "x": 665.90625,
+            "y": 421,
+            "width": 64.28125,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "golem",
+          "archetype": "HEAVY",
+          "boss": true,
+          "variant": 0,
+          "name": "무거운 내려치기",
+          "material": "stone",
+          "sound": "rock",
+          "timing": [
+            649,
+            448,
+            100,
+            319,
+            307
+          ],
+          "intentName": "",
+          "special": "shift",
+          "elapsed": 1839.699999999255,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 652.4000000003725
+            },
+            {
+              "phase": "hit",
+              "time": 1102.699999999255
+            },
+            {
+              "phase": "reaction",
+              "time": 1208.5999999996275
+            },
+            {
+              "phase": "recovery",
+              "time": 1529.199999999255
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 7,
+          "absorbed": 9
+        },
+        {
+          "type": "golem",
+          "archetype": "HEAVY",
+          "boss": true,
+          "variant": 1,
+          "name": "무거운 내려치기",
+          "material": "stone",
+          "sound": "rock",
+          "timing": [
+            649,
+            448,
+            100,
+            319,
+            307
+          ],
+          "intentName": "",
+          "special": "groundSmash",
+          "elapsed": 1840.9000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 649.7000000011176
+            },
+            {
+              "phase": "hit",
+              "time": 1099.5
+            },
+            {
+              "phase": "reaction",
+              "time": 1210
+            },
+            {
+              "phase": "recovery",
+              "time": 1530.7000000011176
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 11,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "treeGuardian",
+      "geometry": {
+        "faces": [
+          {
+            "x": 530.3553903536978,
+            "y": 39.7168,
+            "width": 170.2492192926045,
+            "height": 161.952,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 380.625,
+            "y": 137.375,
+            "width": 97.28125,
+            "height": 53
+          },
+          {
+            "x": 776.1171875,
+            "y": 191.359375,
+            "width": 61.796875,
+            "height": 53
+          },
+          {
+            "x": 388.2734375,
+            "y": 293.9375,
+            "width": 81.984375,
+            "height": 53
+          },
+          {
+            "x": 711.5390625,
+            "y": 369.515625,
+            "width": 73.890625,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "treeGuardian",
+          "archetype": "HEAVY",
+          "boss": true,
+          "variant": 0,
+          "name": "무거운 내려치기",
+          "material": "leaf",
+          "sound": "rock",
+          "timing": [
+            649,
+            448,
+            100,
+            319,
+            307
+          ],
+          "intentName": "",
+          "special": "regenSeed",
+          "elapsed": 1851.5999999996275,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 653.8000000007451
+            },
+            {
+              "phase": "hit",
+              "time": 1102.9000000003725
+            },
+            {
+              "phase": "reaction",
+              "time": 1217.0999999996275
+            },
+            {
+              "phase": "recovery",
+              "time": 1541.0999999996275
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 9
+        },
+        {
+          "type": "treeGuardian",
+          "archetype": "HEAVY",
+          "boss": true,
+          "variant": 1,
+          "name": "무거운 내려치기",
+          "material": "leaf",
+          "sound": "rock",
+          "timing": [
+            649,
+            448,
+            100,
+            319,
+            307
+          ],
+          "intentName": "",
+          "special": "regenSeed",
+          "elapsed": 1847.2999999988824,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 653.1999999992549
+            },
+            {
+              "phase": "hit",
+              "time": 1105.4000000003725
+            },
+            {
+              "phase": "reaction",
+              "time": 1217.7999999988824
+            },
+            {
+              "phase": "recovery",
+              "time": 1537.5999999996275
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 1,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "flameGiant",
+      "geometry": {
+        "faces": [
+          {
+            "x": 524.98,
+            "y": 43.379999999999995,
+            "width": 154.23999999999998,
+            "height": 216.9,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 378.1796875,
+            "y": 183.171875,
+            "width": 81.515625,
+            "height": 53
+          },
+          {
+            "x": 748.203125,
+            "y": 269.9375,
+            "width": 74.125,
+            "height": 53
+          },
+          {
+            "x": 397.984375,
+            "y": 392.84375,
+            "width": 80.46875,
+            "height": 53
+          },
+          {
+            "x": 695.59375,
+            "y": 421,
+            "width": 63.65625,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "flameGiant",
+          "archetype": "HEAVY",
+          "boss": true,
+          "variant": 0,
+          "name": "무거운 내려치기",
+          "material": "ember",
+          "sound": "rock",
+          "timing": [
+            649,
+            448,
+            100,
+            319,
+            307
+          ],
+          "intentName": "",
+          "special": "flameFist",
+          "elapsed": 1848.0999999996275,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.2999999988824129
+            },
+            {
+              "phase": "attack",
+              "time": 651.5
+            },
+            {
+              "phase": "hit",
+              "time": 1107.3999999985099
+            },
+            {
+              "phase": "reaction",
+              "time": 1217.199999999255
+            },
+            {
+              "phase": "recovery",
+              "time": 1537.0999999996275
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 8
+        },
+        {
+          "type": "flameGiant",
+          "archetype": "HEAVY",
+          "boss": true,
+          "variant": 1,
+          "name": "무거운 내려치기",
+          "material": "ember",
+          "sound": "rock",
+          "timing": [
+            649,
+            448,
+            100,
+            319,
+            307
+          ],
+          "intentName": "",
+          "special": "flameFist",
+          "elapsed": 1845.9000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 659
+            },
+            {
+              "phase": "hit",
+              "time": 1108.5999999996275
+            },
+            {
+              "phase": "reaction",
+              "time": 1216.4000000003725
+            },
+            {
+              "phase": "recovery",
+              "time": 1538.2000000011176
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "darkKnight",
+      "geometry": {
+        "faces": [
+          {
+            "x": 554.7868826778243,
+            "y": 40.295199999999994,
+            "width": 121.38623464435145,
+            "height": 170.628,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 436.34375,
+            "y": 173.046875,
+            "width": 77.5625,
+            "height": 53
+          },
+          {
+            "x": 723.5703125,
+            "y": 201.484375,
+            "width": 64.515625,
+            "height": 53
+          },
+          {
+            "x": 445.203125,
+            "y": 343.671875,
+            "width": 82.59375,
+            "height": 53
+          },
+          {
+            "x": 678.640625,
+            "y": 400.546875,
+            "width": 78.53125,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "darkKnight",
+          "archetype": "SLASH",
+          "boss": true,
+          "variant": 0,
+          "name": "검을 들어 베기",
+          "material": "metal",
+          "sound": "metal",
+          "timing": [
+            319,
+            342,
+            65,
+            260,
+            212
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1222.5,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 321.40000000037253
+            },
+            {
+              "phase": "hit",
+              "time": 677.4000000003725
+            },
+            {
+              "phase": "reaction",
+              "time": 745.7000000011176
+            },
+            {
+              "phase": "recovery",
+              "time": 1008.9000000003725
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 1,
+          "absorbed": 9
+        },
+        {
+          "type": "darkKnight",
+          "archetype": "SLASH",
+          "boss": true,
+          "variant": 1,
+          "name": "검을 들어 베기",
+          "material": "metal",
+          "sound": "metal",
+          "timing": [
+            319,
+            342,
+            65,
+            260,
+            212
+          ],
+          "intentName": "",
+          "special": "strongThrust",
+          "elapsed": 1217.7999999988824,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 321.2999999988824
+            },
+            {
+              "phase": "hit",
+              "time": 667.5999999996275
+            },
+            {
+              "phase": "reaction",
+              "time": 741.5999999996275
+            },
+            {
+              "phase": "recovery",
+              "time": 1004.7999999988824
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 2,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "chaosMage",
+      "geometry": {
+        "faces": [
+          {
+            "x": 568.0230330550919,
+            "y": 34.0272,
+            "width": 94.91393388981635,
+            "height": 135.108,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 461.625,
+            "y": 133.625,
+            "width": 82.28125,
+            "height": 53
+          },
+          {
+            "x": 696.640625,
+            "y": 147.140625,
+            "width": 63.09375,
+            "height": 53
+          },
+          {
+            "x": 472.5703125,
+            "y": 259.734375,
+            "width": 84.140625,
+            "height": 53
+          },
+          {
+            "x": 666.7265625,
+            "y": 291.25,
+            "width": 63.609375,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "chaosMage",
+          "archetype": "MAGIC",
+          "boss": true,
+          "variant": 0,
+          "name": "마력 집중 · 투사체",
+          "material": "arcane",
+          "sound": "magic",
+          "timing": [
+            507,
+            413,
+            70,
+            260,
+            236
+          ],
+          "intentName": "",
+          "special": "falseProphecy",
+          "elapsed": 1501.2000000011176,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 509.59999999962747
+            },
+            {
+              "phase": "hit",
+              "time": 924.0999999996275
+            },
+            {
+              "phase": "reaction",
+              "time": 1001.5999999996275
+            },
+            {
+              "phase": "recovery",
+              "time": 1265
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 9
+        },
+        {
+          "type": "chaosMage",
+          "archetype": "MAGIC",
+          "boss": true,
+          "variant": 1,
+          "name": "마력 집중 · 투사체",
+          "material": "arcane",
+          "sound": "magic",
+          "timing": [
+            507,
+            413,
+            70,
+            260,
+            236
+          ],
+          "intentName": "",
+          "special": "pageShuffle",
+          "elapsed": 1498.9000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 507.90000000037253
+            },
+            {
+              "phase": "hit",
+              "time": 924.9000000003725
+            },
+            {
+              "phase": "reaction",
+              "time": 1000.5
+            },
+            {
+              "phase": "recovery",
+              "time": 1262
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 1,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "dragonGuardian",
+      "geometry": {
+        "faces": [
+          {
+            "x": 452.79252296819794,
+            "y": 37.135999999999996,
+            "width": 298.6149540636042,
+            "height": 177.23999999999998,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 209.03125,
+            "y": 187.875,
+            "width": 76.9375,
+            "height": 53
+          },
+          {
+            "x": 917.6796875,
+            "y": 205.59375,
+            "width": 78.046875,
+            "height": 53
+          },
+          {
+            "x": 128.65625,
+            "y": 243.578125,
+            "width": 63.8125,
+            "height": 53
+          },
+          {
+            "x": 812.578125,
+            "y": 361,
+            "width": 64.28125,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "dragonGuardian",
+          "archetype": "CLAW",
+          "boss": true,
+          "variant": 0,
+          "name": "발톱 휘두르기",
+          "material": "scale",
+          "sound": "creature",
+          "timing": [
+            342,
+            330,
+            70,
+            224,
+            212
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1198.4000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 347
+            },
+            {
+              "phase": "hit",
+              "time": 680.3000000007451
+            },
+            {
+              "phase": "reaction",
+              "time": 759
+            },
+            {
+              "phase": "recovery",
+              "time": 984.7000000011176
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 1,
+          "absorbed": 9
+        },
+        {
+          "type": "dragonGuardian",
+          "archetype": "BITE",
+          "boss": true,
+          "variant": 1,
+          "name": "다가오는 송곳니",
+          "material": "scale",
+          "sound": "creature",
+          "timing": [
+            307,
+            295,
+            70,
+            224,
+            224
+          ],
+          "intentName": "",
+          "special": "smallBreath",
+          "elapsed": 1134.4000000003725,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 307.59999999962747
+            },
+            {
+              "phase": "hit",
+              "time": 606.5999999996275
+            },
+            {
+              "phase": "reaction",
+              "time": 683.8000000007451
+            },
+            {
+              "phase": "recovery",
+              "time": 909.0999999996275
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 2,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "demonKing",
+      "geometry": {
+        "faces": [
+          {
+            "x": 557.7875451553931,
+            "y": 36.892799999999994,
+            "width": 115.38490968921391,
+            "height": 164.59199999999998,
+            "kind": "face"
+          }
+        ],
+        "targets": [
+          {
+            "x": 436.9453125,
+            "y": 174.984375,
+            "width": 83.015625,
+            "height": 53
+          },
+          {
+            "x": 705.8984375,
+            "y": 174.984375,
+            "width": 78.765625,
+            "height": 53
+          },
+          {
+            "x": 461.0078125,
+            "y": 312.140625,
+            "width": 63.765625,
+            "height": 53
+          },
+          {
+            "x": 677.90625,
+            "y": 356.03125,
+            "width": 77.0625,
+            "height": 53
+          }
+        ]
+      },
+      "runs": [
+        {
+          "type": "demonKing",
+          "archetype": "MAGIC",
+          "boss": true,
+          "variant": 0,
+          "name": "마력 집중 · 투사체",
+          "material": "void",
+          "sound": "magic",
+          "timing": [
+            507,
+            413,
+            70,
+            260,
+            236
+          ],
+          "intentName": "",
+          "special": "none",
+          "elapsed": 1507.300000000745,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0
+            },
+            {
+              "phase": "attack",
+              "time": 511.5
+            },
+            {
+              "phase": "hit",
+              "time": 929
+            },
+            {
+              "phase": "reaction",
+              "time": 1006
+            },
+            {
+              "phase": "recovery",
+              "time": 1270.2000000011176
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 0,
+          "absorbed": 9
+        },
+        {
+          "type": "demonKing",
+          "archetype": "MAGIC",
+          "boss": true,
+          "variant": 1,
+          "name": "마력 집중 · 투사체",
+          "material": "void",
+          "sound": "magic",
+          "timing": [
+            507,
+            413,
+            70,
+            260,
+            236
+          ],
+          "intentName": "",
+          "special": "kingSword",
+          "elapsed": 1495.8999999985099,
+          "trace": [
+            {
+              "phase": "anticipation",
+              "time": 0.09999999962747097
+            },
+            {
+              "phase": "attack",
+              "time": 508
+            },
+            {
+              "phase": "hit",
+              "time": 921.6999999992549
+            },
+            {
+              "phase": "reaction",
+              "time": 998.5
+            },
+            {
+              "phase": "recovery",
+              "time": 1259.199999999255
+            }
+          ],
+          "commits": 1,
+          "hpDamage": 1,
+          "absorbed": 9
+        }
+      ],
+      "errors": []
+    },
+    {
+      "type": "goblin",
+      "special": "steal",
+      "distinctSpecial": true,
+      "timerPaused": true
+    },
+    {
+      "type": "dragonGuardian",
+      "special": "doomBreath",
+      "distinctSpecial": true,
+      "timerPaused": true
+    },
+    {
+      "type": "demonKing",
+      "special": "kingSword",
+      "distinctSpecial": true,
+      "timerPaused": true
+    }
+  ]
+}

@@ -15,3 +15,6 @@ test-results/
 .idea/
 Thumbs.db
 .DS_Store
+
+# Reproducible raw v3.5.2 browser captures; selected evidence is committed.
+/qa-v352/

@@ -41,7 +41,7 @@
 @media(prefers-reduced-motion:reduce){.story-flash{animation:none;opacity:0}.rpg-shell button{transition:none}}
 
 .demon-silhouette svg{width:100%;height:100%;filter:drop-shadow(0 0 24px #8c51b8aa)}
-.story-level-overlay .modal{color:#ffe4a7;text-align:center;max-width:600px;padding:30px}
+.story-level-overlay .modal{background:#18332e;color:#ffe4a7;text-align:center;max-width:600px;padding:30px}
 .story-level-overlay .modal h2{color:#ffe4a7;font-size:32px}
 .story-level-overlay .modal p{color:#e7f2dd;font-size:18px;margin:14px 0;line-height:1.6}
 .story-level-overlay .modal>b{font-size:24px}
