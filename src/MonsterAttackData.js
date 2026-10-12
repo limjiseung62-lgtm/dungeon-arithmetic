@@ -13,6 +13,7 @@ export const EnemyArchetypes=Object.freeze({
 export const MonsterAttackTypes=Object.freeze(types);
 export function monsterAttackSpec(type,intent={},variant=0){
  let archetype=types[type]||'SLASH';if(type==='dragonGuardian'&&variant%2===1)archetype='BITE';
+ if(type==='orc'&&variant%2===1)archetype='HEAVY';
  const base=EnemyArchetypes[archetype],boss=['golem','treeGuardian','flameGiant','darkKnight','chaosMage','dragonGuardian','demonKing'].includes(type),material=/flame|fire|magma|lava/i.test(type)?'ember':/golem|seal/.test(type)?'stone':/tree|vine|forest|mushroom/.test(type)?'leaf':/dragon|wyvern/i.test(type)?'scale':/king|abyss|darkPriest/i.test(type)?'void':base.sound==='metal'?'metal':'arcane';
- return {type,archetype,boss,variant:variant%2,name:base.name,material,sound:base.sound,timing:base.timing.map((ms,i)=>Math.round(ms*(boss&&i!==2?1.18:1))),intentName:intent.label||intent.name||intent.patternName||'',special:intent.special||'none'};
+ return {type,archetype,boss,variant:variant%2,name:type==='golem'?(intent.special==='groundSmash'?'대지 붕괴':intent.special==='stone'?'핵 폭주':'거석 강타'):base.name,material,sound:base.sound,timing:base.timing.map((ms,i)=>Math.round(ms*(boss&&i!==2?1.18:1))),intentName:intent.label||intent.name||intent.patternName||'',special:intent.special||'none'};
 }

@@ -1,0 +1,24 @@
+{
+  "version": "3.6.0",
+  "date": "2026-10-12",
+  "generatedRasterAssets": [],
+  "generatedAudioAssets": [],
+  "previousSourceRecords": ["ART-SOURCES-v35-rebuild.json", "ART-SOURCES-v35-start.json"],
+  "reusedAssets": [
+    {"path": "assets/mercenaries/*.webp", "purpose": "핵심 6명 동료 연계 원화", "prompt": "기존 자산 기록 유지"},
+    {"path": "assets/mercenaries-v35/*.webp", "purpose": "신규 12명 직업별 지원", "prompt": "ART-SOURCES-v35-rebuild.json 참조"},
+    {"path": "assets/legendary-v35/*.webp", "purpose": "전설 무기 7종", "prompt": "ART-SOURCES-v35-rebuild.json 참조"},
+    {"path": "assets/presentation-v35/slash.webp", "purpose": "연격/대검 궤적", "prompt": "기존 자산 재사용"},
+    {"path": "assets/presentation-v35/magic.webp", "purpose": "신성/별빛/룬 마법", "prompt": "기존 자산 재사용"},
+    {"path": "assets/combat-v35/supportAtlas.webp", "purpose": "방패 충돌", "prompt": "기존 자산 재사용"},
+    {"path": "src/AssetManifest.js", "purpose": "몬스터/배경 원화는 기존 경로 그대로 사용", "prompt": "기존 원화 생성 기록 유지"},
+    {"path": "assets/audio/player-hit.wav", "purpose": "화살 명중 큐", "prompt": "기존 프로젝트 음원"},
+    {"path": "assets/audio/shield-impact.wav", "purpose": "무거운 지원 타격 큐", "prompt": "기존 프로젝트 음원"}
+  ],
+  "codePresentation": [
+    {"path": "src/MercenaryAttackProfiles.js", "purpose": "18명 직업별 직접 연계 문법"},
+    {"path": "src/MonsterAttackPresentation.js", "purpose": "골렘 팔 분절/별도 회전축/전방 강타"},
+    {"path": "mobile-v3.6.css", "purpose": "화살·연격·지면파·핵 충전과 모바일 배치"}
+  ],
+  "fonts": {"source": "기기 기본 폰트, 새 폰트 파일 배포 없음", "monster": ["Gungsuh", "궁서", "Georgia", "Malgun Gothic", "serif"], "reading": "기존 설명/수식 폰트 유지"}
+}

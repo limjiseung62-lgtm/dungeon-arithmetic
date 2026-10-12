@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "result": {
+    "trace": [
+      {
+        "id": "rowen",
+        "phase": "hit",
+        "motion": "arrows",
+        "level": "20",
+        "damage": "피해 3",
+        "hp": "114 / 140"
+      },
+      {
+        "id": "kain",
+        "phase": "hit",
+        "motion": "slashes",
+        "level": "20",
+        "damage": "피해 5",
+        "hp": "109 / 140"
+      },
+      {
+        "id": "elia",
+        "phase": "hit",
+        "motion": "runes",
+        "level": "20",
+        "damage": "피해 5",
+        "hp": "104 / 140"
+      }
+    ],
+    "supports": [
+      {
+        "id": "1b01a0fa-8f60-4906-b2ad-8c543b229812:2:mercenary:rowen:1:attack:0",
+        "kind": "mercenary",
+        "mercenaryId": "rowen",
+        "grade": "B",
+        "level": 20,
+        "effect": "damage",
+        "value": 3,
+        "enemyId": "boss-2-0",
+        "awakened": false,
+        "compact": true,
+        "text": "로웬 지원! 추가 피해 +3",
+        "dialogue": "좋아! 지금이 기회야!"
+      },
+      {
+        "id": "1b01a0fa-8f60-4906-b2ad-8c543b229812:2:mercenary:kain:1:attack:0",
+        "kind": "mercenary",
+        "mercenaryId": "kain",
+        "grade": "S",
+        "level": 20,
+        "effect": "damage",
+        "value": 5,
+        "enemyId": "boss-2-0",
+        "awakened": false,
+        "compact": true,
+        "text": "카인 지원! 추가 피해 +5",
+        "dialogue": "좋은 판단이야. 함께 해내자!"
+      },
+      {
+        "id": "1b01a0fa-8f60-4906-b2ad-8c543b229812:2:mercenary:elia:1:attack:0",
+        "kind": "mercenary",
+        "mercenaryId": "elia",
+        "grade": "S",
+        "level": 20,
+        "effect": "damage",
+        "value": 5,
+        "enemyId": "boss-2-0",
+        "awakened": false,
+        "compact": true,
+        "text": "엘리아 지원! 추가 피해 +5",
+        "dialogue": "좋은 판단이야. 함께 해내자!"
+      }
+    ],
+    "hp": 104,
+    "displayHP": "104 / 140",
+    "remaining": 0
+  },
+  "reward": {
+    "growth": [
+      {
+        "id": "rowen",
+        "from": 20,
+        "to": 20,
+        "exp": 66
+      },
+      {
+        "id": "kain",
+        "from": 20,
+        "to": 20,
+        "exp": 66
+      },
+      {
+        "id": "elia",
+        "from": 20,
+        "to": 20,
+        "exp": 66
+      }
+    ],
+    "saved": {
+      "records": {
+        "rowen": {
+          "level": 20,
+          "exp": 66
+        },
+        "bram": {
+          "level": 1,
+          "exp": 0
+        },
+        "sera": {
+          "level": 1,
+          "exp": 0
+        },
+        "luna": {
+          "level": 1,
+          "exp": 0
+        },
+        "kain": {
+          "level": 20,
+          "exp": 66
+        },
+        "elia": {
+          "level": 20,
+          "exp": 66
+        },
+        "aiden": {
+          "level": 1,
+          "exp": 0
+        },
+        "nox": {
+          "level": 1,
+          "exp": 0
+        },
+        "iris": {
+          "level": 1,
+          "exp": 0
+        },
+        "tobin": {
+          "level": 1,
+          "exp": 0
+        },
+        "rafa": {
+          "level": 1,
+          "exp": 0
+        },
+        "boris": {
+          "level": 1,
+          "exp": 0
+        },
+        "lyra": {
+          "level": 1,
+          "exp": 0
+        },
+        "rune": {
+          "level": 1,
+          "exp": 0
+        },
+        "faye": {
+          "level": 1,
+          "exp": 0
+        },
+        "vero": {
+          "level": 1,
+          "exp": 0
+        },
+        "sol": {
+          "level": 1,
+          "exp": 0
+        },
+        "mirin": {
+          "level": 1,
+          "exp": 0
+        }
+      },
+      "eventIds": [
+        "1b01a0fa-8f60-4906-b2ad-8c543b229812:2:growth"
+      ]
+    }
+  },
+  "saveReload": true
+}

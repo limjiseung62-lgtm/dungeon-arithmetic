@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "method": "CPU4x headless Edge, no screenshots during measurement, three 4-player actual resolution cycles per detail",
+  "rows": [
+    {
+      "detail": "normal",
+      "throttle": 4,
+      "viewport": "1024x768",
+      "runs": [
+        {
+          "samples": 1085,
+          "p95": 12.600000000000364,
+          "max": 233.92999998807863,
+          "elapsed": 11843.899999976158,
+          "nodes": 0,
+          "animations": 0
+        },
+        {
+          "samples": 1174,
+          "p95": 12.600000000002183,
+          "max": 145.90000000000146,
+          "elapsed": 11414.5,
+          "nodes": 0,
+          "animations": 0
+        },
+        {
+          "samples": 1236,
+          "p95": 12.5,
+          "max": 158.10000000000582,
+          "elapsed": 11498.800000011921,
+          "nodes": 0,
+          "animations": 0
+        }
+      ]
+    },
+    {
+      "detail": "simple",
+      "throttle": 4,
+      "viewport": "1024x768",
+      "runs": [
+        {
+          "samples": 663,
+          "p95": 16.600000000000364,
+          "max": 191.33200001192108,
+          "elapsed": 9400.399999976158,
+          "nodes": 0,
+          "animations": 0
+        },
+        {
+          "samples": 720,
+          "p95": 12.700000000000728,
+          "max": 145.70000000000073,
+          "elapsed": 9062.300000011921,
+          "nodes": 0,
+          "animations": 0
+        },
+        {
+          "samples": 721,
+          "p95": 12.69999999999709,
+          "max": 274.90000000000146,
+          "elapsed": 9136.400000035763,
+          "nodes": 0,
+          "animations": 0
+        }
+      ]
+    }
+  ]
+}

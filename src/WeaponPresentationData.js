@@ -1,6 +1,6 @@
 import {equipmentById} from './EquipmentData.js';
 export const WeaponTypeNames={SWORD:'한손검',GREATSWORD:'대검',DAGGER:'단검',STAFF:'지팡이'};
-export const WeaponTypeTraits={SWORD:'빠르고 정확한 균형 잡힌 검격',GREATSWORD:'공격 A/S의 무거운 타격 +2',DAGGER:'공격 C/B의 빠른 연타 +2',STAFF:'공격 A/S 마력 +1 · 일반 공격은 두루마리를 소모하지 않음'};
+export const WeaponTypeTraits={SWORD:'안정적인 검격 · S로 BREAK 보조 · 공격한 뒤 A/S 방어로 반격',GREATSWORD:'공격 A/S 타격 +2 · S로 뒤쪽 적에게 광역 참격 +3',DAGGER:'C/B 연타 +2 · BREAK 중 A/S 약점 추가타 +3',STAFF:'A/S 마력 +1 · S 두루마리 강화 +3 · 일반 공격은 두루마리를 소모하지 않음'};
 const stages=['anticipation','cutin','charge','trail','contact','reaction','damage','restore'];
 const grade={C:[40,0,50,120,0,55,110,45],B:[70,0,100,170,25,90,150,70],A:[100,0,150,240,65,135,220,100],S:[180,280,260,200,110,280,350,180]};
 const timing={SWORD:{},GREATSWORD:{C:[60,0,80,110,0,65,110,45],B:[100,0,160,210,40,110,150,70],A:[180,0,230,270,80,170,220,100],S:[180,280,400,240,150,330,350,180]},DAGGER:{C:[25,0,35,100,0,40,110,45],B:[60,0,90,140,15,65,150,70],A:[80,0,100,220,55,110,220,100],S:[180,280,140,300,80,190,350,180]},STAFF:{C:[40,0,70,100,0,40,110,45],B:[60,0,160,160,25,80,150,70],A:[100,0,220,240,60,110,220,100],S:[180,280,340,260,100,220,350,180]}};

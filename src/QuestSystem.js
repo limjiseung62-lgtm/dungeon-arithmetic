@@ -1,19 +1,22 @@
+import {questUnlocked} from './ProgressionQuests.js';
 import {relation} from './AffinitySystem.js';
 import {collectionProgress} from './CollectionSystem.js';
 import {QuestData,QuestConfig,questById} from './QuestData.js';
 export const blankQuests=()=>({activeQuests:[],completedQuests:[],rewardedQuests:[],questProgress:{},questEventIds:[]});
 export const questStatus=(p,id)=>p.rewardedQuests.includes(id)?'REWARDED':p.completedQuests.includes(id)?'COMPLETED':p.activeQuests.includes(id)?'ACTIVE':'AVAILABLE';
-export function acceptQuest(p,id){
+export function acceptQuest(p,id,heroLevel=1){
  const q=questById(id);if(!q||questStatus(p,id)!=='AVAILABLE')return {ok:false,message:'이미 수락한 의뢰예요.'};
+ if(!questUnlocked(p,q,heroLevel))return {ok:false,message:'선행 의뢰와 지역·성장 조건을 먼저 완료해 주세요.'};
  if(q.type==='PERSONAL_ADVENTURE'&&(!relation(p,q.mercenaryId).personalQuestUnlocked||!p.unlockedDungeons.includes(q.dungeon)))return {ok:false,message:'함께 모험해 신뢰를 쌓고 해당 지역을 먼저 열어 주세요.'};
  if(q.prerequisites?.some(id=>!p.rewardedQuests.includes(id)))return {ok:false,message:'먼저 첫 번째 모험을 완료 보고해 주세요.'};
  if(p.activeQuests.length>=QuestConfig.maxActive)return {ok:false,message:`의뢰는 동시에 ${QuestConfig.maxActive}개까지 수락할 수 있어요.`};
- p.activeQuests.push(id);p.questProgress[id]={count:0,scrolls:[],...(q.type==='PERSONAL_ADVENTURE'?{personal:{actions:0,won:false}}:{})};if(q.type.startsWith('COLLECT_'))progressQuests(p,{id:'collection-accept:'+id,type:'COLLECTION_UPDATED',counts:collectionProgress(p).counts});return {ok:true,message:`${q.name} 의뢰를 수락했어요.`};
+ p.activeQuests.push(id);p.questProgress[id]={count:0,scrolls:[],...(q.type==='PERSONAL_ADVENTURE'?{personal:{actions:0,won:false}}:{})};if(q.type==='MERCENARY_LEVEL'){const level=Math.max(1,...Object.values(p.mercenaryGrowth?.records||{}).map(r=>r.level));progressQuests(p,{id:'growth-accept:'+id,type:'MERCENARY_LEVEL',level,dungeonId:'any'});}if(q.type.startsWith('COLLECT_'))progressQuests(p,{id:'collection-accept:'+id,type:'COLLECTION_UPDATED',counts:collectionProgress(p).counts});return {ok:true,message:`${q.name} 의뢰를 수락했어요.`};
 }
 function matches(q,e){
  const f=q.filter||{};if(q.dungeon!=='any'&&e.dungeonId!==q.dungeon)return false;
  if(q.type==='PERSONAL_ADVENTURE')return e.personalQuestId===q.id&&e.mercenaryId===q.mercenaryId;
  switch(q.type){
+ case 'MERCENARY_LEVEL':return e.type==='MERCENARY_LEVEL'&&e.level>=q.filter.level;
  case 'COLLECT_MONSTERS':case 'COLLECT_EQUIPMENT':case 'COLLECT_BOSS':return e.type==='COLLECTION_UPDATED';
  case 'BOSS_BREAK':return e.type==='BOSS_BREAK';
  case 'KILL_MONSTER':return e.type==='MONSTER_DEFEATED'&&(!f.monster||f.monster===e.monster);

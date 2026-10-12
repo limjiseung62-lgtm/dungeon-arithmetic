@@ -1,0 +1,608 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "grade": "S",
+      "weaponId": "earth_shatterer",
+      "weaponType": "GREATSWORD",
+      "profile": "earth",
+      "elapsed": 26248.19999998808,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.3999999761581421
+        },
+        {
+          "stage": "cutin",
+          "time": 3181.600000023842
+        },
+        {
+          "stage": "charge",
+          "time": 6463.399999976158
+        },
+        {
+          "stage": "trail",
+          "time": 9926.800000011921
+        },
+        {
+          "stage": "contact",
+          "time": 13200.399999976158
+        },
+        {
+          "stage": "reaction",
+          "time": 16355.699999988079
+        },
+        {
+          "stage": "damage",
+          "time": 19709.600000023842
+        },
+        {
+          "stage": "restore",
+          "time": 23063.5
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 1.432,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-1",
+          "speed": 0.72,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 11.36,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-2",
+          "speed": 0.72,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 14.632,
+          "grade": "S",
+          "asset": true,
+          "assetName": "shield-impact",
+          "speed": 0.72,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 14.632,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedAttackBonus": 6
+    },
+    {
+      "grade": "S",
+      "weaponId": "worldtree_staff",
+      "weaponType": "STAFF",
+      "profile": "forest",
+      "elapsed": 26057.899999976158,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.7999999523162842
+        },
+        {
+          "stage": "cutin",
+          "time": 3183.399999976158
+        },
+        {
+          "stage": "charge",
+          "time": 6467.5
+        },
+        {
+          "stage": "trail",
+          "time": 9850.399999976158
+        },
+        {
+          "stage": "contact",
+          "time": 13167.699999988079
+        },
+        {
+          "stage": "reaction",
+          "time": 16271.099999964237
+        },
+        {
+          "stage": "damage",
+          "time": 19525.19999998808
+        },
+        {
+          "stage": "restore",
+          "time": 22877.299999952316
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 1.2213333333333334,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-charge",
+          "speed": 1.04,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 11.072,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-launch",
+          "speed": 1.04,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 14.392,
+          "grade": "S",
+          "asset": true,
+          "assetName": "healing-light",
+          "speed": 1.04,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 14.392,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedScrollBonus": 8
+    },
+    {
+      "grade": "S",
+      "weaponId": "inferno_blade",
+      "weaponType": "GREATSWORD",
+      "profile": "inferno",
+      "elapsed": 26246.30000001192,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.699999988079071
+        },
+        {
+          "stage": "cutin",
+          "time": 3184.5
+        },
+        {
+          "stage": "charge",
+          "time": 6468
+        },
+        {
+          "stage": "trail",
+          "time": 9921.899999976158
+        },
+        {
+          "stage": "contact",
+          "time": 13241.899999976158
+        },
+        {
+          "stage": "reaction",
+          "time": 16384.30000001192
+        },
+        {
+          "stage": "damage",
+          "time": 19709.100000023842
+        },
+        {
+          "stage": "restore",
+          "time": 23063.600000023842
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 1.16,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-1",
+          "speed": 0.72,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 11.08,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-2",
+          "speed": 0.72,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 14.4,
+          "grade": "S",
+          "asset": true,
+          "assetName": "fire-explosion",
+          "speed": 0.72,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 14.4,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedAttackBonus": 5
+    },
+    {
+      "grade": "S",
+      "weaponId": "eclipse_blade",
+      "weaponType": "SWORD",
+      "profile": "eclipse",
+      "elapsed": 25907.600000023842,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.30000001192092896
+        },
+        {
+          "stage": "cutin",
+          "time": 3181.199999988079
+        },
+        {
+          "stage": "charge",
+          "time": 6463.5
+        },
+        {
+          "stage": "trail",
+          "time": 9704.900000035763
+        },
+        {
+          "stage": "contact",
+          "time": 13020.5
+        },
+        {
+          "stage": "reaction",
+          "time": 16133.5
+        },
+        {
+          "stage": "damage",
+          "time": 19375.30000001192
+        },
+        {
+          "stage": "restore",
+          "time": 22726.600000023842
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 0.8213333333333334,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-1",
+          "speed": 1,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 10.530666666666667,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-3",
+          "speed": 1,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 13.84,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-impact-3",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 13.84,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedAttackBonus": 4
+    },
+    {
+      "grade": "S",
+      "weaponId": "chaos_staff",
+      "weaponType": "STAFF",
+      "profile": "chaos",
+      "elapsed": 26042.69999998808,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.699999988079071
+        },
+        {
+          "stage": "cutin",
+          "time": 3184.100000023842
+        },
+        {
+          "stage": "charge",
+          "time": 6467
+        },
+        {
+          "stage": "trail",
+          "time": 9829
+        },
+        {
+          "stage": "contact",
+          "time": 13153.699999988079
+        },
+        {
+          "stage": "reaction",
+          "time": 16265.600000023842
+        },
+        {
+          "stage": "damage",
+          "time": 19510.80000001192
+        },
+        {
+          "stage": "restore",
+          "time": 22861.400000035763
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 0.8613333333333333,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-charge",
+          "speed": 1.04,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 10.690666666666667,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-launch",
+          "speed": 1.04,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 14.021333333333333,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-shield",
+          "speed": 1.04,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 14.021333333333333,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedScrollBonus": 7
+    },
+    {
+      "grade": "S",
+      "weaponId": "dragon_slayer",
+      "weaponType": "GREATSWORD",
+      "profile": "dragon",
+      "elapsed": 26264.100000023842,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.800000011920929
+        },
+        {
+          "stage": "cutin",
+          "time": 3182.300000011921
+        },
+        {
+          "stage": "charge",
+          "time": 6464.600000023842
+        },
+        {
+          "stage": "trail",
+          "time": 9906.600000023842
+        },
+        {
+          "stage": "contact",
+          "time": 13235
+        },
+        {
+          "stage": "reaction",
+          "time": 16378.300000011921
+        },
+        {
+          "stage": "damage",
+          "time": 19729.5
+        },
+        {
+          "stage": "restore",
+          "time": 23080.900000035763
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 0.8906666666666667,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-1",
+          "speed": 0.72,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 10.792,
+          "grade": "S",
+          "asset": true,
+          "assetName": "sword-swing-2",
+          "speed": 0.72,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 14.12,
+          "grade": "S",
+          "asset": true,
+          "assetName": "dragon-roar",
+          "speed": 0.72,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 14.12,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedAttackBonus": 8
+    },
+    {
+      "grade": "S",
+      "weaponId": "finale_staff",
+      "weaponType": "STAFF",
+      "profile": "king",
+      "elapsed": 26161.30000001192,
+      "limited": false,
+      "assetFailures": [],
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.30000001192092896
+        },
+        {
+          "stage": "cutin",
+          "time": 3184
+        },
+        {
+          "stage": "charge",
+          "time": 6465.699999988079
+        },
+        {
+          "stage": "trail",
+          "time": 9886.899999976158
+        },
+        {
+          "stage": "contact",
+          "time": 13247.300000011921
+        },
+        {
+          "stage": "reaction",
+          "time": 16373.800000011921
+        },
+        {
+          "stage": "damage",
+          "time": 19625.5
+        },
+        {
+          "stage": "restore",
+          "time": 22978.399999976158
+        }
+      ],
+      "audio": [
+        {
+          "name": "charge",
+          "time": 0.8613333333333333,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-charge",
+          "speed": 1.04,
+          "maxDuration": 0.5,
+          "gain": 0.06599999964237213
+        },
+        {
+          "name": "whoosh",
+          "time": 10.752,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-launch",
+          "speed": 1.04,
+          "maxDuration": 0.5,
+          "gain": 0.148499995470047
+        },
+        {
+          "name": "attack",
+          "time": 14.112,
+          "grade": "S",
+          "asset": true,
+          "assetName": "magic-charge",
+          "speed": 1.04,
+          "maxDuration": 0.7,
+          "gain": 0.27950000762939453
+        },
+        {
+          "name": "s35-low",
+          "time": 14.112,
+          "grade": "S",
+          "asset": true,
+          "assetName": "s35-low-impact",
+          "speed": 1,
+          "maxDuration": 0.7,
+          "gain": 0.09600000083446503
+        }
+      ],
+      "appliedScrollBonus": 9
+    }
+  ],
+  "method": "real legendary effects and UI with QA-only +3000ms holds for blind captures; normal four-weapon timing separately verified"
+}

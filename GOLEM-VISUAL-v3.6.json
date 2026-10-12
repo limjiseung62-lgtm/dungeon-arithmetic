@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "special": "none",
+      "move": "fist",
+      "passed": true
+    },
+    {
+      "special": "groundSmash",
+      "move": "collapse",
+      "passed": true
+    },
+    {
+      "special": "stone",
+      "move": "core",
+      "passed": true
+    }
+  ],
+  "method": "real UI with QA-only +4000ms phase holds for captures; normal timings verified separately in QUALITY-ENEMY-v36.json"
+}

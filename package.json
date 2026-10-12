@@ -1,6 +1,6 @@
 {
   "name": "dungeon-arithmetic",
-  "version": "3.5.2",
+  "version": "3.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -99,6 +99,8 @@
     "test:quality:coop": "node tests/quality-coop-v352.cjs",
     "test:quality:production": "node tests/quality-site-v352.cjs",
     "test:quality:surfaces": "node tests/quality-surfaces-v352.cjs",
-    "test:quality:interrupt": "node tests/quality-interrupt-v352.cjs"
+    "test:quality:interrupt": "node tests/quality-interrupt-v352.cjs",
+    "test:v36": "node --test tests/integration-v36.test.mjs",
+    "test:v36:balance": "node tests/balance-matrix-v36.mjs"
   }
 }

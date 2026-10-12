@@ -1,0 +1,5 @@
+export const MercenaryAttackProfiles=Object.freeze({
+ rowen:{motion:'arrows',name:'연속 사격',count:3},bram:{motion:'bash',name:'수호자의 돌진',count:1},sera:{motion:'holy',name:'생명의 기도',count:2},luna:{motion:'nova',name:'별빛 마법',count:3},kain:{motion:'slashes',name:'섬광 연격',count:4},elia:{motion:'runes',name:'현자의 문양',count:3},
+ aiden:{motion:'spear',name:'갑옷 꿰뚫기',count:1},nox:{motion:'slashes',name:'그림자 약점',count:2},iris:{motion:'leaves',name:'정화의 약초',count:3},tobin:{motion:'flask',name:'연금 촉매',count:1},rafa:{motion:'fists',name:'균형 파쇄',count:2},boris:{motion:'cleave',name:'노련한 강타',count:1},lyra:{motion:'notes',name:'여유의 선율',count:3},rune:{motion:'runes',name:'정화의 룬',count:2},faye:{motion:'arrows',name:'후열 사격',count:2},vero:{motion:'bash',name:'마력 방패',count:2},sol:{motion:'nova',name:'원소 조율',count:4},mirin:{motion:'holy',name:'위기의 수호',count:1}
+});
+export function mercenaryAttackProfile(id,level=1){const p=MercenaryAttackProfiles[id];return {...p,count:p.count+(level>=20?1:0),level,timing:[150,180,80,180,120]};}

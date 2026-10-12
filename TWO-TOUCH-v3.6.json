@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "maximumPhysicalContacts": 2,
+  "waves": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "result": {
+    "pads": [
+      {
+        "ids": [
+          0
+        ],
+        "ops": []
+      },
+      {
+        "ids": [
+          0
+        ],
+        "ops": []
+      },
+      {
+        "ids": [
+          0
+        ],
+        "ops": []
+      },
+      {
+        "ids": [
+          0
+        ],
+        "ops": []
+      }
+    ],
+    "phase": "playing",
+    "players": 4
+  },
+  "physicalWhiteboard": false
+}

@@ -1,0 +1,12 @@
+export const ProgressionQuestData=[
+ {id:'mine-survey',name:'광산 조사',description:'광산의 첫 경비를 쓰러뜨리고 붉은 마력의 흔적을 찾으세요.',type:'KILL_MONSTER',target:3,filter:{},dungeon:'burning-mine',category:'main',reward:{exp:60,gold:85,mercenaryExp:40}},
+ {id:'mine-elite',name:'용암 경비 토벌',description:'광산 조사 보고 후 마그마 경비병을 물리치세요.',type:'KILL_MONSTER',target:1,filter:{monster:'magmaGuard'},dungeon:'burning-mine',category:'guild',prerequisites:['mine-survey'],reward:{exp:80,gold:110,scroll:'ice',mercenaryExp:60}},
+ {id:'mine-giant',name:'화염의 근원을 끊어라',description:'화염 거인을 쓰러뜨리고 광산에 평화를 돌려주세요.',type:'KILL_MONSTER',target:1,filter:{monster:'flameGiant'},dungeon:'burning-mine',category:'main',prerequisites:['mine-elite'],reward:{exp:100,gold:140,mercenaryExp:80}},
+ {id:'ember-secret',name:'잔불의 비밀',description:'화염 거인 공략 보고 후 광산에서 두루마리 2종을 사용하세요.',type:'USE_DIFFERENT_SCROLLS',target:2,filter:{},dungeon:'burning-mine',category:'special',prerequisites:['mine-giant'],reward:{exp:100,gold:90,equipment:'mage_armor',mercenaryExp:100}},
+ {id:'companions-trained',name:'함께 성장하는 모험',description:'동행한 동료 한 명을 레벨 10까지 성장시키세요.',type:'MERCENARY_LEVEL',target:1,filter:{level:10},dungeon:'any',category:'growth',minHeroLevel:4,reward:{exp:70,gold:120,mercenaryExp:100}},
+ {id:'companions-master',name:'노련한 동료들',description:'동료 성장 의뢰 보고 후 동료 한 명을 레벨 20까지 키우세요.',type:'MERCENARY_LEVEL',target:1,filter:{level:20},dungeon:'any',category:'growth',prerequisites:['companions-trained'],reward:{exp:100,gold:160,scroll:'meteor'}},
+ {id:'canyon-wing-study',name:'날개의 빈틈',description:'용의 날개를 BREAK로 무너뜨리세요.',type:'BOSS_BREAK',target:2,filter:{},dungeon:'sky-canyon',category:'special',reward:{exp:120,gold:140,mercenaryExp:100}},
+ {id:'castle-ward',name:'왕좌로 향하는 방패',description:'마왕의 성에서 방어 S로 특수능력을 차단하세요.',type:'BLOCK_SPECIAL',target:3,filter:{},dungeon:'demon-castle',category:'guild',reward:{exp:130,gold:160,scroll:'shield',mercenaryExp:120}}
+].map(q=>({...q,difficulty:'성장 모험'}));
+export function questUnlocked(p,q,heroLevel=50){return (!q.prerequisites||q.prerequisites.every(id=>p.rewardedQuests.includes(id)))&&(!q.minHeroLevel||heroLevel>=q.minHeroLevel)&&(q.dungeon==='any'||p.unlockedDungeons.includes(q.dungeon));}
+export const questCategory=q=>({main:'메인',guild:'길드',growth:'성장',special:'특별'})[q.category]||(q.type==='PERSONAL_ADVENTURE'?'특별 · 동료 이야기':q.type.startsWith('COLLECT_')?'특별':['first-adventure','forest-road'].includes(q.id)?'메인':'길드');

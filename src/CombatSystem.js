@@ -1,3 +1,4 @@
+import {weaponFollowup,weaponCounter} from './EquipmentCombat.js';
 import {isCoop,beginCoopRound,prepareCoopResolution,commitCoopCombo,recordCoopContribution,coopPressure} from './ClassCoopSystem.js';
 import {finalGate,submitFinal,clearDominion} from './FinalBattleSystem.js';
 import {inCastle} from './CastleData.js';
@@ -128,7 +129,7 @@ export class CombatSystem{
         action.status='resolved';let event;
         if(action.actionType==='attack'){
           const before=s.monsterHP,e=this.resolveTarget(action);action.bossRelicBonus=fortressRelicBonus(s,e,action.targetGrade);action.equipmentBonus=(s.battleContext?.attackGradeBonus?.(action.targetGrade)||0)+(['A','S'].includes(action.targetGrade)&&(e?.elite?.breakTurns||e?.boss?.breakTurns)?s.battleContext?.bossBreakBonus||0:0);let amount=s.enemies?attackDamage(s,action.targetGrade,bossArmor(e,monsterAt(e.monsterIndex).armor)):action.baseDamage;const mineHit=e?mineAttackDamage(s,e,action.targetGrade,amount):{amount,breakDamage:0};amount=bossDamage(e,mineHit.amount+fortressRelicBonus(s,e,action.targetGrade));amount=castleDamage(s,e,canyonDamage(s,e,action.targetGrade,bodyDamage(s,e,action,amount)));if(isCoop(s)&&e?.type==='dragonGuardian'&&e.boss.stance==='FLYING'&&['C','B'].includes(action.targetGrade))amount=Math.max(1,Math.round(amount*.8));action.illusionHit=bodyActive(s)&&action.appearance!==s.chaosTurn.body;action.breakDamage=mineHit.breakDamage;action.baseDamage=amount;if(e)e.hp=Math.max(0,e.hp-amount);else s.monsterHP=Math.max(0,s.monsterHP-amount);syncEncounter(s);s.totalDamage+=before-s.monsterHP;
-          const bossBreak=elitePressure(s,e,action.targetGrade)||(bodyBreak(s,e,action)&&coopPressure(s,e,action.targetGrade));if(bossBreak&&e.type==='chaosMage')collapseIllusions(s);action.bossBreak=bossBreak;s.stats.attack[action.targetGrade]++;
+          const bossBreak=elitePressure(s,e,action.targetGrade)||(bodyBreak(s,e,action)&&coopPressure(s,e,action.targetGrade));if(bossBreak&&e.type==='chaosMage')collapseIllusions(s);action.bossBreak=bossBreak;action.weaponFollowup=weaponFollowup(s,e,action);s.stats.attack[action.targetGrade]++;
           event=this.emit('attack',`${action.playerId+1}P ⚔ DAMAGE ${action.baseDamage}`,{damage:isCoop(s)?before-s.monsterHP:action.baseDamage,bossBreak:action.bossBreak,breakDamage:action.breakDamage||0,enemyId:action.enemyId,action,retargeted:action.retargeted});
         }else if(action.actionType==='scroll'){
           const before=s.monsterHP;if(['SINGLE_ENEMY','RANDOM_ENEMIES','ALL_ENEMIES'].includes(action.targetType))this.resolveTarget(action);const boost=this.scrollModifier?.(action,s)||0;const scroll=useScroll(s,action.scrollSlot,action.enemyId,boost);s.totalDamage+=before-s.monsterHP;
@@ -157,7 +158,8 @@ export class CombatSystem{
       if(s.enemies){while(this.currentEnemy()?.hp===0)s.enemyResolutionIndex++;if(!this.currentEnemy()||s.hero.hp===0){s.resolutionStage='status';return this.resolveNext();}}
       const e=this.currentEnemy(),intent=e?.intent||s.intent;
       s.resolutionStage=s.enemies?'special':'status';const incoming=s.scrollStop?0:mitigateAttack(s,Math.round(intent.attack*(1-(e?.weaken||s.scrollWeaken||0))));const damage=takeDamage(s,incoming,'enemy');
-      return this.emit('enemy',`${e?e.name+' · ':''}적의 공격 ${damage.absorbed+damage.hpDamage} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,{...damage,attack:damage.absorbed+damage.hpDamage,suppressed:!!s.scrollStop,enemyId:e?.id,monster:e?.monsterIndex});
+      const counter=weaponCounter(s,e,damage.absorbed);
+      return this.emit('enemy',`${e?e.name+' · ':''}적의 공격 ${damage.absorbed+damage.hpDamage} · 방어막 흡수 ${damage.absorbed} · HP −${damage.hpDamage}`,{...damage,weaponCounter:counter,attack:damage.absorbed+damage.hpDamage,suppressed:!!s.scrollStop,enemyId:e?.id,monster:e?.monsterIndex});
     }
     if(s.resolutionStage==='status'){
       s.resolutionStage='end';const poison=tickPoison(s);

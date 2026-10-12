@@ -1,0 +1,677 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "weapon": "steel_sword",
+      "type": "SWORD",
+      "grade": "C",
+      "elapsed": 483.5,
+      "damage": 11,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.9000000357627869
+        },
+        {
+          "stage": "cutin",
+          "time": 45.40000003576279
+        },
+        {
+          "stage": "charge",
+          "time": 45.60000002384186
+        },
+        {
+          "stage": "trail",
+          "time": 98.90000003576279
+        },
+        {
+          "stage": "contact",
+          "time": 237.9000000357628
+        },
+        {
+          "stage": "reaction",
+          "time": 247.9000000357628
+        },
+        {
+          "stage": "damage",
+          "time": 312.30000001192093
+        },
+        {
+          "stage": "restore",
+          "time": 427.7000000476837
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "steel_sword",
+      "type": "SWORD",
+      "grade": "B",
+      "elapsed": 746.1000000238419,
+      "damage": 17,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.3999999761581421
+        },
+        {
+          "stage": "cutin",
+          "time": 72.69999998807907
+        },
+        {
+          "stage": "charge",
+          "time": 72.80000001192093
+        },
+        {
+          "stage": "trail",
+          "time": 176.89999997615814
+        },
+        {
+          "stage": "contact",
+          "time": 374.39999997615814
+        },
+        {
+          "stage": "reaction",
+          "time": 402.69999998807907
+        },
+        {
+          "stage": "damage",
+          "time": 499.19999998807907
+        },
+        {
+          "stage": "restore",
+          "time": 653
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "steel_sword",
+      "type": "SWORD",
+      "grade": "A",
+      "elapsed": 1446.300000011921,
+      "damage": 24,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.8999999761581421
+        },
+        {
+          "stage": "cutin",
+          "time": 101.19999998807907
+        },
+        {
+          "stage": "charge",
+          "time": 102.39999997615814
+        },
+        {
+          "stage": "trail",
+          "time": 373.5999999642372
+        },
+        {
+          "stage": "contact",
+          "time": 759.3000000119209
+        },
+        {
+          "stage": "reaction",
+          "time": 892.3999999761581
+        },
+        {
+          "stage": "damage",
+          "time": 1046.699999988079
+        },
+        {
+          "stage": "restore",
+          "time": 1307.3999999761581
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "steel_sword",
+      "type": "SWORD",
+      "grade": "S",
+      "elapsed": 2041.199999988079,
+      "damage": 24,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 1.0999999642372131
+        },
+        {
+          "stage": "cutin",
+          "time": 182
+        },
+        {
+          "stage": "charge",
+          "time": 466.39999997615814
+        },
+        {
+          "stage": "trail",
+          "time": 738.1999999880791
+        },
+        {
+          "stage": "contact",
+          "time": 971.7999999523163
+        },
+        {
+          "stage": "reaction",
+          "time": 1197.7999999523163
+        },
+        {
+          "stage": "damage",
+          "time": 1507.199999988079
+        },
+        {
+          "stage": "restore",
+          "time": 1860.3999999761581
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "dark_greatsword",
+      "type": "GREATSWORD",
+      "grade": "C",
+      "elapsed": 515.5,
+      "damage": 11,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.699999988079071
+        },
+        {
+          "stage": "cutin",
+          "time": 62.799999952316284
+        },
+        {
+          "stage": "charge",
+          "time": 63.09999996423721
+        },
+        {
+          "stage": "trail",
+          "time": 146.0999999642372
+        },
+        {
+          "stage": "contact",
+          "time": 273
+        },
+        {
+          "stage": "reaction",
+          "time": 283.19999998807907
+        },
+        {
+          "stage": "damage",
+          "time": 352.39999997615814
+        },
+        {
+          "stage": "restore",
+          "time": 465.7999999523163
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "dark_greatsword",
+      "type": "GREATSWORD",
+      "grade": "B",
+      "elapsed": 846.1999999880791,
+      "damage": 17,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 1.0999999642372131
+        },
+        {
+          "stage": "cutin",
+          "time": 88.39999997615814
+        },
+        {
+          "stage": "charge",
+          "time": 88.89999997615814
+        },
+        {
+          "stage": "trail",
+          "time": 225.0999999642372
+        },
+        {
+          "stage": "contact",
+          "time": 437.39999997615814
+        },
+        {
+          "stage": "reaction",
+          "time": 562.3000000119209
+        },
+        {
+          "stage": "damage",
+          "time": 658.0999999642372
+        },
+        {
+          "stage": "restore",
+          "time": 787.0999999642372
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "dark_greatsword",
+      "type": "GREATSWORD",
+      "grade": "A",
+      "elapsed": 1128.699999988079,
+      "damage": 26,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 2.5
+        },
+        {
+          "stage": "cutin",
+          "time": 152.19999998807907
+        },
+        {
+          "stage": "charge",
+          "time": 153.89999997615814
+        },
+        {
+          "stage": "trail",
+          "time": 347
+        },
+        {
+          "stage": "contact",
+          "time": 619.2999999523163
+        },
+        {
+          "stage": "reaction",
+          "time": 723
+        },
+        {
+          "stage": "damage",
+          "time": 861.0999999642372
+        },
+        {
+          "stage": "restore",
+          "time": 1042.199999988079
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "dark_greatsword",
+      "type": "GREATSWORD",
+      "grade": "S",
+      "elapsed": 2156.7000000476837,
+      "damage": 26,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.6000000238418579
+        },
+        {
+          "stage": "cutin",
+          "time": 182.80000001192093
+        },
+        {
+          "stage": "charge",
+          "time": 464
+        },
+        {
+          "stage": "trail",
+          "time": 867.2000000476837
+        },
+        {
+          "stage": "contact",
+          "time": 1134.9000000357628
+        },
+        {
+          "stage": "reaction",
+          "time": 1287.7000000476837
+        },
+        {
+          "stage": "damage",
+          "time": 1619.2000000476837
+        },
+        {
+          "stage": "restore",
+          "time": 1974.300000011921
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "rogue_dagger",
+      "type": "DAGGER",
+      "grade": "C",
+      "elapsed": 1606.2000000476837,
+      "damage": 13,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.800000011920929
+        },
+        {
+          "stage": "cutin",
+          "time": 27.700000047683716
+        },
+        {
+          "stage": "charge",
+          "time": 27.700000047683716
+        },
+        {
+          "stage": "trail",
+          "time": 64.60000002384186
+        },
+        {
+          "stage": "contact",
+          "time": 726.3000000119209
+        },
+        {
+          "stage": "reaction",
+          "time": 750.2000000476837
+        },
+        {
+          "stage": "damage",
+          "time": 1433
+        },
+        {
+          "stage": "restore",
+          "time": 1545.4000000357628
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "rogue_dagger",
+      "type": "DAGGER",
+      "grade": "B",
+      "elapsed": 910.4000000357628,
+      "damage": 18,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 1.300000011920929
+        },
+        {
+          "stage": "cutin",
+          "time": 63.5
+        },
+        {
+          "stage": "charge",
+          "time": 64.10000002384186
+        },
+        {
+          "stage": "trail",
+          "time": 365
+        },
+        {
+          "stage": "contact",
+          "time": 570.9000000357628
+        },
+        {
+          "stage": "reaction",
+          "time": 592.2000000476837
+        },
+        {
+          "stage": "damage",
+          "time": 673.4000000357628
+        },
+        {
+          "stage": "restore",
+          "time": 837
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "rogue_dagger",
+      "type": "DAGGER",
+      "grade": "A",
+      "elapsed": 995.1000000238419,
+      "damage": 23,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.6000000238418579
+        },
+        {
+          "stage": "cutin",
+          "time": 81.69999998807907
+        },
+        {
+          "stage": "charge",
+          "time": 81.80000001192093
+        },
+        {
+          "stage": "trail",
+          "time": 247.89999997615814
+        },
+        {
+          "stage": "contact",
+          "time": 497.5
+        },
+        {
+          "stage": "reaction",
+          "time": 554.3999999761581
+        },
+        {
+          "stage": "damage",
+          "time": 667.3000000119209
+        },
+        {
+          "stage": "restore",
+          "time": 890.3000000119209
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "rogue_dagger",
+      "type": "DAGGER",
+      "grade": "S",
+      "elapsed": 2745.899999976158,
+      "damage": 23,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 2
+        },
+        {
+          "stage": "cutin",
+          "time": 183.89999997615814
+        },
+        {
+          "stage": "charge",
+          "time": 476.39999997615814
+        },
+        {
+          "stage": "trail",
+          "time": 704.8999999761581
+        },
+        {
+          "stage": "contact",
+          "time": 1133.5999999642372
+        },
+        {
+          "stage": "reaction",
+          "time": 1605.3999999761581
+        },
+        {
+          "stage": "damage",
+          "time": 1805.0999999642372
+        },
+        {
+          "stage": "restore",
+          "time": 2562.199999988079
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "sage_staff",
+      "type": "STAFF",
+      "grade": "C",
+      "elapsed": 2719.899999976158,
+      "damage": 11,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 0.5
+        },
+        {
+          "stage": "cutin",
+          "time": 42.59999996423721
+        },
+        {
+          "stage": "charge",
+          "time": 42.69999998807907
+        },
+        {
+          "stage": "trail",
+          "time": 118.19999998807907
+        },
+        {
+          "stage": "contact",
+          "time": 729.7999999523163
+        },
+        {
+          "stage": "reaction",
+          "time": 765.5
+        },
+        {
+          "stage": "damage",
+          "time": 1342.3999999761581
+        },
+        {
+          "stage": "restore",
+          "time": 2673.7999999523163
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "sage_staff",
+      "type": "STAFF",
+      "grade": "B",
+      "elapsed": 3197.399999976158,
+      "damage": 16,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 1.699999988079071
+        },
+        {
+          "stage": "cutin",
+          "time": 65.89999997615814
+        },
+        {
+          "stage": "charge",
+          "time": 66.5
+        },
+        {
+          "stage": "trail",
+          "time": 1000.5
+        },
+        {
+          "stage": "contact",
+          "time": 1383.800000011921
+        },
+        {
+          "stage": "reaction",
+          "time": 1415.1000000238419
+        },
+        {
+          "stage": "damage",
+          "time": 2975
+        },
+        {
+          "stage": "restore",
+          "time": 3124.5
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "sage_staff",
+      "type": "STAFF",
+      "grade": "A",
+      "elapsed": 1206.300000011921,
+      "damage": 24,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 5.600000023841858
+        },
+        {
+          "stage": "cutin",
+          "time": 104.20000004768372
+        },
+        {
+          "stage": "charge",
+          "time": 104.60000002384186
+        },
+        {
+          "stage": "trail",
+          "time": 328.10000002384186
+        },
+        {
+          "stage": "contact",
+          "time": 675.1000000238419
+        },
+        {
+          "stage": "reaction",
+          "time": 753
+        },
+        {
+          "stage": "damage",
+          "time": 888.4000000357628
+        },
+        {
+          "stage": "restore",
+          "time": 1105.7000000476837
+        }
+      ],
+      "cleaned": true
+    },
+    {
+      "weapon": "sage_staff",
+      "type": "STAFF",
+      "grade": "S",
+      "elapsed": 2158.400000035763,
+      "damage": 24,
+      "trace": [
+        {
+          "stage": "anticipation",
+          "time": 1
+        },
+        {
+          "stage": "cutin",
+          "time": 184.5
+        },
+        {
+          "stage": "charge",
+          "time": 465.80000001192093
+        },
+        {
+          "stage": "trail",
+          "time": 810
+        },
+        {
+          "stage": "contact",
+          "time": 1195.5
+        },
+        {
+          "stage": "reaction",
+          "time": 1396.9000000357628
+        },
+        {
+          "stage": "damage",
+          "time": 1622.5
+        },
+        {
+          "stage": "restore",
+          "time": 1976.6000000238419
+        }
+      ],
+      "cleaned": true
+    }
+  ]
+}

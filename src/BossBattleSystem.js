@@ -11,7 +11,9 @@ export function bossIntent(s,e,intent){const b=e.boss,d=bossData(e);if(!b)return
  if(e.type==='dragonGuardian'&&b.phase===3){special=b.breathCharge===1?'doomBreath':'none';extra=b.breathCharge===1?DragonRules.breathDamage:0;label=b.breathCharge===1?'⚠ 멸망의 브레스 · 발동!':'멸망의 브레스 충전 · '+(b.breathCharge-1)+'턴 뒤 발동';}
  if(d.strategy==='regeneration'&&b.seedTurns){special='regenSeed';label=b.phase===3?'마지막 재생':'재생의 씨앗';}
  if(e.type==='darkKnight'&&b.phase===3&&['blackWave','execution'].includes(special)){b.pressure=Math.max(b.pressure,1);}if(b.phase>=2)danger='위험';if(b.phase===3)danger='치명적';
- const attack=intent.attack+d.phases[b.phase-1].attack;
+ const signature=s.battleContext?.mode==='rpg'&&e.type!=='golem'&&!b.breakTurns&&s.enemyTurn>=4&&s.enemyTurn%4===0;
+ if(signature){label='⚠ '+({golem:'대지 붕괴',treeGuardian:'숲의 분노',flameGiant:'과열 폭발',darkKnight:'처형의 검격',chaosMage:'차원 균열',dragonGuardian:'용혈의 포효',demonKing:'왕의 심판'}[e.type]||label)+' · 강공격 / 방어 또는 BREAK';danger='위험';}
+ const attack=intent.attack+d.phases[b.phase-1].attack+(signature?Math.max(2,Math.round(intent.attack*.12)):0);
  return kingIntent(s,e,{...intent,attack:b.breakTurns?Math.round(attack*.65):attack,special:b.breakTurns?'none':special,bossLabel:b.breakTurns?'약점 노출':label,danger:b.breakTurns?'일반':danger,extraDamage:extra});
 }
 export const bossArmor=(e,armor)=>e?.type==='dragonGuardian'&&e.boss?.phase===3?0:e?.type==='darkKnight'&&(e.boss?.breakTurns||e.boss?.phase===3)?0:bossData(e)?.removeArmorPhase&&e.boss?.phase>=bossData(e).removeArmorPhase?0:armor;

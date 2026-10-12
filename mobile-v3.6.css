@@ -1,0 +1,79 @@
+/* The compact viewport is RPG-only: CLASS keeps its whiteboard layout. */
+button,h1,h2,h3,.stat,.quest-copy{word-break:keep-all;overflow-wrap:break-word}
+.enemy-card header b,.battle-heading h1,.monster-dialogue strong,.enemy-attack-tell{font-family:'Gungsuh','궁서',Georgia,'Malgun Gothic',serif;font-weight:900;letter-spacing:.04em;text-shadow:0 2px 2px #000,0 0 12px #971c1c}
+.monster-dialogue{border:2px solid #ba9275;background:linear-gradient(145deg,#182a38,#0a1426);color:#f4e7d4;line-height:1.6;word-break:keep-all}
+.monster-dialogue[data-speaker*="고블린"]{border-color:#acc270;rotate:-1deg}.monster-dialogue[data-speaker*="골렘"]{border-width:4px;border-radius:3px;border-color:#bfaa87}.monster-dialogue[data-speaker*="마왕"]{border-color:#b189d7;box-shadow:0 0 22px #a668b344}.monster-dialogue[data-speaker*="용"]{border-color:#bba161;background:linear-gradient(145deg,#292b1b,#17212c)}
+.other-quests{grid-column:1/-1}.other-quests>summary{cursor:pointer;padding:16px;color:#ebd7ab}.other-quests[open]{display:grid;gap:12px}
+.enemy-card[data-type=goblin] header b{color:#d6eaae;letter-spacing:-.02em}
+.enemy-card[data-type=golem] header b{color:#edd7b4;letter-spacing:.13em}
+.enemy-attack[data-type=golem] .enemy-attack-tell{color:#ffe2a4}
+.mercenary-growth{display:block;color:#bce7d8;font-weight:700;line-height:1.6}
+.direct-support .mercenary-actor{animation:none!important;opacity:1!important;left:0!important;bottom:-12%!important;width:30%;height:85%;transform:translateX(-18%);transition:transform .16s}
+.direct-support[data-limited=true] .mercenary-actor{width:16%;height:50%;transition:none}
+.direct-support[data-phase=approach] .mercenary-actor{transform:translateX(8%)}
+.direct-support .mercenary-support-copy{left:5%;right:5%;bottom:6%;top:auto!important;background:#0c2639ed;border:1px solid #d2b36a;padding:10px;transform:none!important;animation:none!important}
+.direct-support .mercenary-support-copy strong{font-size:18px}.direct-support .mercenary-damage{display:block;font-size:29px;color:#ffefb5;text-shadow:0 2px #000}
+.mercenary-strikes{position:absolute;left:var(--support-x);top:43%;width:30%;height:35%;translate:-50% -50%;opacity:0;transition:opacity .1s,transform .14s}
+.mercenary-strikes i{position:absolute;inset:0;transform:translateY(calc(var(--strike)*12px));background:url('assets/presentation-v35/slash.webp') center/contain no-repeat}
+.direct-support[data-phase=approach] .mercenary-strikes{opacity:1;transform:translateX(-50%) scale(.45)}
+.direct-support[data-phase=hit] .mercenary-strikes{opacity:1;transform:scale(1.4)}
+.direct-support[data-phase=reaction] .mercenary-strikes{opacity:.7;transform:scale(1.1)}
+.direct-support[data-phase=recovery] .mercenary-strikes{opacity:0}
+.direct-support .mercenary-impact{animation:none!important;opacity:0;left:var(--support-x);top:43%;translate:-50% -50%}
+.direct-support[data-phase=hit] .mercenary-impact{opacity:1;transform:scale(1.5)}
+.direct-support[data-phase=reaction] .mercenary-impact{opacity:.45}
+.monster-dialogue small{color:#dcc79d}
+.direct-support[data-motion=arrows] .mercenary-strikes i,.direct-support[data-motion=spear] .mercenary-strikes i{background:none;height:4px;top:35%;border-top:3px solid #f8df99;box-shadow:0 0 8px #fbdc77;transform:rotate(-12deg) translateY(calc(var(--strike)*23px))}
+.direct-support[data-motion=arrows] .mercenary-strikes i:after,.direct-support[data-motion=spear] .mercenary-strikes i:after{content:'◆';position:absolute;right:0;top:-12px;color:#f8df99}
+.direct-support[data-motion=bash] .mercenary-strikes i{background:url('assets/combat-v35/supportAtlas.webp') 100% 100%/200% 200% no-repeat;transform:rotate(-8deg)}
+.direct-support[data-motion=cleave] .mercenary-strikes{width:65%;height:65%;rotate:28deg}
+.direct-support[data-motion=slashes] .mercenary-strikes i{rotate:calc(var(--strike)*65deg)}
+.direct-support[data-motion=nova] .mercenary-strikes i,.direct-support[data-motion=runes] .mercenary-strikes i,.direct-support[data-motion=holy] .mercenary-strikes i{background:url('assets/presentation-v35/magic.webp') center/contain no-repeat;rotate:calc(var(--strike)*35deg);transform:scale(calc(1 - var(--strike)*.13))}
+.direct-support[data-motion=holy] .mercenary-strikes{filter:sepia(1) brightness(1.8)}
+.direct-support[data-motion=runes] .mercenary-strikes{filter:hue-rotate(90deg);border:4px double #bfa8ff;border-radius:50%}
+.direct-support[data-motion=fists] .mercenary-strikes i{background:none;border:8px solid #ffdca0;border-radius:30%;width:45%;height:45%;left:calc(var(--strike)*40%)}
+.direct-support[data-motion=leaves] .mercenary-strikes i{background:none;border-radius:100% 0;background:#9fe6b1;width:25%;height:55%;left:calc(var(--strike)*30%);rotate:30deg}
+.direct-support[data-motion=notes] .mercenary-strikes i:after{content:'♫';font-size:65px;color:#ffda98}
+.direct-support[data-motion=notes] .mercenary-strikes i{background:none;left:calc(var(--strike)*30%)}
+.direct-support[data-motion=flask] .mercenary-strikes i{background:none;border:5px solid #debcfd;border-radius:20% 20% 50% 50%;width:40%;height:70%;box-shadow:inset 0 -35px #ad7cdc}
+.direct-support:is([data-phase=approach],[data-phase=hit],[data-phase=reaction])[data-motion=arrows] .mercenary-strikes i{animation:support-arrow-flight .22s ease-out both;animation-delay:calc(var(--strike)*.045s)}
+.direct-support:is([data-phase=approach],[data-phase=hit],[data-phase=reaction])[data-motion=slashes] .mercenary-strikes i{animation:support-slash-sweep .18s ease-out both;animation-delay:calc(var(--strike)*.035s)}
+@keyframes support-arrow-flight{from{opacity:0;translate:-170px 0}to{opacity:1;translate:0 0}}
+@keyframes support-slash-sweep{from{opacity:0;scale:.25}to{opacity:1;scale:1}}
+.enemy-attack[data-type=golem] .enemy-attack-limb{clip-path:polygon(0 25%,40% 20%,45% 80%,0 100%);transform-origin:20% 25%}
+.enemy-attack[data-type=golem] .golem-other-arm{clip-path:polygon(60% 20%,100% 25%,100% 100%,55% 80%);transform-origin:80% 25%;opacity:.8}
+.enemy-attack[data-golem-move=fist] .golem-other-arm{display:none}
+.golem-core-pulse{position:absolute;inset:20% 15%;opacity:0;border-radius:50%;background:radial-gradient(#effffc,#2cdfac 15%,transparent 60%)}
+.enemy-attack .enemy-attack-result{z-index:70}
+.enemy-attack[data-golem-move=core][data-phase=anticipation] .golem-core-pulse{opacity:.6;animation:golem-core-charge .65s infinite alternate}
+.enemy-attack[data-golem-move=core][data-phase=attack] .golem-core-pulse{opacity:1;transform:scale(2)}
+.enemy-attack[data-golem-move=collapse][data-phase=hit] .golem-core-pulse{opacity:1;top:65%;height:25%;background:repeating-radial-gradient(ellipse,#fff1b7 0 3%,transparent 4% 17%);transform:scale(2)}
+@keyframes golem-core-charge{to{filter:brightness(1.8);transform:scale(1.3)}}
+@media(max-width:600px) and (orientation:portrait){
+ .game-shell.rpg-combat{height:100vh;height:100dvh;min-height:0;max-width:none;margin:0;padding:calc(4px + env(safe-area-inset-top)) 6px calc(4px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:4px;overflow:hidden}
+ .rpg-combat .game-header{min-height:30px;height:30px;padding:0;flex:none}
+ .rpg-combat .brand{font-size:13px;white-space:nowrap}.rpg-combat .brand>span,.rpg-combat .brand small,.rpg-combat .journey{display:none}
+ .rpg-combat .top-actions{gap:4px}.rpg-combat .top-actions button{min-height:30px;font-size:11px;padding:4px 6px}
+ .rpg-combat :is(.quest-tracker,.party-hud,.game-tip,.battle-guidance,.action-ledger,.pad-players,.pad-title,.pad-steps,.team-status,.scroll-summary,.battle-heading .eyebrow){display:none}
+ .rpg-combat .battle-heading{padding:0;min-height:44px;display:grid;grid-template-columns:1fr 1fr 48px;gap:5px;flex:none}
+ .rpg-combat .battle-heading h1{font-size:14px;margin:0}.rpg-combat .enemy-hp{width:auto;min-width:0;font-size:11px}.rpg-combat .enemy-hp b{font-size:12px}
+ .rpg-combat .shared-clock{gap:2px}.rpg-combat .shared-clock>span{display:none}.rpg-combat .timer{width:44px;height:44px;padding:0}.rpg-combat .timer b{font-size:24px}.rpg-combat .timer small{font-size:9px}
+ .game-shell.rpg-combat .battle-stage[data-pov=v35]{flex:1 1 0;min-height:210px!important;height:0!important;max-height:none;margin:0;border-radius:10px}
+ .rpg-combat .enemy-hp>div:first-child{display:flex;flex-direction:column;align-items:flex-end;white-space:nowrap}.rpg-combat .enemy-hp>div:first-child>span{display:none}
+ .rpg-combat .defense-targets .combat-target{min-width:0!important;flex:1;width:auto!important;height:44px!important;margin:0}
+ .rpg-combat .pad-submit{grid-column:auto!important}.rpg-combat .input-pad{box-sizing:border-box}
+ .rpg-combat .enemy-intent{left:6px;top:auto;bottom:53px;padding:4px;font-size:10px;max-width:60%}.rpg-combat .enemy-intent small{display:none}.rpg-combat .enemy-intent strong{font-size:11px}
+ .rpg-combat .defense-targets{top:auto!important;bottom:4px!important;left:4px;right:4px;width:auto;height:48px!important;min-height:0!important;transform:none}.rpg-combat .defense-caption{display:none!important}.rpg-combat .defense-targets>div:not(.defense-caption){display:flex;justify-content:space-evenly;height:44px!important}
+ .rpg-combat .combat-target{width:48px;height:46px;min-width:0;padding:2px}.rpg-combat .combat-target .target-value{font-size:23px}.rpg-combat .combat-target small{font-size:10px}
+ .rpg-combat .team-hud{padding:4px;min-height:38px;gap:6px;display:flex;flex:none}.rpg-combat .hero-health{flex:1;min-width:100px;font-size:12px}.rpg-combat .shield-value{font-size:11px}.rpg-combat .scroll-select{font-size:11px;max-width:115px;padding:4px}.rpg-combat .scroll-label{display:flex}
+ .rpg-combat .pad-deck{padding:0;display:block;flex:none}.rpg-combat .input-pad{padding:6px;margin:0;border-radius:10px;min-height:0}
+ .rpg-combat .pad-expression{height:32px;min-height:32px;margin:0 0 4px;font-size:18px;padding:4px}
+ .rpg-combat .pad-keys{display:grid;grid-template-columns:1fr 1fr;gap:4px}.rpg-combat .pad-dice{grid-column:1/-1;display:flex;gap:5px;margin:0}.rpg-combat .dice-button{flex:1;height:48px;min-height:48px;font-size:24px;padding:0}.rpg-combat .dice-button small{font-size:10px}
+ .rpg-combat .pad-operators{grid-column:1/-1;display:flex;gap:4px;margin:0}.rpg-combat .operator-button{flex:1;min-height:44px;height:44px;font-size:25px;padding:0}
+ .rpg-combat .pad-tools,.rpg-combat .pad-submit{display:flex;gap:4px;margin:0}.rpg-combat .pad-tools button,.rpg-combat .pad-submit button{flex:1;min-height:44px;font-size:13px;padding:4px;white-space:nowrap}
+ .rpg-combat .pad-message{min-height:18px;font-size:11px;padding:0;margin:0}
+ .rpg-combat .battle-stage[data-pov=v35] .boss-hud{top:auto;bottom:62px;right:6px;left:auto;width:62%;max-height:72px;padding:5px;overflow:auto}
+ .rpg-combat .boss-hud b,.rpg-combat .boss-hud span,.rpg-combat .boss-hud strong{font-size:11px;line-height:1.35}.rpg-combat .boss-hud small{display:none}
+ .rpg-combat>aside:not(.party-hud){max-height:35px;overflow:hidden;font-size:11px;padding:3px;margin:0}.rpg-combat>aside p,.rpg-combat>aside small{display:none}
+ .rpg-combat.cinematic .battle-stage{min-height:0}.rpg-combat .cinematic-footer{font-size:11px;padding:3px}
+}

@@ -1,3 +1,4 @@
+import {seedMercenaryGrowth,validateMercenaryGrowth} from './MercenaryGrowth.js';
 import {seedLegendary,validateLegendary} from './LegendarySystem.js';
 import {CastleDungeon} from './CastleData.js';
 import {migrateRoster,validateRoster} from './MercenaryRoster.js';
@@ -31,10 +32,11 @@ export function migrateSave(value){
  if(value?.saveVersion===4&&value.progress?.storyCompleted===undefined){value=structuredClone(value);value.progress.storyCompleted=false;value.progress.endingSeen=false;}
  if(value?.saveVersion===4){value=structuredClone(value);const records=blankRelationships();value.progress.mercenaryRelations={...records,...value.progress.mercenaryRelations};migrateRoster(value);seedLegendary(value);value.progress.rebuildSchema=1;value.saveVersion=5;}
  if(value?.saveVersion===5&&value.progress.rebuildSchema===undefined){value=structuredClone(value);seedLegendary(value);value.progress.rebuildSchema=1;}
+ if(value?.saveVersion===5&&value.progress&&!value.progress.mercenaryGrowth){value=structuredClone(value);seedMercenaryGrowth(value.progress);}
  return value;
 }
 export function validateSave(raw){
- const data=migrateSave(raw);if(data?.saveVersion!==RPGConfig.saveVersion)throw new Error('지원하지 않는 저장 버전입니다.');
+ const data=migrateSave(raw);if(data?.progress&&!validateMercenaryGrowth(data.progress))throw new Error('동료 성장 기록이 올바르지 않습니다.');if(data?.saveVersion!==RPGConfig.saveVersion)throw new Error('지원하지 않는 저장 버전입니다.');
  if(!data.meta||typeof data.meta.createdAt!=='string'||typeof data.meta.updatedAt!=='string')throw new Error('저장 정보가 올바르지 않습니다.');
  if(!validateCampaign(data.progress))throw new Error('봉인 이야기 기록이 올바르지 않습니다.');
  if(!validateRelationships(data.progress))throw new Error('동료 관계 기록이 올바르지 않습니다.');

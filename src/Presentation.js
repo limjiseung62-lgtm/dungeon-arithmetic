@@ -13,7 +13,7 @@ export class SequencePlayer{
 }
 export class DialogueSystem{
  constructor(player,audio){this.player=player;this.audio=audio;}
- async show(line){if(!line||this.player.cancelled)return;const host=document.querySelector('.battle-stage');if(!host)return;const bubble=document.createElement('button');bubble.className='monster-dialogue';bubble.dataset.action='dialogue-next';const speaker=document.createElement('small'),text=document.createElement('strong');speaker.textContent=line.speaker;text.textContent=line.text;bubble.append(speaker,text);host.append(bubble);if(line.voiceAsset)this.audio.playAsset(line.voiceAsset,'VOICE');await this.player.wait(line.duration);bubble.remove();}
+ async show(line){if(!line||this.player.cancelled)return;const host=document.querySelector('.battle-stage');if(!host)return;const bubble=document.createElement('button');bubble.className='monster-dialogue';bubble.dataset.action='dialogue-next';bubble.dataset.speaker=line.speaker||'';const speaker=document.createElement('small'),text=document.createElement('strong');speaker.textContent=line.speaker;text.textContent=line.text;bubble.append(speaker,text);host.append(bubble);if(line.voiceAsset)this.audio.playAsset(line.voiceAsset,'VOICE');await this.player.wait(line.duration);bubble.remove();}
 }
 export class MonsterSpecialSequence{
  constructor(player,dialogue,audio){Object.assign(this,{player,dialogue,audio});}
